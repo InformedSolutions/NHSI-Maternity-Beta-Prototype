@@ -12,7 +12,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-  NHS.UK prototype kit
+  Maternity events - single notification portal
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -28,59 +28,38 @@
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
 
-      <!-- Change the page title here -->
-      <h1>
-        NHS.UK prototype kit
-        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Version {{version}}</span>
-      </h1>
 
-      <!-- Add your content here -->
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+<div class="nhsuk-width-container">
 
-      <p class="nhsuk-lede-text">
-        This kit lets you rapidly create HTML prototypes of NHS services.
-      </p>
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
 
-      <hr>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
 
-      <h2>
-        About this page
-      </h2>
+        <h1>Notify national organisations about maternity events</h1>
+        <p></p>
+        <p>You can use this service to:</p>
+        <ul>
+          <li>notify HSIB of </li>
+          <li>notify NHSR of severe brain injuries</li>
+          <li>notify MBBRACE of</li>
+          <li>notify CDOPs</li>
+        </ul>
 
-      <p>
-        Use this page as the index for your project.
-      </p>
-      
-      <p>
-        You'll find the code for this page at <strong>/app/views/index.html</strong>.
-      </p>
+        <h2>Before you start</h2>
 
-      <p>
-        There is also an <a href="/page-example">example page</a>, which contains a selection of NHS.UK frontend styles and components.
-      </p>
+        <p>We'll ask you for: ...</p>
 
-      <hr>
+        <a class="nhsuk-button" href="#" role="button" draggable="false">Start now</a>
 
-      <h2>
-        Get started
-      </h2>
+        <p>By using this service you are agreeing to our <a href="#">terms of use</a> and <a href="#">privacy policy</a>.</p>
 
-      <p>Get started by using the:</p>
+      </div>
+    </div>
 
-      <ul>
-        <li>
-          <a href="/docs/how-tos">how to guides</a>
-        </li>
-        <li>
-          <a href="/docs/page-templates">page templates</a>
-        </li>
-        <li>
-          code snippets for styles and components from the <a href="https://service-manual.nhs.uk/design-system">NHS digital service manual</a>
-        </li>
-      </ul>
+  </main>
+</div>
 
       <!-- End of content -->
 
