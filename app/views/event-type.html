@@ -1,0 +1,102 @@
+
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+  Maternity events - single notification portal
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <div class="nhsuk-form-group">
+
+    <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h1 class="nhsuk-fieldset__heading">
+          What type of event do you want to notify of?
+        </h1>
+      </legend>
+
+      <div class="nhsuk-hint" id="example-hint">
+        If you select multiple, they must have happened in the same event (e.g must be a mother baby pair).
+      </div>
+
+      <div class="nhsuk-checkboxes">
+
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+            Maternal death (whilst pregnant)
+          </label>
+        </div>
+
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+            Maternal death (less than 42 days after pregnancy)
+          </label>
+        </div>
+
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+            Maternal death (between 42 days and 365 after pregnancy) 
+          </label>
+        </div>
+
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+            Perinatal death (less than 28 days) 
+          </label>
+        </div>
+
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+            Neonatal death  (less than 7 days)
+          </label>
+        </div>
+
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+            Severe brain injury (between 37 weeks and 7 days)
+          </label>
+        </div>
+
+      </div>
+    </fieldset>
+
+  </div>
+
+</form>
+
+        <a class="nhsuk-button" type="submit">Continue</a>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
