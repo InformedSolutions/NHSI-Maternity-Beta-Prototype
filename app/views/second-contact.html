@@ -1,0 +1,89 @@
+
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">      
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+            <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Second point of contact's details
+              </h1>
+            </legend>
+
+            <p>This will be used by HSIB</p>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="email">
+                First name
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="test-width-10" type="text">
+            </div>
+    
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="name">
+                Surname
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="surname" name="test-width-10" type="text">
+            </div>
+    
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="job-title">
+                Job title
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="job-title" name="test-width-10" type="text">
+            </div>
+    
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="phone-number">
+                Telephone number
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="phone-number" name="test-width-10" type="text">
+            </div>
+            
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="reporting-trust">
+                Email address
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="email-address" name="test-width-10" type="text">
+            </div>
+
+          </fieldset>
+          </div>
+        <a class="nhsuk-button" href="/mothers-details" role="button" draggable="false">Continue</a>
+        
+        <p><a href="/task-list">Return to task list</a></p>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

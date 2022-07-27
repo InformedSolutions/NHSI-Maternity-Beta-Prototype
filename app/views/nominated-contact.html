@@ -1,0 +1,193 @@
+
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">      
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+            <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Nominated family contact
+              </h1>
+            </legend>
+
+            <p>This will be used by HSIB</p>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="email">
+                First name
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="test-width-10" type="text">
+            </div>
+    
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="name">
+                Surname
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="surname" name="test-width-10" type="text">
+            </div>
+            
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="name">
+                Preferred name
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="surname" name="test-width-10" type="text">
+            </div>
+  
+            <h3 class="nhsuk-heading-m">Address</h3>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-line-1">
+                Address line 1
+              </label>
+              <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-line-2">
+                Address line 2 (optional)
+              </label>
+              <input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
+            </div>          
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-town">
+                Town or city
+              </label>
+              <input class="nhsuk-input nhsuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+            </div>          
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-county">
+                County (optional)
+              </label>
+              <input class="nhsuk-input nhsuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+            </div>          
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-postcode">
+                Postcode
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="phone-number">
+                Telephone number
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="phone-number" name="test-width-10" type="text">
+            </div>
+            
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="reporting-trust">
+                Email address
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="email-address" name="test-width-10" type="text">
+            </div>
+
+            <div class="nhsuk-radios nhsuk-radios--inline">
+              <label class="nhsuk-label" for="reporting-trust">
+                Preferred method of communication
+              </label>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                  Email
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                  Telephone
+                </label>
+              </div>
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="reporting-trust">
+                Relationship to mother/baby
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="email-address" name="test-width-10" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="reporting-trust">
+                Special communication requirement
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="email-address" name="test-width-10" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="select-1">
+                Ethnicity
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="1" disabled>White</option>
+                <option value="2">British</option>
+                <option value="3">Irish</option>
+                <option value="4">Gypsy or Irish Traveller</option>
+                <option value="5">Other White</option>
+                <option value="6" disabled>Mixed/Multiple ethnic group</option>
+                <option value="7">White and Black Caribbean</option>
+                <option value="8">White and Black African</option>
+                <option value="9">White and Asian</option>
+                <option value="10">Other Mixed</option>
+                <option value="11" disabled>Asian/Asian British</option>
+                <option value="12">Indian</option>
+                <option value="13">Pakistani</option>
+                <option value="14">Bangladeshi</option>
+                <option value="15">Chinese</option>
+                <option value="16">Other Asian</option>
+                <option value="17" disabled>Black/African/Caribbean/Black British</option>
+                <option value="18">African</option>
+                <option value="19">Caribbean</option>
+                <option value="20">Other Black</option>
+                <option value="21" disabled>Other ethnic group</option>
+                <option value="22">Arab</option>
+                <option value="23">Any other ethnic group</option>
+              </select>
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="select-1">
+                Religion
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="1"> </option>
+              </select>
+            </div>
+
+          </fieldset>
+          </div>
+        <a class="nhsuk-button" href="/check-answers" role="button" draggable="false">Continue</a>
+        
+        <p><a href="/task-list">Return to task list</a></p>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

@@ -15,13 +15,15 @@
 
 {% block content %}
 
+{% include "includes/back.html" %}
+
 
 <div class="nhsuk-width-container">
 
   <main class="nhsuk-main-wrapper" id="maincontent" role="main">
 
     <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
+      <div class="nhsuk-grid-column-two-thirds">      
 
         <div class="nhsuk-form-group">
           <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
@@ -33,7 +35,7 @@
 
             <h3 class="nhsuk-heading-m">Date of event</h3>
             <div class="nhsuk-hint" id="example-hint">
-              For example, 15 3 1984
+              For example, 15 3 2022
             </div>
         
             <div class="nhsuk-date-input" id="example">
@@ -103,7 +105,9 @@
           <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
         </div>
 
-        <a class="nhsuk-button" href="/home" role="button" draggable="false">Continue</a>
+        <a class="nhsuk-button" href="/criteria" role="button" draggable="false">Continue</a>
+        
+        <p><a href="/task-list">Return to task list</a></p>
 
       </div>
     </div>

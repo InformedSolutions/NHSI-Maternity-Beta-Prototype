@@ -6,14 +6,16 @@
 
 {% block content %}
 
+{% include "includes/back.html" %}
+ <br>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="nhsuk-heading-xl">
         Notify of a neonatal death
       </h1>
 
-      <p>Event type: neonatal death <a href "">change</a></p>
-      <p>LFPSE reference number: 146-929-603 <a href "">change</a></p>
+      <p>Event type: Neonatal death <a href ="event-type">change</a></p>
+      <p>LFPSE reference number: 146-929-603 <a href ="safety-event">change</a></p>
 
       <ol class="app-task-list">
         <li>
@@ -31,8 +33,8 @@
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="read-declaration-status">
-                 Criteria
+                <a href="criteria" aria-describedby="read-declaration-status">
+                 Event type detail
                 </a>
               </span>
               <strong class="nhsuk-tag nhsuk-tag--blue" id="read-declaration-status">Completed</strong>
@@ -47,7 +49,7 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="company-information-status">
+                <a href="first-contact" aria-describedby="company-information-status">
                   First point of contact
                 </a>
               </span>
@@ -57,14 +59,6 @@
               <span class="app-task-list__task-name">
                 <a href="#" aria-describedby="contact-details-status">
                   Second point of contact
-                </a>
-              </span>
-              <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="list-convictions-status">
-                  Nominated contact
                 </a>
               </span>
               <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
@@ -79,9 +73,161 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                Submit and pay
+                <a href="mothers-detail" aria-describedby="company-information-status">
+                Mother's details
+                </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot start yet</strong>
+              <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="locations" aria-describedby="company-information-status">
+                Locations involved in mother's care
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">4. </span> Baby details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="multiple-babies" aria-describedby="company-information-status">
+                Baby's details
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="locations" aria-describedby="company-information-status">
+                Cause of death
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">5. </span> Significant household and family members
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="household"aria-describedby="company-information-status">
+                Partner's details
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">6. </span> Further details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="further-details" aria-describedby="company-information-status">
+                Further details
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">7. </span> Professional's details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="professionals" aria-describedby="company-information-status">
+                  Professional's details
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+            </li>
+          </ul>
+        </li>
+        
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">8. </span> Covid-19
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="covid-19" aria-describedby="company-information-status">
+                  Covid-19
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">9. </span> Support and comorbidities
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="comorbidities" aria-describedby="company-information-status">
+                  Support and comorbidities
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">10. </span> Consent and nominated family contact
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="consent" aria-describedby="company-information-status">
+                  Consent
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="nominated-contact" aria-describedby="company-information-status">
+                  Nominated family contact
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">8. </span> Submit
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Review answers and submit
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--red" id="submit-pay-status">Cannot start yet</strong>
             </li>
           </ul>
         </li>

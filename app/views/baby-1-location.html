@@ -29,7 +29,7 @@
           <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
               <h1 class="nhsuk-fieldset__heading">
-                Was this a patient safety event?
+                Was the baby born at a different location?
               </h1>
             </legend>
       
@@ -47,12 +47,40 @@
         
                 <div class="nhsuk-form-group">
                   <label class="nhsuk-label" for="email">
-                    LFPSE reference number (optional)
+                    Actual place of birth
                   </label>
                   <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
                 </div>
-        
-              </div>
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="email">
+                    Place of death                  
+                  </label>
+                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+                </div>
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="email">
+                    Type of unit                 
+                  </label>
+                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+                </div>
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="email">
+                    Unit of care prior to transfer for palliative care/discharge                 
+                  </label>
+                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+                </div>
+                
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="select-1">
+            Reason there was a transfer of care
+          </label>
+          <select class="nhsuk-select" id="select-1" name="select-1">
+            <option value="1">Baby discharged here for paliative care</option>
+            <option value="2">Baby was discharged home</option>
+            <option value="3">Baby was never in hospital</option>
+          </select>
+        </div>
+        </div>
         
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
@@ -65,7 +93,10 @@
         
         </div>
 
-        <a class="nhsuk-button" href="/task-list" role="button" draggable="false">Continue</a>
+        <a class="nhsuk-button" href="/cause-of-death" role="button" draggable="false">Continue</a>
+
+        <p><a href="/task-list">Return to task list</a></p>
+
 
       </div>
     </div>

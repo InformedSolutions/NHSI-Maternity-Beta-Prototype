@@ -1,0 +1,91 @@
+
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+  Maternity events - single notification portal
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Event type details
+              </h1>
+            </legend>
+        
+            <div class="nhsuk-radios nhsuk-radios--inline">
+              <label class="nhsuk-label" for="email">
+                Was it an intrapartum stillbirth?
+              </label>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="inline-1" name="inline" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="inline-1">
+                  Yes
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="inline-2" name="inline" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="inline-2">
+                  No
+                </label>
+              </div>
+            </div>
+            <br>
+            <div class="nhsuk-radios nhsuk-radios--inline">
+              <label class="nhsuk-label" for="email">
+                Was it an early neonatal death?
+              </label>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                  Yes
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        
+        </div>
+
+        <a class="nhsuk-button" href="/first-contact" role="button" draggable="false">Continue</a>
+
+        <p><a href="/task-list">Return to task list</a></p>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
