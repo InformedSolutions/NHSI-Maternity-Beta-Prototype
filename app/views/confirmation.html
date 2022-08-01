@@ -5,21 +5,26 @@
 {% endblock %}
 
 {% block content %}
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
 
-      <div class="nhsuk-card-confirmation nhsuk-card--confirmation nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4">
+    <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4">
 
-        <div class="nhsuk-card-confirmation__content">
-          <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
-            SUBMISSION COMPLETE
-          </h1>          
-        </div>
+      <div class="nhsuk-card__content">
 
+        <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
+          Application complete
+        </h1>
+
+        <p class="nhsuk-u-font-size-24">
+          Your reference number
+          <br>
+          <strong class="nhsuk-u-font-size-32">HDJ2123F</strong>
+        </p>
+        
       </div>
-      <h2>
-        Your reference number: HDJ2123
-      </h2>
+
+    </div>
       <p>We have sent you a confirmation email to joe.bloggs@nhs.net.</p>
 
       <p>We have notified MBRRACE, CDOP and HSIB of this event. </p>
@@ -30,3 +35,5 @@
     </div>
   </div>
 {% endblock %}
+
+
