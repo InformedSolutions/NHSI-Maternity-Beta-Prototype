@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Confirmation page template - NHS.UK prototype kit
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <div class="nhsuk-card-confirmation nhsuk-card--confirmation nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4">
+
+        <div class="nhsuk-card-confirmation__content">
+          <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
+            SUBMISSION COMPLETE
+          </h1>          
+        </div>
+
+      </div>
+      <h2>
+        Your reference number: HDJ2123
+      </h2>
+      <p>We have sent you a confirmation email to joe.bloggs@nhs.net.</p>
+
+      <p>We have notified MBRRACE, CDOP and HSIB of this event. </p>
+
+      <p><a href>Download a copy of your answers</p></a>
+      <a class="nhsuk-button nhsuk-button--secondary" href="/event-type" role="button" draggable="false">Notify of another event</a>
+
+    </div>
+  </div>
+{% endblock %}

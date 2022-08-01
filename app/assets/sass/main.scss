@@ -9,6 +9,29 @@
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
   
+.nhsuk-card-confirmation {
+  margin-bottom: 40px;
+  background: #028a14;
+  border: 2px solid #000000;
+  position: relative;
+  /* [1] */
+  width: 100%;
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-card {
+    margin-bottom: 48px;
+  }
+}
+
+.nhsuk-card-confirmation__content {
+  padding-left: 40px;
+  padding-right: 20px;
+  padding-top: 45px;
+  padding-bottom: 20px;
+  position: center;
+  color: #ffffff;
+}
+
 
 .app-task-list {
     list-style-type: none;
