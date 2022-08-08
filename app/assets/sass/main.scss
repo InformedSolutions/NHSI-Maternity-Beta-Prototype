@@ -367,3 +367,149 @@
     padding-bottom: 11px;
   }
 }
+
+.accordion-toggle {
+  display: block;
+  text-decoration: none;
+  background-image: url(images/accordion-arrow.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 34px 68px;
+  background-position: -5px 0px;
+  padding-left: 30px;
+  height: 30px;
+  }
+  
+  .accordion-toggle:focus {
+  background-color: #fff;
+  outline: 0px;
+  }
+  
+  .arrow_up {
+  background-position: -2px -39px; /* -4 / -39 */
+  }
+  
+  .accordion-content {
+  display: none;
+  }
+  
+  .accordion-content.active {
+  display: block;
+  }
+  .date_example {
+  color: #6f777b;
+  }
+  .phase-banner {
+  width:100%
+  }
+  
+  .accordion-content {
+    display: none;
+}
+
+.accordion-content.active {
+    display: block;
+}
+
+#filterForm {
+    min-width:12em;
+}
+
+.errorlist{
+    color: #b10e1e;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.form-control {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.accordion-toggle {
+    border-bottom: 1px solid #bfc1c3;
+    padding-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.accordion-toggle {
+display: block;
+text-decoration: none;
+background-image: url(images/accordion-arrow.png);
+background-position: left center;
+background-repeat: no-repeat;
+background-size: 34px 68px;
+background-position: -5px 0px;
+padding-left: 30px;
+height: 30px;
+
+}
+
+.accordion-toggle:focus {
+background-color: #fff;
+outline: 0px;
+}
+
+.arrow_up {
+background-position: -2px -39px; /* -4 / -39 */
+}
+
+.accordion-content {
+display: none;
+}
+
+.accordion-content.active {
+display: inline-grid;
+}
+.date_example {
+color: #6f777b;
+}
+.phase-banner {
+width:100%
+}
+.four-column-div {
+      column-count: 4;
+        
+}
+.button2{
+    background-color: grey;
+    border: 1px;
+    color: white;
+    padding: 12px 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.button2:hover{
+    background-color: darkgrey;
+    color:white;
+    cursor:pointer;
+}
+
+.buttonSearch{
+    background-color: green;
+    border: 0px;
+    width: 40px;
+    height: 40px;
+}
+
+.buttonSearch:hover{
+    background-color: darkgreen;
+    cursor:pointer;
+}
+
+.buttonSearch img{
+    padding-top: 5px;
+}
+
+form.searchBar input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 80%;
+        background: #f1f1f1;
+    }
+

@@ -20,20 +20,21 @@
 <div class="nhsuk-width-container">
 
   <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+    <form method="post" class="form" action="event-type">
 
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds">
 
         <div class="nhsuk-form-group">
 
-    <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+    <fieldset class="nhsuk-fieldset" aria-describedby="event-type-hint">
       <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
         <h1 class="nhsuk-fieldset__heading">
           What type of event do you want to notify of?
         </h1>
       </legend>
 
-      <div class="nhsuk-hint" id="example-hint">
+      <div class="nhsuk-hint" id="event-type-hint">
         If you select multiple event types, they must have happened in the same event (e.g must be a mother baby pair).
       </div>
 
@@ -42,22 +43,22 @@
       <div class="nhsuk-checkboxes">
 
         <div class="nhsuk-checkboxes__item">
-          <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+          <input class="nhsuk-checkboxes__input" id="event-type-1" name="event-type" type="checkbox" value="maternal-death">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="event-type-1">
             Maternal death (whilst pregnant)
           </label>
         </div>
 
         <div class="nhsuk-checkboxes__item">
-          <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
-          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+          <input class="nhsuk-checkboxes__input" id="event-type-2" name="event-type" type="checkbox" value="phone">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="event-type-2">
             Maternal death (less than 42 days after pregnancy)
           </label>
         </div>
 
         <div class="nhsuk-checkboxes__item">
-          <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
-          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+          <input class="nhsuk-checkboxes__input" id="event-type-3" name="event-type" type="checkbox" value="phone">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="event-type-3">
             Maternal death (between 42 days and 365 after pregnancy)
           </label>
         </div>
@@ -65,8 +66,8 @@
         <h2 class="nhsuk-heading-m">Baby</h2>
 
         <div class="nhsuk-checkboxes__item">
-          <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+          <input class="nhsuk-checkboxes__input" id="event-type-4" name="event-type" type="checkbox" value="late-fetal-loss">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="event-type-4">
             Late fetal losses
           </label>
         </div>
@@ -86,8 +87,8 @@
         </div>
 
         <div class="nhsuk-checkboxes__item">
-          <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+          <input class="nhsuk-checkboxes__input" id="event-type-5" name="event-type" type="checkbox" value="stillbirth">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="event-type-5">
             Stillbirths
           </label>
         </div>
@@ -107,8 +108,8 @@
         </div>
 
         <div class="nhsuk-checkboxes__item">
-          <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+          <input class="nhsuk-checkboxes__input" id="event-type-6" name="event-type" type="checkbox" value="termination">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="event-type-6">
             Terminations of pregnancy
           </label>
         </div>
@@ -127,8 +128,8 @@
         </div>
 
         <div class="nhsuk-checkboxes__item">
-          <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+          <input class="nhsuk-checkboxes__input" id="event-type-7" name="event-type" type="checkbox" value="perinatal">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="event-type-7">
             Perinatal death (between 7 and 28 days) 
           </label>
         </div>
@@ -147,8 +148,8 @@
         </div>
 
         <div class="nhsuk-checkboxes__item">
-          <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+          <input class="nhsuk-checkboxes__input" id="event-type-8" name="event-type" type="checkbox" value="neonatal">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="event-type-8">
             Neonatal death  (less than 7 days)
           </label>
         </div>
@@ -168,8 +169,8 @@
         
 
         <div class="nhsuk-checkboxes__item">
-          <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+          <input class="nhsuk-checkboxes__input" id="event-type-9" name="event-type" type="checkbox" value="brain-injury">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="event-type-9">
             Severe brain injury (between 37 weeks and 7 days)
           </label>
         </div>
@@ -200,9 +201,13 @@
 
   </div>
 
-</form>
 
-        <a class="nhsuk-button" href="/safety-event" role="button" draggable="false">Continue</a>
+
+        <button type="submit" class="nhsuk-button">
+          Continue
+      </button>
+
+    </form>
 
       </div>
     </div>
