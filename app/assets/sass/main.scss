@@ -8,6 +8,7 @@
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
+
   
 .nhsuk-card-confirmation {
   margin-bottom: 40px;
@@ -427,13 +428,6 @@
 }
 
 .accordion-toggle {
-    border-bottom: 1px solid #bfc1c3;
-    padding-top: 5px;
-    margin-bottom: 5px;
-}
-
-
-.accordion-toggle {
 display: block;
 text-decoration: none;
 background-image: url(images/accordion-arrow.png);
@@ -443,7 +437,10 @@ background-size: 34px 68px;
 background-position: -5px 0px;
 padding-left: 30px;
 height: 30px;
-
+border-bottom: 1px solid #bfc1c3;
+padding-top: 5px;
+margin-bottom: 5px;
+float:left;
 }
 
 .accordion-toggle:focus {

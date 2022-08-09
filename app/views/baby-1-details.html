@@ -35,95 +35,8 @@
       <br>
 
         <div class="nhsuk-form-group">
-            
-          <fieldset class="nhsuk-fieldset">
-            <div class="nhsuk-radios nhsuk-radios">
-              <label class="nhsuk-label" for="email">
-                Was this a live birth?
-              </label>
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="inline-1" name="inline" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="inline-1">
-                  Yes
-                </label>
-              </div>
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="inline-2" name="inline" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="inline-2">
-                  No
-                </label>
-              </div>
-            </div>
-            </fieldset>
-            <br>
+  
 
-            <fieldset class="nhsuk-fieldset">
-              <label class="nhsuk-label" for="email">
-                Is the baby still alive?
-              </label>
-              <div class="nhsuk-radios nhsuk-radios">
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
-                  <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-                    Yes
-                  </label>
-                </div>
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
-                  <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-                    No
-                  </label>
-                </div>
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="example-inline-3" name="example-inline" type="radio" value="dont-know">
-                  <label class="nhsuk-label nhsuk-radios__label" for="example-inline-3">
-                    Don't know
-                  </label>
-                </div>
-              </div>
-              </fieldset>
-              <br>
-              <fieldset class="nhsuk-fieldset" aria-describedby="termination">
-                  <label class="nhsuk-label" for="email">
-                    Was this a termination?
-                  </label>
-          
-            
-                <div class="nhsuk-radios nhsuk-radios--conditional">
-            
-                  <div class="nhsuk-radios__item">
-                    <input class="nhsuk-radios__input" id="termination-1" name="termination" type="radio" value="email" aria-controls="conditional-termination-1" aria-expanded="false">
-                    <label class="nhsuk-label nhsuk-radios__label" for="termination-1">
-                      Yes
-                    </label>
-                  </div>
-            
-                  <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-termination-1">
-            
-                    <div class="nhsuk-form-group">
-                      <label class="nhsuk-label" for="email">
-                        Reason for termination
-                      </label>
-                      <select class="nhsuk-select" id="select-1" name="select-1">
-                        <option value="1">Congenital anomaly</option>
-                        <option value="2">Maternal health</option>
-                        <option value="3">Fatal reduction</option>
-                        <option value="4">Other</option>
-                        <option value="5">Not known</option>
-                      </select>
-                    </div>
-            
-                  </div>
-            
-                  <div class="nhsuk-radios__item">
-                    <input class="nhsuk-radios__input" id="termination-2" name="termination" type="radio" value="phone" aria-controls="conditional-termination-2" aria-expanded="false">
-                    <label class="nhsuk-label nhsuk-radios__label" for="termination-2">
-                      No
-                    </label>
-                  </div>        
-                </div>
-              </fieldset>
-              <br>
         <div class="nhsuk-radios nhsuk-radios--conditional">
           <label class="nhsuk-label" for="reporting-unit">
             Was the baby eligible for an NHS number?
@@ -240,6 +153,51 @@
             <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
           </div>
 
+        <br>
+
+          <fieldset class="nhsuk-fieldset">
+            <label class="nhsuk-label" for="input-width-10">
+            What sex was baby 1?
+            </label>
+  
+          <div class="nhsuk-form-group">
+        
+            <div class="nhsuk-radios">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                  Male
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                  Female
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="not sure">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+                  Indeterminate
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-hints-4" name="example-hints" type="radio" value="not sure">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+                  Not known
+                </label>
+              </div>
+        
+            </div>
+          </div>
+        
+        </fieldset>        
+
+
   
         </div>
       </div>
@@ -332,48 +290,7 @@
         <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
       </div>
 
-        <fieldset class="nhsuk-fieldset">
-            <label class="nhsuk-label" for="input-width-10">
-            What sex was baby 1?
-            </label>
-  
-          <div class="nhsuk-form-group">
         
-            <div class="nhsuk-radios">
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
-                  Male
-                </label>
-              </div>
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
-                  Female
-                </label>
-              </div>
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
-                  Indeterminate
-                </label>
-              </div>
-
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-4" name="example-hints" type="radio" value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
-                  Not known
-                </label>
-              </div>
-        
-            </div>
-          </div>
-        
-        </fieldset>        
-
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="select-1">
             Ethnicity
