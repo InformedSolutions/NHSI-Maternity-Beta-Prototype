@@ -23,19 +23,19 @@
   <main class="nhsuk-main-wrapper" id="maincontent" role="main">
 
     <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">      
+      <div class="nhsuk-grid-column-two-thirds">   
+        <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+          <h1 class="nhsuk-fieldset__heading">
+            Baby details
+          </h1>
+        </legend>
 
         <div class="nhsuk-form-group">
-          <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
-            <legend class="nhsuk-fieldset__legend nhsuk-label--l">
-              <h1 class="nhsuk-fieldset__heading">
-                Mother's details
-              </h1>
-            </legend>
+  
 
         <div class="nhsuk-radios nhsuk-radios--conditional">
           <label class="nhsuk-label" for="reporting-unit">
-            Was the mother eligible for an NHS number?
+            Was the baby eligible for an NHS number?
           </label>
     
         
@@ -112,42 +112,50 @@
             </div>
           </div>
           <br>
-          <h3 class="nhsuk-heading-m">Address</h3>
+         
 
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-line-1">
-              Address line 1
+          <fieldset class="nhsuk-fieldset">
+            <label class="nhsuk-label" for="input-width-10">
+            What sex was baby 1?
             </label>
-            <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+  
+          <div class="nhsuk-form-group">
+        
+            <div class="nhsuk-radios">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                  Male
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                  Female
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="not sure">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+                  Indeterminate
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-hints-4" name="example-hints" type="radio" value="not sure">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+                  Not known
+                </label>
+              </div>
+        
+            </div>
           </div>
         
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-line-2">
-              Address line 2 (optional)
-            </label>
-            <input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
-          </div>
-        
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-town">
-              Town or city
-            </label>
-            <input class="nhsuk-input nhsuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
-          </div>
-        
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-county">
-              County (optional)
-            </label>
-            <input class="nhsuk-input nhsuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
-          </div>
-        
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-postcode">
-              Postcode
-            </label>
-            <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
-          </div>
+        </fieldset>        
+
 
   
         </div>
@@ -157,17 +165,17 @@
 
       <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="input-width-10">
-          Hospital number
+          Hospital number (optional)
         </label>
         <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
       </div>
-    
+        
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="select-1">
             Ethnicity
           </label>
           <select class="nhsuk-select" id="select-1" name="select-1">
-            <option value="1" disabled> </option>
+            <option value="1" > </option>
             <option value="1" disabled>White</option>
             <option value="2">British</option>
             <option value="3">Irish</option>
@@ -194,65 +202,22 @@
           </select>
         </div>
         </fieldset>
-        </div>
 
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="select-1">
-            Marital status
+            Religion
           </label>
           <select class="nhsuk-select" id="select-1" name="select-1">
             <option value="1"> </option>
           </select>
         </div>
-
-        <div class="nhsuk-radios nhsuk-radios--conditional">
-          <label class="nhsuk-label" for="smoke">
-              During pregnancy, did the mother smoke or use tobacco?
-            </label>
-
-              
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="smoke-1" name="smoke" type="radio" value="email" aria-controls="conditional-smoke-1" aria-expanded="false">
-            <label class="nhsuk-label nhsuk-radios__label" for="smoke-1">
-              Yes
-            </label>
-          </div>
-
-          <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-smoke-1">
-
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="email">
-                How many cigarettes per day did they smoke?
-              </label>
-              <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
-            </div>
-
-          </div>
-
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="smoke-2" name="smoke" type="radio" value="phone" aria-controls="conditional-smoke-2" aria-expanded="false">
-            <label class="nhsuk-label nhsuk-radios__label" for="smoke-2">
-              No
-            </label>
-          </div>        
         
-
-        <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="smoke-3" name="smoke" type="radio" value="email" aria-controls="conditional-smoke-3" aria-expanded="false">
-          <label class="nhsuk-label nhsuk-radios__label" for="smoke-3">
-            Not known
-          </label>
         </div>
-        </div>       
-      
 
-        </fieldset>
 
-        <br> 
+        <a class="nhsuk-button" href="/brain-injury/further-details" role="button" draggable="false">Continue</a>
         
-        <a class="nhsuk-button" href="/locations" role="button" draggable="false">Continue</a>
-        
-        <p><a href="/task-list">Return to task list</a></p>
+        <p><a href="/brain-injury/task-list">Return to task list</a></p>
 
       </div>
     </div>
