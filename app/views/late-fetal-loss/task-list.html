@@ -10,31 +10,14 @@
  <br>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-      {% if eventType == 'stillbirth' %}
-
       <h1 class="nhsuk-heading-xl">
-        Notify of a stillbirth
+        Notify of a late fetal loss
       </h1>
 
-      <p>Event type: Stillbirth <a href ="../event-type">change</a><br>
-      Was the death was caused by health problems present at birth?: No <a href ="/stillbirth/stillbirth-type">change</a><br>
-      Gestational age at delivery: 37 weeks <a href ="/stillbirth/stillbirth-type">change</a></p>
-          
-      {% else %} 
-      
-      <h1 class="nhsuk-heading-xl">
-        Notify of a neonatal death
-      </h1>
-
-      <p>Event type: Neonatal death <a href ="event-type">change</a> <br>
-      Was the death was caused by health problems present at birth?: No <a href ="/stillbirth/stillbirth-type">change</a> <br>
-      Gestational age at delivery: 37 weeks <a href ="/stillbirth/stillbirth-type">change</a></p>
-
-      {% endif %}
+      <p>Event type: Late fetal loss <a href ="../event-type">change</a></p>
 
       <h2 class="nhsuk-heading-l">Section 1 - Complete within 24 hours (or next working day)</h2>
-
+      
       <div class="nhsuk-hint" id="example-hint">
         This section is used for notifying MBRRACE and your local CDOP.
       </div>
@@ -49,23 +32,12 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="safety-event" aria-describedby="read-declaration-status">
+                <a href="/safety-event" aria-describedby="read-declaration-status">
                  Patient safety event details
                 </a>
               </span>
               <strong class="nhsuk-tag nhsuk-tag--blue" id="read-declaration-status">Completed</strong>
             </li>
-            {% if eventType == 'stillbirth' %}
-            {% else %} 
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="event-details" aria-describedby="read-declaration-status">
-                 Event details
-                </a>
-              </span>
-              <strong class="nhsuk-tag nhsuk-tag--blue" id="read-declaration-status">Completed</strong>
-            </li>
-            {% endif %}
           </ul> 
         </li>
 
@@ -76,7 +48,7 @@
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="mothers-details" aria-describedby="company-information-status">
+              <a href=/mothers-details" aria-describedby="company-information-status">
               Mother's details
               </a>
             </span>
@@ -84,7 +56,7 @@
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="locations" aria-describedby="company-information-status">
+              <a href="/locations" aria-describedby="company-information-status">
               Locations involved in mother's care
               </a>
             </span>
@@ -100,7 +72,7 @@
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="multiple-babies" aria-describedby="company-information-status">
+              <a href="/multiple-babies" aria-describedby="company-information-status">
               Number of babies
               </a>
             </span>
@@ -108,7 +80,7 @@
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="baby-1-details" aria-describedby="company-information-status">
+              <a href="/baby-1-details" aria-describedby="company-information-status">
               Baby's details
               </a>
             </span>
@@ -116,7 +88,7 @@
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="baby-1-location" aria-describedby="company-information-status">
+              <a href="/baby-1-location" aria-describedby="company-information-status">
               Baby's location
               </a>
             </span>
@@ -124,7 +96,7 @@
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="locations" aria-describedby="company-information-status">
+              <a href="/locations" aria-describedby="company-information-status">
               Cause of death
               </a>
             </span>
@@ -140,7 +112,7 @@
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="household"aria-describedby="company-information-status">
+              <a href="/household"aria-describedby="company-information-status">
               Partner's details
               </a>
             </span>
@@ -156,7 +128,7 @@
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="further-details" aria-describedby="company-information-status">
+              <a href="/further-details" aria-describedby="company-information-status">
               Further event details
               </a>
             </span>
@@ -172,7 +144,7 @@
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="professionals" aria-describedby="company-information-status">
+              <a href="/professionals" aria-describedby="company-information-status">
                 Professional's details
               </a>
             </span>
@@ -188,7 +160,7 @@
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="covid-19" aria-describedby="company-information-status">
+              <a href="/covid-19" aria-describedby="company-information-status">
                 Covid-19
               </a>
             </span>
@@ -204,7 +176,7 @@
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="comorbidities" aria-describedby="company-information-status">
+              <a href="/comorbidities" aria-describedby="company-information-status">
                 Support and comorbidities
               </a>
             </span>
@@ -226,47 +198,6 @@
           </li>
         </ul>
       </li>
-      
-      <h2 class="nhsuk-heading-l">Section 2 - Complete at earliest convenience</h2>
-
-      <div class="nhsuk-hint" id="example-hint">
-        This section collects additional information required to notify HSIB.
-      </div>
-
-
-        <li>
-          <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">10. </span> HSIB consent and nominated family contact
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                  HSIB consent
-              </span>
-              <strong class="nhsuk-tag nhsuk-tag--red" id="submit-pay-status">Cannot start yet</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                  Nominated family contact
-              </span>
-              <strong class="nhsuk-tag nhsuk-tag--red" id="submit-pay-status">Cannot start yet</strong>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">11. </span> Submit section 2
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                  Review answers and submit
-              </span>
-              <strong class="nhsuk-tag nhsuk-tag--red" id="submit-pay-status">Cannot start yet</strong>
-            </li>
-          </ul>
-        </li>
       </ol>
 
       <a class="nhsuk-button nhsuk-button--secondary" href="/event-view" role="button" draggable="false">Save progress and return later</a>
@@ -275,4 +206,4 @@
     </div>
   </div>
 
-{% endblock %}
+  {% endblock %}

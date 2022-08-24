@@ -33,8 +33,10 @@
             <dt class="govuk-summary-list__key">
               Event type
             </dt>
+
+            {% if eventType == 'stillbirth' %}
             <dd class="govuk-summary-list__value">
-              Neonatal death
+              Stillbirth
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="/event-type">
@@ -42,6 +44,111 @@
               </a>
             </dd>
           </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Was the death was caused by health problems present at birth?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                No
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/safety-event">
+                  Change
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Gestational age at delivery
+              </dt>
+              <dd class="govuk-summary-list__value">
+                37 weeks 
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/safety-event">
+                  Change
+                </a>
+              </dd>
+            </div>
+
+            {% elif eventType == 'perinatal' %} 
+
+            <dd class="govuk-summary-list__value">
+              Perinatal death
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/event-type">
+                Change
+              </a>
+            </dd>
+          </div>
+
+          {% elif eventType == 'late-fetal-loss' %} 
+
+          <dd class="govuk-summary-list__value">
+            Late fetal loss
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/event-type">
+              Change
+            </a>
+          </dd>
+        </div>
+
+          
+            {% elif eventType == 'maternal' %} 
+            
+            <dd class="govuk-summary-list__value">
+              Maternal death (whilst pregnant)
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/event-type">
+                Change
+              </a>
+            </dd>
+          </div>
+
+          {% else %}
+
+          <dd class="govuk-summary-list__value">
+            Neonatal death
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/event-type">
+              Change
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Was the death was caused by health problems present at birth?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/safety-event">
+              Change
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Gestational age at delivery
+          </dt>
+          <dd class="govuk-summary-list__value">
+            37 weeks 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/safety-event">
+              Change
+            </a>
+          </dd>
+        </div>
+            
+            {% endif %}
+           
+     
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Patient safety event?
@@ -676,8 +783,20 @@
             </dd>
           </div>
         </dl>
-       
+
+        {% if eventType == 'perinatal' %}
+
+        <a class="nhsuk-button" href="/perinatal/confirmation" role="button" draggable="false">Submit</a>
+
+        {% elif eventType == 'late-fetal-loss' %}
+
+        <a class="nhsuk-button" href="/late-fetal-loss/confirmation" role="button" draggable="false">Submit</a>
+
+        {% else %}
+
           <a class="nhsuk-button" href="/confirmation-section-1" role="button" draggable="false">Submit</a>
+
+        {% endif %}
 
         </form>
 

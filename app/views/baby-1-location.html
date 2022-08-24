@@ -45,6 +45,36 @@
         
               <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
         
+                
+                {% if eventType == 'maternal' %}
+
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="email">
+                    Actual place of birth
+                  </label>
+                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+                </div>
+
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+                  No
+                </label>
+              </div>        
+            </div>
+          </fieldset>
+        
+        </div>
+
+                <a class="nhsuk-button" href="/further-details" role="button" draggable="false">Continue</a>
+
+                <p><a href="/maternal-task-list">Return to task list</a></p>
+
+        
+                {% else %} 
+
                 <div class="nhsuk-form-group">
                   <label class="nhsuk-label" for="email">
                     Actual place of birth
@@ -69,18 +99,19 @@
                   </label>
                   <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
                 </div>
-                
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="select-1">
-            Reason there was a transfer of care
-          </label>
-          <select class="nhsuk-select" id="select-1" name="select-1">
-            <option value="1">Baby discharged here for paliative care</option>
-            <option value="2">Baby was discharged home</option>
-            <option value="3">Baby was never in hospital</option>
-          </select>
-        </div>
-        </div>
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="select-1">
+                    Reason there was a transfer of care
+                  </label>
+                  <select class="nhsuk-select" id="select-1" name="select-1">
+                    <option value="1">Baby discharged here for paliative care</option>
+                    <option value="2">Baby was discharged home</option>
+                    <option value="3">Baby was never in hospital</option>
+                  </select>
+                </div>
+
+
+                </div>
         
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
@@ -96,6 +127,9 @@
         <a class="nhsuk-button" href="/cause-of-death" role="button" draggable="false">Continue</a>
 
         <p><a href="/task-list">Return to task list</a></p>
+
+        {% endif %}
+
 
 
       </div>

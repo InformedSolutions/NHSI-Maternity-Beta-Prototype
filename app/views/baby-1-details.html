@@ -160,8 +160,6 @@
           </div>
         
         </fieldset>        
-
-
   
         </div>
       </div>
@@ -174,6 +172,10 @@
         </label>
         <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
       </div>
+
+      {% if eventType == 'maternal' %}
+
+      {% else %} 
 
       <h3 class="nhsuk-heading-m">Date of death</h3>
       <div class="nhsuk-hint" id="example-hint">
@@ -207,7 +209,7 @@
         </div>
       </div>
     </fieldset>
-  
+
   </div>
 
   <div class="nhsuk-form-group">
@@ -237,7 +239,9 @@
         </div>
       </div>
     </fieldset>
-  
+
+    {% endif %}
+    
   </div>
 
       <div class="nhsuk-form-group">
@@ -299,6 +303,7 @@
         
         </div>
         </div>
+
 
 
         <a class="nhsuk-button" href="/baby-1-location" role="button" draggable="false">Continue</a>

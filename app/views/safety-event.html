@@ -65,9 +65,23 @@
         
         </div>
 
-        <a class="nhsuk-button" href="/event-details" role="button" draggable="false">Continue</a>
+        
 
-        <p><a href="/task-list">Return to task list</a></p>
+      {% if eventType == 'perinatal' %}
+
+      <a class="nhsuk-button" href="/mothers-details" role="button" draggable="false">Continue</a>
+
+      {% elif eventType == 'late-fetal-loss' %}
+
+      <a class="nhsuk-button" href="/mothers-details" role="button" draggable="false">Continue</a>
+
+      {% else %} 
+      
+      <a class="nhsuk-button" href="/event-details" role="button" draggable="false">Continue</a>
+
+      {% endif %}
+    
+      <p><a href="/task-list">Return to task list</a></p>
 
 
       </div>

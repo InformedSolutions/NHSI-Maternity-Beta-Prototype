@@ -29,7 +29,7 @@
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
               <h1 class="nhsuk-fieldset__heading">
-                Describe what happened
+                Outline the circumstances leading to notification
               </h1>
             </legend>
         
@@ -38,9 +38,19 @@
         
         </div>
 
+        {% if eventType == 'maternal' %}
+
+        <a class="nhsuk-button" href="/check-answers-section-1" role="button" draggable="false">Continue</a>
+
+        <p><a href="/maternal/task-list">Return to task list</a></p>
+
+        {% else %} 
+
         <a class="nhsuk-button" href="/professionals" role="button" draggable="false">Continue</a>
 
         <p><a href="/task-list">Return to task list</a></p>
+
+        {% endif %}
 
       </div>
     </div>

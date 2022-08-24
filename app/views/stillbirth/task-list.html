@@ -10,31 +10,16 @@
  <br>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-      {% if eventType == 'stillbirth' %}
-
       <h1 class="nhsuk-heading-xl">
         Notify of a stillbirth
       </h1>
 
-      <p>Event type: Stillbirth <a href ="../event-type">change</a><br>
-      Was the death was caused by health problems present at birth?: No <a href ="/stillbirth/stillbirth-type">change</a><br>
-      Gestational age at delivery: 37 weeks <a href ="/stillbirth/stillbirth-type">change</a></p>
-          
-      {% else %} 
-      
-      <h1 class="nhsuk-heading-xl">
-        Notify of a neonatal death
-      </h1>
-
-      <p>Event type: Neonatal death <a href ="event-type">change</a> <br>
-      Was the death was caused by health problems present at birth?: No <a href ="/stillbirth/stillbirth-type">change</a> <br>
-      Gestational age at delivery: 37 weeks <a href ="/stillbirth/stillbirth-type">change</a></p>
-
-      {% endif %}
+      <p>Event type: Stillbirth <a href ="../event-type">change</a></p>
+      <p>Was the death was caused by health problems present at birth?: No <a href ="/stillbirth/stillbirth-type">change</a></p>
+      <p>Gestational age at delivery: 37 weeks <a href ="/stillbirth/stillbirth-type">change</a></p>
 
       <h2 class="nhsuk-heading-l">Section 1 - Complete within 24 hours (or next working day)</h2>
-
+      
       <div class="nhsuk-hint" id="example-hint">
         This section is used for notifying MBRRACE and your local CDOP.
       </div>
@@ -49,23 +34,12 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="safety-event" aria-describedby="read-declaration-status">
+                <a href="/safety-event" aria-describedby="read-declaration-status">
                  Patient safety event details
                 </a>
               </span>
               <strong class="nhsuk-tag nhsuk-tag--blue" id="read-declaration-status">Completed</strong>
             </li>
-            {% if eventType == 'stillbirth' %}
-            {% else %} 
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="event-details" aria-describedby="read-declaration-status">
-                 Event details
-                </a>
-              </span>
-              <strong class="nhsuk-tag nhsuk-tag--blue" id="read-declaration-status">Completed</strong>
-            </li>
-            {% endif %}
           </ul> 
         </li>
 
@@ -275,4 +249,4 @@
     </div>
   </div>
 
-{% endblock %}
+  {% endblock %}

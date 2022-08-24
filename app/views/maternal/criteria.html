@@ -1,0 +1,115 @@
+
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+  Maternity events - single notification portal
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Maternal death details
+              </h1>
+            </legend>
+        
+            <div class="nhsuk-radios nhsuk-radios--inline">              
+              <label class="nhsuk-label" for="email">
+                Was the death was caused by suicide?
+              </label>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="suicide-1" name="suicide" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="suicide-1">
+                  Yes
+                </label>
+              </div>
+            
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="suicide-2" name="suicide" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="suicide-2">
+                  No
+                </label>
+              </div>
+            </div>
+            <br>
+          
+            <div class="nhsuk-radios nhsuk-radios--inline">
+              <label class="nhsuk-label" for="email">
+                Was it a direct maternal death?
+              </label>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="direct-death-1" name="direct-death" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="direct-death-1">
+                  Yes
+                </label>
+              </div>
+            
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="direct-death-2" name="direct-death" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="direct-death-2">
+                  No
+                </label>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="nhsuk-radios nhsuk-radios--inline">
+              <label class="nhsuk-label" for="email">
+                Was it an indirect maternal death?
+              </label>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="indirect-1" name="indirect" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="indirect-1">
+                  Yes
+                </label>
+              </div>
+            
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="indirect-2" name="indirect" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="indirect-2">
+                  No
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        
+        </div>
+
+        <br>
+
+        <a class="nhsuk-button" href="task-list" role="button" draggable="false">Continue</a>
+
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
