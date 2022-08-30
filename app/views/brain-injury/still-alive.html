@@ -1,0 +1,65 @@
+
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+  Maternity events - single notification portal
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Did the baby die within 7 days of birth?
+              </h1>
+            </legend>
+      
+        
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                Yes
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                No
+              </label>
+            </div>
+          </div>
+          </fieldset>
+        
+      <a class="nhsuk-button" href="/brain-injury/task-list" role="button" draggable="false">Continue</a>
+    
+      </div>
+    </div>
+
+  </main>
+</div>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

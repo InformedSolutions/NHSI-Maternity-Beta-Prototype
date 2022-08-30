@@ -14,7 +14,7 @@ router.post('/event-type', function (req, res) {
     req.session.eventType = req.body['event-type'];
 
     if (req.session.eventType == 'brain-injury') {
-            res.redirect('/brain-injury/task-list')
+            res.redirect('/brain-injury/still-alive')
 
         } else if (req.session.eventType == 'maternal') {
 
@@ -121,6 +121,21 @@ router.get('/stillbirth/stillbirth-type', function (req, res) {
  router.get('/safety-event', function (req, res) {
         req.session.eventType = req.session.eventType;
         res.render('safety-event', {
+            eventType: req.session.eventType,
+        });
+    });
+
+router.get('/confirmation-section-1', function (req, res) {
+        req.session.eventType = req.session.eventType;
+        res.render('confirmation-section-1', {
+            eventType: req.session.eventType,
+        });
+    });
+    
+    
+router.get('/event-details', function (req, res) {
+        req.session.eventType = req.session.eventType;
+        res.render('event-details', {
             eventType: req.session.eventType,
         });
     });

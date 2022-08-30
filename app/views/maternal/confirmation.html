@@ -27,19 +27,11 @@
     </div>
       <p>We have sent you a confirmation email to joe.bloggs@nhs.net.</p>
 
-      {% if (eventType == 'maternal') or (eventType == 'maternal-42') %}
-
       <p>We have notified MBRRACE.</p>
 
-      {% else %}
-      
-      <p>We have notified MBRRACE who will notify your local CDOP of this event. </p>
-
-      {% endif %}
-
       <p><a href>Download a copy of your answers</p></a>
-      <a class="nhsuk-button nhsuk-button--secondary" href="/task-list-section-2" role="button" draggable="false">Return to task list to complete section 2</a>
-
+      <a class="nhsuk-button nhsuk-button--secondary" href="/event-type" role="button" draggable="false">Notify of another event</a>
+      <p><a href="/home">Return to home</p></a>
     </div>
   </div>
 {% endblock %}

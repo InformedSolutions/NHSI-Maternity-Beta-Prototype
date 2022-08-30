@@ -73,6 +73,18 @@
             </label>
             <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
           </div>
+
+          {% if (eventType == 'maternal') or (eventType == 'maternal-42') or (eventType == 'brain-injury') or (eventType == 'stillbirth') or (eventType == 'neonatal') %}
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="email">
+             Middle name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+          </div>
+
+          {% else %}
+          {% endif %}
+
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="email">
              Surname
@@ -196,7 +208,7 @@
         </fieldset>
         </div>
 
-        {% if eventType == 'perinatal' %}
+        {% if eventType == 'perinatal' or eventType == 'maternal-365' %}
         {% elif eventType == 'late-fetal-loss' %}
         {% else %}
 
@@ -210,6 +222,9 @@
         </div>
 
         {% endif %}
+
+        {% if (eventType == 'maternal') or (eventType == 'maternal-42') or (eventType == 'maternal-365')  %}
+        {% else %}
 
         <div class="nhsuk-radios nhsuk-radios--conditional">
           <label class="nhsuk-label" for="smoke">
@@ -252,8 +267,9 @@
         </div>
         <br> 
 
+        {% endif %}
         
-        {% if eventType == 'maternal' %}
+        {% if (eventType == 'maternal') or (eventType == 'maternal-42') or (eventType == 'maternal-365')  %}
         
         <h3 class="nhsuk-heading-m">Date of death</h3>
         <div class="nhsuk-hint" id="example-hint">

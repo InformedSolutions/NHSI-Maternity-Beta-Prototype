@@ -46,7 +46,7 @@
               <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
         
                 
-                {% if eventType == 'maternal' %}
+                {% if (eventType == 'maternal') or (eventType == 'maternal-42') or (eventType == 'maternal-365')  %}
 
                 <div class="nhsuk-form-group">
                   <label class="nhsuk-label" for="email">

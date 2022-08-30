@@ -20,6 +20,28 @@
       <p>Event type: Stillbirth <a href ="../event-type">change</a></p>
       <p>Was the death was caused by health problems present at birth?: No <a href ="/stillbirth/stillbirth-type">change</a></p>
       <p>Gestational age at delivery: 37 weeks <a href ="/stillbirth/stillbirth-type">change</a></p>
+
+      {% elif eventType == 'maternal' %}
+
+      <h1 class="nhsuk-heading-xl">
+        Notify of a maternal death (whilst pregnant)
+      </h1>
+
+      <p>Event type: Maternal death (whilst pregnant) <a href ="../event-type">change</a><br>
+      Was the death was caused by suicide?: No <a href ="/maternal/criteria">change</a><br>
+      Was it a direct maternal death?: Yes <a href ="/maternal/criteria">change</a><br>
+      Was it an indirect maternal death?: No <a href ="/maternal/criteria">change</a></p>
+
+      {% elif eventType == 'maternal-42' %}
+
+      <h1 class="nhsuk-heading-xl">
+        Notify of a maternal death (less than 42 days after pregnancy)
+      </h1>
+
+      <p>Event type: Maternal death (less than 42 days after pregnancy) <a href ="../event-type">change</a><br>
+        Was the death was caused by suicide?: No <a href ="/maternal/criteria">change</a><br>
+        Was it a direct maternal death?: Yes <a href ="/maternal/criteria">change</a><br>
+        Was it an indirect maternal death?: No <a href ="/maternal/criteria">change</a></p>
           
       {% else %} 
       

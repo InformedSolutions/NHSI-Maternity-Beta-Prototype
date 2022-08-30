@@ -1,0 +1,69 @@
+
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+  Maternity events - single notification portal
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                What was the role of ABC Trust?
+              </h1>
+            </legend>
+      
+            <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="select-1">
+                  Role
+                </label>
+                <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="1" disabled selected> </option>
+                  <option value="2">Mother was booked here</option>
+                  <option value="3">Mother laboured here</option>
+                  <option value="4">Mother gave birth here</option>
+                  <option value="5">Baby died here</option>
+                </select>
+              </div>
+
+              </fieldset>
+              </div>
+
+            
+    
+      <a class="nhsuk-button" href="/mothers-details" role="button" draggable="false">Continue</a>
+    
+      <p><a href="/task-list">Return to task list</a></p>
+
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

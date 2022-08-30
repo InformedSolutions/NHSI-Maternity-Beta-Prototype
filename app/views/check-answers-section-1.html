@@ -24,7 +24,15 @@
 
         <br>
 
+        {% if (eventType == 'maternal') or (eventType == 'maternal-42') or (eventType == 'maternal-365')  %}
+
+        <h1 class="govuk-heading-l">Check your answers for section 1 (MBRRACE)</h1>
+
+        {% else %}
+
         <h1 class="govuk-heading-l">Check your answers for section 1 (MBRRACE and CDOP)</h1>
+
+        {% endif %}
 
         <h2 class="govuk-heading-m">Event details</h2>
 
@@ -107,6 +115,147 @@
               </a>
             </dd>
           </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Was the death was caused by suicide?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/maternal/criteria">
+                Change
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Was it a direct maternal death?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Yes 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/maternal/criteria">
+                Change
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Was it an indirect maternal death?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/maternal/criteria">
+                Change
+              </a>
+            </dd>
+          </div>
+
+          {% elif eventType == 'maternal-42' %} 
+            
+          <dd class="govuk-summary-list__value">
+            Maternal death (less than 42 days after pregnancy)
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/event-type">
+              Change
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Was the death was caused by suicide?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/maternal/criteria">
+              Change
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Was it a direct maternal death?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Yes 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/maternal/criteria">
+              Change
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Was it an indirect maternal death?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/maternal/criteria">
+              Change
+            </a>
+          </dd>
+        </div>
+
+        {% elif eventType == 'maternal-365' %} 
+            
+        <dd class="govuk-summary-list__value">
+          Maternal death (between 42 days and 365 after pregnancy)
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/event-type">
+            Change
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Was the death was caused by suicide?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          No
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/maternal/criteria">
+            Change
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Was it a direct maternal death?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes 
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/maternal/criteria">
+            Change
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Was it an indirect maternal death?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          No 
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/maternal/criteria">
+            Change
+          </a>
+        </dd>
+      </div>
 
           {% else %}
 
@@ -432,6 +581,13 @@
               </a>
             </dd>
           </div>
+
+          
+          {% if (eventType == 'maternal') or (eventType == 'maternal-42') or (eventType == 'maternal-365')  %}
+        </dl>
+
+        {% else %}
+
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Suspected cause of death
@@ -478,12 +634,15 @@
           </div>
         </dl>
 
+        {% endif %}
+
+
         <h2 class="govuk-heading-m">Further details</h2>
 
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Describe what happened
+              Outline the circumstances leading to notification
             </dt>
             <dd class="govuk-summary-list__value">
               Lorem ipsum dolor sit amet.
@@ -495,6 +654,9 @@
             </dd>
           </div>
         </dl>
+
+        {% if (eventType == 'maternal') or (eventType == 'maternal-42') or (eventType == 'maternal-365')  %}
+        {% else %}
 
         <h2 class="govuk-heading-m">Professional's details</h2>
 
@@ -784,6 +946,8 @@
           </div>
         </dl>
 
+        {% endif %}
+
         {% if eventType == 'perinatal' %}
 
         <a class="nhsuk-button" href="/perinatal/confirmation" role="button" draggable="false">Submit</a>
@@ -791,6 +955,10 @@
         {% elif eventType == 'late-fetal-loss' %}
 
         <a class="nhsuk-button" href="/late-fetal-loss/confirmation" role="button" draggable="false">Submit</a>
+
+        {% elif eventType == 'maternal-365' %}
+
+        <a class="nhsuk-button" href="/maternal/confirmation" role="button" draggable="false">Submit</a>
 
         {% else %}
 
