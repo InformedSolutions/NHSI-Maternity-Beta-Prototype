@@ -26,7 +26,7 @@ router.post('/event-type', function (req, res) {
                 
         } else if (req.session.eventType == 'maternal-365') {
 
-                res.redirect('/maternal/task-list')
+                res.redirect('/maternal/task-list-after42')
 
         } else if (req.session.eventType == 'late-fetal-loss') {
 
