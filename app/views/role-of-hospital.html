@@ -26,35 +26,51 @@
 
         <div class="nhsuk-form-group">
 
-          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+          <fieldset class="nhsuk-fieldset" aria-describedby="role">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
               <h1 class="nhsuk-fieldset__heading">
                 What was the role of ABC Trust?
               </h1>
             </legend>
       
-            <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="select-1">
-                  Role
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="hospital-role-1" name="hospital-role" type="radio" value="role" aria-controls="conditional-hospital-role-1" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="hospital-role-1">
+                  Mother was booked here
                 </label>
-                <select class="nhsuk-select" id="select-1" name="select-1">
-                <option value="1" disabled selected> </option>
-                  <option value="2">Mother was booked here</option>
-                  <option value="3">Mother laboured here</option>
-                  <option value="4">Mother gave birth here</option>
-                  <option value="5">Baby died here</option>
-                </select>
               </div>
-
-              </fieldset>
-              </div>
-
             
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="hospital-role-2" name="hospital-role" type="radio" value="role" aria-controls="conditional-hospital-role-2" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="hospital-role-2">
+                  Mother laboured here
+                </label>
+              </div>        
+            
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="hospital-role-3" name="hospital-role" type="radio" value="role" aria-controls="conditional-hospital-role-3" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="hospital-role-3">
+                  Mother gave birth here 
+                </label>
+              </div>  
+            
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="hospital-role-4" name="hospital-role" type="radio" value="role" aria-controls="conditional-hospital-role-4" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="hospital-role-4">
+                  Baby died here
+                </label>
+              </div> 
+
+            </div>
+          </fieldset>
+        
+        </div>            
     
       <a class="nhsuk-button" href="/mothers-details" role="button" draggable="false">Continue</a>
     
       <p><a href="/task-list">Return to task list</a></p>
-
 
       </div>
     </div>
