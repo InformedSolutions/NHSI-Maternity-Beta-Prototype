@@ -107,7 +107,6 @@ document.addEventListener('click', function (event) {
             <div id="filterBox" style="background-color: #cccccc; padding: 30px; padding-bottom: 1px;">
                 <div class="column-one-half form-group">
 
-
                     <div id="description">
                     <form class="searchBar">
                         <p class="nhsuk-heading-m">Search by reference number</p>
@@ -122,7 +121,7 @@ document.addEventListener('click', function (event) {
 
                 <div>
                     <form method="GET" action="" novalidate id="filterForm">
-                        <div style="width:25%; float:left;">       
+                        <div style="width:20%; float:left;">       
                             <a href="#content-3" class="accordion-toggle">Created on</a>
                             <div class="form-group accordion-content" id="content-3" style="margin-top: 5%; margin-bottom: 3%;">
                             
@@ -185,9 +184,9 @@ document.addEventListener('click', function (event) {
 
                                 </div>
                             </div>
-                            </div>
+                        </div>
 
-                            <div style="width:25%; float:left;">
+                        <div style="width:20%; float:left;">
                             <a href="#content-10" class="accordion-toggle ">Created by</a>
                             <div class="form-group accordion-content " id="content-10" style="margin-bottom: 3%;">
 
@@ -204,9 +203,9 @@ document.addEventListener('click', function (event) {
 
                                 </select>
                             </div>
-                            </div>
+                        </div>
 
-                            <div style="width:25%; float:left;">
+                        <div style="width:20%; float:left;">
                             <a href="#content-4" class="accordion-toggle ">Event date</a>
                             <div class="form-group accordion-content " id="content-4" style="margin-top: 5%;margin-bottom: 3%;">
                                 <label class="form-label" styling="margin-top: 20px !important;"><label for="id_filtered_incident_date_before_0">Event date before</label></label>
@@ -267,32 +266,29 @@ document.addEventListener('click', function (event) {
 
                                 </div>
                             </div>
-                            </div>
+                        </div>
 
-                            <div style="width:25%; float:left">
+                        <div style="width:20%; float:left">
                             <a href="#content-5" class="accordion-toggle ">Event type</a>
                             <div class="form-group accordion-content " id="content-5" style="margin-bottom: 3%;">
 
                                 <div id="id_filtered_physical_harm_0-group" class="multiple-choice" style="margin-top: 3%;">
                                     <input type="checkbox" name="filtered_physical_harm" value="5" id="id_filtered_physical_harm_0" class="form-control">
 
-                                    <label id="id_filtered_physical_harm_0-label" for="id_filtered_physical_harm_0">No physical harm</label>
+                                    <label id="id_filtered_physical_harm_0-label" for="id_filtered_physical_harm_0">Maternal death (whilst pregnant)</label>
                                 </div>
-
-
-
 
                                 <div id="id_filtered_physical_harm_1-group" class="multiple-choice" style="margin-top: 3%;">
                                     <input type="checkbox" name="filtered_physical_harm" value="4" id="id_filtered_physical_harm_1" class="form-control">
 
-                                    <label id="id_filtered_physical_harm_1-label" for="id_filtered_physical_harm_1">Low physical harm</label>
+                                    <label id="id_filtered_physical_harm_1-label" for="id_filtered_physical_harm_1">Maternal death (less than 42 days after pregnancy)</label>
                                 </div>
 
 
                                 <div id="id_filtered_physical_harm_2-group" class="multiple-choice" style="margin-top: 3%;">
                                     <input type="checkbox" name="filtered_physical_harm" value="3" id="id_filtered_physical_harm_2" class="form-control">
 
-                                    <label id="id_filtered_physical_harm_2-label" for="id_filtered_physical_harm_2">Moderate physical harm</label>
+                                    <label id="id_filtered_physical_harm_2-label" for="id_filtered_physical_harm_2">Maternal death (between 42 and 365 days after pregnancy)<label>
                                 </div>
 
 
@@ -300,24 +296,67 @@ document.addEventListener('click', function (event) {
                                 <div id="id_filtered_physical_harm_3-group" class="multiple-choice" style="margin-top: 3%;">
                                     <input type="checkbox" name="filtered_physical_harm" value="2" id="id_filtered_physical_harm_3" class="form-control">
 
-                                    <label id="id_filtered_physical_harm_3-label" for="id_filtered_physical_harm_3">Severe physical harm</label>
+                                    <label id="id_filtered_physical_harm_3-label" for="id_filtered_physical_harm_3">Late fetal loss</label>
                                 </div>
 
 
                                 <div id="id_filtered_physical_harm_4-group" class="multiple-choice" style="margin-top: 3%;">
                                     <input type="checkbox" name="filtered_physical_harm" value="1" id="id_filtered_physical_harm_4" class="form-control">
 
-                                    <label id="id_filtered_physical_harm_4-label" for="id_filtered_physical_harm_4">Fatal</label>
+                                    <label id="id_filtered_physical_harm_4-label" for="id_filtered_physical_harm_4">Stillbirth</label>
+                                </div>
+
+                                <div id="id_filtered_physical_harm_4-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="1" id="id_filtered_physical_harm_4" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_4-label" for="id_filtered_physical_harm_4">Perinatal death</label>
+                                </div>
+
+                                <div id="id_filtered_physical_harm_4-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="1" id="id_filtered_physical_harm_4" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_4-label" for="id_filtered_physical_harm_4">Neonatal death</label>
+                                </div>
+
+                                <div id="id_filtered_physical_harm_4-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="1" id="id_filtered_physical_harm_4" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_4-label" for="id_filtered_physical_harm_4">Severe brain injury</label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div style="width:20%; float:left">
+                            <a href="#content-6" class="accordion-toggle ">Status</a>
+                            <div class="form-group accordion-content " id="content-6" style="margin-bottom: 3%;">
+
+                                <div id="id_filtered_physical_harm_0-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="5" id="id_filtered_physical_harm_0" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_0-label" for="id_filtered_physical_harm_0">Draft started<label>
+                                </div>
+
+                                <div id="id_filtered_physical_harm_1-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="4" id="id_filtered_physical_harm_1" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_1-label" for="id_filtered_physical_harm_1">Section 1 submitted<label>
+                                </div>
+
+
+                                <div id="id_filtered_physical_harm_2-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="3" id="id_filtered_physical_harm_2" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_2-label" for="id_filtered_physical_harm_2">Section 2 submitted<label>
                                 </div>
                             </div>
-                            </div>
-                            
+                        </div>                            
                 
-                            </div>
+                </div>
 
-                            <br>
+                    <br>
 
-                        <div class="form-group" style="padding-top:10px">
+                        <div class="form-group" style="padding-top:10px; padding-right:90%">
                             <input type="hidden" name="ods" value="Z01">
                             <br>
                             <input class="nhsuk-button" type="submit" value="Filter results" id="submit-button"> <br>
@@ -339,12 +378,25 @@ document.addEventListener('click', function (event) {
                         <th class="govuk-table__header" width="15%" scope="col" style="padding-top:0;">Created by</th>
                         <th class="govuk-table__header" width="10%" scope="col" style="padding-top:0;">Event date</th>
                         <th class="govuk-table__header" width="10%" scope="col" style="padding-top:0;">Event type</th>
-                        <th class="govuk-table__header" width="10%" scope="col" style="padding-top:0;">Status</th>
+                        <th class="govuk-table__header" width="10%" scope="col" style="padding-top:0;">Section 1</th>
+                        <th class="govuk-table__header" width="10%" scope="col" style="padding-top:0;">Section 2</th>
                         <th class="govuk-table__header" width="10%" scope="col" style="padding-top:0;"> </th>
                     </tr>
                 </thead>
                 <tbody class="govuk-table__body">
 
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">146-924-540</td>
+                        <td class="govuk-table__cell">30 Oct 2022 10:43</td>
+                        <td class="govuk-table__cell">John Jones</td>
+                        <td class="govuk-table__cell">30 Oct 2022</td>
+                        <td class="govuk-table__cell">Maternal death (whilst pregnant)</td>
+                        <td class="govuk-table__cell">Draft started</td>
+                        <td class="govuk-table__cell">Not started </td>
+                        <td class="govuk-table__cell">
+                            <a href="/maternal/task-list" style="margin-top: 0;">View</a>
+                        </td>
+                    </tr>
 
                     <tr class="govuk-table__row">
                         <td class="govuk-table__cell">146-924-540</td>
@@ -352,21 +404,10 @@ document.addEventListener('click', function (event) {
                         <td class="govuk-table__cell">Hope Bristow</td>
                         <td class="govuk-table__cell">27 Oct 2022</td>
                         <td class="govuk-table__cell">Severe brain injury</td>
-                        <td class="govuk-table__cell">Submitted</td>
+                        <td class="govuk-table__cell">Submitted - 27 Oct 2022</td>
+                        <td class="govuk-table__cell">Not started</td>
                         <td class="govuk-table__cell">
-                            <a href="/submitted-read-only" style="margin-top: 0;">View</a>
-                        </td>
-                    </tr>
-
-                    <tr class="govuk-table__row">
-                        <td class="govuk-table__cell">146-924-540</td>
-                        <td class="govuk-table__cell">28 Apr 2021 10:43</td>
-                        <td class="govuk-table__cell">John Jones</td>
-                        <td class="govuk-table__cell">28 Apr 2021</td>
-                        <td class="govuk-table__cell">Maternal death (whilst pregnant)</td>
-                        <td class="govuk-table__cell">Draft started</td>
-                        <td class="govuk-table__cell">
-                            <a href="/maternal/task-list" style="margin-top: 0;">View</a>
+                            <a href="/submitted-section-1" style="margin-top: 0;">View</a>
                         </td>
                     </tr>
 
@@ -376,9 +417,10 @@ document.addEventListener('click', function (event) {
                         <td class="govuk-table__cell">Joe Bloggs</td>
                         <td class="govuk-table__cell">28 Apr 2021</td>
                         <td class="govuk-table__cell">Severe brain injury</td>
-                        <td class="govuk-table__cell">Section 1 submitted</td>
+                        <td class="govuk-table__cell">Submitted - 28 Apr 2021</td>
+                        <td class="govuk-table__cell">Submitted - 03 Mar 2021</td>
                         <td class="govuk-table__cell">
-                            <a href="/submitted-section-1" style="margin-top: 0;">View</a>
+                            <a href="/submitted-read-only" style="margin-top: 0;">View</a>
                         </td>
                     </tr>
 
