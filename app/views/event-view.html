@@ -118,10 +118,10 @@ document.addEventListener('click', function (event) {
 
                 <br>
 
-
-                <div>
                     <form method="GET" action="" novalidate id="filterForm">
-                        <div style="width:20%; float:left;">       
+                    <div class="flex-container">
+                        <div>
+                        <div style="width:25%; float:left;">       
                             <a href="#content-3" class="accordion-toggle">Created on</a>
                             <div class="form-group accordion-content" id="content-3" style="margin-top: 5%; margin-bottom: 3%;">
                             
@@ -185,9 +185,9 @@ document.addEventListener('click', function (event) {
                                 </div>
                             </div>
                         </div>
-
-                        <div style="width:20%; float:left;">
+                        <div style="width:25%; float:left;">
                             <a href="#content-10" class="accordion-toggle ">Created by</a>
+                            <br><br>
                             <div class="form-group accordion-content " id="content-10" style="margin-bottom: 3%;">
 
                                 <select class="form-control" style="margin-top: 3%;">
@@ -201,7 +201,7 @@ document.addEventListener('click', function (event) {
                             </div>
                         </div>
 
-                        <div style="width:20%; float:left;">
+                        <div style="width:25%; float:left;">
                             <a href="#content-4" class="accordion-toggle ">Event date</a>
                             <div class="form-group accordion-content " id="content-4" style="margin-top: 5%;margin-bottom: 3%;">
                                 <label class="form-label" styling="margin-top: 20px !important;"><label for="id_filtered_incident_date_before_0">Event date before</label></label>
@@ -264,7 +264,7 @@ document.addEventListener('click', function (event) {
                             </div>
                         </div>
 
-                        <div style="width:20%; float:left">
+                        <div style="width:25%; float:left">
                             <a href="#content-5" class="accordion-toggle ">Event type</a>
                             <div class="form-group accordion-content " id="content-5" style="margin-bottom: 3%;">
 
@@ -322,9 +322,11 @@ document.addEventListener('click', function (event) {
 
                             </div>
                         </div>
-
-                        <div style="width:20%; float:left">
+                        </div>
+                        <div>
+                        <div style="width:33%; float:left">
                             <a href="#content-6" class="accordion-toggle ">Status</a>
+                            <br><br>
                             <div class="form-group accordion-content " id="content-6" style="margin-bottom: 3%;">
 
                                 <div id="id_filtered_physical_harm_0-group" class="multiple-choice" style="margin-top: 3%;">
@@ -346,19 +348,138 @@ document.addEventListener('click', function (event) {
                                     <label id="id_filtered_physical_harm_2-label" for="id_filtered_physical_harm_2">Section 2 submitted<label>
                                 </div>
                             </div>
-                        </div>                            
-                
-                </div>
+                        </div> 
+                        
+                        <div style="width:33%; float:left;">
+                            <a href="#content-7" class="accordion-toggle ">Section 1 submitted date</a>
+                            <div class="form-group accordion-content " id="content-7" style="margin-top: 5%;margin-bottom: 3%;">
+                                <label class="form-label" styling="margin-top: 20px !important;"><label for="id_filtered_incident_date_before_0">Event date before</label></label>
+                                <label class="form-label date_example">For example 20/04/2020</label>
 
-                    <br>
+                                <div class="form-date">
 
-                        <div class="form-group" style="padding-top:10px; padding-right:90%">
+                                    <div class="form-group form-group-day">
+                                        <label id="id_filtered_incident_date_before_0-label" class="form-label" for="id_filtered_incident_date_before_0">Day</label>
+                                        <input type="number" name="filtered_incident_date_before_0" min="1" max="31" id="id_filtered_incident_date_before_0" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-month">
+                                        <label id="id_filtered_incident_date_before_1-label" class="form-label" for="id_filtered_incident_date_before_1">Month</label>
+                                        <input type="number" name="filtered_incident_date_before_1" min="1" max="12" id="id_filtered_incident_date_before_1" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-year">
+                                        <label id="id_filtered_incident_date_before_2-label" class="form-label" for="id_filtered_incident_date_before_2">Year</label>
+                                        <input type="number" name="filtered_incident_date_before_2" min="1900" max="2021" id="id_filtered_incident_date_before_2" class="form-control">
+
+
+                                    </div>
+
+                                </div>
+
+                                <br><br><br><br>
+
+                                <label class="form-label" styling="margin-top: 20px !important;"><label for="id_filtered_incident_date_after_0">Event date after</label></label>
+                                <label class="form-label date_example">For example 20/04/2020</label>
+
+                                <div class="form-date">
+
+                                    <div class="form-group form-group-day">
+                                        <label id="id_filtered_incident_date_after_0-label" class="form-label" for="id_filtered_incident_date_after_0">Day</label>
+                                        <input type="number" name="filtered_incident_date_after_0" min="1" max="31" id="id_filtered_incident_date_after_0" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-month">
+                                        <label id="id_filtered_incident_date_after_1-label" class="form-label" for="id_filtered_incident_date_after_1">Month</label>
+                                        <input type="number" name="filtered_incident_date_after_1" min="1" max="12" id="id_filtered_incident_date_after_1" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-year">
+                                        <label id="id_filtered_incident_date_after_2-label" class="form-label" for="id_filtered_incident_date_after_2">Year</label>
+                                        <input type="number" name="filtered_incident_date_after_2" min="1900" max="2021" id="id_filtered_incident_date_after_2" class="form-control">
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div style="width:34%; float:left;">
+                            <a href="#content-8" class="accordion-toggle ">Section 2 submitted date</a>
+                            <div class="form-group accordion-content " id="content-8" style="margin-top: 5%;margin-bottom: 3%;">
+                                <label class="form-label" styling="margin-top: 20px !important;"><label for="id_filtered_incident_date_before_0">Event date before</label></label>
+                                <label class="form-label date_example">For example 20/04/2020</label>
+
+                                <div class="form-date">
+
+                                    <div class="form-group form-group-day">
+                                        <label id="id_filtered_incident_date_before_0-label" class="form-label" for="id_filtered_incident_date_before_0">Day</label>
+                                        <input type="number" name="filtered_incident_date_before_0" min="1" max="31" id="id_filtered_incident_date_before_0" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-month">
+                                        <label id="id_filtered_incident_date_before_1-label" class="form-label" for="id_filtered_incident_date_before_1">Month</label>
+                                        <input type="number" name="filtered_incident_date_before_1" min="1" max="12" id="id_filtered_incident_date_before_1" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-year">
+                                        <label id="id_filtered_incident_date_before_2-label" class="form-label" for="id_filtered_incident_date_before_2">Year</label>
+                                        <input type="number" name="filtered_incident_date_before_2" min="1900" max="2021" id="id_filtered_incident_date_before_2" class="form-control">
+
+
+                                    </div>
+
+                                </div>
+
+                                <br><br><br><br>
+
+                                <label class="form-label" styling="margin-top: 20px !important;"><label for="id_filtered_incident_date_after_0">Event date after</label></label>
+                                <label class="form-label date_example">For example 20/04/2020</label>
+
+                                <div class="form-date">
+
+                                    <div class="form-group form-group-day">
+                                        <label id="id_filtered_incident_date_after_0-label" class="form-label" for="id_filtered_incident_date_after_0">Day</label>
+                                        <input type="number" name="filtered_incident_date_after_0" min="1" max="31" id="id_filtered_incident_date_after_0" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-month">
+                                        <label id="id_filtered_incident_date_after_1-label" class="form-label" for="id_filtered_incident_date_after_1">Month</label>
+                                        <input type="number" name="filtered_incident_date_after_1" min="1" max="12" id="id_filtered_incident_date_after_1" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-year">
+                                        <label id="id_filtered_incident_date_after_2-label" class="form-label" for="id_filtered_incident_date_after_2">Year</label>
+                                        <input type="number" name="filtered_incident_date_after_2" min="1900" max="2021" id="id_filtered_incident_date_after_2" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="form-group" style="padding-top:10px">
                             <input type="hidden" name="ods" value="Z01">
-                            <br>
                             <input class="nhsuk-button" type="submit" value="Filter results" id="submit-button"> <br>
                             <a href="/event-view">Clear filters</a>
                         </div>
+                        </div>
                         <br>
+
 
                     </form>
                 </div>
