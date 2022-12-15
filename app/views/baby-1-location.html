@@ -27,13 +27,26 @@
         <div class="nhsuk-form-group">
 
           <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
-            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+  
+            <legend class="nhsuk-fieldset__legend nhsuk-label--l">
               <h1 class="nhsuk-fieldset__heading">
-                Was the baby born at a different location?
+                Baby 1 Locations
               </h1>
             </legend>
+
+            <label class="nhsuk-label" for="email">
+              Intended place of birth at booking:
+            </label>
+            <div class="nhsuk-hint">
+              John Radcliffe Hospital, Oxford University Hospitals NHS Trust
+            </div>
+            <br>
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              <h3 class="nhsuk-fieldset__heading">
+                Was the baby born at a different location?
+              </h3>
+            </legend>
       
-        
             <div class="nhsuk-radios nhsuk-radios--conditional">
         
               <div class="nhsuk-radios__item">
@@ -88,10 +101,25 @@
                   <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
                 </div>
                 <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="email">
+                  <label class="nhsuk-label" for="select-1">
                     Type of unit                 
                   </label>
-                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+                  <select class="nhsuk-select" id="select-1" name="select-1">
+                    <option value="0" disabled>Select</option>
+                    <option value="1">Freestanding midwifery unit</option>
+                    <option value="2">Alongside midwifery unit </option>
+                    <option value="3">Labour ward </option>
+                    <option value="4">Neonatal unit </option>
+                    <option value="5">Paediatric unit </option>
+                    <option value="6">PCIU</option>
+                    <option value="7">Theatre</option>
+                    <option value="8">A&E</option>
+                    <option value="9">Hospice</option>
+                    <option value="10">Home</option>
+                    <option value="11">In transit</option>
+                    <option value="12">Other</option>
+                    <option value="13">Not known</option>
+                  </select>
                 </div>
                 <div class="nhsuk-form-group">
                   <label class="nhsuk-label" for="email">
