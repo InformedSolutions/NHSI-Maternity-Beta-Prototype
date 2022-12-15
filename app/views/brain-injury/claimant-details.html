@@ -29,42 +29,16 @@
           <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
             <legend class="nhsuk-fieldset__legend nhsuk-label--l">
               <h1 class="nhsuk-fieldset__heading">
-                Claimant details
+                Parent/Guardian details
               </h1>
             </legend>
-
-            <div class="nhsuk-radios nhsuk-radios--inline">
-              <label class="nhsuk-label" for="email">
-                Is the claimant someone other than the injured party?
-              </label>
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="inline-1" name="inline" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="inline-1">
-                  Yes
-                </label>
-              </div>
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="inline-2" name="inline" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="inline-2">
-                  No
-                </label>
-              </div>
-            </div>
-          </div>
-
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="name">
-                Title
-              </label>
-              <input class="nhsuk-input nhsuk-input--width-10" id="surname" name="test-width-10" type="text">
             </div>
 
             <div class="nhsuk-form-group">
               <label class="nhsuk-label" for="email">
                 First name
               </label>
-              <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="test-width-10" type="text">
+              <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="PG-first-name" type="text">
             </div>
     
             <div class="nhsuk-form-group">
@@ -80,21 +54,43 @@
               </label>
               <input class="nhsuk-input nhsuk-input--width-10" id="surname" name="test-width-10" type="text">
             </div>
-
             <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="name">
-                National insurance number
+              <label class="nhsuk-label" for="select-1">
+                Marital status
               </label>
-              <input class="nhsuk-input nhsuk-input--width-10" id="surname" name="test-width-10" type="text">
+              <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="1">Single</option>
+                <option value="2">Married</option>
+                <option value="3">Divorced</option>
+                <option value="4">Civil partnership</option>
+                <option value="5">Widowed</option>
+              </select>
             </div>
-
             <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="name">
-                NHS number
+              <label class="nhsuk-label" for="select-1">
+                Relationship to injured party
               </label>
-              <input class="nhsuk-input nhsuk-input--width-10" id="surname" name="test-width-10" type="text">
+              <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="2">Mother</option>
+                <option value="3">Father</option>
+                <option value="3">Legal guardian</option>
+              </select>
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="select-1">
+                What is the family's preferred language?
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="2">English</option>
+                <option value="3">Other values to be agreed</option>
+              </select>
             </div>
             
+            <br>
+
+          </fieldset>
+
+          <br>
            
             <h3 class="nhsuk-heading-m">Address</h3>
             <div class="nhsuk-form-group">
@@ -127,53 +123,14 @@
               </label>
               <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
             </div>
-
             <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="phone-number">
-                Telephone number
+              <label class="nhsuk-label" for="address-country">
+                Country (optional)
               </label>
-              <input class="nhsuk-input nhsuk-input--width-10" id="phone-number" name="test-width-10" type="text">
-            </div>
-            
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="reporting-trust">
-                Email address
-              </label>
-              <input class="nhsuk-input nhsuk-input--width-10" id="email-address" name="test-width-10" type="text">
+              <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
             </div>
 
-            <div class="nhsuk-radios nhsuk-radios--inline">
-              <label class="nhsuk-label" for="reporting-trust">
-                Is the claimant represented by solicitors?
-              </label>
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-                  Yes
-                </label>
-              </div>
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-                  No
-                </label>
-              </div>
-            </div>
-
-            <br>
-            
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="reporting-trust">
-                Claim reference number
-              </label>
-              <input class="nhsuk-input nhsuk-input--width-10" id="email-address" name="test-width-10" type="text">
-            </div>
-
-          </fieldset>
-
-          <br>
-
-          <a class="nhsuk-button" href="/brain-injury/check-answers-section-2" role="button" draggable="false">Continue</a>
+          <a class="nhsuk-button" href="/brain-injury/claim-details" role="button" draggable="false">Continue</a>
         
         <p><a href="/brain-injury/task-list">Return to task list</a></p>
 
