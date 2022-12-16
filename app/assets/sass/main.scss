@@ -9,6 +9,10 @@
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
 
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
   
 .nhsuk-card-confirmation {
   margin-bottom: 40px;
