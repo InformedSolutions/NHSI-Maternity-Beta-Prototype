@@ -111,6 +111,13 @@ router.get('/maternal/task-list', function (req, res) {
         });
     });
     
+router.get('/maternal/task-list-after42', function (req, res) {
+    req.session.eventType = req.session.eventType;
+    res.render('maternal/task-list-after42', {
+        eventType: req.session.eventType,
+    });
+});
+    
 router.get('/stillbirth/stillbirth-type', function (req, res) {
         req.session.eventType = req.session.eventType;
         res.render('stillbirth/stillbirth-type', {
