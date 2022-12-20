@@ -45,7 +45,6 @@ router.post('/event-type', function (req, res) {
         } else if (req.session.eventType == 'neonatal') {
 
                 res.redirect('/stillbirth/stillbirth-type')
-        
 
     } else {
             res.redirect('/task-list')
@@ -146,7 +145,15 @@ router.get('/event-details', function (req, res) {
             eventType: req.session.eventType,
         });
     });
-    
-    
-    
-    
+
+router.post('/brain-injury/investigation-details', function (req, res) {
+    req.session.correspondenceType = req.session.data['correspondence-type'];
+
+    if (req.session.correspondenceType == 'correspondence-y') {
+        res.redirect('/brain-injury/investigation-details-further')
+    }
+    else if (req.session.correspondenceType == 'correspondence-n') {
+        res.redirect('/brain-injury/task-list-section-2-incomplete')
+    }
+})
+     

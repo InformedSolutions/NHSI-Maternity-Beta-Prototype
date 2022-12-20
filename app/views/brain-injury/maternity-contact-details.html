@@ -1,0 +1,83 @@
+
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">      
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+            <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Trust's maternity contact details
+              </h1>
+            </legend>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="email">
+                First name
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="PG-first-name" type="text">
+            </div>
+    
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="name">
+                Surname
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="surname" name="test-width-10" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="name">
+                Email
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="surname" name="test-width-10" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="name">
+                Internal Reference number
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="surname" name="test-width-10" type="text">
+            </div>
+            
+            <br>
+
+          </fieldset>
+
+          <br>  
+          <a class="nhsuk-button" href="/brain-injury/investigation-details" role="button" draggable="false">Continue</a>
+        
+        <p><a href="/brain-injury/task-list">Return to task list</a></p>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
