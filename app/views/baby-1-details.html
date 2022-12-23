@@ -39,18 +39,51 @@
           {% if (eventType == 'brain-injury') %}
           {% else %}
 
-          <div class="nhsuk-radios nhsuk-radios--inline">
+          <div class="nhsuk-radios nhsuk-radios--conditional">
             <label class="nhsuk-label" for="email">
               Was this a live birth?
             </label>
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="direct-death-1" name="direct-death" type="radio" value="yes">
+              <input class="nhsuk-radios__input" id="live-birth-1" name="live-birth" type="radio" value="yes" aria-controls="conditional-live-birth-1" aria-expanded="false">
               <label class="nhsuk-label nhsuk-radios__label" for="direct-death-1">
                 Yes
               </label>
             </div>
+
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-live-birth-1">
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="email">
+                  Is the baby still alive?
+                </label>
+                
+                <div class="nhsuk-radios">
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios_input" id="still-alive-1" name="still-alive" type="radio" value="yes">
+                    <label class="nhsuk-label nhsuk-radios__label" for="still-alive-1">
+                      Yes
+                    </label>
+                  </div>
+
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios_input" id="still-alive-2" name="still-alive" type="radio" value="no">
+                    <label class="nhsuk-label nhsuk-radios__label" for="still-alive-2">
+                      No
+                    </label>
+                  </div>
+
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios_input" id="still-alive-3" name="still-alive" type="radio" value="not-known">
+                    <label class="nhsuk-label nhsuk-radios__label" for="still-alive-3">
+                      Not known
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="direct-death-2" name="direct-death" type="radio" value="no">
+              <input class="nhsuk-radios__input" id="live-birth-2" name="live-birth" type="radio" value="no" aria-controls="conditional-live-birth-2" aria-expanded="false">
               <label class="nhsuk-label nhsuk-radios__label" for="direct-death-2">
                 No
               </label>
@@ -59,19 +92,67 @@
 
           <br>
 
-          <div class="nhsuk-radios nhsuk-radios--inline">
+          <div class="nhsuk-radios nhsuk-radios--conditional">
             <label class="nhsuk-label" for="email">
               Was this a termination?
             </label>
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="direct-death-1" name="direct-death" type="radio" value="yes">
-              <label class="nhsuk-label nhsuk-radios__label" for="direct-death-1">
+              <input class="nhsuk-radios__input" id="termination" name="termination" type="radio" value="yes" aria-controls="conditional-termination-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="termination-1">
                 Yes
               </label>
             </div>
+
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-termination-1">
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="email">
+                  What was the reason for the termination?
+                </label>
+                
+                <div class="nhsuk-radios">
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios_input" id="termination-1" name="termination" type="radio" value="yes">
+                    <label class="nhsuk-label nhsuk-radios__label" for="termination-1">
+                      Congenital anomaly
+                    </label>
+                  </div>
+
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios_input" id="termination-2" name="termination" type="radio" value="no">
+                    <label class="nhsuk-label nhsuk-radios__label" for="termination-2">
+                      Maternal health 
+                    </label>
+                  </div>
+
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios_input" id="termination-3" name="termination" type="radio" value="not-known">
+                    <label class="nhsuk-label nhsuk-radios__label" for="termination-3">
+                      Fetal reduction 
+                    </label>
+                  </div>
+
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios_input" id="termination-4" name="termination" type="radio" value="not-known">
+                    <label class="nhsuk-label nhsuk-radios__label" for="termination-4">
+                      Other 
+                    </label>
+                  </div>
+
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios_input" id="termination-5" name="termination" type="radio" value="not-known">
+                    <label class="nhsuk-label nhsuk-radios__label" for="termination-5">
+                      Not known 
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="direct-death-2" name="direct-death" type="radio" value="no">
-              <label class="nhsuk-label nhsuk-radios__label" for="direct-death-2">
+              <input class="nhsuk-radios__input" id="termination" name="termination" type="radio" value="no" aria-controls="conditional-termination-2" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="termnination-2">
                 No
               </label>
             </div>
@@ -79,42 +160,15 @@
 
           <br>
 
-          {% endif %}
-
-        <div class="nhsuk-radios nhsuk-radios--conditional">
-          <label class="nhsuk-label" for="reporting-unit">
-            Was the baby eligible for an NHS number?
-          </label>
-    
-        
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email" aria-controls="conditional-contact-1" aria-expanded="false">
-            <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
-              Yes
+          {% endif %}    
+            
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="email">
+              NHS number (if known)
             </label>
+            <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
           </div>
-    
-          <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
-    
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="email">
-               NHS number
-              </label>
-              <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
-            </div>
-    
-          </div>
-    
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
-            <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
-              No
-            </label>
-          </div>        
-       
-
-        <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-2">
-    
+            
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="email">
              Name
@@ -165,7 +219,7 @@
 
           <fieldset class="nhsuk-fieldset">
             <label class="nhsuk-label" for="input-width-10">
-            What sex was baby 1?
+            Sex
             </label>
   
           <div class="nhsuk-form-group">
@@ -204,15 +258,13 @@
           </div>
         
         </fieldset>        
-  
-        </div>
-      </div>
+
 
       <br>
 
       <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="input-width-10">
-          Hospital number (optional)
+          Hospital number (if known)
         </label>
         <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
       </div>
