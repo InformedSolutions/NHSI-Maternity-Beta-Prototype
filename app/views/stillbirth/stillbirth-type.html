@@ -81,8 +81,15 @@
 
         <br>
 
+        {% if eventType == 'stillbirth' %}
+
         <a class="nhsuk-button" href="task-list" role="button" draggable="false">Continue</a>
 
+        {% else %}
+
+        <a class="nhsuk-button" href="/neonatal/task-list" role="button" draggable="false">Continue</a>
+
+        {% endif %}
 
       </div>
     </div>
