@@ -157,3 +157,15 @@ router.post('/brain-injury/investigation-details', function (req, res) {
     }
 })
      
+
+router.post('/household', function (req, res) {
+    req.session.correspondenceType = req.session.data['answer'];
+
+    if (req.session.correspondenceType == 'yes') {
+        res.redirect('/household-further')
+    }
+    else if (req.session.correspondenceType == 'no') {
+        res.redirect('/further-details')
+    }
+})
+     

@@ -38,11 +38,12 @@
 
           {% if (eventType == 'brain-injury') %}
           {% else %}
-
-          <div class="nhsuk-radios nhsuk-radios--conditional">
+          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
             <label class="nhsuk-label" for="email">
               Was this a live birth?
             </label>
+
+          <div class="nhsuk-radios nhsuk-radios--conditional">
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="live-birth-1" name="live-birth" type="radio" value="yes" aria-controls="conditional-live-birth-1" aria-expanded="false">
               <label class="nhsuk-label nhsuk-radios__label" for="direct-death-1">
@@ -51,36 +52,36 @@
             </div>
 
             <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-live-birth-1">
-
+              
               <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="email">
-                  Is the baby still alive?
-                </label>
-                
                 <div class="nhsuk-radios">
-                  <div class="nhsuk-radios__item">
-                    <input class="nhsuk-radios_input" id="still-alive-1" name="still-alive" type="radio" value="yes">
-                    <label class="nhsuk-label nhsuk-radios__label" for="still-alive-1">
-                      Yes
-                    </label>
-                  </div>
+                  <label class="nhsuk-label" for="email">
+                    Is the baby still alive?
+                  </label>
 
-                  <div class="nhsuk-radios__item">
-                    <input class="nhsuk-radios_input" id="still-alive-2" name="still-alive" type="radio" value="no">
-                    <label class="nhsuk-label nhsuk-radios__label" for="still-alive-2">
-                      No
-                    </label>
-                  </div>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios_input" id="still-alive-1" name="still-alive" type="radio" value="yes">
+                  <label class="nhsuk-label nhsuk-radios__label" for="still-alive-1">
+                    Yes
+                  </label>
+                </div>
 
-                  <div class="nhsuk-radios__item">
-                    <input class="nhsuk-radios_input" id="still-alive-3" name="still-alive" type="radio" value="not-known">
-                    <label class="nhsuk-label nhsuk-radios__label" for="still-alive-3">
-                      Not known
-                    </label>
-                  </div>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios_input" id="still-alive-2" name="still-alive" type="radio" value="no">
+                  <label class="nhsuk-label nhsuk-radios__label" for="still-alive-2">
+                    No
+                  </label>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios_input" id="still-alive-3" name="still-alive" type="radio" value="not-known">
+                  <label class="nhsuk-label nhsuk-radios__label" for="still-alive-3">
+                    Not known
+                  </label>
+                </div>
                 </div>
               </div>
-            </div>
+          </div>
 
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="live-birth-2" name="live-birth" type="radio" value="no" aria-controls="conditional-live-birth-2" aria-expanded="false">
@@ -89,8 +90,10 @@
               </label>
             </div>
           </div>
+          </fieldset>
+        </div>
 
-          <br>
+        <div class="nhsuk-form-group">
 
           <div class="nhsuk-radios nhsuk-radios--conditional">
             <label class="nhsuk-label" for="email">
