@@ -153,7 +153,7 @@ router.post('/brain-injury/investigation-details', function (req, res) {
         res.redirect('/brain-injury/investigation-details-further')
     }
     else if (req.session.correspondenceType == 'correspondence-n') {
-        res.redirect('/brain-injury/task-list-section-2-incomplete')
+        res.redirect('/brain-injury/mri-outcome')
     }
 })
      
