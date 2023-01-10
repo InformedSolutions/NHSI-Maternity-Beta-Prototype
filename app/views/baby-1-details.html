@@ -1,9 +1,8 @@
-
 {% extends 'layout.html' %}
 
 
 {% block pageTitle %}
-  Maternity events - single notification portal
+Maternity events - single notification portal
 {% endblock %}
 
 
@@ -23,36 +22,37 @@
   <main class="nhsuk-main-wrapper" id="maincontent" role="main">
 
     <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">   
+      <div class="nhsuk-grid-column-two-thirds">
         <legend class="nhsuk-fieldset__legend nhsuk-label--l">
           <h1 class="nhsuk-fieldset__heading">
             Baby 1 details
           </h1>
         </legend>
-      <div class="nhsuk-hint">
-        Please enter details in the order the babies were born.
-      </div>
-      <br>
+        <div class="nhsuk-hint">
+          Please enter details in the order the babies were born.
+        </div>
+        <br>
 
 
-          {% if (eventType == 'brain-injury') %}
-          {% else %}
-          <div class="nhsuk-form-group">
+        {% if (eventType == 'brain-injury') %}
+        {% else %}
+        <div class="nhsuk-form-group">
 
           <fieldset class="nhsuk-fieldset" aria-describedby="covidtest">
             <label class="nhsuk-label" for="email">
               Was this a live birth?
             </label>
-        
+
             <div class="nhsuk-radios nhsuk-radios--conditional">
-        
+
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="covidtest-1" name="covidtest" type="radio" value="email" aria-controls="conditional-covidtest-1" aria-expanded="false">
+                <input class="nhsuk-radios__input" id="covidtest-1" name="covidtest" type="radio" value="email"
+                  aria-controls="conditional-covidtest-1" aria-expanded="false">
                 <label class="nhsuk-label nhsuk-radios__label" for="covidtest-1">
                   Yes
                 </label>
               </div>
-        
+
               <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-covidtest-1">
                 <div class="nhsuk-form-group">
 
@@ -60,23 +60,26 @@
                     <label class="nhsuk-label nhsuk-radios__label" for="covidtest-1">
                       Is the baby still alive?
                     </label>
-              
+
                     <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
+                      <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio"
+                        value="yes">
                       <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
                         Yes
                       </label>
                     </div>
-              
+
                     <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
+                      <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio"
+                        value="no">
                       <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
                         No
                       </label>
                     </div>
-              
+
                     <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="not sure">
+                      <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio"
+                        value="not sure">
                       <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
                         Not known
                       </label>
@@ -84,16 +87,17 @@
                   </div>
                 </div>
               </div>
-        
+
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="covidtest-2" name="covidtest" type="radio" value="phone" aria-controls="conditional-covidtest-2" aria-expanded="false">
+                <input class="nhsuk-radios__input" id="covidtest-2" name="covidtest" type="radio" value="phone"
+                  aria-controls="conditional-covidtest-2" aria-expanded="false">
                 <label class="nhsuk-label nhsuk-radios__label" for="covidtest-2">
                   No
                 </label>
-              </div>        
+              </div>
             </div>
-            </div>
-          </fieldset>
+        </div>
+        </fieldset>
 
 
         <div class="nhsuk-form-group">
@@ -102,55 +106,61 @@
             <label class="nhsuk-label" for="email">
               Was this a termination?
             </label>
-        
+
             <div class="nhsuk-radios nhsuk-radios--conditional">
-        
+
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="termination" name="termination" type="radio" value="email" aria-controls="conditional-termination-1" aria-expanded="false">
+                <input class="nhsuk-radios__input" id="termination" name="termination" type="radio" value="email"
+                  aria-controls="conditional-termination-1" aria-expanded="false">
                 <label class="nhsuk-label nhsuk-radios__label" for="termination-1">
                   Yes
                 </label>
               </div>
-        
+
               <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-termination-1">
-                
+
                 <div class="nhsuk-form-group">
 
                   <div class="nhsuk-radios">
                     <label class="nhsuk-label nhsuk-radios__label" for="termination-1">
                       What was the reason for the termination?
                     </label>
-              
+
                     <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
+                      <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio"
+                        value="yes">
                       <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
                         Congenital anomaly
                       </label>
                     </div>
-              
+
                     <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
+                      <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio"
+                        value="no">
                       <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
                         Maternal health
                       </label>
                     </div>
-              
+
                     <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="not sure">
+                      <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio"
+                        value="not sure">
                       <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
                         Fetal reduction
                       </label>
                     </div>
 
                     <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="not sure">
+                      <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio"
+                        value="not sure">
                       <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
                         Other
                       </label>
                     </div>
 
                     <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="not sure">
+                      <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio"
+                        value="not sure">
                       <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
                         Not known
                       </label>
@@ -159,333 +169,404 @@
                   </div>
                 </div>
               </div>
-        
+
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="termination-2" name="termination" type="radio" value="phone" aria-controls="conditional-termination-2" aria-expanded="false">
+                <input class="nhsuk-radios__input" id="termination-2" name="termination" type="radio" value="phone"
+                  aria-controls="conditional-termination-2" aria-expanded="false">
                 <label class="nhsuk-label nhsuk-radios__label" for="termination-2">
                   No
                 </label>
-              </div>        
+              </div>
             </div>
-            </div>
-          </fieldset>
-          {% endif %}    
-           
-          
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="email">
-              NHS number (if known)
-            </label>
-            <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
-          </div>
-            
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="email">
-             Name
-            </label>
-            <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
-          </div>
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="email">
-             Surname
-            </label>
-            <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
-          </div>
+        </div>
+        </fieldset>
+        {% endif %}
 
-          <h3 class="nhsuk-heading-m">Date of birth</h3>
-          <div class="nhsuk-hint" id="example-hint">
-            For example, 15 3 1984
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="email">
+            NHS number (if known)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="email">
+            Name
+          </label>
+          <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+        </div>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="email">
+            Surname
+          </label>
+          <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+        </div>
+
+        <h3 class="nhsuk-heading-m">Date of birth</h3>
+        <div class="nhsuk-hint" id="example-hint">
+          For example, 15 3 1984
+        </div>
+
+        <div class="nhsuk-date-input" id="example">
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                Day
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day"
+                name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+            </div>
           </div>
-      
-          <div class="nhsuk-date-input" id="example">
-            <div class="nhsuk-date-input__item">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
-                  Day
-                </label>
-                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
-              </div>
-            </div>
-            <div class="nhsuk-date-input__item">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
-                  Month
-                </label>
-                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
-              </div>
-            </div>
-            <div class="nhsuk-date-input__item">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
-                  Year
-                </label>
-                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
-              </div>
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                Month
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month"
+                name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
             </div>
           </div>
-          
-          <fieldset class="nhsuk-fieldset">
-            <label class="nhsuk-label" for="input-width-10">
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                Year
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year"
+                name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
+            </div>
+          </div>
+        </div>
+
+        <fieldset class="nhsuk-fieldset">
+          <label class="nhsuk-label" for="input-width-10">
             Sex
-            </label>
-  
+          </label>
+
           <div class="nhsuk-form-group">
-        
+
             <div class="nhsuk-radios">
-        
+
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
                 <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
                   Male
                 </label>
               </div>
-        
+
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
                 <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
                   Female
                 </label>
               </div>
-        
+
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="not sure">
+                <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio"
+                  value="not sure">
                 <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
                   Indeterminate
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-4" name="example-hints" type="radio" value="not sure">
+                <input class="nhsuk-radios__input" id="example-hints-4" name="example-hints" type="radio"
+                  value="not sure">
                 <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
                   Not known
                 </label>
               </div>
-        
+
             </div>
           </div>
-        
-        </fieldset>        
 
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="input-width-10">
-          Hospital number (if known)
-        </label>
-        <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
-      </div>
+        </fieldset>
 
-      {% if (eventType == 'maternal') or (eventType == 'maternal-42') or (eventType == 'maternal-365') %}
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-width-10">
+            Hospital number (if known)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+        </div>
 
-      {% elif (eventType == 'stillbirth') or (eventType == 'late-fetal-loss') %}
+        {% if (eventType == 'maternal') or (eventType == 'maternal-42') or (eventType == 'maternal-365') %}
 
-      <h3 class="nhsuk-heading-m">Date baby's death was confirmed</h3>
-      <div class="nhsuk-hint" id="example-hint">
-        For example, 15 3 2022
-      </div>
-  
-      <div class="nhsuk-date-input" id="example">
-        <div class="nhsuk-date-input__item">
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
-              Day
-            </label>
-            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+        {% elif (eventType == 'stillbirth') or (eventType == 'late-fetal-loss') %}
+
+        <h3 class="nhsuk-heading-m">Date baby's death was confirmed</h3>
+        <div class="nhsuk-hint" id="example-hint">
+          For example, 15 3 2022
+        </div>
+
+        <div class="nhsuk-date-input" id="example">
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                Day
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day"
+                name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+            </div>
+          </div>
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                Month
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month"
+                name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+            </div>
+          </div>
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                Year
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year"
+                name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
+            </div>
           </div>
         </div>
-        <div class="nhsuk-date-input__item">
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
-              Month
-            </label>
-            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+
+        {% else %}
+
+        <h3 class="nhsuk-heading-m">Date of death</h3>
+        <div class="nhsuk-hint" id="example-hint">
+          For example, 15 3 2022
+        </div>
+
+        <div class="nhsuk-date-input" id="example">
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                Day
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day"
+                name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+            </div>
+          </div>
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                Month
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month"
+                name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+            </div>
+          </div>
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                Year
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year"
+                name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
+            </div>
           </div>
         </div>
-        <div class="nhsuk-date-input__item">
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
-              Year
+        </fieldset>
+
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+
+            <h3 class="nhsuk-heading-m">Time of death</h3>
+            <div class="nhsuk-hint" id="example-hint">
+              For example, 13 50
+            </div>
+
+            <div class="nhsuk-date-input" id="example">
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                    Hours
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day"
+                    name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                    Minutes
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month"
+                    name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+        </div>
+        {% endif %}
+
+
+
+        <div class="nhsuk-radios nhsuk-radios--conditional nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-unit">
+            Is gestational age at delivery known?
+          </label>
+
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="gestation-1" name="gestation" type="radio" value="email"
+              aria-controls="conditional-gestation-1" aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" for="gestation-1">
+              Yes
             </label>
-            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
+          </div>
+
+          <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-gestation-1">
+
+            <div class="nhsuk-date-input" id="example">
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                    Weeks
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day"
+                    name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                    Days
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month"
+                    name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="gestation-2" name="gestation" type="radio" value="phone"
+              aria-controls="conditional-gestation-2" aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" for="gestation-2">
+              No
+            </label>
+          </div>
+
+
+          <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-gestation-2">
+
+            <fieldset class="nhsuk-fieldset">
+              <label class="nhsuk-label" for="input-width-10">
+                Reason
+              </label>
+
+              <div class="nhsuk-form-group">
+
+                <div class="nhsuk-radios">
+
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio"
+                      value="yes">
+                    <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                      Concealed pregnancy
+                    </label>
+                  </div>
+
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio"
+                      value="no">
+                    <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                      Unable to estimate
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+
+            </fieldset>
+
           </div>
         </div>
-      </div>
 
-      {% else %} 
+        <div class="nhsuk-radios nhsuk-radios--conditional nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-unit">
+            Birth weight (grams)
+          </label>
 
-      <h3 class="nhsuk-heading-m">Date of death</h3>
-      <div class="nhsuk-hint" id="example-hint">
-        For example, 15 3 2022
-      </div>
-  
-      <div class="nhsuk-date-input" id="example">
-        <div class="nhsuk-date-input__item">
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
-              Day
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="weight-1" name="weight" type="radio" value="weight"
+              aria-controls="conditional-weight-1" aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" for="weight-1">
+              Known
             </label>
-            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+          </div>
+
+          <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-weight-1">
+
+            <div class="nhsuk-date-input" id="example">
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="example-weight">
+                    Weight
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input" id="example-day" name="example-day" type="text"
+                    pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="weight-2" name="weight" type="radio">
+            <label class="nhsuk-label nhsuk-radios__label" for="weight-2">
+              Not known
+            </label>
           </div>
         </div>
-        <div class="nhsuk-date-input__item">
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
-              Month
-            </label>
-            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
-          </div>
-        </div>
-        <div class="nhsuk-date-input__item">
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
-              Year
-            </label>
-            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
-          </div>
-        </div>
-      </div>
-    </fieldset>
 
 
-  <div class="nhsuk-form-group">
-    <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
 
-      <h3 class="nhsuk-heading-m">Time of death</h3>
-      <div class="nhsuk-hint" id="example-hint">
-        For example, 13 50
-      </div>
-  
-      <div class="nhsuk-date-input" id="example">
-        <div class="nhsuk-date-input__item">
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
-              Hours
-            </label>
-            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
-          </div>
-        </div>
-        <div class="nhsuk-date-input__item">
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
-              Minutes
-            </label>
-            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
-          </div>
-        </div>
-      </div>
-    </fieldset>
-
-    </div>
-    {% endif %}
-
-
-    
-  <div class="nhsuk-radios nhsuk-radios--conditional">
-    <label class="nhsuk-label" for="reporting-unit">
-      Is gestational age at delivery known?
-    </label>
-
-  
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="gestation-1" name="gestation" type="radio" value="email" aria-controls="conditional-gestation-1" aria-expanded="false">
-      <label class="nhsuk-label nhsuk-radios__label" for="gestation-1">
-        Yes
-      </label>
-    </div>
-
-    <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-gestation-1">
-
-      <div class="nhsuk-date-input" id="example">
-        <div class="nhsuk-date-input__item">
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
-              Weeks
-            </label>
-            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
-          </div>
-        </div>
-        <div class="nhsuk-date-input__item">
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
-              Days
-            </label>
-            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-
-    <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="gestation-2" name="gestation" type="radio" value="phone" aria-controls="conditional-gestation-2" aria-expanded="false">
-      <label class="nhsuk-label nhsuk-radios__label" for="gestation-2">
-        No
-      </label>
-    </div>        
- 
-
-  <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-gestation-2">
-
-    <div class="nhsuk-form-group">
-      <label class="nhsuk-label" for="email">
-       Reason this is unknown
-      </label>
-      <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
-    </div>
-  </div>
-</div>
-
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="input-width-10">
-          Birth weight (grams)
-        </label>
-        <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
-      </div>
-
-        
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="select-1">
             Ethnicity
           </label>
           <select class="nhsuk-select" id="select-1" name="select-1">
-            <option value="1" > </option>
+            <option></option>
             <option value="1" disabled>White</option>
-            <option value="2">British</option>
+            <option value="2">English, Welsh, Scottish, Nothern Irish or British</option>
             <option value="3">Irish</option>
-            <option value="4">Gypsy or Irish Traveller</option>
-            <option value="5">Other White</option>
-            <option value="6" disabled>Mixed/Multiple ethnic group</option>
-            <option value="7">White and Black Caribbean</option>
-            <option value="8">White and Black African</option>
-            <option value="9">White and Asian</option>
-            <option value="10">Other Mixed</option>
-            <option value="11" disabled>Asian/Asian British</option>
-            <option value="12">Indian</option>
-            <option value="13">Pakistani</option>
-            <option value="14">Bangladeshi</option>
-            <option value="15">Chinese</option>
-            <option value="16">Other Asian</option>
-            <option value="17" disabled>Black/African/Caribbean/Black British</option>
-            <option value="18">African</option>
-            <option value="19">Caribbean</option>
-            <option value="20">Other Black</option>
-            <option value="21" disabled>Other ethnic group</option>
-            <option value="22">Arab</option>
-            <option value="23">Any other ethnic group</option>
+            <option value="4">Any other white background</option>
+            <option value="5" disabled>Mixed or multiple ethnic groups</option>
+            <option value="6">White and Black Caribbean</option>
+            <option value="7">White and Black African</option>
+            <option value="8">White and Asian</option>
+            <option value="9">Any other mixed or multiple ethnic background</option>
+            <option value="10" disabled>Asian or Asian British</option>
+            <option value="11">Indian</option>
+            <option value="12">Pakistani</option>
+            <option value="13">Bangladeshi</option>
+            <option value="14">Chinese</option>
+            <option value="15">Any other Asian background</option>
+            <option value="16" disabled>Black, African, Caribbean or Black British</option>
+            <option value="17">African</option>
+            <option value="18">Caribbean</option>
+            <option value="19">Any other Black, African or Caribbean background</option>
+            <option value="20" disabled>Other options</option>
+            <option value="21">Any other ethnic group</option>
+            <option value="22">I don't know</option>
           </select>
         </div>
         </fieldset>
 
-        
-    {% if (eventType == 'perinatal') or (eventType == 'late-fetal-loss')  %}
 
-    {% else %} 
+        {% if (eventType == 'perinatal') or (eventType == 'late-fetal-loss') %}
+
+        {% else %}
 
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="select-1">
             Religion
           </label>
           <select class="nhsuk-select" id="select-1" name="select-1">
-            <option value="1">  </option>
+            <option value="1"> </option>
             <option value="2"> African religion</option>
             <option value="3"> Agnostic movement</option>
             <option value="4"> Anthroposophy</option>
@@ -599,15 +680,15 @@
             <option value="1"> Vodun</option>
             <option value="1"> Witchcraft</option>
             <option value="1"> Yoruba</option>
-      
+
           </select>
         </div>
 
 
-        {% endif %} 
+        {% endif %}
 
         <a class="nhsuk-button" href="/baby-1-location" role="button" draggable="false">Continue</a>
-        
+
         <p><a href="/task-list">Return to task list</a></p>
 
       </div>
@@ -616,8 +697,8 @@
   </main>
 </div>
 
-      <!-- End of content -->
+<!-- End of content -->
 
-    </div>
-  </div>
+</div>
+</div>
 {% endblock %}

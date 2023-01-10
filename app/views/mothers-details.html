@@ -140,30 +140,29 @@
             Ethnicity
           </label>
           <select class="nhsuk-select" id="select-1" name="select-1">
-            <option value="1" disabled> </option>
+            <option></option>
             <option value="1" disabled>White</option>
-            <option value="2">British</option>
+            <option value="2">English, Welsh, Scottish, Nothern Irish or British</option>
             <option value="3">Irish</option>
-            <option value="4">Gypsy or Irish Traveller</option>
-            <option value="5">Other White</option>
-            <option value="6" disabled>Mixed/Multiple ethnic group</option>
-            <option value="7">White and Black Caribbean</option>
-            <option value="8">White and Black African</option>
-            <option value="9">White and Asian</option>
-            <option value="10">Other Mixed</option>
-            <option value="11" disabled>Asian/Asian British</option>
-            <option value="12">Indian</option>
-            <option value="13">Pakistani</option>
-            <option value="14">Bangladeshi</option>
-            <option value="15">Chinese</option>
-            <option value="16">Other Asian</option>
-            <option value="17" disabled>Black/African/Caribbean/Black British</option>
-            <option value="18">African</option>
-            <option value="19">Caribbean</option>
-            <option value="20">Other Black</option>
-            <option value="21" disabled>Other ethnic group</option>
-            <option value="22">Arab</option>
-            <option value="23">Any other ethnic group</option>
+            <option value="4">Any other white background</option>
+            <option value="5" disabled>Mixed or multiple ethnic groups</option>
+            <option value="6">White and Black Caribbean</option>
+            <option value="7">White and Black African</option>
+            <option value="8">White and Asian</option>
+            <option value="9">Any other mixed or multiple ethnic background</option>
+            <option value="10" disabled>Asian or Asian British</option>
+            <option value="11">Indian</option>
+            <option value="12">Pakistani</option>
+            <option value="13">Bangladeshi</option>
+            <option value="14">Chinese</option>
+            <option value="15">Any other Asian background</option>
+            <option value="16" disabled>Black, African, Caribbean or Black British</option>
+            <option value="17">African</option>
+            <option value="18">Caribbean</option>
+            <option value="19">Any other Black, African or Caribbean background</option>
+            <option value="20" disabled>Other options</option>
+            <option value="21">Any other ethnic group</option>
+            <option value="22">I don't know</option>
           </select>
         </div>
           </fieldset>
@@ -235,7 +234,7 @@
 
         {% endif %}
         
-        {% if (eventType == 'maternal') or (eventType == 'maternal-42') or (eventType == 'maternal-365')  %}
+        {% if (eventType == 'maternal') or (eventType == 'maternal-42') %}
         
         <h3 class="nhsuk-heading-m">Date of death</h3>
         <div class="nhsuk-hint" id="example-hint">
@@ -267,56 +266,6 @@
               <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
             </div>
           </div>
-        </div>
-        
-        <div class="nhsuk-form-group">
-
-          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
-            <label class="nhsuk-label" for="email">
-              Was the mother tested for COVID-19?
-            </label>
-      
-        
-            <div class="nhsuk-radios nhsuk-radios--conditional">
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="mothercovid-1" name="mothercovid" type="radio" value="email" aria-controls="conditional-mothercovid-1" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="mothercovid-1">
-                  Yes and tested positive
-                </label>
-              </div>
-            
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="mothercovid-2" name="mothercovid" type="radio" value="phone" aria-controls="conditional-mothercovid-2" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="mothercovid-2">
-                  Yes and tested negative
-                </label>
-              </div>        
-            
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="mothercovid-3" name="mothercovid" type="radio" value="phone" aria-controls="conditional-mothercovid-3" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="mothercovid-3">
-                  Not tested 
-                </label>
-              </div>  
-            
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="mothercovid-4" name="mothercovid" type="radio" value="phone" aria-controls="conditional-mothercovid-4" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="mothercovid-4">
-                  Not applicable 
-                </label>
-              </div> 
-            
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="mothercovid-5" name="mothercovid" type="radio" value="phone" aria-controls="conditional-mothercovid-5" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="mothercovid-5">
-                  Not known
-                </label>
-              </div> 
-
-            </div>
-          </fieldset>
-        
         </div>
 
         {% else %} 
