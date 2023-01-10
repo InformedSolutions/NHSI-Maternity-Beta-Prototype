@@ -168,4 +168,10 @@ router.post('/household', function (req, res) {
         res.redirect('/further-details')
     }
 })
-     
+
+router.get('/professionals', function (req, res) {
+    req.session.eventType = req.session.eventType;
+    res.render('professionals', {
+        eventType: req.session.eventType,
+    });
+});

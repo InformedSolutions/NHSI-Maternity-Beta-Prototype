@@ -1,9 +1,8 @@
-
 {% extends 'layout.html' %}
 
 
 {% block pageTitle %}
-  {{ serviceName }}
+{{ serviceName }}
 {% endblock %}
 
 
@@ -39,14 +38,14 @@
           </label>
           <input class="nhsuk-input nhsuk-input--width-10" id="name" name="test-width-10" type="text">
         </div>
-        
+
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="phone-number">
             Obstetrician name (optional)
           </label>
           <input class="nhsuk-input nhsuk-input--width-10" id="phone-number" name="test-width-10" type="text">
         </div>
-        
+
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="reporting-trust">
             Obstetrician contact details (optional)
@@ -110,7 +109,23 @@
           <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
         </div>
 
-
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="PMRT">
+            Will you use the PMRT for the CDOP review and reporting of this death?
+          </label>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="PMRT-1" name="PMRT" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="PMRT-1">
+              Yes
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="PMRT-2" name="PMRT" type="radio" value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="PMRT-2">
+              No
+            </label>
+          </div>
+        </div>
 
         <a class="nhsuk-button" href="/covid-19" role="button" draggable="false">Continue</a>
 
@@ -122,8 +137,8 @@
   </main>
 </div>
 
-      <!-- End of content -->
+<!-- End of content -->
 
-    </div>
-  </div>
+</div>
+</div>
 {% endblock %}
