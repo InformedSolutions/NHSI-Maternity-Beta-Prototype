@@ -38,33 +38,10 @@ Maternity events - single notification portal
               </label>
               <input class="nhsuk-input nhsuk-input--width-10" id="email" name="email" type="text">
             </div>
-            
-          {% if eventType == 'late-fetal-loss' or 'eventType == maternal-365' %}
-          {% else %}
 
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="select-1">
-              Title
-            </label>
-            <select class="nhsuk-select" id="select-1" name="select-1">
-              <option value="1">Dr</option>
-              <option value="2">Miss</option>
-              <option value="3">Mr</option>
-              <option value="4">Mrs</option>
-              <option value="5">Ms</option>
-              <option value="5">Rev</option>
-              <option value="5">Sir</option>
-            </select>
-          </div>
+            {% if eventType == 'late-fetal-loss' or eventType == 'maternal-365' %}
+            {% else %}
 
-          {% endif %}
-
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="email">
-             Name
-            </label>
-            <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
-          </div>
             <div class="nhsuk-form-group">
               <label class="nhsuk-label" for="select-1">
                 Title
@@ -79,6 +56,8 @@ Maternity events - single notification portal
                 <option value="5">Sir</option>
               </select>
             </div>
+
+            {% endif %}
 
             <div class="nhsuk-form-group">
               <label class="nhsuk-label" for="email">
@@ -225,6 +204,7 @@ Maternity events - single notification portal
         Religion
       </label>
       <select class="nhsuk-select" id="select-1" name="select-1">
+        <option></option>
         <option value="2"> African religion</option>
         <option value="3"> Agnostic movement</option>
         <option value="4"> Anthroposophy</option>
