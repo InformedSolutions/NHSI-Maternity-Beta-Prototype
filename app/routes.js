@@ -35,7 +35,7 @@ router.post('/event-type', function (req, res) {
         
         } else if (req.session.eventType == 'stillbirth') {
 
-                res.redirect('/stillbirth/stillbirth-type')
+                res.redirect('/stillbirth/task-list')
 
                  
         } else if (req.session.eventType == 'perinatal') {
