@@ -1,9 +1,8 @@
-
 {% extends 'layout.html' %}
 
 
 {% block pageTitle %}
-  Maternity events - single notification portal
+Maternity events - single notification portal
 {% endblock %}
 
 
@@ -23,7 +22,7 @@
   <main class="nhsuk-main-wrapper" id="maincontent" role="main">
 
     <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">      
+      <div class="nhsuk-grid-column-two-thirds">
 
         <div class="nhsuk-form-group">
           <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
@@ -33,13 +32,13 @@
               </h1>
             </legend>
 
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="email">
-              NHS number (if known)
-            </label>
-            <input class="nhsuk-input nhsuk-input--width-10" id="email" name="email" type="text">
-          </div>
-
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="email">
+                NHS number (if known)
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="email" name="email" type="text">
+            </div>
+            
           {% if eventType == 'late-fetal-loss' or 'eventType == maternal-365' %}
           {% else %}
 
@@ -66,95 +65,123 @@
             </label>
             <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
           </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="select-1">
+                Title
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="1">Dr</option>
+                <option value="2">Miss</option>
+                <option value="3">Mr</option>
+                <option value="4">Mrs</option>
+                <option value="5">Ms</option>
+                <option value="5">Rev</option>
+                <option value="5">Sir</option>
+              </select>
+            </div>
 
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="email">
-             Surname
-            </label>
-            <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
-          </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="email">
+                Name
+              </label>
+              <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+            </div>
 
-          <h3 class="nhsuk-heading-m">Date of birth</h3>
-          <div class="nhsuk-hint" id="example-hint">
-            For example, 15 3 1984
-          </div>
-      
-          <div class="nhsuk-date-input" id="example">
-            <div class="nhsuk-date-input__item">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
-                  Day
-                </label>
-                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="email">
+                Surname
+              </label>
+              <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+            </div>
+
+            <h3 class="nhsuk-heading-m">Date of birth</h3>
+            <div class="nhsuk-hint" id="example-hint">
+              For example, 15 3 1984
+            </div>
+
+            <div class="nhsuk-date-input" id="example">
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                    Day
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day"
+                    name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                    Month
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month"
+                    name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                    Year
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year"
+                    name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
               </div>
             </div>
-            <div class="nhsuk-date-input__item">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
-                  Month
-                </label>
-                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
-              </div>
-            </div>
-            <div class="nhsuk-date-input__item">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
-                  Year
-                </label>
-                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
-              </div>
-            </div>
-          </div>
-          <br>
-          <h3 class="nhsuk-heading-m">Address</h3>
+            <br>
+            <h3 class="nhsuk-heading-m">Address</h3>
 
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-line-1">
-              Address line 1
-            </label>
-            <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
-          </div>
-        
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-line-2">
-              Address line 2 (optional)
-            </label>
-            <input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
-          </div>
-        
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-town">
-              Town or city
-            </label>
-            <input class="nhsuk-input nhsuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
-          </div>
-        
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-county">
-              County (optional)
-            </label>
-            <input class="nhsuk-input nhsuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
-          </div>
-        
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-postcode">
-              Postcode
-            </label>
-            <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
-          </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-line-1">
+                Address line 1
+              </label>
+              <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text"
+                autocomplete="address-line1">
+            </div>
 
-  
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-line-2">
+                Address line 2 (optional)
+              </label>
+              <input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text"
+                autocomplete="address-line2">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-town">
+                Town or city
+              </label>
+              <input class="nhsuk-input nhsuk-!-width-two-thirds" id="address-town" name="address-town" type="text"
+                autocomplete="address-level2">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-county">
+                County (optional)
+              </label>
+              <input class="nhsuk-input nhsuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-postcode">
+                Postcode
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text"
+                autocomplete="postal-code">
+            </div>
+
+
         </div>
 
-      <br>
+        <br>
 
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="input-width-10">
-          Hospital number
-        </label>
-        <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
-      </div>
-    
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-width-10">
+            Hospital number
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+        </div>
+
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="select-1">
             Ethnicity
@@ -185,484 +212,485 @@
             <option value="22">I don't know</option>
           </select>
         </div>
-          </fieldset>
-        </div>
-      </div>
-
-        {% if eventType == 'perinatal' or eventType == 'maternal-365' %}
-        {% elif eventType == 'late-fetal-loss' %}
-        {% else %}
-
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="select-1">
-            Religion
-          </label>
-          <select class="nhsuk-select" id="select-1" name="select-1">
-            <option value="2"> African religion</option>
-            <option value="3"> Agnostic movement</option>
-            <option value="4"> Anthroposophy</option>
-            <option value="5"> Arcane school religion </option>
-            <option value="6"> Atheist movement</option>
-            <option value="7"> Black magic</option>
-            <option value="8"> Brahma Kumaris</option>
-            <option value="9"> British Israelism</option>
-            <option value="10"> Christian Humanism</option>
-            <option value="11" disabled> Christian religion</option>
-            <option value="12"> Agnostic Christian</option>
-            <option value="13"> Anglican Church</option>
-            <option value="14"> Baptist Church</option>
-            <option value="15"> Catholic religion</option>
-            <option value="16"> Celtic Christian Church </option>
-            <option value="17"> Christadelphian movement </option>
-            <option value="18"> Christian Existentialism</option>
-            <option value="19"> Christian Spiritualism </option>
-            <option value="20"> Church of Jesus Christ of Latter Day Saints </option>
-            <option value="21"> Church Universal and Triumphant </option>
-            <option value="22"> Eastern Christianity </option>
-            <option value="23"> Free Christian Church </option>
-            <option value="24"> Independent Fundamental Christian Church </option>
-            <option value="25"> Jehovah's Witness religion </option>
-            <option value="26"> Judaic Christian </option>
-            <option value="27"> Nonconformist religion </option>
-            <option value="28"> Old Catholic Church </option>
-            <option value="29"> Open Episcopal Church </option>
-            <option value="30"> Orthodox Christian religion </option>
-            <option value="31"> Pentecostalist religion </option>
-            <option value="32"> Plymouth Brethren religion </option>
-            <option value="1"> Protestant religion </option>
-            <option value="1"> Quaker religion </option>
-            <option value="1"> Reformed Church </option>
-            <option value="1"> Rosicrucian Fellowship </option>
-            <option value="1"> Salvation Army </option>
-            <option value="1"> Seventh Day Adventist religion </option>
-            <option value="1"> Swedenborgianism </option>
-            <option value="1"> Unitarian Universalist Church </option>
-            <option value="1"> United Church of Christ </option>
-            <option value="1"> Western Christianity </option>
-            <option value="1"> - </option>
-            <option value="1"> Church of Religious Science </option>
-            <option value="1"> Comenianism </option>
-            <option value="1"> Deism</option>
-            <option value="1"> Eckankar religion </option>
-            <option value="1"> Eminist religion </option>
-            <option value="1"> Goddess Tradition </option>
-            <option value="1" disabled> Hinduism, Buddhism AND/OR derivative </option>
-            <option value="1"> Brahmanism</option>
-            <option value="1"> Buddhism</option>
-            <option value="1"> Hinduism</option>
-            <option value="1"> Jainism</option>
-            <option value="1"> Lamaism</option>
-            <option value="1"> Sikhism</option>
-            <option value="1"> - </option>
-            <option value="1"> Humanism</option>
-            <option value="1"> Indigenous spirituality </option>
-            <option value="1"> Infinite Way</option>
-            <option value="1" disabled> Islam</option>
-            <option value="1"> Ahmadiyya Islam</option>
-            <option value="1"> Druze religion</option>
-            <option value="1"> Shi'ite muslim religio</option>
-            <option value="1"> Sufi muslim religion</option>
-            <option value="1"> Sunni muslim religion</option>
-            <option value="1"> - </option>
-            <option value="1" disabled> Judaism</option>
-            <option value="1"> Conservative Jewish religion</option>
-            <option value="1"> Hasidim</option>
-            <option value="1"> Humanistic Judaism</option>
-            <option value="1"> Kabbalah</option>
-            <option value="1"> Liberal Jewish religion</option>
-            <option value="1"> Messianic Judaism</option>
-            <option value="1"> Orthodox Jewish Faith</option>
-            <option value="1"> Reform Jewish Faith</option>
-            <option value="1"> - </option>
-            <option value="1"> Lightworker</option>
-            <option value="1"> Mixed religion</option>
-            <option value="1"> Mysticism</option>
-            <option value="1"> National Spiritualist Church</option>
-            <option value="1"> Native American Religion</option>
-            <option value="1"> New age movement</option>
-            <option value="1" disabled> New religious movement </option>
-            <option value="1"> Christian Scientist religious movement</option>
-            <option value="1"> Krishna consciousness religious movement</option>
-            <option value="1"> Unification church religious movement </option>
-            <option value="1"> - </option>
-            <option value="1"> Occultism</option>
-            <option value="1"> Paganism</option>
-            <option value="1"> Pantheism</option>
-            <option value="1"> Para-religious movement </option>
-            <option value="1"> Peyote Religion</option>
-            <option value="1"> Primal society religion</option>
-            <option value="1"> Primitive tribal spiritual belief</option>
-            <option value="1"> Radhasoami</option>
-            <option value="1"> Rastafarian movement </option>
-            <option value="1" disabled> Religion of Japan, China AND/OR Persia</option>
-            <option value="1"> Confucianism</option>
-            <option value="1"> Shintoism</option>
-            <option value="1"> Taoism</option>
-            <option value="1"> Zoroastrianism</option>
-            <option value="1"> - </option>
-            <option value="1"> Santeria</option>
-            <option value="1"> Satanism</option>
-            <option value="1"> Shamanism</option>
-            <option value="1"> Shumei</option>
-            <option value="1"> Spiritualism</option>
-            <option value="1"> Transcendental meditation</option>
-            <option value="1"> Trinitarian Humanism</option>
-            <option value="1"> Universalism</option>
-            <option value="1"> Vodun</option>
-            <option value="1"> Witchcraft</option>
-            <option value="1"> Yoruba</option>
-      
-          </select>
-        </div>
-
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="select-1">
-            Marital status
-          </label>
-          <select class="nhsuk-select" id="select-1" name="select-1">
-            <option value="1" disabled> Select</option>
-            <option value="3"> Single</option>
-            <option value="2"> Married/Civil Partner</option>
-            <option value="4"> Divorced/Civil Partnership Dissolved</option>
-            <option value="5"> Widowed/Surviving Civil Partner</option>
-            <option value="6"> Separated</option>
-            <option value="7"> Not disclosed</option>          
-            <option value="8"> Not asked</option>
-          </select>
-        </div>
-
-
-            <fieldset class="nhsuk-fieldset">
-              <label class="nhsuk-label" for="input-width-10">
-              Sex
-              </label>
-
-            <div class="nhsuk-form-group">
-          
-              <div class="nhsuk-radios">
-          
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="example-hints-1" name="sex" type="radio" value="yes">
-                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
-                    Male
-                  </label>
-                </div>
-          
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="example-hints-2" name="sex" type="radio" value="no">
-                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
-                    Female
-                  </label>
-                </div>
-          
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="example-hints-3" name="sex" type="radio" value="not sure">
-                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
-                    Indeterminate
-                  </label>
-                </div>
-
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="example-hints-4" name="sex" type="radio" value="not sure">
-                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
-                    Not Stated
-                  </label>
-                </div>
-
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="example-hints-4" name="sex" type="radio" value="not sure">
-                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
-                    Not Asked
-                  </label>
-                </div>
-
-          
-              </div>
-            </div>
-          
-          </fieldset>        
-                <fieldset class="nhsuk-fieldset">
-                  <label class="nhsuk-label" for="input-width-10">
-                  Does the mother's sex match their sex assigned at birth? 
-                  </label>
-
-                <div class="nhsuk-form-group">
-              
-                  <div class="nhsuk-radios">
-              
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-1" name="assigned" type="radio" value="yes">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
-                        Yes - the person's gender identity is the same as their gender assigned at birth
-                      </label>
-                    </div>
-              
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-2" name="assigned" type="radio" value="no">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
-                        No - the person's gender identity is not the same as their gender assigned at birth
-                      </label>
-                    </div>
-              
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-3" name="assigned" type="radio" value="not sure">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
-                        Not stated
-                      </label>
-                    </div>
-
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-4" name="assigned" type="radio" value="not sure">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
-                        Not Asked
-                      </label>
-                    </div>    
-                  </div>
-                </div>
-                    
-            </fieldset>        
-            <fieldset class="nhsuk-fieldset">
-              <label class="nhsuk-label" for="input-width-10">
-              Does the mother have a disability? 
-              </label>
-
-            <div class="nhsuk-form-group">
-
-              <div class="nhsuk-radios">
-
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="example-hints-1" name="disabled" type="radio" value="yes">
-                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
-                    Yes - the person has been diagnosed as disabled or considers themself to be disabled.        </label>
-                </div>
-
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="example-hints-2" name="disabled" type="radio" value="no">
-                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
-                    No - the person has not been diagnosed as disabled or does not consider themself to be disabled.        </label>
-                </div>
-
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="example-hints-3" name="disabled" type="radio" value="not sure">
-                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
-                    Not stated
-                  </label>
-                </div>
-
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="example-hints-4" name="disabled" type="radio" value="not sure">
-                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
-                    Not Asked
-                  </label>
-                </div>    
-              </div>
-            </div>
-
-          </fieldset>        
-
-          <fieldset class="nhsuk-fieldset">
-            <label class="nhsuk-label" for="input-width-10">
-            What is the mother's sexual orientation? 
-            </label>
-
-          <div class="nhsuk-form-group">
-
-            <div class="nhsuk-radios">
-
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-1" name="orientation" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
-                  Heterosexual
-              </div>
-
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-2" name="orientation" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
-                  Gay or Lesbian
-              </div>
-
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-3" name="orientation" type="radio" value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
-                  Bisexual
-                </label>
-              </div>
-
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-4" name="orientation" type="radio" value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
-                  Other sexual orientation not listed
-                </label>
-              </div>    
-
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-4" name="orientation" type="radio" value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
-                  Person asked and does not know or is not sure
-                </label>
-              </div>    
-
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-4" name="orientation" type="radio" value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
-                  Not stated
-                </label>
-              </div>    
-
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-4" name="orientation" type="radio" value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
-                  Not asked
-                </label>
-              </div>    
-            </div>
-          </div>
-
-        </fieldset>        
-
-        <fieldset class="nhsuk-fieldset">
-          <label class="nhsuk-label" for="input-width-10">
-          Is the mother pregnant? 
-          </label>
-
-        <div class="nhsuk-form-group">
-
-          <div class="nhsuk-radios">
-
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-hints-1" name="pregnant" type="radio" value="yes">
-              <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
-                Yes
-            </div>
-
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-hints-2" name="pregnant" type="radio" value="no">
-              <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
-                No
-            </div>
-
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-hints-3" name="pregnant" type="radio" value="not sure">
-              <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
-                Not stated
-              </label>
-            </div>
-
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-hints-4" name="pregnant" type="radio" value="not sure">
-              <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
-                Not asked
-              </label>
-            </div>    
-          </div>
-        </div>
-
-      </fieldset>        
-
-        {% endif %}
-
-        {% if (eventType == 'maternal') or (eventType == 'maternal-42') or (eventType == 'maternal-365')  %}
-        {% else %}
-
-        <div class="nhsuk-radios nhsuk-radios--conditional">
-          <label class="nhsuk-label" for="smoke">
-              During pregnancy, did the mother smoke or use tobacco?
-            </label>
-
-              
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="smoke-1" name="smoke" type="radio" value="email" aria-controls="conditional-smoke-1" aria-expanded="false">
-            <label class="nhsuk-label nhsuk-radios__label" for="smoke-1">
-              Yes
-            </label>
-          </div>
-
-          <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-smoke-1">
-
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="email">
-                How many cigarettes per day did they smoke?
-              </label>
-              <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
-            </div>
-
-          </div>
-
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="smoke-2" name="smoke" type="radio" value="phone" aria-controls="conditional-smoke-2" aria-expanded="false">
-            <label class="nhsuk-label nhsuk-radios__label" for="smoke-2">
-              No
-            </label>
-          </div>        
-        
-
-        <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="smoke-3" name="smoke" type="radio" value="email" aria-controls="conditional-smoke-3" aria-expanded="false">
-          <label class="nhsuk-label nhsuk-radios__label" for="smoke-3">
-            Not known
-          </label>
-        </div>
-        </div>
-        <br> 
-
-        {% endif %}
-        
-        {% if (eventType == 'maternal') or (eventType == 'maternal-42') %}
-        
-        <h3 class="nhsuk-heading-m">Date of death</h3>
-        <div class="nhsuk-hint" id="example-hint">
-          For example, 15 3 1984
-        </div>
-    
-        <div class="nhsuk-date-input" id="example">
-          <div class="nhsuk-date-input__item">
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
-                Day
-              </label>
-              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
-            </div>
-          </div>
-          <div class="nhsuk-date-input__item">
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
-                Month
-              </label>
-              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
-            </div>
-          </div>
-          <div class="nhsuk-date-input__item">
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
-                Year
-              </label>
-              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
-            </div>
-          </div>
-        </div>
-
-        {% else %} 
-
-        {% endif %}
-
-
-      
-
         </fieldset>
-
-        
-        <a class="nhsuk-button" href="/locations" role="button" draggable="false">Continue</a>
-        
-        <p><a href="/task-list">Return to task list</a></p>
-
       </div>
     </div>
 
-  </main>
+    {% if eventType == 'perinatal' or eventType == 'maternal-365' %}
+    {% elif eventType == 'late-fetal-loss' %}
+    {% else %}
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="select-1">
+        Religion
+      </label>
+      <select class="nhsuk-select" id="select-1" name="select-1">
+        <option value="2"> African religion</option>
+        <option value="3"> Agnostic movement</option>
+        <option value="4"> Anthroposophy</option>
+        <option value="5"> Arcane school religion </option>
+        <option value="6"> Atheist movement</option>
+        <option value="7"> Black magic</option>
+        <option value="8"> Brahma Kumaris</option>
+        <option value="9"> British Israelism</option>
+        <option value="10"> Christian Humanism</option>
+        <option value="11" disabled> Christian religion</option>
+        <option value="12"> Agnostic Christian</option>
+        <option value="13"> Anglican Church</option>
+        <option value="14"> Baptist Church</option>
+        <option value="15"> Catholic religion</option>
+        <option value="16"> Celtic Christian Church </option>
+        <option value="17"> Christadelphian movement </option>
+        <option value="18"> Christian Existentialism</option>
+        <option value="19"> Christian Spiritualism </option>
+        <option value="20"> Church of Jesus Christ of Latter Day Saints </option>
+        <option value="21"> Church Universal and Triumphant </option>
+        <option value="22"> Eastern Christianity </option>
+        <option value="23"> Free Christian Church </option>
+        <option value="24"> Independent Fundamental Christian Church </option>
+        <option value="25"> Jehovah's Witness religion </option>
+        <option value="26"> Judaic Christian </option>
+        <option value="27"> Nonconformist religion </option>
+        <option value="28"> Old Catholic Church </option>
+        <option value="29"> Open Episcopal Church </option>
+        <option value="30"> Orthodox Christian religion </option>
+        <option value="31"> Pentecostalist religion </option>
+        <option value="32"> Plymouth Brethren religion </option>
+        <option value="1"> Protestant religion </option>
+        <option value="1"> Quaker religion </option>
+        <option value="1"> Reformed Church </option>
+        <option value="1"> Rosicrucian Fellowship </option>
+        <option value="1"> Salvation Army </option>
+        <option value="1"> Seventh Day Adventist religion </option>
+        <option value="1"> Swedenborgianism </option>
+        <option value="1"> Unitarian Universalist Church </option>
+        <option value="1"> United Church of Christ </option>
+        <option value="1"> Western Christianity </option>
+        <option value="1"> - </option>
+        <option value="1"> Church of Religious Science </option>
+        <option value="1"> Comenianism </option>
+        <option value="1"> Deism</option>
+        <option value="1"> Eckankar religion </option>
+        <option value="1"> Eminist religion </option>
+        <option value="1"> Goddess Tradition </option>
+        <option value="1" disabled> Hinduism, Buddhism AND/OR derivative </option>
+        <option value="1"> Brahmanism</option>
+        <option value="1"> Buddhism</option>
+        <option value="1"> Hinduism</option>
+        <option value="1"> Jainism</option>
+        <option value="1"> Lamaism</option>
+        <option value="1"> Sikhism</option>
+        <option value="1"> - </option>
+        <option value="1"> Humanism</option>
+        <option value="1"> Indigenous spirituality </option>
+        <option value="1"> Infinite Way</option>
+        <option value="1" disabled> Islam</option>
+        <option value="1"> Ahmadiyya Islam</option>
+        <option value="1"> Druze religion</option>
+        <option value="1"> Shi'ite muslim religio</option>
+        <option value="1"> Sufi muslim religion</option>
+        <option value="1"> Sunni muslim religion</option>
+        <option value="1"> - </option>
+        <option value="1" disabled> Judaism</option>
+        <option value="1"> Conservative Jewish religion</option>
+        <option value="1"> Hasidim</option>
+        <option value="1"> Humanistic Judaism</option>
+        <option value="1"> Kabbalah</option>
+        <option value="1"> Liberal Jewish religion</option>
+        <option value="1"> Messianic Judaism</option>
+        <option value="1"> Orthodox Jewish Faith</option>
+        <option value="1"> Reform Jewish Faith</option>
+        <option value="1"> - </option>
+        <option value="1"> Lightworker</option>
+        <option value="1"> Mixed religion</option>
+        <option value="1"> Mysticism</option>
+        <option value="1"> National Spiritualist Church</option>
+        <option value="1"> Native American Religion</option>
+        <option value="1"> New age movement</option>
+        <option value="1" disabled> New religious movement </option>
+        <option value="1"> Christian Scientist religious movement</option>
+        <option value="1"> Krishna consciousness religious movement</option>
+        <option value="1"> Unification church religious movement </option>
+        <option value="1"> - </option>
+        <option value="1"> Occultism</option>
+        <option value="1"> Paganism</option>
+        <option value="1"> Pantheism</option>
+        <option value="1"> Para-religious movement </option>
+        <option value="1"> Peyote Religion</option>
+        <option value="1"> Primal society religion</option>
+        <option value="1"> Primitive tribal spiritual belief</option>
+        <option value="1"> Radhasoami</option>
+        <option value="1"> Rastafarian movement </option>
+        <option value="1" disabled> Religion of Japan, China AND/OR Persia</option>
+        <option value="1"> Confucianism</option>
+        <option value="1"> Shintoism</option>
+        <option value="1"> Taoism</option>
+        <option value="1"> Zoroastrianism</option>
+        <option value="1"> - </option>
+        <option value="1"> Santeria</option>
+        <option value="1"> Satanism</option>
+        <option value="1"> Shamanism</option>
+        <option value="1"> Shumei</option>
+        <option value="1"> Spiritualism</option>
+        <option value="1"> Transcendental meditation</option>
+        <option value="1"> Trinitarian Humanism</option>
+        <option value="1"> Universalism</option>
+        <option value="1"> Vodun</option>
+        <option value="1"> Witchcraft</option>
+        <option value="1"> Yoruba</option>
+
+      </select>
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="select-1">
+        Marital status
+      </label>
+      <select class="nhsuk-select" id="select-1" name="select-1">
+        <option value="1" disabled> Select</option>
+        <option value="3"> Single</option>
+        <option value="2"> Married/Civil Partner</option>
+        <option value="4"> Divorced/Civil Partnership Dissolved</option>
+        <option value="5"> Widowed/Surviving Civil Partner</option>
+        <option value="6"> Separated</option>
+        <option value="7"> Not disclosed</option>
+        <option value="8"> Not asked</option>
+      </select>
+    </div>
+
+
+    <fieldset class="nhsuk-fieldset">
+      <label class="nhsuk-label" for="input-width-10">
+        Sex
+      </label>
+
+      <div class="nhsuk-form-group">
+
+        <div class="nhsuk-radios">
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-1" name="sex" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+              Male
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-2" name="sex" type="radio" value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+              Female
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-3" name="sex" type="radio" value="not sure">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+              Indeterminate
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-4" name="sex" type="radio" value="not sure">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+              Not Stated
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-4" name="sex" type="radio" value="not sure">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+              Not Asked
+            </label>
+          </div>
+
+
+        </div>
+      </div>
+
+    </fieldset>
+    <fieldset class="nhsuk-fieldset">
+      <label class="nhsuk-label" for="input-width-10">
+        Does the mother's sex match their sex assigned at birth?
+      </label>
+
+      <div class="nhsuk-form-group">
+
+        <div class="nhsuk-radios">
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-1" name="assigned" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+              Yes - the person's gender identity is the same as their gender assigned at birth
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-2" name="assigned" type="radio" value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+              No - the person's gender identity is not the same as their gender assigned at birth
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-3" name="assigned" type="radio" value="not sure">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+              Not stated
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-4" name="assigned" type="radio" value="not sure">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+              Not Asked
+            </label>
+          </div>
+        </div>
+      </div>
+
+    </fieldset>
+    <fieldset class="nhsuk-fieldset">
+      <label class="nhsuk-label" for="input-width-10">
+        Does the mother have a disability?
+      </label>
+
+      <div class="nhsuk-form-group">
+
+        <div class="nhsuk-radios">
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-1" name="disabled" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+              Yes - the person has been diagnosed as disabled or considers themself to be disabled. </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-2" name="disabled" type="radio" value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+              No - the person has not been diagnosed as disabled or does not consider themself to be disabled. </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-3" name="disabled" type="radio" value="not sure">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+              Not stated
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-4" name="disabled" type="radio" value="not sure">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+              Not Asked
+            </label>
+          </div>
+        </div>
+      </div>
+
+    </fieldset>
+
+    <fieldset class="nhsuk-fieldset">
+      <label class="nhsuk-label" for="input-width-10">
+        What is the mother's sexual orientation?
+      </label>
+
+      <div class="nhsuk-form-group">
+
+        <div class="nhsuk-radios">
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-1" name="orientation" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+              Heterosexual
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-2" name="orientation" type="radio" value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+              Gay or Lesbian
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-3" name="orientation" type="radio" value="not sure">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+              Bisexual
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-4" name="orientation" type="radio" value="not sure">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+              Other sexual orientation not listed
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-4" name="orientation" type="radio" value="not sure">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+              Person asked and does not know or is not sure
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-4" name="orientation" type="radio" value="not sure">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+              Not stated
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-4" name="orientation" type="radio" value="not sure">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+              Not asked
+            </label>
+          </div>
+        </div>
+      </div>
+
+    </fieldset>
+
+    <fieldset class="nhsuk-fieldset">
+      <label class="nhsuk-label" for="input-width-10">
+        Is the mother pregnant?
+      </label>
+
+      <div class="nhsuk-form-group">
+
+        <div class="nhsuk-radios">
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-1" name="pregnant" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+              Yes
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-2" name="pregnant" type="radio" value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+              No
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-3" name="pregnant" type="radio" value="not sure">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+              Not stated
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-4" name="pregnant" type="radio" value="not sure">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+              Not asked
+            </label>
+          </div>
+        </div>
+      </div>
+
+    </fieldset>
+
+    {% endif %}
+
+    <div class="nhsuk-radios nhsuk-radios--conditional">
+      <label class="nhsuk-label" for="smoke">
+        During pregnancy, did the mother smoke or use tobacco?
+      </label>
+
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="smoke-1" name="smoke" type="radio" value="email"
+          aria-controls="conditional-smoke-1" aria-expanded="false">
+        <label class="nhsuk-label nhsuk-radios__label" for="smoke-1">
+          Yes
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-smoke-1">
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="email">
+            How many cigarettes per day did they smoke?
+          </label>
+          <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+        </div>
+
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="smoke-2" name="smoke" type="radio" value="phone"
+          aria-controls="conditional-smoke-2" aria-expanded="false">
+        <label class="nhsuk-label nhsuk-radios__label" for="smoke-2">
+          No
+        </label>
+      </div>
+
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="smoke-3" name="smoke" type="radio" value="email"
+          aria-controls="conditional-smoke-3" aria-expanded="false">
+        <label class="nhsuk-label nhsuk-radios__label" for="smoke-3">
+          Not known
+        </label>
+      </div>
+    </div>
+    <br>
+
+    {% if (eventType == 'maternal') or (eventType == 'maternal-42') %}
+
+    <h3 class="nhsuk-heading-m">Date of death</h3>
+    <div class="nhsuk-hint" id="example-hint">
+      For example, 15 3 1984
+    </div>
+
+    <div class="nhsuk-date-input" id="example">
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+            Day
+          </label>
+          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day"
+            type="text" pattern="[0-9]*" inputmode="numeric">
+        </div>
+      </div>
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+            Month
+          </label>
+          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month"
+            name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+        </div>
+      </div>
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+            Year
+          </label>
+          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year"
+            type="text" pattern="[0-9]*" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+
+    {% else %}
+
+    {% endif %}
+
+
+
+
+    </fieldset>
+
+
+    <a class="nhsuk-button" href="/locations" role="button" draggable="false">Continue</a>
+
+    <p><a href="/task-list">Return to task list</a></p>
+
+</div>
 </div>
 
-      <!-- End of content -->
+</main>
+</div>
 
-    </div>
-  </div>
+<!-- End of content -->
+
+</div>
+</div>
 {% endblock %}
