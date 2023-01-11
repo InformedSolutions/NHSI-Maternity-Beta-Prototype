@@ -51,7 +51,15 @@
           <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
         </div>
 
+        {% if eventType == 'perinatal' %}
+
+        <a class="nhsuk-button" href="role-of-hospital" role="button" draggable="false">Save</a>
+
+        {% else %}
+
         <a class="nhsuk-button" href="event-details" role="button" draggable="false">Save</a>
+
+        {% endif %}
 
       </div>
     </div>
