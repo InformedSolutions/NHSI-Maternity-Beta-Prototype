@@ -40,6 +40,9 @@
             <input class="nhsuk-input nhsuk-input--width-10" id="email" name="email" type="text">
           </div>
 
+          {% if eventType == 'late-fetal-loss' or 'eventType == maternal-365' %}
+          {% else %}
+
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="select-1">
               Title
@@ -55,7 +58,8 @@
             </select>
           </div>
 
-  
+          {% endif %}
+
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="email">
              Name
