@@ -508,6 +508,10 @@
               </a>
             </dd>
           </div>
+
+          {% if eventType == 'stillbirth' or eventType == 'late-fetal-loss' %}
+          {% else %}
+
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Did the mother smoke or use tobacco?
@@ -534,6 +538,8 @@
               </a>
             </dd>
           </div>
+          {% endif %}
+
         </dl>
 
         <h2 class="govuk-heading-m">Baby 1's details</h2>
