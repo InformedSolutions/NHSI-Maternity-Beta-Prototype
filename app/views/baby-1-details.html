@@ -34,8 +34,12 @@ Maternity events - single notification portal
         <br>
 
 
-        {% if (eventType == 'brain-injury') %}
+        {% if (eventType == 'brain-injury') %}        
         {% else %}
+
+        {% if eventType == 'stillbirth' or eventType == 'late-fetal-loss' %}
+        {% else %}
+
         <div class="nhsuk-form-group">
 
           <fieldset class="nhsuk-fieldset" aria-describedby="covidtest">
@@ -98,7 +102,7 @@ Maternity events - single notification portal
             </div>
         </div>
         </fieldset>
-
+        {% endif %}
 
         <div class="nhsuk-form-group">
 

@@ -568,6 +568,9 @@ Maternity events - single notification portal
 
     {% endif %}
 
+    {% if eventType == 'late-fetal-loss' or eventType == 'stillbirth' %}
+    {% else %}
+
     <div class="nhsuk-radios nhsuk-radios--conditional">
       <label class="nhsuk-label" for="smoke">
         During pregnancy, did the mother smoke or use tobacco?
@@ -610,6 +613,8 @@ Maternity events - single notification portal
         </label>
       </div>
     </div>
+    {% endif %}
+
     <br>
 
     {% if (eventType == 'maternal') or (eventType == 'maternal-42') %}
