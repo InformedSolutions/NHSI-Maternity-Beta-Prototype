@@ -242,6 +242,39 @@ Maternity events - single notification portal
           </div>
         </div>
 
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+
+            <h3 class="nhsuk-heading-m">Time of Birth</h3>
+            <div class="nhsuk-hint" id="example-hint">
+              For example, 13 50
+            </div>
+
+            <div class="nhsuk-date-input" id="example">
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                    Hours
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day"
+                    name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                    Minutes
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month"
+                    name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+        </div>
+
+
         <fieldset class="nhsuk-fieldset">
           <label class="nhsuk-label" for="input-width-10">
             Sex
@@ -293,9 +326,7 @@ Maternity events - single notification portal
           <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
         </div>
 
-        {% if (eventType == 'maternal') or (eventType == 'maternal-42') or (eventType == 'maternal-365') %}
-
-        {% elif (eventType == 'stillbirth') or (eventType == 'late-fetal-loss') %}
+        {% if (eventType == 'stillbirth') or (eventType == 'late-fetal-loss') %}
 
         <h3 class="nhsuk-heading-m">Date baby's death was confirmed</h3>
         <div class="nhsuk-hint" id="example-hint">
@@ -333,6 +364,9 @@ Maternity events - single notification portal
         </div>
 
         {% else %}
+        {% endif %}
+
+        {% if eventType == 'stillbirth' or eventType == 'neonatal' or eventType == 'perinatal' or eventType == 'brain-injury'%}
 
         <h3 class="nhsuk-heading-m">Date of death</h3>
         <div class="nhsuk-hint" id="example-hint">
@@ -402,6 +436,7 @@ Maternity events - single notification portal
           </fieldset>
 
         </div>
+        {% else %}
         {% endif %}
 
 
