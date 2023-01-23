@@ -147,12 +147,16 @@ router.get('/event-details', function (req, res) {
     });
 
 router.post('/brain-injury/investigation-details', function (req, res) {
-    req.session.correspondenceType = req.session.data['correspondence-type'];
+    req.session.refused = req.session.data['refused'];
+    req.session.mnsi = req.session.data['MNSI'];
 
-    if (req.session.correspondenceType == 'correspondence-y') {
+    if (req.session.mnsi == 'MNSI-y') {
+        res.redirect('/brain-injury/mri-outcome')
+    }
+    else if (req.session.refused == 'refused-y') {
         res.redirect('/brain-injury/investigation-details-further')
     }
-    else if (req.session.correspondenceType == 'correspondence-n') {
+    else if (req.session.refused == 'refused-n') {
         res.redirect('/brain-injury/mri-outcome')
     }
 })

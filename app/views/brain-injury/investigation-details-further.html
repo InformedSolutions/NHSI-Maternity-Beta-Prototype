@@ -23,137 +23,105 @@
 
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds">
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-label--l">
-            <h1 class="nhsuk-fieldset__heading">
-              Investigation details
-            </h1>
-          </legend>
 
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="email">
-              Trust's internal reference number
-            </label>
-            <input class="nhsuk-input nhsuk-input--width-10" id="email" name="reference" type="text">
-          </div>
-
-          <div class="nhsuk-form-group">
-              <legend class="nhsuk-label">
-                  Is claimant represented by solicitors?
+        <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <h1 class="nhsuk-fieldset__heading">
+                  Investigation details further
+                </h1>
               </legend>
-          
-              <div class="nhsuk-radios">
-          
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="example-1" name="solicitors" type="radio" value="yes">
-                  <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-                    Yes
-                  </label>
-                </div>
-          
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="example-2" name="solicitors" type="radio" value="no">
-                  <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-                    No
-                  </label>
-                </div>
-          
-              </div>
-          
-          </div>
 
-          <div class="nhsuk-form-group">
-            <div class="nhsuk-radios nhsuk-radios--conditional">
-              <label class="nhsuk-label" for="mnsi">
-                Have the family refused an MNSI?
-              </label>
-        
+              <div class="nhsuk-form-group">
+                <legend class="nhsuk-label">
+                    Have the family requested an Early Notificiation investigation?
+                </legend>
             
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="contact-1" name="MNSI" type="radio" value="email" aria-controls="conditional-contact-1" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
-                  Yes
-                </label>
-              </div>
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="contact-2" name="MNSI" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
-                  No
-                </label>
-              </div>
-        
-              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-2">
-        
-                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="email">
-                    MNSI reference
-                  </label>
-                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+                <div class="nhsuk-radios">
+            
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="example-1" name="EN" type="radio" value="yes">
+                    <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                      Yes
+                    </label>
+                  </div>
+            
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="example-2" name="EN" type="radio" value="no">
+                    <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+                      No
+                    </label>
+                  </div>
+            
                 </div>
-        
               </div>
-  
-            </div>
-          </div>
 
-          <div class="nhsuk-form-group">
-            <legend class="nhsuk-label">
-                Have the family requested an Early Notificiation investigation?
-            </legend>
-        
-            <div class="nhsuk-radios">
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-1" name="EN" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-                  Yes
-                </label>
-              </div>
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-2" name="EN" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-                  No
-                </label>
-              </div>
-        
-            </div>
-          </div>
+              <div class="nhsuk-form-group">
+                <div class="nhsuk-radios nhsuk-radios--conditional">
+                  <label class="nhsuk-label" for="mnsi">
+                    Have you received any correspondence from the parent or guardian or their representatives ?
+                  </label>
+            
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="correspondence-1" name="correspondence" type="radio" value="correspondence-y" aria-controls="conditional-contact-1" aria-expanded="false">
+                    <label class="nhsuk-label nhsuk-radios__label" for="correspondence-1">
+                      Yes
+                    </label>
+                  </div>
 
-          <div class="nhsuk-form-group">
-            <legend class="nhsuk-label">
-                Have the family been advised that the incident has been reported to the Early Notificiation scheme?
-            </legend>
+                  <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+            
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="email">
+                        Is the claimant represented by solicitors? 
+                      </label>
+    
+                      <div class="nhsuk-radios">
+              
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input" id="refused-1" name="refused" type="radio" value="refused-y">
+                          <label class="nhsuk-label nhsuk-radios__label" for="refused-1">
+                            Yes
+                          </label>
+                        </div>
+                  
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input" id="refused-2" name="refused" type="radio" value="refused-n">
+                          <label class="nhsuk-label nhsuk-radios__label" for="refused-2">
+                            No
+                          </label>
+                        </div>
+                  
+                      </div>    
+    
+                    </div>
+                  </div>  
+    
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="correspondence-2" name="correspondence" type="radio" value="correspondence-n" aria-controls="conditional-contact-2" aria-expanded="false">
+                    <label class="nhsuk-label nhsuk-radios__label" for="correspondence-2">
+                      No
+                    </label>
+                  </div>     
+                </div>
+              <br>
+            </fieldset>
+            
+            <a class="nhsuk-button" href="/brain-injury/mri-outcome" role="button" draggable="false">Continue</a>
+            
+        </div>
         
-            <div class="nhsuk-radios">
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-1" name="EN reported" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-                  Yes
-                </label>
-              </div>
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-2" name="EN reported" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-                  No
-                </label>
-              </div>
-        
-            </div>
-          </div>
+        <br>
+        <p><a href="/brain-injury/task-list">Return to task list</a></p>
 
-          <a class="nhsuk-button" href="/brain-injury/mri-outcome" role="button" draggable="false">Continue</a>
-          <br>
-          <p><a href="/brain-injury/task-list">Return to task list</a></p>
-        </fieldset>
-      </div>      
+      </div>
     </div>
 
   </main>
 </div>
-<!-- End of content -->
 
+      <!-- End of content -->
+
+    </div>
+  </div>
 {% endblock %}
