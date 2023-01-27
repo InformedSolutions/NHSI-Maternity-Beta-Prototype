@@ -146,21 +146,32 @@ router.get('/event-details', function (req, res) {
         });
     });
 
-router.post('/brain-injury/investigation-details', function (req, res) {
+router.post('/brain-injury/investigation-details-2', function (req, res) {
     req.session.refused = req.session.data['refused'];
     req.session.mnsi = req.session.data['MNSI'];
 
     if (req.session.mnsi == 'MNSI-y') {
-        res.redirect('/brain-injury/mri-outcome')
+        res.redirect('/brain-injury/investigation-details-4')
     }
     else if (req.session.refused == 'refused-y') {
-        res.redirect('/brain-injury/investigation-details-further')
+        res.redirect('/brain-injury/nhsr-end')
     }
     else if (req.session.refused == 'refused-n') {
-        res.redirect('/brain-injury/mri-outcome')
+        res.redirect('/brain-injury/investigation-details-3')
     }
 })
      
+router.post('/brain-injury/investigation-details-3', function (req, res) {
+    req.session.EN = req.session.data['EN'];
+
+    if (req.session.EN == 'yes') {
+        res.redirect('/brain-injury/investigation-details-4')
+    }
+    else if (req.session.EN == 'no') {
+        res.redirect('/brain-injury/nhsr-end')
+    }
+})
+
 
 router.post('/household', function (req, res) {
     req.session.correspondenceType = req.session.data['answer'];
