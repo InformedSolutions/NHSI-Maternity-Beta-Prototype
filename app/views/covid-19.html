@@ -123,6 +123,9 @@
         
         </div>
 
+        {% if eventType == 'stillbirth' or eventType == 'late-fetal-loss' %}
+        {% else %}
+
         <div class="nhsuk-form-group">
 
           <fieldset class="nhsuk-fieldset" aria-describedby="covidtest">
@@ -266,6 +269,7 @@
             </div>
             </div>
           </fieldset>
+          {% endif %}
 
           <div class="nhsuk-form-group">
 

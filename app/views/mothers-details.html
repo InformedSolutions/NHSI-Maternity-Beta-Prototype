@@ -34,7 +34,7 @@ Maternity events - single notification portal
 
             <div class="nhsuk-form-group">
               <label class="nhsuk-label" for="email">
-                NHS number (if known)
+                NHS number
               </label>
               <input class="nhsuk-input nhsuk-input--width-10" id="email" name="email" type="text">
             </div>
@@ -570,6 +570,9 @@ Maternity events - single notification portal
 
     {% endif %}
 
+    {% if eventType == 'late-fetal-loss' or eventType == 'stillbirth' %}
+    {% else %}
+
     <div class="nhsuk-radios nhsuk-radios--conditional">
       <label class="nhsuk-label" for="smoke">
         During pregnancy, did the mother smoke or use tobacco?
@@ -612,6 +615,8 @@ Maternity events - single notification portal
         </label>
       </div>
     </div>
+    {% endif %}
+
     <br>
 
     {% if (eventType == 'maternal') or (eventType == 'maternal-42') %}

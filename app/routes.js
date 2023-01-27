@@ -182,3 +182,10 @@ router.get('/account-details', function (req, res) {
         eventType: req.session.eventType,
     });
 });
+
+router.get('/covid-19', function (req, res) {
+    req.session.eventType = req.session.eventType;
+    res.render('covid-19', {
+        eventType: req.session.eventType,
+    });
+});

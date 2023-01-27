@@ -33,6 +33,9 @@
               </h1>
             </legend>
 
+            {% if eventType == 'stillbirth' or eventType == 'neonatal' or eventType == 'late-fetal-loss' %}
+            {% else %}
+
             <h3 class="nhsuk-heading-m">Date of event</h3>
             <div class="nhsuk-hint" id="example-hint">
               For example, 15 3 2022
@@ -98,6 +101,8 @@
         
         </div>
 
+        {% endif %}
+
         {% if (eventType == 'stillbirth') or (eventType == 'neonatal') or (eventType == 'brain-injury') or (eventType == 'maternal') or (eventType == 'maternal-42') %}
 
         <div class="nhsuk-form-group">
@@ -125,11 +130,22 @@
           <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
         </div>
 
+        {% if (eventType == 'stillbirth') or (eventType == 'neonatal') or (eventType == 'brain-injury') %} 
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-unit">
+            NHSR reference number (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
+        </div>
+        <br>
+        {% else %}
+
+        {% endif %}
+
         <a class="nhsuk-button" href="/role-of-hospital" role="button" draggable="false">Continue</a>
 
         <p><a href="/task-list">Return to task list</a></p>
-
-
 
       </div>
     </div>
