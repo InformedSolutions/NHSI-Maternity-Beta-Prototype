@@ -212,3 +212,9 @@ router.get('/cause-of-death', function (req, res) {
     });
 });
 
+router.get('/locations', function (req, res) {
+    req.session.eventType = req.session.eventType;
+    res.render('locations', {
+        eventType: req.session.eventType,
+    });
+});
