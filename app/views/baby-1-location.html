@@ -23,23 +23,35 @@ Maternity events - single notification portal
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds">
 
+          <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Baby 1 Locations
+            </h1>
+          </legend>
+
+          {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="reporting-unit">
+              Delivery hospital and trust
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
+          </div>
+
+          {% else %}
+
+        <label class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m" for="email">
+          Intended place of birth at booking:
+        </label>
+        <div class="nhsuk-hint">
+          John Radcliffe Hospital, Oxford University Hospitals NHS Trust
+        </div>
+        <br>
+
         <div class="nhsuk-form-group">
 
           <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
 
-            <legend class="nhsuk-fieldset__legend nhsuk-label--l">
-              <h1 class="nhsuk-fieldset__heading">
-                Baby 1 Locations
-              </h1>
-            </legend>
-
-            <label class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m" for="email">
-              Intended place of birth at booking:
-            </label>
-            <div class="nhsuk-hint">
-              John Radcliffe Hospital, Oxford University Hospitals NHS Trust
-            </div>
-            <br>
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
               <h3 class="nhsuk-fieldset__heading">
                 Was the baby born at a different location?
@@ -57,9 +69,6 @@ Maternity events - single notification portal
               </div>
 
               <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
-
-
-                {% if (eventType == 'maternal') or (eventType == 'maternal-42') or (eventType == 'maternal-365') %}
 
                 <div class="nhsuk-form-group">
                   <label class="nhsuk-label" for="email">
@@ -81,103 +90,73 @@ Maternity events - single notification portal
           </fieldset>
 
         </div>
-
-        {% else %}
+        {% if eventType == 'neonatal' or eventType == 'perinatal' %}
 
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="email">
-            Actual place of birth
+            Place of death
           </label>
           <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
         </div>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="select-1">
+            Type of unit
+          </label>
+          <select class="nhsuk-select" id="select-1" name="select-1">
+            <option value="0" disabled>Select</option>
+            <option value="1">Freestanding midwifery unit</option>
+            <option value="2">Alongside midwifery unit </option>
+            <option value="3">Labour ward </option>
+            <option value="4">Neonatal unit </option>
+            <option value="5">Paediatric unit </option>
+            <option value="6">PICU</option>
+            <option value="7">Theatre</option>
+            <option value="8">A&E</option>
+            <option value="9">Hospice</option>
+            <option value="10">Home</option>
+            <option value="11">In transit</option>
+            <option value="12">Other</option>
+            <option value="13">Not known</option>
+          </select>
+        </div>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="email">
+            Unit of care prior to transfer for palliative care/discharge
+          </label>
+          <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+        </div>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="select-1">
+            Reason there was a transfer of care
+          </label>
+          <select class="nhsuk-select" id="select-1" name="select-1">
+            <option value="1">Baby discharged here for palliative care</option>
+            <option value="2">Baby was discharged home</option>
+            <option value="3">Baby was never in hospital</option>
+          </select>
+        </div>
+        {% else %}
+        {% endif %}
+
+        {% endif %}
 
       </div>
-
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone"
-          aria-controls="conditional-contact-2" aria-expanded="false">
-        <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
-          No
-        </label>
-      </div>
-
-      {% endif %}
-
-      {% if eventType == 'neonatal' or eventType == 'perinatal' or eventType == 'maternal' or eventType == 'maternal-42' or eventType == 'maternal-365' %}
-
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="email">
-          Place of death
-        </label>
-        <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
-      </div>
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="select-1">
-          Type of unit
-        </label>
-        <select class="nhsuk-select" id="select-1" name="select-1">
-          <option value="0" disabled>Select</option>
-          <option value="1">Freestanding midwifery unit</option>
-          <option value="2">Alongside midwifery unit </option>
-          <option value="3">Labour ward </option>
-          <option value="4">Neonatal unit </option>
-          <option value="5">Paediatric unit </option>
-          <option value="6">PICU</option>
-          <option value="7">Theatre</option>
-          <option value="8">A&E</option>
-          <option value="9">Hospice</option>
-          <option value="10">Home</option>
-          <option value="11">In transit</option>
-          <option value="12">Other</option>
-          <option value="13">Not known</option>
-        </select>
-      </div>
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="email">
-          Unit of care prior to transfer for palliative care/discharge
-        </label>
-        <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
-      </div>
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="select-1">
-          Reason there was a transfer of care
-        </label>
-        <select class="nhsuk-select" id="select-1" name="select-1">
-          <option value="1">Baby discharged here for palliative care</option>
-          <option value="2">Baby was discharged home</option>
-          <option value="3">Baby was never in hospital</option>
-        </select>
-      </div>
-      {% else %}
-      {% endif %}
-
     </div>
-    </fieldset>
 
-</div>
+    {% if eventType == 'stillbirth' or eventType == 'late-fetal-loss' %}
 
-{% if eventType == 'stillbirth' or eventType == 'late-fetal-loss' %}
+    <a class="nhsuk-button" href="/check-answers-section-1" role="button" draggable="false">Continue</a>
 
-<a class="nhsuk-button" href="/check-answers-section-1" role="button" draggable="false">Continue</a>
+    {% else %}
 
-{% else %}
+    <a class="nhsuk-button" href="/cause-of-death" role="button" draggable="false">Continue</a>
 
-<a class="nhsuk-button" href="/cause-of-death" role="button" draggable="false">Continue</a>
+    {% endif %}
 
-{% endif %}
-
-<p><a href="/task-list">Return to task list</a></p>
-
-
-
-</div>
-</div>
+    <p><a href="/task-list">Return to task list</a></p>
 
 </main>
 </div>
 
 <!-- End of content -->
-
-</div>
-</div>
 {% endblock %}

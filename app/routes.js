@@ -204,3 +204,11 @@ router.get('/covid-19', function (req, res) {
         eventType: req.session.eventType,
     });
 });
+
+router.get('/cause-of-death', function (req, res) {
+    req.session.eventType = req.session.eventType;
+    res.render('cause-of-death', {
+        eventType: req.session.eventType,
+    });
+});
+

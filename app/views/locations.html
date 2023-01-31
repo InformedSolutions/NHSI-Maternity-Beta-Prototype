@@ -27,6 +27,9 @@
         <div class="nhsuk-form-group">
 
           <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+
+            {% if eventType == 'late-fetal-loss' or eventType == 'stillbirth' or eventType=='neonatal' or eventType=='perinatal' %}
+
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
               <h1 class="nhsuk-fieldset__heading">
                 Was this mother booked?
@@ -74,6 +77,18 @@
                 </label>
               </div>        
             </div>
+
+            {% else %}
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="email">
+                Place of death 
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="email" name="email" type="text">
+            </div>
+
+            {% endif %}
+
           </fieldset>
         
         </div>

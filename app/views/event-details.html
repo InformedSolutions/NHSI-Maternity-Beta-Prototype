@@ -143,7 +143,15 @@
 
         {% endif %}
 
+        {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}
+
+        <a class="nhsuk-button" href="/mothers-details" role="button" draggable="false">Continue</a>
+
+        {% else %}
+
         <a class="nhsuk-button" href="/role-of-hospital" role="button" draggable="false">Continue</a>
+
+        {% endif %}
 
         <p><a href="/task-list">Return to task list</a></p>
 
