@@ -11,23 +11,31 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      {% if eventType == 'maternal' %}
+      {% if MaternalEventType == 'maternal' %}
 
       <h1 class="nhsuk-heading-xl">
         Notify of a maternal death (whilst pregnant)
       </h1>
 
-      <p>Event type: Maternal death (whilst pregnant) <a href ="../event-type">change</a><br>
-      Was the death was caused by suicide?: No <a href ="/maternal/criteria">change</a><br>
-      Type of maternal death: Direct <a href ="/maternal/criteria">change</a><br>
+      {% if (suicide == 'yes') %}
+      <p>Event type: Maternal death (whilst pregnant) <a href ="/event-type-0">change</a><br>
+        Was the death was caused by suicide?: Yes <a href ="/maternal/criteria">change</a><br>
+        Was it a direct maternal death?: Yes <a href ="/maternal/criteria">change</a><br>
+        Was it an indirect maternal death?: No <a href ="/maternal/criteria">change</a></p>
+      {% else %}
+      <p>Event type: Maternal death (whilst pregnant) <a href ="/event-type-0">change</a><br>
+        Was the death was caused by suicide?: No <a href ="/maternal/criteria">change</a><br>
+        Was it a direct maternal death?: Yes <a href ="/maternal/criteria">change</a><br>
+        Was it an indirect maternal death?: No <a href ="/maternal/criteria">change</a></p>
+      {% endif %}
 
-      {% elif eventType == 'maternal-365' %} 
+      {% elif MaternalEventType == 'maternal-365' %} 
 
       <h1 class="nhsuk-heading-xl">
         Notify of a maternal death (between 42 days and 365 after pregnancy)
       </h1>
 
-      <p>Event type: Maternal death (between 42 days and 365 after pregnancy) <a href ="../event-type">change</a></p>
+      <p>Event type: Maternal death (between 42 days and 365 after pregnancy) <a href ="/event-type-0">change</a></p>
 
       {% else %}
 
@@ -35,10 +43,17 @@
         Notify of a maternal death (less than 42 days after pregnancy)
       </h1>
 
-      <p>Event type: Maternal death (less than 42 days after pregnancy) <a href ="../event-type">change</a><br>
+      {% if (suicide == 'yes') %}
+      <p>Event type: Maternal death (less than 42 days after pregnancy) <a href ="/event-type-0">change</a><br>
+        Was the death was caused by suicide?: Yes <a href ="/maternal/criteria">change</a><br>
+        Was it a direct maternal death?: Yes <a href ="/maternal/criteria">change</a><br>
+        Was it an indirect maternal death?: No <a href ="/maternal/criteria">change</a></p>
+      {% else %}
+      <p>Event type: Maternal death (less than 42 days after pregnancy) <a href ="/event-type-0">change</a><br>
         Was the death was caused by suicide?: No <a href ="/maternal/criteria">change</a><br>
         Was it a direct maternal death?: Yes <a href ="/maternal/criteria">change</a><br>
         Was it an indirect maternal death?: No <a href ="/maternal/criteria">change</a></p>
+      {% endif %}
 
       {% endif %}
 
@@ -199,7 +214,7 @@
         </ul>
       </li>
 
-      {% if eventType == 'maternal-365' %} 
+      {% if (MaternalEventType == 'maternal-365') or (suicide == 'yes') %} 
       {% else %}
 
       
