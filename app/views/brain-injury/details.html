@@ -17,51 +17,39 @@ Maternity events - single notification portal
 {% include "includes/back.html" %}
 
 <div class="nhsuk-width-container">
-
   <main class="nhsuk-main-wrapper" id="maincontent" role="main">
     <form method="post" class="form">
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-two-thirds">
-
           <div class="nhsuk-form-group">
-
-            <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
-              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-                <h1 class="nhsuk-fieldset__heading">
-                  Did the baby die within 7 days of birth?
-                </h1>
-              </legend>
-
+            <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Was the severe brain injury diagnosed within 7 days of birth?
+              </h1>
+            </legend>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="die-1" name="die" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="die-1">
+                <input class="nhsuk-radios__input" id="diagnosed-1" name="diagnosed" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="diagnosed-1">
                   Yes
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="die-2" name="die" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="die-2">
+                <input class="nhsuk-radios__input" id="diagnosed-2" name="diagnosed" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="diagnosed-2">
                   No
                 </label>
               </div>
-          </div>
-          </fieldset>
+            </div>
+            
           <button type="submit" class="nhsuk-button">
             Continue
           </button>
         </div>
       </div>
     </form>
-
-
-
   </main>
 </div>
-
 <!-- End of content -->
-
-</div>
-</div>
 {% endblock %}

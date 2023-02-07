@@ -80,7 +80,7 @@ router.post('/event-type-0', function (req, res) {
 
     } else if (req.session.BabyEventType == 'brain-injury') {
 
-        res.redirect('/brain-injury/task-list')
+        res.redirect('/brain-injury/still-alive')
     }
 });
 
@@ -320,9 +320,14 @@ router.get('/locations', function (req, res) {
 router.get('/not-notifiable', function (req, res) {
     req.session.birthWeight = req.session.birthWeight
     req.session.timeAfterBirth = req.session.timeAfterBirth
+    req.session.diagnosed = req.session.diagnosed
+    req.session.mri = req.session.mri
+
     res.render('not-notifiable', {
         birthWeight: req.session.birthWeight,
-        timeAfterBirth: req.session.timeAfterBirth
+        timeAfterBirth: req.session.timeAfterBirth,
+        diagnosed: req.session.diagnosed,
+        mri: req.session.mri
     });
 })
 
@@ -335,7 +340,41 @@ router.get('/neonatal/task-list', function (req, res) {
 
 router.get('/stillbirth/task-list', function (req, res) {
     req.session.gestationWeeks = req.session.gestationWeeks
+    req.session.mri = req.session.mri
+    req.session.diagnosed = req.session.diagnosed
+
     res.render('stillbirth/task-list', {
-        gestationWeeks: req.session.gestationWeeks
+        gestationWeeks: req.session.gestationWeeks,
+        mri: req.session.mri,
+        diagnosed: req.session.diagnosed
+    });
+});
+
+router.post('/brain-injury/still-alive', function(req,res) {
+    req.session.die = req.session.data['die']
+    
+    if (req.session.die == 'yes') {
+        res.redirect('/event-type-3')
+    } else {
+        res.redirect('/brain-injury/details')
+    }
+})
+
+router.post('/brain-injury/details', function(req,res) {
+    req.session.diagnosed = req.session.data['diagnosed']
+    
+    if (req.session.diagnosed == 'yes') {
+        res.redirect('/brain-injury/task-list')
+    } else {
+        res.redirect('/brain-injury/task-list')
+    }
+})
+
+router.get('/brain-injury/task-list', function (req, res) {
+    req.session.mri = req.session.mri
+    req.session.diagnosed = req.session.diagnosed
+
+    res.render('brain-injury/task-list', {
+        diagnosed: req.session.diagnosed
     });
 });
