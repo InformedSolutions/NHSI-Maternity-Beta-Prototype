@@ -18,16 +18,6 @@
       </h1>
 
       <p>Event type: Maternal death (whilst pregnant) <a href ="../event-type">change</a><br>
-      Was the death was caused by suicide?: No <a href ="/maternal/criteria">change</a><br>
-      Type of maternal death: Direct <a href ="/maternal/criteria">change</a><br>
-
-      {% elif eventType == 'maternal-365' %} 
-
-      <h1 class="nhsuk-heading-xl">
-        Notify of a maternal death (between 42 days and 365 after pregnancy)
-      </h1>
-
-      <p>Event type: Maternal death (between 42 days and 365 after pregnancy) <a href ="../event-type">change</a></p>
 
       {% else %}
 
@@ -36,11 +26,12 @@
       </h1>
 
       <p>Event type: Maternal death (less than 42 days after pregnancy) <a href ="../event-type">change</a><br>
+      
+      {% endif %}
+
         Was the death was caused by suicide?: No <a href ="/maternal/criteria">change</a><br>
         Was it a direct maternal death?: Yes <a href ="/maternal/criteria">change</a><br>
         Was it an indirect maternal death?: No <a href ="/maternal/criteria">change</a></p>
-
-      {% endif %}
 
       <h2 class="nhsuk-heading-l">Section 1 - Complete within 24 hours (or next working day)</h2>
 
