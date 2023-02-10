@@ -27,11 +27,46 @@
         <div class="nhsuk-form-group">
 
           <fieldset class="nhsuk-fieldset">
+
+            {% if eventType=='neonatal' or eventType=='perinatal' %}
+
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
               <h1 class="nhsuk-fieldset__heading">
                 Outline the circumstances leading to notification
               </h1>
             </legend>
+
+            <div class="nhsuk-hint" id="event-type-hint">
+              Please provide a brief narrative summary of what happened to the baby. This should include 
+              any information you have on medical conditions the baby had, any obstetric complications 
+              the mother experienced and whether the baby was cared for in multiple departments or 
+              transferred between multiple hospitals. It should also include a description of how the 
+              baby died e.g. "At Day 12 of life the baby experienced an acute deterioration in condition 
+              and despite maximal efforts could not be resuscitated." and what immediate support has been
+               offered to parents.
+            </div>      
+
+            {% elif eventType=='brain-injury' %}
+
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Incident description
+              </h1>
+            </legend>
+
+            <div class="nhsuk-hint" id="event-type-hint">
+              Enter the incident as reported.
+            </div>      
+
+            {% else %}
+
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Summary of events leading to the mother's death
+              </h1>
+            </legend>
+
+            {% endif %}
         
             <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
           </fieldset>
