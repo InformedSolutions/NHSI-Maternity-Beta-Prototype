@@ -154,10 +154,10 @@ router.post('/brain-injury/investigation-details-2', function (req, res) {
         res.redirect('/brain-injury/investigation-details-4')
     }
     else if (req.session.refused == 'refused-y') {
-        res.redirect('/brain-injury/nhsr-end')
+        res.redirect('/brain-injury/investigation-details-3')
     }
     else if (req.session.refused == 'refused-n') {
-        res.redirect('/brain-injury/investigation-details-3')
+        res.redirect('/brain-injury/investigation-details-4')
     }
 })
      
@@ -180,9 +180,21 @@ router.post('/household', function (req, res) {
         res.redirect('/household-further')
     }
     else if (req.session.correspondenceType == 'no') {
+        res.redirect('/sibling-details')
+    }
+})
+
+router.post('/sibling-details', function (req, res) {
+    req.session.siblings = req.session.data['siblings'];
+
+    if (req.session.siblings == 'yes') {
+        res.redirect('/sibling-further')
+    }
+    else if (req.session.siblings == 'no') {
         res.redirect('/further-details')
     }
 })
+
 
 router.get('/professionals', function (req, res) {
     req.session.eventType = req.session.eventType;
