@@ -25,13 +25,17 @@
       </div>
 
     </div>
-      {% if (eventType == 'maternal') or (eventType == 'maternal-42') %}
+      {% if (eventType == 'maternal') or (eventType == 'maternal-42') or eventType=='neonatal' or eventType=='stillbirth' %}
 
-      <p>We have notified MBRRACE.</p>
+      <p>We have notified MBRRACE. You must return to the task list and complete the second section to notify HSIB. 
+        We will not ask for any information already provided in this notification unless the information 
+        provided is likely to have changed.</p>
 
-      {% else %}
+      {% elif eventType=='brain-injury' %}
       
-      <p>We have notified MBRRACE who will notify your local CDOP of this event. </p>
+      <p>We have notified HSIB. You must return to the task list and complete the second section to notify NHSR. 
+        We will not ask for any information already provided in this notification unless the information 
+        provided is likely to have changed.</p>
 
       {% endif %}
 
