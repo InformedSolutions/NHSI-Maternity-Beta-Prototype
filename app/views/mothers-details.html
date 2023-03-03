@@ -39,7 +39,7 @@ Maternity events - single notification portal
               <input class="nhsuk-input nhsuk-input--width-10" id="email" name="email" type="text">
             </div>
 
-            {% if eventType == 'late-fetal-loss' or eventType == 'maternal-365' %}
+            {% if eventType == 'late-fetal-loss' or eventType == 'maternal-365' or eventType=='perinatal' %}
             {% else %}
 
             <div class="nhsuk-form-group">
@@ -672,8 +672,7 @@ Maternity events - single notification portal
 
     {% endif %}
 
-    {% if eventType == 'late-fetal-loss' or eventType == 'stillbirth' %}
-    {% else %}
+    {% if eventType=='perinatal' or eventType=='neonatal' %}
 
     <div class="nhsuk-radios nhsuk-radios--conditional">
       <label class="nhsuk-label" for="smoke">
@@ -717,6 +716,7 @@ Maternity events - single notification portal
         </label>
       </div>
     </div>
+    {% else %}
     {% endif %}
 
     <br>
@@ -757,6 +757,42 @@ Maternity events - single notification portal
         </div>
       </div>
     </div>
+
+    {% endif %}
+
+    {% if (eventType == 'maternal') or (eventType == 'maternal-42') %}
+
+    <div class="nhsuk-form-group">
+      <h3 class="nhsuk-heading-m">Time of death</h3>
+      <div class="nhsuk-hint" id="example-hint">
+        For example, 13 50
+      </div>
+
+      <div class="nhsuk-date-input" id="example">
+        <div class="nhsuk-date-input__item">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+              Hours
+            </label>
+            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day"
+              name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+          </div>
+        </div>
+        <div class="nhsuk-date-input__item">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+              Minutes
+            </label>
+            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month"
+              name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% endif %}
+
+    {% if (eventType == 'maternal') or (eventType == 'maternal-42') or (eventType == 'maternal-365') %}
 
     <div class="nhsuk-form-group">
       <label class="nhsuk-label" for="select-1">
