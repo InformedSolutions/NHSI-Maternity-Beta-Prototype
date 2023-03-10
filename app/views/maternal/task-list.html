@@ -55,6 +55,8 @@
         Was it an indirect maternal death?: No <a href ="/maternal/criteria">change</a></p>
       {% endif %}
 
+      {% endif %}
+
       <h2 class="nhsuk-heading-l">Section 1 - Complete within 24 hours (or next working day)</h2>
 
       <div class="nhsuk-hint" id="example-hint">
@@ -214,7 +216,6 @@
 
       {% if (MaternalEventType == 'maternal-365') or (suicide == 'yes') %} 
       {% else %}
-
       
       <h2 class="nhsuk-heading-l">Section 2 - Complete at earliest convenience</h2>
 
@@ -263,4 +264,4 @@
     </div>
   </div>
 
-{% endblock %}
+  {% endblock %}
