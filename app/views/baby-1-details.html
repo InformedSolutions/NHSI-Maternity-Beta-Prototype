@@ -198,7 +198,7 @@ Maternity events - single notification portal
 
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="email">
-            Name
+            First name
           </label>
           <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
         </div>
@@ -211,7 +211,7 @@ Maternity events - single notification portal
 
         {% endif %}
 
-        {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}
+        {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}    
 
         <h3 class="nhsuk-heading-m">Expected date of delivery (optional)</h3>
         <div class="nhsuk-hint" id="example-hint">
@@ -248,44 +248,136 @@ Maternity events - single notification portal
           </div>
         </div>
 
-        <h3 class="nhsuk-heading-m">Date of delivery/ pregnancy loss (optional)</h3>
-        <div class="nhsuk-hint" id="example-hint">
-          For example, 15 3 1984
-        </div>
+        <div class="nhsuk-radios nhsuk-radios--conditional">
+          <label class="nhsuk-label" for="delivery-date">
+            <h3 class="nhsuk-heading-m">Is the date of delivery/pregnancy loss known?</h3>
+          </label>
+    
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="delivery-date-1" name="delivery-date" type="radio" value="email"
+              aria-controls="conditional-delivery-date-1" aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" for="delivery-date-1">
+              Yes
+            </label>
+          </div>
+    
+          <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-delivery-date-1">
+    
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="email">
+                Date of delivery/pregnancy loss
+              </label>
+              <div class="nhsuk-hint" id="example-hint">
+                For example, 15 3 1984
+              </div>
+      
+              <div class="nhsuk-date-input" id="example">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                      Day
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day"
+                      name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                      Month
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month"
+                      name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                      Year
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year"
+                      name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+              </div>     
 
-        <div class="nhsuk-date-input" id="example">
-          <div class="nhsuk-date-input__item">
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
-                Day
-              </label>
-              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day"
-                name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
             </div>
+
           </div>
-          <div class="nhsuk-date-input__item">
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
-                Month
-              </label>
-              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month"
-                name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
-            </div>
-          </div>
-          <div class="nhsuk-date-input__item">
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
-                Year
-              </label>
-              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year"
-                name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
-            </div>
+    
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="delivery-date-2" name="delivery-date" type="radio" value="phone"
+              aria-controls="conditional-delivery-date-2" aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" for="delivery-date-2">
+              No
+            </label>
           </div>
         </div>
+        <br>
 
         {% endif %}
 
-        {% if eventType=='maternal-365' %}
+        {% if eventType=='maternal' or eventType=='maternal-42' %}
+
+        <div class="nhsuk-radios nhsuk-radios--conditional">
+          <label class="nhsuk-label" for="delivery-time">
+            <h3 class="nhsuk-heading-m">Is the time of delivery known?</h3>
+          </label>
+    
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="delivery-time-1" name="delivery-time" type="radio" value="email"
+              aria-controls="conditional-delivery-time-1" aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" for="delivery-time-1">
+              Yes
+            </label>
+          </div>
+    
+          <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-delivery-time-1">
+    
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="email">
+                Time of delivery
+              </label>
+              <div class="nhsuk-hint" id="example-hint">
+                For example, 13 50
+              </div>
+  
+              <div class="nhsuk-date-input" id="example">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                      Hours
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day"
+                      name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                      Minutes
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month"
+                      name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="delivery-time-2" name="delivery-time" type="radio" value="phone"
+              aria-controls="conditional-delivery-time-2" aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" for="delivery-time-2">
+              No
+            </label>
+          </div>
+        </div>
+        <br>
+
+        {% endif %}
+
+        {% if eventType=='maternal-365' or eventType=='maternal-42' or eventType=='maternal' %}
         {% else %}
 
         <h3 class="nhsuk-heading-m">Date of birth</h3>
@@ -658,32 +750,35 @@ Maternity events - single notification portal
             Ethnicity
           </label>
           <select class="nhsuk-select" id="select-1" name="select-1">
-            <option>Choose ethnicity</option>
+            <option value="0"> Choose ethnicity</option>
             <option value="1" disabled>White</option>
-            <option value="2">English, Welsh, Scottish, Nothern Irish or British</option>
+            <option value="2">British</option>
             <option value="3">Irish</option>
-            <option value="4">Any other white background</option>
-            <option value="5" disabled>Mixed or multiple ethnic groups</option>
-            <option value="6">White and Black Caribbean</option>
-            <option value="7">White and Black African</option>
-            <option value="8">White and Asian</option>
-            <option value="9">Any other mixed or multiple ethnic background</option>
-            <option value="10" disabled>Asian or Asian British</option>
-            <option value="11">Indian</option>
-            <option value="12">Pakistani</option>
-            <option value="13">Bangladeshi</option>
-            <option value="14">Chinese</option>
+            <option value="4">White gypsy or Irish Traveller</option>
+            <option value="5">Any other white background</option>
+            <option value="6" disabled>Mixed</option>
+            <option value="7">White and Black Caribbean</option>
+            <option value="8">White and Black African</option>
+            <option value="9">White and Asian</option>
+            <option value="10">Any other mixed background</option>
+            <option value="11" disabled>Asian or Asian British</option>
+            <option value="12">Indian</option>
+            <option value="13">Pakistani</option>
+            <option value="14">Bangladeshi</option>
             <option value="15">Any other Asian background</option>
-            <option value="16" disabled>Black, African, Caribbean or Black British</option>
-            <option value="17">African</option>
+            <option value="17" disabled>Black or Black British</option>
             <option value="18">Caribbean</option>
-            <option value="19">Any other Black, African or Caribbean background</option>
-            <option value="20" disabled>Other options</option>
-            <option value="21">Any other ethnic group</option>
-            <option value="22">I don't know</option>
+            <option value="19">African</option>
+            <option value="20">Any other Black background</option>
+            <option value="21" disabled>Other ethnic groups</option>
+            <option value="22">Chinese</option>
+            <option value="23">Arab</option>
+            <option value="24">Any other ethnic group</option>
+            <option value="25">Not stated</option>
+            <option value="26">Not known</option>
           </select>
         </div>
-        </fieldset>
+      </fieldset>
 
         {% endif %}
 

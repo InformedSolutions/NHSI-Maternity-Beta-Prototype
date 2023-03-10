@@ -115,32 +115,35 @@ Maternity events - single notification portal
                 Ethnicity
               </label>
               <select class="nhsuk-select" id="select-1" name="select-1">
-                <option value="0">Choose ethnicity</option>
+                <option value="0"> Choose ethnicity</option>
                 <option value="1" disabled>White</option>
-                <option value="2">English, Welsh, Scottish, Nothern Irish or British</option>
+                <option value="2">British</option>
                 <option value="3">Irish</option>
-                <option value="4">Any other white background</option>
-                <option value="5" disabled>Mixed or multiple ethnic groups</option>
-                <option value="6">White and Black Caribbean</option>
-                <option value="7">White and Black African</option>
-                <option value="8">White and Asian</option>
-                <option value="9">Any other mixed or multiple ethnic background</option>
-                <option value="10" disabled>Asian or Asian British</option>
-                <option value="11">Indian</option>
-                <option value="12">Pakistani</option>
-                <option value="13">Bangladeshi</option>
-                <option value="14">Chinese</option>
+                <option value="4">White gypsy or Irish Traveller</option>
+                <option value="5">Any other white background</option>
+                <option value="6" disabled>Mixed</option>
+                <option value="7">White and Black Caribbean</option>
+                <option value="8">White and Black African</option>
+                <option value="9">White and Asian</option>
+                <option value="10">Any other mixed background</option>
+                <option value="11" disabled>Asian or Asian British</option>
+                <option value="12">Indian</option>
+                <option value="13">Pakistani</option>
+                <option value="14">Bangladeshi</option>
                 <option value="15">Any other Asian background</option>
-                <option value="16" disabled>Black, African, Caribbean or Black British</option>
-                <option value="17">African</option>
+                <option value="17" disabled>Black or Black British</option>
                 <option value="18">Caribbean</option>
-                <option value="19">Any other Black, African or Caribbean background</option>
-                <option value="20" disabled>Other options</option>
-                <option value="21">Any other ethnic group</option>
-                <option value="22">I don't know</option>
+                <option value="19">African</option>
+                <option value="20">Any other Black background</option>
+                <option value="21" disabled>Other ethnic groups</option>
+                <option value="22">Chinese</option>
+                <option value="23">Arab</option>
+                <option value="24">Any other ethnic group</option>
+                <option value="25">Not stated</option>
+                <option value="26">Not known</option>
               </select>
             </div>
-          </fieldset>
+            </fieldset>
         </div>
         {% if eventType == 'perinatal' or eventType == 'maternal-365' %}
         {% elif eventType == 'late-fetal-loss' %}
@@ -296,36 +299,36 @@ Maternity events - single notification portal
             <div class="nhsuk-radios">
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-1" name="sex" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                <input class="nhsuk-radios__input" id="sex-hints-1" name="sex" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="sex-hints-1">
                   Male
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-2" name="sex" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                <input class="nhsuk-radios__input" id="sex-hints-2" name="sex" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="sex-hints-2">
                   Female
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-3" name="sex" type="radio" value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+                <input class="nhsuk-radios__input" id="sex-hints-3" name="sex" type="radio" value="not sure">
+                <label class="nhsuk-label nhsuk-radios__label" for="sex-hints-3">
                   Indeterminate
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-4" name="sex" type="radio" value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+                <input class="nhsuk-radios__input" id="sex-hints-4" name="sex" type="radio" value="not sure">
+                <label class="nhsuk-label nhsuk-radios__label" for="sex-hints-4">
                   Not Stated
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-4" name="sex" type="radio" value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+                <input class="nhsuk-radios__input" id="sex-hints-4" name="sex" type="radio" value="not sure">
+                <label class="nhsuk-label nhsuk-radios__label" for="sex-hints-4">
                   Not Asked
                 </label>
               </div>
@@ -345,29 +348,29 @@ Maternity events - single notification portal
             <div class="nhsuk-radios">
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-1" name="assigned" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                <input class="nhsuk-radios__input" id="assigned-hints-1" name="assigned" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="assigned-hints-1">
                   Yes - the person's gender identity is the same as their gender assigned at birth
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-2" name="assigned" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                <input class="nhsuk-radios__input" id="assigned-hints-2" name="assigned" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="assigned-hints-2">
                   No - the person's gender identity is not the same as their gender assigned at birth
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-3" name="assigned" type="radio" value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+                <input class="nhsuk-radios__input" id="assigned-hints-3" name="assigned" type="radio" value="not sure">
+                <label class="nhsuk-label nhsuk-radios__label" for="assigned-hints-3">
                   Not stated
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-4" name="assigned" type="radio" value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+                <input class="nhsuk-radios__input" id="assigned-hints-4" name="assigned" type="radio" value="not sure">
+                <label class="nhsuk-label nhsuk-radios__label" for="assigned-hints-4">
                   Not Asked
                 </label>
               </div>
@@ -385,28 +388,28 @@ Maternity events - single notification portal
             <div class="nhsuk-radios">
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-1" name="disabled" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                <input class="nhsuk-radios__input" id="disabled-hints-1" name="disabled" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="disabled-hints-1">
                   Yes - the person has been diagnosed as disabled or considers themself to be disabled. </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-2" name="disabled" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                <input class="nhsuk-radios__input" id="disabled-hints-2" name="disabled" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="disabled-hints-2">
                   No - the person has not been diagnosed as disabled or does not consider themself to be disabled.
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-3" name="disabled" type="radio" value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+                <input class="nhsuk-radios__input" id="disabled-hints-3" name="disabled" type="radio" value="not sure">
+                <label class="nhsuk-label nhsuk-radios__label" for="disabled-hints-3">
                   Not stated
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-4" name="disabled" type="radio" value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+                <input class="nhsuk-radios__input" id="disabled-hints-4" name="disabled" type="radio" value="not sure">
+                <label class="nhsuk-label nhsuk-radios__label" for="disabled-hints-4">
                   Not Asked
                 </label>
               </div>
@@ -425,53 +428,53 @@ Maternity events - single notification portal
             <div class="nhsuk-radios">
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-1" name="orientation" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                <input class="nhsuk-radios__input" id="orientation-hints-1" name="orientation" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="orientation-hints-1">
                   Heterosexual
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-2" name="orientation" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                <input class="nhsuk-radios__input" id="orientation-hints-2" name="orientation" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="orientation-hints-2">
                   Gay or Lesbian
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-3" name="orientation" type="radio"
+                <input class="nhsuk-radios__input" id="orientation-hints-3" name="orientation" type="radio"
                   value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+                <label class="nhsuk-label nhsuk-radios__label" for="orientation-hints-3">
                   Bisexual
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-4" name="orientation" type="radio"
+                <input class="nhsuk-radios__input" id="orientation-hints-4" name="orientation" type="radio"
                   value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+                <label class="nhsuk-label nhsuk-radios__label" for="orientation-hints-4">
                   Other sexual orientation not listed
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-4" name="orientation" type="radio"
+                <input class="nhsuk-radios__input" id="orientation-hints-4" name="orientation" type="radio"
                   value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+                <label class="nhsuk-label nhsuk-radios__label" for="orientation-hints-4">
                   Person asked and does not know or is not sure
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-4" name="orientation" type="radio"
+                <input class="nhsuk-radios__input" id="orientation-hints-4" name="orientation" type="radio"
                   value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+                <label class="nhsuk-label nhsuk-radios__label" for="orientation-hints-4">
                   Not stated
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-4" name="orientation" type="radio"
+                <input class="nhsuk-radios__input" id="orientation-hints-4" name="orientation" type="radio"
                   value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+                <label class="nhsuk-label nhsuk-radios__label" for="orientation-hints-4">
                   Not asked
                 </label>
               </div>
@@ -490,27 +493,27 @@ Maternity events - single notification portal
             <div class="nhsuk-radios">
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-1" name="pregnant" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                <input class="nhsuk-radios__input" id="pregnant-hints-1" name="pregnant" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="pregnant-hints-1">
                   Yes
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-2" name="pregnant" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                <input class="nhsuk-radios__input" id="pregnant-hints-2" name="pregnant" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="pregnant-hints-2">
                   No
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-3" name="pregnant" type="radio" value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+                <input class="nhsuk-radios__input" id="pregnant-hints-3" name="pregnant" type="radio" value="not sure">
+                <label class="nhsuk-label nhsuk-radios__label" for="pregnant-hints-3">
                   Not stated
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-4" name="pregnant" type="radio" value="not sure">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
+                <input class="nhsuk-radios__input" id="pregnant-hints-4" name="pregnant" type="radio" value="not sure">
+                <label class="nhsuk-label nhsuk-radios__label" for="pregnant-hints-4">
                   Not asked
                 </label>
               </div>

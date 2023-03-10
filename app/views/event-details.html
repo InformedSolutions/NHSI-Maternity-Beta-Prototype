@@ -33,8 +33,7 @@
               </h1>
             </legend>
 
-            {% if eventType == 'stillbirth' or eventType == 'neonatal' or eventType == 'late-fetal-loss' %}
-            {% else %}
+            {% if eventType == 'brain-injury' or eventType=='stillbirth' or eventType=='neonatal' %}
 
             <h3 class="nhsuk-heading-m">Date of event</h3>
             <div class="nhsuk-hint" id="example-hint">
@@ -129,7 +128,6 @@
           </label>
           <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
         </div>
-
         {% if (eventType == 'stillbirth') or (eventType == 'neonatal') or (eventType == 'brain-injury') %} 
 
         <div class="nhsuk-form-group">
@@ -138,17 +136,19 @@
           </label>
           <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
         </div>
-        <br>
+        
         {% else %}
 
         {% endif %}
 
         {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}
 
+        <br>
         <a class="nhsuk-button" href="/mothers-details" role="button" draggable="false">Continue</a>
 
         {% else %}
 
+        <br>
         <a class="nhsuk-button" href="/role-of-hospital" role="button" draggable="false">Continue</a>
 
         {% endif %}
