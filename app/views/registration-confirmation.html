@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Maternity events - single notification portal
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+<br>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4">
+
+      <div class="nhsuk-card__content">
+        <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
+          Thank you for registering to access the Single Notification Portal 
+        </h1>
+        <p>We have sent your request for admin access to NHS England for review. Please check your email for next steps. 
+        </p>
+      </div>
+
+    </div>
+
+      <p><a href="/home">Return to home</p></a>
+
+    </div>
+  </div>
+{% endblock %}
