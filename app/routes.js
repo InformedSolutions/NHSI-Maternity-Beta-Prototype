@@ -117,18 +117,25 @@ router.post('/event-type-3', function (req, res) {
     req.session.timeAfterBirth = req.session.data['time-after-birth']
 
     if (req.session.gestationWeeks > 21 && req.session.gestationWeeks < 24 && req.session.signOfLife == 'no') {
+        req.session.eventType = "late-fetal-loss"
         res.redirect('/late-fetal-loss/task-list')
     } else if (req.session.gestationWeeks > 23 && req.session.signOfLife == 'no') {
+        req.session.eventType = "stillbirth"
         res.redirect('/stillbirth/task-list')
     } else if (req.session.birthWeight > 399 && req.session.signOfLife == 'no') {
+        req.session.eventType = "stillbirth"
         res.redirect('/stillbirth/task-list')
     } else if (req.session.gestationWeeks > 19 && req.session.timeAfterBirth == 'before-7') {
+        req.session.eventType = "neonatal"
         res.redirect('/neonatal/task-list')
     } else if (req.session.birthWeight > 399 && req.session.timeAfterBirth == 'before-7') {
+        req.session.eventType = "neonatal"
         res.redirect('/neonatal/task-list')
     } else if (req.session.gestationWeeks > 19 && req.session.timeAfterBirth == 'between-7-28') {
+        req.session.eventType = "perinatal"
         res.redirect('/perinatal/task-list')
     } else if (req.session.birthWeight > 399 && req.session.timeAfterBirth == 'between-7-28') {
+        req.session.eventType = "perinatal"
         res.redirect('/perinatal/task-list')
     } else if (req.session.timeAfterBirth == 'after-28') {
         res.redirect('/not-notifiable')
