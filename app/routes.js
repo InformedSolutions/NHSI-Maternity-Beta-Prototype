@@ -362,12 +362,9 @@ router.post('/brain-injury/still-alive', function(req,res) {
 
 router.post('/brain-injury/details', function(req,res) {
     req.session.diagnosed = req.session.data['diagnosed']
+    req.session.labour = req.session.data['labour']
     
-    if (req.session.diagnosed == 'yes') {
-        res.redirect('/brain-injury/task-list')
-    } else {
-        res.redirect('/brain-injury/task-list')
-    }
+    res.redirect('/brain-injury/task-list')
 })
 
 router.get('/brain-injury/task-list', function (req, res) {
@@ -375,6 +372,7 @@ router.get('/brain-injury/task-list', function (req, res) {
     req.session.diagnosed = req.session.diagnosed
 
     res.render('brain-injury/task-list', {
-        diagnosed: req.session.diagnosed
+        diagnosed: req.session.diagnosed,
+        labour: req.session.labour
     });
 });
