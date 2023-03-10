@@ -1,0 +1,105 @@
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+Maternity events - single notification portal
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+    <form method="post" class="form">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <div class="nhsuk-form-group">
+
+            <h1 class="nhsuk-fieldset__legend--l">
+              Severe brain injury details
+            </h1>
+
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend">
+                <h1 class="nhsuk-fieldset__heading">
+                  Did the mother go into labour?
+                </h1>
+              </legend>
+
+              <p class="nhsuk-hint">
+                The definition of labour used by HSIB includes:
+                <ul class="nhsuk-hint">
+                  <li>
+                    Any labour diagnosed by a health professional, including the latent phase (start) of labour at less than 4cm cervical dilatation.
+                  </li>
+                  <li>
+                    When the mother called the maternity unit to report any concerns of being in labour, for example (but not limited to) abdominal pains, contractions, or suspected ruptured membranes (waters breaking).
+                  </li>
+                  <li>
+                    Induction of labour (when labour is started artificially).
+                  </li>
+                  <li>
+                    When the baby was thought to be alive following suspected or confirmed pre-labour rupture of membranes.
+                  </li>
+                </ul>
+              </p>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="labour-1" name="labour" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="labour-1">
+                  Yes
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="labour-2" name="labour" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="labour-2">
+                  No
+                </label>
+              </div>
+
+            </fieldset>
+
+            <br>
+
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend">
+                <h1 class="nhsuk-fieldset__heading">
+                  Was the severe brain injury diagnosed within 7 days of birth?
+                </h1>
+              </legend>
+  
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="diagnosed-1" name="diagnosed" type="radio" value="yes">
+                  <label class="nhsuk-label nhsuk-radios__label" for="diagnosed-1">
+                    Yes
+                  </label>
+                </div>
+  
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="diagnosed-2" name="diagnosed" type="radio" value="no">
+                  <label class="nhsuk-label nhsuk-radios__label" for="diagnosed-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            
+          <button type="submit" class="nhsuk-button">
+            Continue
+          </button>
+        </div>
+      </div>
+    </form>
+  </main>
+</div>
+<!-- End of content -->
+{% endblock %}

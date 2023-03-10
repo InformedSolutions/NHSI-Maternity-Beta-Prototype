@@ -1,9 +1,8 @@
-
 {% extends 'layout.html' %}
 
 
 {% block pageTitle %}
-  Maternity events - single notification portal
+Maternity events - single notification portal
 {% endblock %}
 
 
@@ -18,8 +17,8 @@
 {% include "includes/back.html" %}
 
 <div class="nhsuk-width-container">
-
-  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+  <form method="post" class="form">
+    <main class="nhsuk-main-wrapper" id="maincontent" role="main">
 
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds">
@@ -34,7 +33,7 @@
             </legend>
         
             <div class="nhsuk-radios nhsuk-radios--inline">              
-              <label class="nhsuk-label" for="email">
+              <label class="nhsuk-label" for="suicide">
                 Did the mother die by suicide?
               </label>
               <div class="nhsuk-radios__item">
@@ -70,41 +69,43 @@
                   No
                 </label>
               </div>
-            </div>
 
-            <br>
+              <br>
 
-            <div class="nhsuk-radios nhsuk-radios--inline">
-              <label class="nhsuk-label" for="email">
-                Was it an indirect maternal death?
-              </label>
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="indirect-1" name="indirect" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="indirect-1">
-                  Yes
+              <div class="nhsuk-radios nhsuk-radios--inline">
+                <label class="nhsuk-label" for="email">
+                  Was it an indirect maternal death?
                 </label>
-              </div>
-            
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="indirect-2" name="indirect" type="radio" value="no">
-                <label class="nhsuk-label nhsuk-radios__label" for="indirect-2">
-                  No
-                </label>
-              </div>
-            </div>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="indirect-1" name="indirect" type="radio" value="yes">
+                  <label class="nhsuk-label nhsuk-radios__label" for="indirect-1">
+                    Yes
+                  </label>
+                </div>
 
-          </fieldset>
-        
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="indirect-2" name="indirect" type="radio" value="no">
+                  <label class="nhsuk-label nhsuk-radios__label" for="indirect-2">
+                    No
+                  </label>
+                </div>
+              </div>
+
+            </fieldset>
+
+          </div>
+
+          <br>
+
+          <button type="submit" class="nhsuk-button">
+            Continue
+          </button>
+
+
         </div>
-
-        <br>
-
-        <a class="nhsuk-button" href="task-list" role="button" draggable="false">Continue</a>
-
-
       </div>
-    </div>
 
-  </main>
+    </main>
+  </form>
 </div>
 {% endblock %}
