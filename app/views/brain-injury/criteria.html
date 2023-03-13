@@ -131,7 +131,15 @@
         
         </div>
 
+        {% if labour=='yes' and diagnosed=='yes' %}
+
         <a class="nhsuk-button" href="/brain-injury/mothers-details" role="button" draggable="false">Continue</a>
+
+        {% else %}
+
+        <a class="nhsuk-button" href="/brain-injury/baby-1-details" role="button" draggable="false">Continue</a>
+
+        {% endif %}
 
         <p><a href="/brain-injury/task-list">Return to task list</a></p>
 
