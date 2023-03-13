@@ -76,12 +76,18 @@ router.post('/event-type-0', function (req, res) {
 
     } else if (req.session.BabyEventType == 'baby-death') {
 
-        res.redirect('/event-type-3')
+        res.redirect('/multiple-babies')
 
     } else if (req.session.BabyEventType == 'brain-injury') {
 
         res.redirect('/brain-injury/still-alive')
     }
+});
+
+router.post('/multiple-babies', function(req,res) {
+    req.session.multiple = req.session.data['multiple']
+    req.session.number = req.session.data['number']
+    res.redirect('/event-type-3')
 });
 
 router.post('/event-type-1', function (req, res) {
@@ -108,6 +114,14 @@ router.post('/event-type-2', function (req, res) {
 
 })
 
+router.get('/event-type-3', function(req,res){
+    req.session.multiple = req.session.multiple
+
+    res.render('event-type-3', {
+        multipleBabies: req.session.multiple
+    })
+})
+
 router.post('/event-type-3', function (req, res) {
     req.session.gestationKnown = req.session.data['gestation-known']
     req.session.gestationWeeks = req.session.data['gestational-weeks']
@@ -115,8 +129,14 @@ router.post('/event-type-3', function (req, res) {
     req.session.birthWeight = req.session.data['birth-weight']
     req.session.signOfLife = req.session.data['sign-of-life']
     req.session.timeAfterBirth = req.session.data['time-after-birth']
+    req.session.thoughtAlive = req.session.data['thought-alive']
 
-    if (req.session.gestationWeeks > 21 && req.session.gestationWeeks < 24 && req.session.signOfLife == 'no') {
+    // get number of babies data for demo purposes
+    req.session.multiple = req.session.multiple
+
+    if (req.session.multiple == 'yes') {
+        res.redirect('/stillbirth/task-list')
+    } else if (req.session.gestationWeeks > 21 && req.session.gestationWeeks < 24 && req.session.signOfLife == 'no') {
         req.session.eventType = "late-fetal-loss"
         res.redirect('/late-fetal-loss/task-list')
     } else if (req.session.gestationWeeks > 23 && req.session.signOfLife == 'no') {
@@ -361,11 +381,15 @@ router.get('/stillbirth/task-list', function (req, res) {
     req.session.gestationWeeks = req.session.gestationWeeks
     req.session.mri = req.session.mri
     req.session.diagnosed = req.session.diagnosed
+    req.session.thoughtAlive = req.session.thoughtAlive
+    req.session.mutliple = req.session.multiple
 
     res.render('stillbirth/task-list', {
         gestationWeeks: req.session.gestationWeeks,
         mri: req.session.mri,
-        diagnosed: req.session.diagnosed
+        diagnosed: req.session.diagnosed,
+        thoughtAlive: req.session.thoughtAlive,
+        multipleBabies: req.session.multiple
     });
 });
 

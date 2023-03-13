@@ -15,7 +15,7 @@
       </h1>
 
       <p>Based on your answers, the event type you need to notify is a <strong>stillbirth.</strong></p>
-      <p>If you think this is not right <a href ="../event-type-0">change the event type.</a></p>
+      <p>If you think this is not right, <a href ="../event-type-0">change the event type.</a></p>
 
       <h2 class="nhsuk-heading-l">Section 1 - Complete within 24 hours (or next working day)</h2>
       
@@ -88,19 +88,77 @@
         </ul>
       </li>
 
+      {% if (multipleBabies == 'yes') %}
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">4. </span> Baby 1's details
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/baby-1-details" aria-describedby="company-information-status">
+              Baby 1's details
+              </a>
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/baby-1-location" aria-describedby="company-information-status">
+              Baby 1's location
+              </a>
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">5. </span> Baby 2's details
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/baby-1-details" aria-describedby="company-information-status">
+              Baby 2's details
+              </a>
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/baby-1-location" aria-describedby="company-information-status">
+              Baby 2's location
+              </a>
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">6. </span> Submit section 1
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+                Review answers and submit
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--red" id="submit-pay-status">Cannot start yet</strong>
+          </li>
+        </ul>
+      </li>
+
+      {% else %} 
+
       <li>
         <h2 class="app-task-list__section">
           <span class="app-task-list__section-number">4. </span> Baby details
         </h2>
         <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/multiple-babies" aria-describedby="company-information-status">
-              Number of babies
-              </a>
-            </span>
-            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
-          </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="/baby-1-details" aria-describedby="company-information-status">
@@ -134,7 +192,9 @@
         </ul>
       </li>
 
-      {% if (gestationWeeks > 36) %}
+      {% endif %}
+
+      {% if (gestationWeeks > 36) and (thoughtAlive == 'yes') %}
 
       <h2 class="nhsuk-heading-l">Section 2 - Complete at earliest convenience</h2>
 
