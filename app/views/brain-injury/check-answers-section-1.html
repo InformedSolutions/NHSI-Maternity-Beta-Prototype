@@ -24,7 +24,9 @@
 
         <br>
 
-        <h1 class="govuk-heading-l">Check your answers for section 1 (MNSI)</h1>
+        <h1 class="govuk-heading-l">Check your answers for section 1 {% if labour=='yes' and diagnosed=='yes' %} (MNSI)
+          {% else %}(NHSR){% endif %}
+        </h1>
 
         <h2 class="govuk-heading-m">User details</h2>
 
@@ -462,7 +464,15 @@
           </div>
         </dl>
 
+        {% if labour=='yes' and diagnosed=='yes' %}
+
           <a class="nhsuk-button" href="/brain-injury/confirmation-section-1" role="button" draggable="false">Submit</a>
+
+        {% else %}
+
+        <a class="nhsuk-button" href="/brain-injury/confirmation" role="button" draggable="false">Submit</a>
+
+        {% endif %}
 
         </form>
 

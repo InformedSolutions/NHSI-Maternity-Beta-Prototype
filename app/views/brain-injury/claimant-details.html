@@ -141,7 +141,16 @@
 
           </fieldset>
           <br>  
+
+          {% if labour=='yes' and diagnosed=='yes' %}
+
           <a class="nhsuk-button" href="/brain-injury/check-answers-section-2" role="button" draggable="false">Continue</a>
+
+          {% else %}
+
+          <a class="nhsuk-button" href="/brain-injury/check-answers-section-1" role="button" draggable="false">Continue</a>
+
+          {% endif %}
         
         <p><a href="/brain-injury/task-list">Return to task list</a></p>
 

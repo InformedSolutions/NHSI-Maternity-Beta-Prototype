@@ -87,6 +87,8 @@ Maternity events - single notification portal
           </div>
           <br>
 
+          {% if labour=='yes' and diagnosed=='yes' %}
+
           <div class="nhsuk-form-group">
             <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
   
@@ -116,8 +118,10 @@ Maternity events - single notification portal
                 </div>
               </div>
             </fieldset>
-  
           </div>
+
+          {% else %}
+          {% endif %}
   
           <fieldset class="nhsuk-fieldset">
             <label class="nhsuk-label" for="input-width-10">
@@ -165,12 +169,17 @@ Maternity events - single notification portal
 
           <br>
 
+          {% if labour=='yes' and diagnosed=='yes' %}
+
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="input-width-10">
               Hospital number (optional)
             </label>
             <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
           </div>
+
+          {% else %}
+          {% endif %}
 
           <h3 class="nhsuk-heading-m">Date of death (optional)</h3>
           <div class="nhsuk-hint" id="example-hint">
@@ -207,6 +216,9 @@ Maternity events - single notification portal
             </div>
           </div>
           <br>
+
+          {% if labour=='yes' and diagnosed=='yes' %}
+
           <div class="nhsuk-form-group">
             <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
   
@@ -438,8 +450,10 @@ Maternity events - single notification portal
 
           </fieldset>
 
-        </div>
+          {% else %}
+          {% endif %}
 
+        </div>
 
         <a class="nhsuk-button" href="/brain-injury/further-details" role="button" draggable="false">Continue</a>
 

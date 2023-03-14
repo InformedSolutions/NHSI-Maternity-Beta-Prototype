@@ -184,8 +184,10 @@ router.get('/mothers-details', function (req, res) {
 
 router.get('/baby-1-details', function (req, res) {
     req.session.eventType = req.session.eventType;
+    req.session.gestationKnown = req.session.gestationKnown
     res.render('baby-1-details', {
         eventType: req.session.eventType,
+        gestationKnown: req.session.gestationKnown,
     });
 });
 
@@ -393,5 +395,15 @@ router.get('/brain-injury/task-list', function (req, res) {
     res.render('brain-injury/task-list', {
         diagnosed: req.session.diagnosed,
         labour: req.session.labour
+    });
+});
+
+router.get('/brain-injury/event-details', function (req, res) {
+    req.session.labour = req.session.labour
+    req.session.diagnosed = req.session.diagnosed
+
+    res.render('brain-injury/event-details', {
+        labour: req.session.labour,
+        diagnosed: req.session.diagnosed
     });
 });
