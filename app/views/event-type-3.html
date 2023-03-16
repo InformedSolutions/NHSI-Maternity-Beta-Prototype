@@ -32,7 +32,7 @@ Maternity events - single notification portal
 
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
                 <h1 class="nhsuk-fieldset__heading">
-                  Baby death details
+                  Baby details
                 </h1>
               </legend>
               <p class="nhsuk-hint">
@@ -43,7 +43,7 @@ Maternity events - single notification portal
 
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
                 <h1 class="nhsuk-fieldset__heading">
-                  Baby death details
+                  Baby details
                 </h1>
               </legend>
 
@@ -193,16 +193,16 @@ Maternity events - single notification portal
                           </label>
                         </div>
                         <div class="nhsuk-radios__item">
-                          <input class="nhsuk-radios__input" id="time-after-birth" name="time-after-birth" type="radio"
+                          <input class="nhsuk-radios__input" id="time-after-birth-1" name="time-after-birth" type="radio"
                             value="between-7-28">
-                          <label class="nhsuk-label nhsuk-radios__label" for="time-after-birth">
+                          <label class="nhsuk-label nhsuk-radios__label" for="time-after-birth-1">
                             Between 7 and 28 completed days
                           </label>
                         </div>
                         <div class="nhsuk-radios__item">
-                          <input class="nhsuk-radios__input" id="time-after-birth" name="time-after-birth" type="radio"
+                          <input class="nhsuk-radios__input" id="time-after-birth-2" name="time-after-birth" type="radio"
                             value="after-28">
-                          <label class="nhsuk-label nhsuk-radios__label" for="time-after-birth">
+                          <label class="nhsuk-label nhsuk-radios__label" for="time-after-birth-2">
                             After 28 completed days
                           </label>
                         </div>
@@ -250,20 +250,20 @@ Maternity events - single notification portal
 
                 <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="baby-2-dead">
                   <div class="nhsuk-radios nhsuk-radios--conditional nhsuk-form-group">
-                    <label class="nhsuk-label" for="gestation">
+                    <label class="nhsuk-label" for="gestation-b2">
                       Is gestational age at delivery known?
                     </label>
 
                     <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="gestation-1-b2" name="gestation-known" type="radio"
-                        value="yes" aria-controls="conditional-gestation-1" aria-expanded="false">
-                      <label class="nhsuk-label nhsuk-radios__label" for="gestation-1">
+                      <input class="nhsuk-radios__input" id="gestation-1-b2" name="gestation-known-b2" type="radio"
+                        value="yes" aria-controls="conditional-gestation-1-b2" aria-expanded="false">
+                      <label class="nhsuk-label nhsuk-radios__label" for="gestation-1-b2">
                         Yes
                       </label>
                     </div>
 
                     <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden"
-                      id="conditional-gestation-1">
+                      id="conditional-gestation-1-b2">
 
                       <div class="nhsuk-date-input" id="example">
                         <div class="nhsuk-date-input__item">
@@ -272,7 +272,7 @@ Maternity events - single notification portal
                               Weeks
                             </label>
                             <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
-                              id="gestational-weeks" name="gestational-weeks-b2" type="number" pattern="[0-9]*"
+                              id="gestational-weeks-b2" name="gestational-weeks-b2" type="number" pattern="[0-9]*"
                               inputmode="numeric">
                           </div>
                         </div>
@@ -282,7 +282,7 @@ Maternity events - single notification portal
                               Days
                             </label>
                             <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
-                              id="gestational-days" name="gestational-days-b2" type="number" pattern="[0-9]*"
+                              id="gestational-days-b2" name="gestational-days-b2" type="number" pattern="[0-9]*"
                               inputmode="numeric">
                           </div>
                         </div>
@@ -291,15 +291,15 @@ Maternity events - single notification portal
                     </div>
 
                     <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="gestation-2" name="gestation-known-b2" type="radio"
-                        value="no" aria-controls="conditional-gestation-2" aria-expanded="false">
-                      <label class="nhsuk-label nhsuk-radios__label" for="gestation-2">
+                      <input class="nhsuk-radios__input" id="gestation-2-b2" name="gestation-known-b2" type="radio"
+                        value="no" aria-controls="conditional-gestation-2-b2" aria-expanded="false">
+                      <label class="nhsuk-label nhsuk-radios__label" for="gestation-2-b2">
                         No
                       </label>
                     </div>
 
                     <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden"
-                      id="conditional-gestation-2">
+                      id="conditional-gestation-2-b2">
 
                       <label class="nhsuk-label" for="input-width-10">
                         Birth weight (grams)
@@ -307,7 +307,7 @@ Maternity events - single notification portal
                       <div class="nhsuk-date-input" id="example">
                         <div class="nhsuk-date-input__item">
                           <div class="nhsuk-form-group">
-                            <input class="nhsuk-input nhsuk-date-input__input" id="birth-weight" name="birth-weight-b2"
+                            <input class="nhsuk-input nhsuk-date-input__input" id="birth-weight-b2" name="birth-weight-b2"
                               type="number" pattern="[0-9]*" inputmode="numeric">
                           </div>
                         </div>
@@ -322,17 +322,17 @@ Maternity events - single notification portal
                     </label>
 
                     <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="thought-alive" name="thought-alive-b2" type="radio"
+                      <input class="nhsuk-radios__input" id="thought-alive-b2" name="thought-alive-b2" type="radio"
                         value="yes">
-                      <label class="nhsuk-label nhsuk-radios__label" for="thought-alive">
+                      <label class="nhsuk-label nhsuk-radios__label" for="thought-alive-b2">
                         Yes
                       </label>
                     </div>
 
                     <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="thought-alive-1" name="thought-alive-b2" type="radio"
+                      <input class="nhsuk-radios__input" id="thought-alive-1-b2" name="thought-alive-b2" type="radio"
                         value="no">
-                      <label class="nhsuk-label nhsuk-radios__label" for="thought-alive-1">
+                      <label class="nhsuk-label nhsuk-radios__label" for="thought-alive-1-b2">
                         No
                       </label>
                     </div>
@@ -344,37 +344,37 @@ Maternity events - single notification portal
                     </label>
 
                     <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="sign-of-life" name="sign-of-life-b2" type="radio"
-                        value="yes" aria-controls="sign-of-life-1" aria-expanded="false">
-                      <label class="nhsuk-label nhsuk-radios__label" for="sign-of-life">
+                      <input class="nhsuk-radios__input" id="sign-of-life-b2" name="sign-of-life-b2" type="radio"
+                        value="yes" aria-controls="sign-of-life-1-b2" aria-expanded="false">
+                      <label class="nhsuk-label nhsuk-radios__label" for="sign-of-life-b2">
                         Yes
                       </label>
                     </div>
 
-                    <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="sign-of-life-1">
+                    <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="sign-of-life-1-b2">
 
                       <div class="nhsuk-radios">
                         <label class="nhsuk-label">
                           How long after birth did the baby die?
                         </label>
                         <div class="nhsuk-radios__item">
-                          <input class="nhsuk-radios__input" id="time-after-birth" name="time-after-birth-b2"
+                          <input class="nhsuk-radios__input" id="time-after-birth-b2" name="time-after-birth-b2"
                             type="radio" value="before-7">
-                          <label class="nhsuk-label nhsuk-radios__label" for="time-after-birth">
+                          <label class="nhsuk-label nhsuk-radios__label" for="time-after-birth-b2">
                             Before 7 completed days
                           </label>
                         </div>
                         <div class="nhsuk-radios__item">
-                          <input class="nhsuk-radios__input" id="time-after-birth" name="time-after-birth-b2"
+                          <input class="nhsuk-radios__input" id="time-after-birth-1-b2" name="time-after-birth-b2"
                             type="radio" value="between-7-28">
-                          <label class="nhsuk-label nhsuk-radios__label" for="time-after-birth">
+                          <label class="nhsuk-label nhsuk-radios__label" for="time-after-birth-1-b2">
                             Between 7 and 28 completed days
                           </label>
                         </div>
                         <div class="nhsuk-radios__item">
-                          <input class="nhsuk-radios__input" id="time-after-birth" name="time-after-birth-b2"
+                          <input class="nhsuk-radios__input" id="time-after-birth-2-b2" name="time-after-birth-b2"
                             type="radio" value="after-28">
-                          <label class="nhsuk-label nhsuk-radios__label" for="time-after-birth">
+                          <label class="nhsuk-label nhsuk-radios__label" for="time-after-birth-2-b2">
                             After 28 completed days
                           </label>
                         </div>
@@ -383,9 +383,9 @@ Maternity events - single notification portal
                     </div>
 
                     <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="sign-of-life" name="sign-of-life-b2" type="radio"
+                      <input class="nhsuk-radios__input" id="sign-of-life-1-b2" name="sign-of-life-b2" type="radio"
                         value="no">
-                      <label class="nhsuk-label nhsuk-radios__label" for="sign-of-life">
+                      <label class="nhsuk-label nhsuk-radios__label" for="sign-of-life-1-b2">
                         No
                       </label>
                     </div>

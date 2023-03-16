@@ -134,6 +134,8 @@ router.post('/event-type-3', function (req, res) {
     // get number of babies data for demo purposes
     req.session.multiple = req.session.multiple
 
+
+    // Multiple baby flow only configured for Stillbirth
     if (req.session.multiple == 'yes') {
         res.redirect('/stillbirth/task-list')
     } else if (req.session.gestationWeeks > 21 && req.session.gestationWeeks < 24 && req.session.signOfLife == 'no') {
