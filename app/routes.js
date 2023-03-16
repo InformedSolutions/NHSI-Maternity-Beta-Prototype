@@ -361,10 +361,6 @@ router.get('/neonatal/task-list', function (req, res) {
 });
 
 router.get('/stillbirth/task-list', function (req, res) {
-    req.session.gestationWeeks = req.session.gestationWeeks
-    req.session.mri = req.session.mri
-    req.session.diagnosed = req.session.diagnosed
-    req.session.thoughtAlive = req.session.data['thought-alive']
 
     res.render('stillbirth/task-list', {
         gestationWeeks: req.session.gestationWeeks,
