@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Maternity events - single notification portal
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+<br>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4">
+
+      <div class="nhsuk-card__content">
+        <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
+          There is currently no admin set for your organisation 
+        </h1>
+        <h3>You must request admin access to proceed.</h3>
+        <p>This should be requested only if you have a duty to oversee and submit notifications for this organisation. Additionally you 
+            will be able to manage which users are able to submit notifications for this organisation and also approve other users as admins. 
+        </p>
+      </div>
+
+    </div>
+
+      <a class="nhsuk-button" href="/#" role="button" draggable="false">Request access</a>
+      <p><a href="/home">Return to home</p></a>
+
+    </div>
+  </div>
+{% endblock %}
