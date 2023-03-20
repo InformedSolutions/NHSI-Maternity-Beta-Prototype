@@ -156,7 +156,7 @@ router.post('/user-management/user-management-route', function (req, res) {
         req.session.route = "admin"
         res.redirect('/account-details-org')
     } else if (req.session.route == 'no-access') {
-        res.redirect('')
+        res.redirect('/user-management/choose-access')
     } else if (req.session.route == 'organisational') {
         res.redirect('/home')
     } else if (req.session.route == 'admin') {

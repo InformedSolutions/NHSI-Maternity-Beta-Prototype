@@ -23,7 +23,11 @@
 
     </div>
 
+      {% if route=='admin' or route=='no-admin' %}
       <p><a href="/">Return to start</p></a>
+      {% else %}
+      <p><a href="/home">Return to home</p></a>
+      {% endif %}
 
     </div>
   </div>
