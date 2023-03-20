@@ -36,14 +36,15 @@ Maternity events - single notification portal
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">Manchester Royal Infirmary (RM326)</td>
-              <td class="govuk-table__cell">Organisational</td>
+              <td class="govuk-table__cell">{% if route=='organisational' %}Organisational{% else %}Admin{% endif %}</td>
               <td class="govuk-table__cell">
-                <a class="nhsuk-button" href="#" role="button" draggable="false">Upgrade access</a>
+                {% if route=='organisational' %}<a class="nhsuk-button" href="registration-confirmation" role="button" draggable="false" style="margin-bottom:0;">Upgrade access</a>{% endif %}
               </td>
             </tr>
           </tbody>
         </table>
 
+        {% if route=='admin' %}
 
         <h1 class="nhsuk-heading-l">Admin area</h1>
 
@@ -52,6 +53,10 @@ Maternity events - single notification portal
         </h2>
         <p>Manage the users who have been granted access to your organisation's event records. From here you can approve
           or reject any incoming requests for access to your organisation's events, or revoke existing users' access.</p>
+
+        {% endif %}
+
+        <p><a href="home">Return to home</a></p>
 
       </div>
     </div>

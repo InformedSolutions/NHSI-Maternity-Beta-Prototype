@@ -147,6 +147,41 @@ router.post('/event-type-3', function (req, res) {
     }
 })
 
+router.post('/user-management/user-management-route', function (req, res) {
+    req.session.route = req.session.data['route']
+
+    if (req.session.route == 'no-admin') {
+        res.redirect('/user-management/no-current-users')
+    } else if (req.session.route == 'first-time') {
+        req.session.route = "admin"
+        res.redirect('/account-details-org')
+    } else if (req.session.route == 'no-access') {
+        res.redirect('')
+    } else if (req.session.route == 'organisational') {
+        res.redirect('/home')
+    } else if (req.session.route == 'admin') {
+        res.redirect('/home')
+    }
+})
+
+router.get('/home', function (req, res) {
+    res.render('home', {
+        route: req.session.route
+    })
+})
+
+router.get('/user-management/access-settings', function (req, res) {
+    res.render('user-management/access-settings', {
+        route: req.session.route
+    })
+})
+
+router.get('/user-management/registration-confirmation', function (req, res) {
+    res.render('user-management/registration-confirmation', {
+        route: req.session.route
+    })
+})
+
 router.post('/maternal/criteria', function (req, res) {
     req.session.suicide = req.session.data['suicide']
     res.redirect('/maternal/task-list')
