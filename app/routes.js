@@ -151,6 +151,7 @@ router.post('/user-management/user-management-route', function (req, res) {
     req.session.route = req.session.data['route']
 
     if (req.session.route == 'no-admin') {
+        req.session.accessRequest = 'admin'
         res.redirect('/user-management/no-current-users')
     } else if (req.session.route == 'first-time') {
         req.session.route = "admin"
@@ -163,6 +164,25 @@ router.post('/user-management/user-management-route', function (req, res) {
         res.redirect('/home')
     }
 })
+
+router.post('/user-management/choose-access', function (req, res) {
+    req.session.accessRequest = req.session.data['access-request']
+
+    if (req.session.accessRequest == 'organisational') {
+        req.session.route = 'organisational'
+        res.redirect('/user-management/registration-confirmation')
+    } else if (req.session.accessRequest == 'admin') {
+        req.session.route = 'admin'
+        res.redirect('/user-management/registration-confirmation')
+    }
+})
+
+router.post('/user-management/access-settings', function (req, res) {
+    req.session.route = 'admin'
+    req.session.accessRequest = 'admin'
+    res.redirect('/user-management/registration-confirmation')
+})
+
 
 router.get('/home', function (req, res) {
     res.render('home', {
@@ -178,7 +198,7 @@ router.get('/user-management/access-settings', function (req, res) {
 
 router.get('/user-management/registration-confirmation', function (req, res) {
     res.render('user-management/registration-confirmation', {
-        route: req.session.route
+        accessRequest: req.session.accessRequest
     })
 })
 

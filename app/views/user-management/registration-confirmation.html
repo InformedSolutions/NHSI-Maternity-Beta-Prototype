@@ -17,13 +17,13 @@
         <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
           Thank you for registering to access the Single Notification Portal 
         </h1>
-        <p>We have sent your request for {% if route=='organisational' %}admin{% elif route=='no-access'%}organisational{% endif %} access to NHS England for review. Please check your email for next steps. 
+        <p>We have sent your request for {% if accessRequest=='admin' %}admin{% elif accessRequest=='organisational'%}organisational{% endif %} access to NHS England for review. Please check your email for next steps. 
         </p>
       </div>
 
     </div>
 
-      {% if route=='admin' or route=='no-admin' %}
+      {% if accessRequest=='no-admin' %}
       <p><a href="/">Return to start</p></a>
       {% else %}
       <p><a href="/home">Return to home</p></a>

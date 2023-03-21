@@ -28,9 +28,9 @@ Maternity events - single notification portal
         <table class="govuk-table">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-              <th class="govuk-table__header" width="15%" scope="col" style="padding-top:0;">Organisation</th>
-              <th class="govuk-table__header" width="15%" scope="col" style="padding-top:0;">Access type</th>
-              <th class="govuk-table__header" width="15%" scope="col" style="padding-top:0;"></th>
+              <th class="govuk-table__header" width="33%" scope="col" style="padding-top:0;">Organisation</th>
+              <th class="govuk-table__header" width="33%" scope="col" style="padding-top:0;">Access type</th>
+              <th class="govuk-table__header" width="33%" scope="col" style="padding-top:0;"></th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
@@ -38,7 +38,11 @@ Maternity events - single notification portal
               <td class="govuk-table__cell">Manchester Royal Infirmary (RM326)</td>
               <td class="govuk-table__cell">{% if route=='organisational' %}Organisational{% else %}Admin{% endif %}</td>
               <td class="govuk-table__cell">
-                {% if route=='organisational' %}<a class="nhsuk-button" href="registration-confirmation" role="button" draggable="false" style="margin-bottom:0;">Upgrade access</a>{% endif %}
+                {% if route=='organisational' %}
+                <form method="post" class="form" action="access-settings">
+                  <button type="submit" class="nhsuk-button" draggable="false" style="margin-bottom:0;">Upgrade access</button>
+                </form>
+                {% endif %}
               </td>
             </tr>
           </tbody>
@@ -49,7 +53,7 @@ Maternity events - single notification portal
         <h1 class="nhsuk-heading-l">Admin area</h1>
 
         <h3 class="nhsuk-card__heading nhsuk-heading-s">
-          <a class="nhsuk-card__link" href="#">Manage users in my organisation</a>
+          <a class="nhsuk-card__link" href="admin-dashboard">Manage users in my organisation</a>
         </h2>
         <p>Manage the users who have been granted access to your organisation's event records. From here you can approve
           or reject any incoming requests for access to your organisation's events, or revoke existing users' access.</p>

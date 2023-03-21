@@ -1,0 +1,80 @@
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+Maternity events - single notification portal
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <h1 class="nhsuk-heading-xl">Admin dashboard</h1>
+
+        <h3> {Trust name} access requests</h3>
+        <p>( 2 requests found )</p>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" width="20%" scope="col" style="padding-top:0;">Name</th>
+              <th class="govuk-table__header" width="20%" scope="col" style="padding-top:0;">Email</th>
+              <th class="govuk-table__header" width="20%" scope="col" style="padding-top:0;">Requested access</th>
+              <th class="govuk-table__header" width="20%" scope="col" style="padding-top:0;"></th>
+              <th class="govuk-table__header" width="20%" scope="col" style="padding-top:0;"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Joe Bloggs</td>
+              <td class="govuk-table__cell">joe.bloggs@nhs.net</td>
+              <td class="govuk-table__cell">Admin</td>
+              <td class="govuk-table__cell">
+                <button type="submit" class="nhsuk-button nhsuk-button--secondary" draggable="false" style="margin-bottom:0; background-color:#007f3b">Approve</button>
+              </td>
+              <td>
+                <button type="submit" class="nhsuk-button nhsuk-button--secondary" draggable="false" style="margin-bottom:0; background-color:#d5281b">Reject</button>
+              </td>
+            </tr>
+          </tbody>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Alex Brown</td>
+              <td class="govuk-table__cell">alex.brown@nhs.net</td>
+              <td class="govuk-table__cell">Organisational</td>
+              <td class="govuk-table__cell">
+                <button type="submit" class="nhsuk-button nhsuk-button--secondary" draggable="false" style="margin-bottom:0; background-color:#007f3b">Approve</button>
+              </td>
+              <td>
+                <button type="submit" class="nhsuk-button nhsuk-button--secondary" draggable="false" style="margin-bottom:0; background-color:#d5281b">Reject</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <a class="nhsuk-button nhsuk-button--secondary" href="manage-users" role="button" draggable="false">Manage organisations users</a>
+
+        <p><a href="/home">Return to home</a></p>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- End of content -->
+{% endblock %}

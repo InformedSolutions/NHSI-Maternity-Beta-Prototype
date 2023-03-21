@@ -1,0 +1,95 @@
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+Maternity events - single notification portal
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <h1 class="nhsuk-heading-xl">{Trust name} Users</h1>
+
+        <h3>Organisational</h3>
+        <p>( 1 user found )</p>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" width="33%" scope="col" style="padding-top:0;">Name</th>
+              <th class="govuk-table__header" width="33%" scope="col" style="padding-top:0;">Email</th>
+              <th class="govuk-table__header" width="33%" scope="col" style="padding-top:0;"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Joe Bloggs</td>
+              <td class="govuk-table__cell">joe.bloggs@nhs.net</td>
+              <td>
+                <button type="submit" class="nhsuk-button nhsuk-button--secondary" draggable="false" style="margin-bottom:0; background-color:#d5281b">Revoke Access</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Admins</h3>
+        <p>( 3 users found )</p>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" width="33%" scope="col" style="padding-top:0;">Name</th>
+              <th class="govuk-table__header" width="33%" scope="col" style="padding-top:0;">Email</th>
+              <th class="govuk-table__header" width="33%" scope="col" style="padding-top:0;"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">John Jones</td>
+              <td class="govuk-table__cell">john.jones@nhs.net</td>
+              <td>
+                <button type="submit" class="nhsuk-button nhsuk-button--secondary" draggable="false" style="margin-bottom:0; background-color:#d5281b">Revoke Access</button>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Ashok Kumar</td>
+              <td class="govuk-table__cell">ashok.kumar@nhs.net</td>
+              <td>
+                <button type="submit" class="nhsuk-button nhsuk-button--secondary" draggable="false" style="margin-bottom:0; background-color:#d5281b">Revoke Access</button>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Frank Foe</td>
+                <td class="govuk-table__cell">frank.foe@nhs.net</td>
+                <td>
+                  <button type="submit" class="nhsuk-button nhsuk-button--secondary" draggable="false" style="margin-bottom:0; background-color:#d5281b">Revoke Access</button>
+                </td>
+              </tr>  
+          </tbody>
+        </table>
+
+        <p><a href="/home">Return to home</a></p>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- End of content -->
+{% endblock %}
