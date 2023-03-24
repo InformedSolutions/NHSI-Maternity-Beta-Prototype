@@ -72,7 +72,7 @@ router.post('/event-type-0', function (req, res) {
 
     } else if (req.session.MaternalEventType == 'maternal-365') {
 
-        res.redirect('/maternal/task-list-after42')
+        res.redirect('/maternal/criteria')
 
     } else if (req.session.BabyEventType == 'baby-death') {
 
@@ -168,8 +168,15 @@ router.post('/event-type-3', function (req, res) {
     }
 })
 
+router.get('/maternal/criteria', function (req, res){
+    res.render('maternal/criteria', {
+        MaternalEventType: req.session.MaternalEventType
+    })
+})
+
 router.post('/maternal/criteria', function (req, res) {
     req.session.suicide = req.session.data['suicide']
+    req.session.multiple = req.session.data['multiple']
     res.redirect('/maternal/task-list')
 })
 
@@ -229,9 +236,11 @@ router.get('/further-details', function (req, res) {
 router.get('/maternal/task-list', function (req, res) {
     req.session.MaternalEventType = req.session.MaternalEventType;
     req.session.suicide = req.session.suicide;
+    req.session.multiple = req.session.multiple
     res.render('maternal/task-list', {
         MaternalEventType: req.session.MaternalEventType,
         suicide: req.session.suicide,
+        multiple: req.session.multiple
     });
 });
 
@@ -268,8 +277,10 @@ router.get('/confirmation-section-1', function (req, res) {
 
 router.get('/event-details', function (req, res) {
     req.session.eventType = req.session.eventType;
+    req.session.MaternalEventType = req.session.MaternalEventType;
     res.render('event-details', {
         eventType: req.session.eventType,
+        MaternalEventType: req.session.MaternalEventType 
     });
 });
 

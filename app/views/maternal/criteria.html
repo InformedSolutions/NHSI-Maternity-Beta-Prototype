@@ -32,6 +32,9 @@ Maternity events - single notification portal
                 </h1>
               </legend>
 
+              {% if MaternalEventType == 'maternal-365' %}
+              {% else %}
+
               <div class="nhsuk-radios">
                 <label class="nhsuk-label" for="suicide">
                   Did the mother die by suicide?
@@ -92,6 +95,8 @@ Maternity events - single notification portal
                 </div>
 
                 <br>
+
+                {% endif %}
 
                 <div class="nhsuk-radios nhsuk-radios--conditional">
 
