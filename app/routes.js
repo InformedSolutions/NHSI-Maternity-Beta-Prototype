@@ -243,6 +243,7 @@ router.get('/confirmation-section-1', function (req, res) {
     req.session.eventType = req.session.eventType;
     res.render('confirmation-section-1', {
         eventType: req.session.eventType,
+        thoughtAlive: req.session.thoughtAlive,
     });
 });
 
@@ -402,6 +403,14 @@ router.get('/brain-injury/event-details', function (req, res) {
     req.session.diagnosed = req.session.diagnosed
 
     res.render('brain-injury/event-details', {
+        labour: req.session.labour,
+        diagnosed: req.session.diagnosed
+    });
+});
+
+router.get('/brain-injury/check-answers-section-1', function (req, res) {
+
+    res.render('brain-injury/check-answers-section-1', {
         labour: req.session.labour,
         diagnosed: req.session.diagnosed
     });
