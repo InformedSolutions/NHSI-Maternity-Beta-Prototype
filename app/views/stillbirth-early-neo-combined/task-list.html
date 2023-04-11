@@ -11,21 +11,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="nhsuk-heading-xl">
-        Notify of a stillbirth
+        Notify of a combination event
       </h1>
 
-      <p>Based on your answers, the event type you need to notify is a <strong>stillbirth.</strong></p>
-      <p>If you think this is not right, <a href ="../event-type-0">change the event type.</a></p>
+      <p>Based on your answers, the event types you need to notify are a <strong>stillbirth</strong> and an<strong> early neonatal death.</strong></p>
+      <p>If you think this is not right <a href ="../event-type-0">change the event type.</a></p>
 
-      {% if (gestationWeeks > 36) and (thoughtAlive == 'yes') %}
-
-      <h2 class="nhsuk-heading-l">Section 1 of 2 - Complete within 24 hours (or next working day)</h2>
-
-      {% else %}
-
-      <h2 class="nhsuk-heading-l">Section 1 of 1 - Complete within 24 hours (or next working day)</h2>
-
-      {% endif %}
+      <h2 class="nhsuk-heading-l">Section 1 - Complete within 24 hours (or next working day)</h2>
       
       <div class="nhsuk-hint" id="example-hint">
         This section is used for notifying MBRRACE.
@@ -48,115 +40,81 @@
           </ul> 
         </li> 
         
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> Mother's details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/mothers-details" aria-describedby="company-information-status">
+                Mother's details
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--white" id="contact-details-status">In progress</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/locations" aria-describedby="company-information-status">
+                Locations involved in mother's care
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/household"aria-describedby="company-information-status">
+                Partner's details
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Baby 1 details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/event-details" aria-describedby="read-declaration-status">
+                 Event details
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey" id="read-declaration-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/role-of-hospital" aria-describedby="read-declaration-status">
+                 Role of trust
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey" id="read-declaration-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/baby-1-details" aria-describedby="company-information-status">
+                Baby's details
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/baby-1-location" aria-describedby="company-information-status">
+                Baby's location
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+            </li>
+          </ul>
+        </li>  
+  
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">2. </span> Mother's details
-        </h2>
-        <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/mothers-details" aria-describedby="company-information-status">
-              Mother's details
-              </a>
-            </span>
-            <strong class="nhsuk-tag nhsuk-tag--white" id="contact-details-status">In progress</strong>
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/locations" aria-describedby="company-information-status">
-              Locations involved in mother's care
-              </a>
-            </span>
-            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
-          </li>
-        </ul>
-      </li>
-
-      {% if (multipleBabies == 'yes') %}
-
-      <li>
-        <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">3. </span> Baby 1's details
-        </h2>
-        <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/event-details" aria-describedby="read-declaration-status">
-               Event details
-              </a>
-            </span>
-            <strong class="nhsuk-tag nhsuk-tag--blue" id="read-declaration-status">Completed</strong>
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/role-of-hospital" aria-describedby="read-declaration-status">
-               Role of trust
-              </a>
-            </span>
-            <strong class="nhsuk-tag nhsuk-tag--blue" id="read-declaration-status">Completed</strong>
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/baby-1-details" aria-describedby="company-information-status">
-              Baby 1's details
-              </a>
-            </span>
-            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/baby-1-location" aria-describedby="company-information-status">
-              Baby 1's location
-              </a>
-            </span>
-            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
-          </li>
-        </ul>
-      </li>
-
-      <li>
-        <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">4. </span> Baby 2's details
-        </h2>
-        <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/baby-1-details" aria-describedby="company-information-status">
-              Baby 2's details
-              </a>
-            </span>
-            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/baby-1-location" aria-describedby="company-information-status">
-              Baby 2's location
-              </a>
-            </span>
-            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
-          </li>
-        </ul>
-      </li>
-
-      <li>
-        <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">6. </span> Submit section 1
-        </h2>
-        <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-                Review answers and submit
-            </span>
-            <strong class="nhsuk-tag nhsuk-tag--red" id="submit-pay-status">Cannot start yet</strong>
-          </li>
-        </ul>
-      </li>
-
-      {% else %} 
-
-      <li>
-        <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">3. </span> Baby details
+          <span class="app-task-list__section-number">4. </span> Baby 2 details
         </h2>
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
@@ -165,7 +123,7 @@
                Event details
               </a>
             </span>
-            <strong class="nhsuk-tag nhsuk-tag--grey" id="read-declaration-status">Not started</strong>
+            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
@@ -173,7 +131,7 @@
                Role of trust
               </a>
             </span>
-            <strong class="nhsuk-tag nhsuk-tag--grey" id="read-declaration-status">Not started</strong>
+            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
@@ -191,12 +149,52 @@
             </span>
             <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
           </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/cause-of-death" aria-describedby="company-information-status">
+              Cause of death
+              </a>
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/sibling-details"aria-describedby="company-information-status">
+              Siblings' details
+              </a>
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/further-details" aria-describedby="company-information-status">
+              Further event details
+              </a>
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/professionals" aria-describedby="company-information-status">
+                Professional's details
+              </a>
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/covid-19" aria-describedby="company-information-status">
+                Covid-19
+              </a>
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+          </li>
         </ul>
       </li>
 
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">4. </span> Submit section 1
+          <span class="app-task-list__section-number">5. </span> Submit section 1
         </h2>
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
@@ -207,13 +205,8 @@
           </li>
         </ul>
       </li>
-
-      {% endif %}
-
-      {% if (gestationWeeks > 36) and (thoughtAlive == 'yes') %}
-
       
-      <h2 class="nhsuk-heading-l">Section 2 of 2 - Complete at earliest convenience</h2>
+      <h2 class="nhsuk-heading-l">Section 2 - Complete at earliest convenience</h2>
 
       <div class="nhsuk-hint" id="example-hint">
         This section collects additional information required to notify MNSI.
@@ -222,7 +215,7 @@
 
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">5. </span> MNSI consent
+            <span class="app-task-list__section-number">6. </span> MNSI consent
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
@@ -236,7 +229,7 @@
 
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">6. </span> Submit section 2
+            <span class="app-task-list__section-number">7. </span> Submit section 2
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
@@ -248,7 +241,7 @@
           </ul>
         </li>
       </ol>
-      {% endif %}
+
       <a class="nhsuk-button nhsuk-button--secondary" href="/event-view" role="button" draggable="false">Save progress and return later</a>
 
 

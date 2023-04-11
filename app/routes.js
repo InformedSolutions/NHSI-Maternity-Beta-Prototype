@@ -72,16 +72,22 @@ router.post('/event-type-0', function (req, res) {
 
     } else if (req.session.MaternalEventType == 'maternal-365') {
         req.session.eventType = 'maternal-365'
-        res.redirect('/maternal/task-list-after42')
+        res.redirect('/maternal/criteria')
 
     } else if (req.session.BabyEventType == 'baby-death') {
 
-        res.redirect('/event-type-3')
+        res.redirect('/multiple-babies')
 
     } else if (req.session.BabyEventType == 'brain-injury') {
 
         res.redirect('/brain-injury/still-alive')
     }
+});
+
+router.post('/multiple-babies', function(req,res) {
+    req.session.multiple = req.session.data['multiple']
+    req.session.number = req.session.data['number']
+    res.redirect('/event-type-3')
 });
 
 router.post('/event-type-1', function (req, res) {
@@ -108,6 +114,14 @@ router.post('/event-type-2', function (req, res) {
 
 })
 
+router.get('/event-type-3', function(req,res){
+    req.session.multiple = req.session.multiple
+
+    res.render('event-type-3', {
+        multipleBabies: req.session.multiple
+    })
+})
+
 router.post('/event-type-3', function (req, res) {
     req.session.gestationKnown = req.session.data['gestation-known']
     req.session.gestationWeeks = req.session.data['gestational-weeks']
@@ -117,7 +131,14 @@ router.post('/event-type-3', function (req, res) {
     req.session.timeAfterBirth = req.session.data['time-after-birth']
     req.session.thoughtAlive = req.session.data['thought-alive']
 
-    if (req.session.gestationWeeks > 21 && req.session.gestationWeeks < 24 && req.session.signOfLife == 'no') {
+    // get number of babies data for demo purposes
+    req.session.multiple = req.session.multiple
+
+
+    // Multiple baby flow only configured for Stillbirth
+    if (req.session.multiple == 'yes') {
+        res.redirect('/stillbirth/task-list')
+    } else if (req.session.gestationWeeks > 21 && req.session.gestationWeeks < 24 && req.session.signOfLife == 'no') {
         req.session.eventType = "late-fetal-loss"
         res.redirect('/late-fetal-loss/task-list')
     } else if (req.session.gestationWeeks > 23 && req.session.signOfLife == 'no') {
@@ -147,8 +168,15 @@ router.post('/event-type-3', function (req, res) {
     }
 })
 
+router.get('/maternal/criteria', function (req, res){
+    res.render('maternal/criteria', {
+        MaternalEventType: req.session.MaternalEventType
+    })
+})
+
 router.post('/maternal/criteria', function (req, res) {
     req.session.suicide = req.session.data['suicide']
+    req.session.multiple = req.session.data['multiple']
     res.redirect('/maternal/task-list')
 })
 
@@ -210,9 +238,11 @@ router.get('/further-details', function (req, res) {
 router.get('/maternal/task-list', function (req, res) {
     req.session.MaternalEventType = req.session.MaternalEventType;
     req.session.suicide = req.session.suicide;
+    req.session.multiple = req.session.multiple
     res.render('maternal/task-list', {
         MaternalEventType: req.session.MaternalEventType,
         suicide: req.session.suicide,
+        multiple: req.session.multiple
     });
 });
 
@@ -250,8 +280,10 @@ router.get('/confirmation-section-1', function (req, res) {
 
 router.get('/event-details', function (req, res) {
     req.session.eventType = req.session.eventType;
+    req.session.MaternalEventType = req.session.MaternalEventType;
     res.render('event-details', {
         eventType: req.session.eventType,
+        MaternalEventType: req.session.MaternalEventType 
     });
 });
 
@@ -368,6 +400,7 @@ router.get('/stillbirth/task-list', function (req, res) {
         mri: req.session.mri,
         diagnosed: req.session.diagnosed,
         thoughtAlive: req.session.thoughtAlive,
+        multipleBabies: req.session.multiple
     });
 });
 
