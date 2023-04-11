@@ -71,13 +71,8 @@ router.post('/event-type-0', function (req, res) {
         res.redirect('/maternal/criteria')
 
     } else if (req.session.MaternalEventType == 'maternal-365') {
-<<<<<<< HEAD
-
-        res.redirect('/maternal/criteria')
-=======
         req.session.eventType = 'maternal-365'
         res.redirect('/maternal/task-list-after42')
->>>>>>> SNP-baselined-filtered
 
     } else if (req.session.BabyEventType == 'baby-death') {
 
@@ -399,24 +394,13 @@ router.get('/neonatal/task-list', function (req, res) {
 });
 
 router.get('/stillbirth/task-list', function (req, res) {
-<<<<<<< HEAD
-    req.session.gestationWeeks = req.session.gestationWeeks
-    req.session.mri = req.session.mri
-    req.session.diagnosed = req.session.diagnosed
-    req.session.thoughtAlive = req.session.thoughtAlive
-    req.session.mutliple = req.session.multiple
-=======
->>>>>>> SNP-baselined-filtered
 
     res.render('stillbirth/task-list', {
         gestationWeeks: req.session.gestationWeeks,
         mri: req.session.mri,
         diagnosed: req.session.diagnosed,
         thoughtAlive: req.session.thoughtAlive,
-<<<<<<< HEAD
         multipleBabies: req.session.multiple
-=======
->>>>>>> SNP-baselined-filtered
     });
 });
 
