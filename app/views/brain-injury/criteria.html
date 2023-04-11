@@ -29,7 +29,7 @@
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
               <h1 class="nhsuk-fieldset__heading">
-                Further event details
+                Criteria
               </h1>
             </legend>
         
@@ -131,7 +131,15 @@
         
         </div>
 
+        {% if labour=='yes' and diagnosed=='yes' %}
+
         <a class="nhsuk-button" href="/brain-injury/mothers-details" role="button" draggable="false">Continue</a>
+
+        {% else %}
+
+        <a class="nhsuk-button" href="/brain-injury/baby-1-details" role="button" draggable="false">Continue</a>
+
+        {% endif %}
 
         <p><a href="/brain-injury/task-list">Return to task list</a></p>
 

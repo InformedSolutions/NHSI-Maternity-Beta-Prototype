@@ -27,11 +27,25 @@
     </div>
       {% if (eventType == 'maternal') or (eventType == 'maternal-42') %}
 
-      <p>We have notified MBRRACE.</p>
+      <p>We have notified MBRRACE. You must return to the task list and complete the second section to notify MNSI. 
+        We will not ask for any information already provided in this notification unless the information 
+        provided is likely to have changed.</p>
+
+      {% elif eventType=='stillbirth' and thoughtAlive=='yes' %}
+
+      <p>We have notified MBRRACE. You must return to the task list and complete the second section to notify MNSI. 
+        We will not ask for any information already provided in this notification unless the information 
+        provided is likely to have changed.</p>
+
+      {% elif eventType=='neonatal' %}
+      
+      <p>We have notified MBRRACE who will notify your local CDOP of this event. You must return to the task list and complete the second section to notify MNSI. 
+        We will not ask for any information already provided in this notification unless the information 
+        provided is likely to have changed.</p>
 
       {% else %}
-      
-      <p>We have notified MBRRACE who will notify your local CDOP of this event. </p>
+
+      <p>We have notified MBRRACE.</p>
 
       {% endif %}
 

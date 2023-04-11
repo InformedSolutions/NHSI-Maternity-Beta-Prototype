@@ -63,16 +63,21 @@ router.post('/event-type-0', function (req, res) {
         res.redirect('/multiple')
 
     } else if (req.session.MaternalEventType == 'maternal') {
-
+        req.session.eventType = 'maternal'
         res.redirect('/maternal/criteria')
 
     } else if (req.session.MaternalEventType == 'maternal-42') {
-
+        req.session.eventType = 'maternal-42'
         res.redirect('/maternal/criteria')
 
     } else if (req.session.MaternalEventType == 'maternal-365') {
+<<<<<<< HEAD
 
         res.redirect('/maternal/criteria')
+=======
+        req.session.eventType = 'maternal-365'
+        res.redirect('/maternal/task-list-after42')
+>>>>>>> SNP-baselined-filtered
 
     } else if (req.session.BabyEventType == 'baby-death') {
 
@@ -213,8 +218,10 @@ router.get('/mothers-details', function (req, res) {
 
 router.get('/baby-1-details', function (req, res) {
     req.session.eventType = req.session.eventType;
+    req.session.gestationKnown = req.session.gestationKnown
     res.render('baby-1-details', {
         eventType: req.session.eventType,
+        gestationKnown: req.session.gestationKnown,
     });
 });
 
@@ -271,6 +278,7 @@ router.get('/confirmation-section-1', function (req, res) {
     req.session.eventType = req.session.eventType;
     res.render('confirmation-section-1', {
         eventType: req.session.eventType,
+        thoughtAlive: req.session.thoughtAlive,
     });
 });
 
@@ -391,18 +399,24 @@ router.get('/neonatal/task-list', function (req, res) {
 });
 
 router.get('/stillbirth/task-list', function (req, res) {
+<<<<<<< HEAD
     req.session.gestationWeeks = req.session.gestationWeeks
     req.session.mri = req.session.mri
     req.session.diagnosed = req.session.diagnosed
     req.session.thoughtAlive = req.session.thoughtAlive
     req.session.mutliple = req.session.multiple
+=======
+>>>>>>> SNP-baselined-filtered
 
     res.render('stillbirth/task-list', {
         gestationWeeks: req.session.gestationWeeks,
         mri: req.session.mri,
         diagnosed: req.session.diagnosed,
         thoughtAlive: req.session.thoughtAlive,
+<<<<<<< HEAD
         multipleBabies: req.session.multiple
+=======
+>>>>>>> SNP-baselined-filtered
     });
 });
 
@@ -430,5 +444,23 @@ router.get('/brain-injury/task-list', function (req, res) {
     res.render('brain-injury/task-list', {
         diagnosed: req.session.diagnosed,
         labour: req.session.labour
+    });
+});
+
+router.get('/brain-injury/event-details', function (req, res) {
+    req.session.labour = req.session.labour
+    req.session.diagnosed = req.session.diagnosed
+
+    res.render('brain-injury/event-details', {
+        labour: req.session.labour,
+        diagnosed: req.session.diagnosed
+    });
+});
+
+router.get('/brain-injury/check-answers-section-1', function (req, res) {
+
+    res.render('brain-injury/check-answers-section-1', {
+        labour: req.session.labour,
+        diagnosed: req.session.diagnosed
     });
 });

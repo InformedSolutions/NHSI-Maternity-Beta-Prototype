@@ -68,6 +68,8 @@
         
         </div>
       
+        {% if labour=='yes' and diagnosed=='yes' %}
+
         <div class="nhsuk-form-group">
           <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
 
@@ -95,8 +97,10 @@
               </div>
             </div>
           </fieldset>
-        
         </div>
+
+        {% else %}
+        {% endif %}
     
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="reporting-unit">
@@ -112,6 +116,8 @@
           </select>
         </div>
 
+        {% if labour=='yes' and diagnosed=='yes' %}
+
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="reporting-unit">
             Hospital incident number
@@ -125,6 +131,9 @@
           </label>
           <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
         </div>
+
+        {% else %}
+        {% endif %}
 
         <a class="nhsuk-button" href="/brain-injury/criteria" role="button" draggable="false">Continue</a>
         
