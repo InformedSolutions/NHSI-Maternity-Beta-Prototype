@@ -551,6 +551,8 @@ Maternity events - single notification portal
         {% else %}
         {% endif %}
 
+        {% if eventType == 'stillbirth' or eventType == 'neonatal' or eventType == 'perinatal' %}
+
         {% if gestationKnown=='no' %}
 
         <fieldset class="nhsuk-fieldset">
@@ -621,6 +623,8 @@ Maternity events - single notification portal
             </label>
           </div>
         </div>
+
+        {% endif %}
 
         {% endif %}
 

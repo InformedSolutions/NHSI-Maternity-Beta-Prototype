@@ -72,7 +72,7 @@ router.post('/event-type-0', function (req, res) {
 
     } else if (req.session.MaternalEventType == 'maternal-365') {
         req.session.eventType = 'maternal-365'
-        res.redirect('/maternal/task-list-after42')
+        res.redirect('/maternal/criteria')
 
     } else if (req.session.BabyEventType == 'baby-death') {
 

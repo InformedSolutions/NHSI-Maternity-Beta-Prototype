@@ -237,6 +237,13 @@ Maternity events - single notification portal
             </div>
 
             <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-county">
+                Country (optional)
+              </label>
+              <input class="nhsuk-input nhsuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
               <label class="nhsuk-label" for="address-postcode">
                 Postcode {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %} (optional) {% endif %}
               </label>
