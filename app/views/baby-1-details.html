@@ -34,7 +34,8 @@ Maternity events - single notification portal
         <br>
 
 
-        {% if (eventType == 'brain-injury') or eventType == 'maternal' or eventType == 'maternal-42' or eventType == 'maternal-365' %}        
+        {% if (eventType == 'brain-injury') or eventType == 'maternal' or eventType == 'maternal-42' or eventType ==
+        'maternal-365' %}
         {% else %}
 
         <div class="nhsuk-form-group">
@@ -131,7 +132,7 @@ Maternity events - single notification portal
 
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="email">
-            First name
+            First name (optional)
           </label>
           <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
         </div>
@@ -144,7 +145,7 @@ Maternity events - single notification portal
 
         {% endif %}
 
-        {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}    
+        {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}
 
         <h3 class="nhsuk-heading-m">Expected date of delivery (optional)</h3>
         <div class="nhsuk-hint" id="example-hint">
@@ -185,7 +186,7 @@ Maternity events - single notification portal
           <label class="nhsuk-label" for="delivery-date">
             <h3 class="nhsuk-heading-m">Is the date of delivery/pregnancy loss known?</h3>
           </label>
-    
+
           <div class="nhsuk-radios__item">
             <input class="nhsuk-radios__input" id="delivery-date-1" name="delivery-date" type="radio" value="email"
               aria-controls="conditional-delivery-date-1" aria-expanded="false">
@@ -193,9 +194,9 @@ Maternity events - single notification portal
               Yes
             </label>
           </div>
-    
+
           <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-delivery-date-1">
-    
+
             <div class="nhsuk-form-group">
               <label class="nhsuk-label" for="email">
                 Date of delivery/pregnancy loss
@@ -203,7 +204,7 @@ Maternity events - single notification portal
               <div class="nhsuk-hint" id="example-hint">
                 For example, 15 3 1984
               </div>
-      
+
               <div class="nhsuk-date-input" id="example">
                 <div class="nhsuk-date-input__item">
                   <div class="nhsuk-form-group">
@@ -232,12 +233,12 @@ Maternity events - single notification portal
                       name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
                   </div>
                 </div>
-              </div>     
+              </div>
 
             </div>
 
           </div>
-    
+
           <div class="nhsuk-radios__item">
             <input class="nhsuk-radios__input" id="delivery-date-2" name="delivery-date" type="radio" value="phone"
               aria-controls="conditional-delivery-date-2" aria-expanded="false">
@@ -256,7 +257,7 @@ Maternity events - single notification portal
           <label class="nhsuk-label" for="delivery-time">
             <h3 class="nhsuk-heading-m">Is the time of delivery known?</h3>
           </label>
-    
+
           <div class="nhsuk-radios__item">
             <input class="nhsuk-radios__input" id="delivery-time-1" name="delivery-time" type="radio" value="email"
               aria-controls="conditional-delivery-time-1" aria-expanded="false">
@@ -264,9 +265,9 @@ Maternity events - single notification portal
               Yes
             </label>
           </div>
-    
+
           <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-delivery-time-1">
-    
+
             <div class="nhsuk-form-group">
               <label class="nhsuk-label" for="email">
                 Time of delivery
@@ -274,7 +275,7 @@ Maternity events - single notification portal
               <div class="nhsuk-hint" id="example-hint">
                 For example, 13 50
               </div>
-  
+
               <div class="nhsuk-date-input" id="example">
                 <div class="nhsuk-date-input__item">
                   <div class="nhsuk-form-group">
@@ -297,7 +298,7 @@ Maternity events - single notification portal
               </div>
             </div>
           </div>
-    
+
           <div class="nhsuk-radios__item">
             <input class="nhsuk-radios__input" id="delivery-time-2" name="delivery-time" type="radio" value="phone"
               aria-controls="conditional-delivery-time-2" aria-expanded="false">
@@ -429,7 +430,8 @@ Maternity events - single notification portal
         </fieldset>
         {% endif %}
 
-        {% if eventType=='late-fetal-loss' or eventType=='stillbirth' or eventType=='neonatal' or eventType=='perinatal' %}
+        {% if eventType=='late-fetal-loss' or eventType=='stillbirth' or eventType=='neonatal' or eventType=='perinatal'
+        %}
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="input-width-10">
             Hospital number (optional)
@@ -478,7 +480,8 @@ Maternity events - single notification portal
         {% else %}
         {% endif %}
 
-        {% if eventType == 'stillbirth' or eventType == 'neonatal' or eventType == 'perinatal' or eventType == 'brain-injury'%}
+        {% if eventType == 'stillbirth' or eventType == 'neonatal' or eventType == 'perinatal' or eventType ==
+        'brain-injury'%}
 
         <h3 class="nhsuk-heading-m">Date of death</h3>
         <div class="nhsuk-hint" id="example-hint">
@@ -565,16 +568,14 @@ Maternity events - single notification portal
             <div class="nhsuk-radios">
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio"
-                  value="yes">
+                <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
                 <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
                   Concealed pregnancy
                 </label>
               </div>
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio"
-                  value="no">
+                <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
                 <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
                   Unable to estimate
                 </label>
@@ -664,7 +665,7 @@ Maternity events - single notification portal
             <option value="26">Not known</option>
           </select>
         </div>
-      </fieldset>
+        </fieldset>
 
         {% endif %}
 
@@ -802,30 +803,30 @@ Maternity events - single notification portal
           <label class="nhsuk-label" for="input-width-10">
             Does the baby have a disability?
           </label>
-    
+
           <div class="nhsuk-form-group">
-    
+
             <div class="nhsuk-radios">
-    
+
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="example-hints-1" name="disabled" type="radio" value="yes">
                 <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
                   Yes - the baby has been diagnosed as disabled</label>
               </div>
-    
+
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="example-hints-2" name="disabled" type="radio" value="no">
                 <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
                   No - the baby has not been diagnosed as disabled</label>
               </div>
-    
+
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="example-hints-3" name="disabled" type="radio" value="not sure">
                 <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
                   Not stated
                 </label>
               </div>
-    
+
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="example-hints-4" name="disabled" type="radio" value="not sure">
                 <label class="nhsuk-label nhsuk-radios__label" for="example-hints-4">
@@ -834,8 +835,40 @@ Maternity events - single notification portal
               </div>
             </div>
           </div>
-    
+
         </fieldset>
+        {% endif %}
+
+        {% if (eventType == 'maternal') or (eventType == 'maternal-42') or (eventType == 'maternal-365') %}
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="select-1">
+            Mode of birth 
+          </label>
+          <select class="nhsuk-select" id="select-1" name="select-1">
+            <option value="1"> Choose mode of birth</option>
+            <option value="3"> Never laboured</option>
+            <option value="2"> Normal birth</option>
+            <option value="4"> Other mode of birth</option>
+            <option value="5"> Caesarean section</option>
+            <option value="6"> Not known</option>
+          </select>
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="select-1">
+            Pregnancy outcome
+          </label>
+          <select class="nhsuk-select" id="select-1" name="select-1">
+            <option value="1"> Choose pregnancy outcome</option>
+            <option value="3"> Not set</option>
+            <option value="2"> Early pregnancy loss (&lt 20 weeks)</option>
+            <option value="4"> Pregnancy loss (20-23 weeks)</option>
+            <option value="5"> Pregnancy loss (24+ weeks)</option>
+            <option value="6"> Woman was undelivered at death</option>
+            <option value="7"> Live birth</option>
+            <option value="8"> Not known</option>
+          </select>
+        </div>
         {% endif %}
 
         <a class="nhsuk-button" href="/baby-1-location" role="button" draggable="false">Continue</a>

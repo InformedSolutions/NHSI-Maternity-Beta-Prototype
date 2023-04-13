@@ -98,6 +98,8 @@ Maternity events - single notification portal
           </label>
           <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
         </div>
+
+        {% if eventType == 'pernatal' %}
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="select-1">
             Type of unit
@@ -119,6 +121,9 @@ Maternity events - single notification portal
             <option value="13">Not known</option>
           </select>
         </div>
+        {% else %}
+        {% endif %} 
+        
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="email">
             Unit of care prior to transfer for palliative care/discharge

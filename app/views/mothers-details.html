@@ -62,7 +62,7 @@ Maternity events - single notification portal
 
             <div class="nhsuk-form-group">
               <label class="nhsuk-label" for="email">
-                Name
+                First name
               </label>
               <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
             </div>
@@ -795,40 +795,6 @@ Maternity events - single notification portal
           </div>
         </div>
       </div>
-    </div>
-
-    {% endif %}
-
-    {% if (eventType == 'maternal') or (eventType == 'maternal-42') or (eventType == 'maternal-365') %}
-
-    <div class="nhsuk-form-group">
-      <label class="nhsuk-label" for="select-1">
-        Mode of birth 
-      </label>
-      <select class="nhsuk-select" id="select-1" name="select-1">
-        <option value="1"> Choose mode of birth</option>
-        <option value="3"> Never laboured</option>
-        <option value="2"> Normal birth</option>
-        <option value="4"> Other mode of birth</option>
-        <option value="5"> Caesarean section</option>
-        <option value="6"> Not known</option>
-      </select>
-    </div>
-
-    <div class="nhsuk-form-group">
-      <label class="nhsuk-label" for="select-1">
-        Pregnancy outcome
-      </label>
-      <select class="nhsuk-select" id="select-1" name="select-1">
-        <option value="1"> Choose pregnancy outcome</option>
-        <option value="3"> Not set</option>
-        <option value="2"> Early pregnancy loss (&lt 20 weeks)</option>
-        <option value="4"> Pregnancy loss (20-23 weeks)</option>
-        <option value="5"> Pregnancy loss (24+ weeks)</option>
-        <option value="6"> Woman was undelivered at death</option>
-        <option value="7"> Live birth</option>
-        <option value="8"> Not known</option>
-      </select>
     </div>
 
     {% endif %}
