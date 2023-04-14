@@ -1,0 +1,592 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+OrgCom View
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/home",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<main role="main" id="content" tabindex="-1">
+  
+ 
+<script type="text/javascript">
+
+function hideDiv(id) {
+    document.getElementById(id).setAttribute("aria-hidden", "true");
+    document.getElementById(id).setAttribute("class", "panel panel-border-narrow js-hidden");
+    
+    };
+    function hideFilter(id) {
+        var div = document.getElementById("filterBox");
+        if (div.style.display !== 'none') {
+            div.style.display = 'none';
+        }
+        else {
+            div.style.display = 'block';
+        }
+    };
+
+
+// Listen for click on the document
+document.addEventListener('click', function (event) {
+
+  //Bail if our clicked element doesn't have the class
+  if (!event.target.classList.contains('accordion-toggle')) return;
+
+  /*event.classList.remove('active');*/
+  event.target.classList.toggle('arrow_up');
+
+  // Get the target content
+  var content = document.querySelector(event.target.hash);
+  if (!content) return;
+
+  // Prevent default link behavior
+  event.preventDefault();
+
+  // If the content is already expanded, collapse it and quit
+  if (content.classList.contains('active')) {
+    content.classList.remove('active');
+    return;
+  }
+
+  // Get all open accordion content, loop through it, and close it
+  /*
+  var accordions = document.querySelectorAll('.accordion-content.active');
+  for (var i = 0; i < accordions.length; i++) {
+    accordions[i].classList.remove('active');
+  }
+   */
+
+  // Toggle our content
+  content.classList.toggle('active');
+})
+</script>
+
+
+<!--<link rel="stylesheet" href="/static/stylesheets/org-view.css"/>-->
+
+<div class="grid-row">
+    <div class="column-full form-group">
+
+        <!--
+        <a class="link-back" href="javascript:history.back()">Back</a>
+            <p class="logged-in">Signed in as: tester@informed.com</p>
+    -->
+
+
+
+        <div class="form-group" style="margin-left: 1%;">
+            <div>
+                <h1 class="heading-large">Manage events in my organisation</h1>
+            </div>
+
+            <p>
+                Your organisation:
+                <span style="font-weight:bold">ABC Hospitial Trust (A01)</span>
+            
+            </p>
+
+            <div class="column-two-thirds form-group accordion-content active" id="description" style="display: flex;">
+
+
+            </div>
+
+        </div>
+        <button class ="button2" onclick=hideFilter()>Hide filters and search</button>
+        <br />
+        <br />
+            <div id="filterBox" style="background-color: #cccccc; padding: 30px; padding-bottom: 1px;">
+                <div class="column-one-half form-group">
+
+                    <div id="description">
+                    <form class="searchBar">
+                        <p class="nhsuk-heading-m">Search by reference number</p>
+                       <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+                        <button class="buttonSearch" type="submit"><img src="images/search-button.png"></button>
+                    </form>
+                    </div>
+                </div>
+
+                <br>
+
+                    <form method="GET" action="" novalidate id="filterForm">
+                    <div class="flex-container">
+                        <div>
+                        <div style="width:25%; float:left;">       
+                            <a href="#content-3" class="accordion-toggle">Created on</a>
+                            <div class="form-group accordion-content" id="content-3" style="margin-top: 5%; margin-bottom: 3%;">
+                            
+
+                                <label class="form-label" styling="margin-top: 20px !important;"><label for="id_filtered_date_before_0">Created before</label></label>
+                                <label class="form-label date_example">For example 20/04/2020</label>
+
+                                <div class="form-date">
+
+                                    <div class="form-group form-group-day">
+                                        <label id="id_filtered_date_before_0-label" class="form-label" for="id_filtered_date_before_0">Day</label>
+                                        <input type="number" name="filtered_date_before_0" min="1" max="31" id="id_filtered_date_before_0" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-month">
+                                        <label id="id_filtered_date_before_1-label" class="form-label" for="id_filtered_date_before_1">Month</label>
+                                        <input type="number" name="filtered_date_before_1" min="1" max="12" id="id_filtered_date_before_1" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-year">
+                                        <label id="id_filtered_date_before_2-label" class="form-label" for="id_filtered_date_before_2">Year</label>
+                                        <input type="number" name="filtered_date_before_2" min="1900" max="2021" id="id_filtered_date_before_2" class="form-control">
+
+
+                                    </div>
+
+                                </div>
+
+                                <br><br><br><br>
+
+                                <label class="form-label" styling="margin-top: 20px !important;"><label for="id_filtered_date_after_0">Created after</label></label>
+                                <label class="form-label date_example">For example 20/04/2020</label>
+
+                                <div class="form-date">
+
+                                    <div class="form-group form-group-day">
+                                        <label id="id_filtered_date_after_0-label" class="form-label" for="id_filtered_date_after_0">Day</label>
+                                        <input type="number" name="filtered_date_after_0" min="1" max="31" id="id_filtered_date_after_0" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-month">
+                                        <label id="id_filtered_date_after_1-label" class="form-label" for="id_filtered_date_after_1">Month</label>
+                                        <input type="number" name="filtered_date_after_1" min="1" max="12" id="id_filtered_date_after_1" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-year">
+                                        <label id="id_filtered_date_after_2-label" class="form-label" for="id_filtered_date_after_2">Year</label>
+                                        <input type="number" name="filtered_date_after_2" min="1900" max="2021" id="id_filtered_date_after_2" class="form-control">
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div style="width:25%; float:left;">
+                            <a href="#content-10" class="accordion-toggle ">Created by</a>
+                            <br><br>
+                            <div class="form-group accordion-content " id="content-10" style="margin-bottom: 3%;">
+
+                                <select class="form-control" style="margin-top: 3%;">
+                                    <option>John Jones</option>
+
+                                    <option>Hope Bristow</option>
+
+                                    <option>Joe Bloggs</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div style="width:25%; float:left;">
+                            <a href="#content-4" class="accordion-toggle ">Event date</a>
+                            <div class="form-group accordion-content " id="content-4" style="margin-top: 5%;margin-bottom: 3%;">
+                                <label class="form-label" styling="margin-top: 20px !important;"><label for="id_filtered_incident_date_before_0">Event date before</label></label>
+                                <label class="form-label date_example">For example 20/04/2020</label>
+
+                                <div class="form-date">
+
+                                    <div class="form-group form-group-day">
+                                        <label id="id_filtered_incident_date_before_0-label" class="form-label" for="id_filtered_incident_date_before_0">Day</label>
+                                        <input type="number" name="filtered_incident_date_before_0" min="1" max="31" id="id_filtered_incident_date_before_0" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-month">
+                                        <label id="id_filtered_incident_date_before_1-label" class="form-label" for="id_filtered_incident_date_before_1">Month</label>
+                                        <input type="number" name="filtered_incident_date_before_1" min="1" max="12" id="id_filtered_incident_date_before_1" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-year">
+                                        <label id="id_filtered_incident_date_before_2-label" class="form-label" for="id_filtered_incident_date_before_2">Year</label>
+                                        <input type="number" name="filtered_incident_date_before_2" min="1900" max="2021" id="id_filtered_incident_date_before_2" class="form-control">
+
+
+                                    </div>
+
+                                </div>
+
+                                <br><br><br><br>
+
+                                <label class="form-label" styling="margin-top: 20px !important;"><label for="id_filtered_incident_date_after_0">Event date after</label></label>
+                                <label class="form-label date_example">For example 20/04/2020</label>
+
+                                <div class="form-date">
+
+                                    <div class="form-group form-group-day">
+                                        <label id="id_filtered_incident_date_after_0-label" class="form-label" for="id_filtered_incident_date_after_0">Day</label>
+                                        <input type="number" name="filtered_incident_date_after_0" min="1" max="31" id="id_filtered_incident_date_after_0" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-month">
+                                        <label id="id_filtered_incident_date_after_1-label" class="form-label" for="id_filtered_incident_date_after_1">Month</label>
+                                        <input type="number" name="filtered_incident_date_after_1" min="1" max="12" id="id_filtered_incident_date_after_1" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-year">
+                                        <label id="id_filtered_incident_date_after_2-label" class="form-label" for="id_filtered_incident_date_after_2">Year</label>
+                                        <input type="number" name="filtered_incident_date_after_2" min="1900" max="2021" id="id_filtered_incident_date_after_2" class="form-control">
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="width:25%; float:left">
+                            <a href="#content-5" class="accordion-toggle ">Event type</a>
+                            <div class="form-group accordion-content " id="content-5" style="margin-bottom: 3%;">
+
+                                <div id="id_filtered_physical_harm_0-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="5" id="id_filtered_physical_harm_0" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_0-label" for="id_filtered_physical_harm_0">Maternal death (whilst pregnant)</label>
+                                </div>
+
+                                <div id="id_filtered_physical_harm_1-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="4" id="id_filtered_physical_harm_1" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_1-label" for="id_filtered_physical_harm_1">Maternal death (less than 42 days after pregnancy)</label>
+                                </div>
+
+
+                                <div id="id_filtered_physical_harm_2-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="3" id="id_filtered_physical_harm_2" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_2-label" for="id_filtered_physical_harm_2">Maternal death (between 42 and 365 days after pregnancy)<label>
+                                </div>
+
+
+
+                                <div id="id_filtered_physical_harm_3-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="2" id="id_filtered_physical_harm_3" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_3-label" for="id_filtered_physical_harm_3">Late fetal loss</label>
+                                </div>
+
+
+                                <div id="id_filtered_physical_harm_4-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="1" id="id_filtered_physical_harm_4" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_4-label" for="id_filtered_physical_harm_4">Stillbirth</label>
+                                </div>
+
+                                <div id="id_filtered_physical_harm_4-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="1" id="id_filtered_physical_harm_4" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_4-label" for="id_filtered_physical_harm_4">Early neonatal death</label>
+                                </div>
+
+                                <div id="id_filtered_physical_harm_4-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="1" id="id_filtered_physical_harm_4" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_4-label" for="id_filtered_physical_harm_4">Late neonatal death</label>
+                                </div>
+
+                                <div id="id_filtered_physical_harm_4-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="1" id="id_filtered_physical_harm_4" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_4-label" for="id_filtered_physical_harm_4">Severe brain injury</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        </div>
+                        <div>
+                        <div style="width:33%; float:left">
+                            <a href="#content-6" class="accordion-toggle ">Status</a>
+                            <br><br>
+                            <div class="form-group accordion-content " id="content-6" style="margin-bottom: 3%;">
+
+                                <div id="id_filtered_physical_harm_0-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="5" id="id_filtered_physical_harm_0" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_0-label" for="id_filtered_physical_harm_0">Draft started<label>
+                                </div>
+
+                                <div id="id_filtered_physical_harm_1-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="4" id="id_filtered_physical_harm_1" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_1-label" for="id_filtered_physical_harm_1">Section 1 Draft Started<label>
+                                </div>
+
+                                <div id="id_filtered_physical_harm_2-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="3" id="id_filtered_physical_harm_2" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_2-label" for="id_filtered_physical_harm_2">Section 2 Draft Started<label>
+                                </div>
+
+                                <div id="id_filtered_physical_harm_2-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="3" id="id_filtered_physical_harm_2" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_2-label" for="id_filtered_physical_harm_2">Section 1 submitted<label>
+                                </div>
+
+                                <div id="id_filtered_physical_harm_2-group" class="multiple-choice" style="margin-top: 3%;">
+                                    <input type="checkbox" name="filtered_physical_harm" value="3" id="id_filtered_physical_harm_2" class="form-control">
+
+                                    <label id="id_filtered_physical_harm_2-label" for="id_filtered_physical_harm_2">Section 2 submitted<label>
+                                </div>
+                            </div>
+                        </div> 
+                        
+                        <div style="width:33%; float:left;">
+                            <a href="#content-7" class="accordion-toggle ">Section 1 submitted date</a>
+                            <div class="form-group accordion-content " id="content-7" style="margin-top: 5%;margin-bottom: 3%;">
+                                <label class="form-label" styling="margin-top: 20px !important;"><label for="id_filtered_incident_date_before_0">Event date before</label></label>
+                                <label class="form-label date_example">For example 20/04/2020</label>
+
+                                <div class="form-date">
+
+                                    <div class="form-group form-group-day">
+                                        <label id="id_filtered_incident_date_before_0-label" class="form-label" for="id_filtered_incident_date_before_0">Day</label>
+                                        <input type="number" name="filtered_incident_date_before_0" min="1" max="31" id="id_filtered_incident_date_before_0" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-month">
+                                        <label id="id_filtered_incident_date_before_1-label" class="form-label" for="id_filtered_incident_date_before_1">Month</label>
+                                        <input type="number" name="filtered_incident_date_before_1" min="1" max="12" id="id_filtered_incident_date_before_1" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-year">
+                                        <label id="id_filtered_incident_date_before_2-label" class="form-label" for="id_filtered_incident_date_before_2">Year</label>
+                                        <input type="number" name="filtered_incident_date_before_2" min="1900" max="2021" id="id_filtered_incident_date_before_2" class="form-control">
+
+
+                                    </div>
+
+                                </div>
+
+                                <br><br><br><br>
+
+                                <label class="form-label" styling="margin-top: 20px !important;"><label for="id_filtered_incident_date_after_0">Event date after</label></label>
+                                <label class="form-label date_example">For example 20/04/2020</label>
+
+                                <div class="form-date">
+
+                                    <div class="form-group form-group-day">
+                                        <label id="id_filtered_incident_date_after_0-label" class="form-label" for="id_filtered_incident_date_after_0">Day</label>
+                                        <input type="number" name="filtered_incident_date_after_0" min="1" max="31" id="id_filtered_incident_date_after_0" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-month">
+                                        <label id="id_filtered_incident_date_after_1-label" class="form-label" for="id_filtered_incident_date_after_1">Month</label>
+                                        <input type="number" name="filtered_incident_date_after_1" min="1" max="12" id="id_filtered_incident_date_after_1" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-year">
+                                        <label id="id_filtered_incident_date_after_2-label" class="form-label" for="id_filtered_incident_date_after_2">Year</label>
+                                        <input type="number" name="filtered_incident_date_after_2" min="1900" max="2021" id="id_filtered_incident_date_after_2" class="form-control">
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div style="width:34%; float:left;">
+                            <a href="#content-8" class="accordion-toggle ">Section 2 submitted date</a>
+                            <div class="form-group accordion-content " id="content-8" style="margin-top: 5%;margin-bottom: 3%;">
+                                <label class="form-label" styling="margin-top: 20px !important;"><label for="id_filtered_incident_date_before_0">Event date before</label></label>
+                                <label class="form-label date_example">For example 20/04/2020</label>
+
+                                <div class="form-date">
+
+                                    <div class="form-group form-group-day">
+                                        <label id="id_filtered_incident_date_before_0-label" class="form-label" for="id_filtered_incident_date_before_0">Day</label>
+                                        <input type="number" name="filtered_incident_date_before_0" min="1" max="31" id="id_filtered_incident_date_before_0" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-month">
+                                        <label id="id_filtered_incident_date_before_1-label" class="form-label" for="id_filtered_incident_date_before_1">Month</label>
+                                        <input type="number" name="filtered_incident_date_before_1" min="1" max="12" id="id_filtered_incident_date_before_1" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-year">
+                                        <label id="id_filtered_incident_date_before_2-label" class="form-label" for="id_filtered_incident_date_before_2">Year</label>
+                                        <input type="number" name="filtered_incident_date_before_2" min="1900" max="2021" id="id_filtered_incident_date_before_2" class="form-control">
+
+
+                                    </div>
+
+                                </div>
+
+                                <br><br><br><br>
+
+                                <label class="form-label" styling="margin-top: 20px !important;"><label for="id_filtered_incident_date_after_0">Event date after</label></label>
+                                <label class="form-label date_example">For example 20/04/2020</label>
+
+                                <div class="form-date">
+
+                                    <div class="form-group form-group-day">
+                                        <label id="id_filtered_incident_date_after_0-label" class="form-label" for="id_filtered_incident_date_after_0">Day</label>
+                                        <input type="number" name="filtered_incident_date_after_0" min="1" max="31" id="id_filtered_incident_date_after_0" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-month">
+                                        <label id="id_filtered_incident_date_after_1-label" class="form-label" for="id_filtered_incident_date_after_1">Month</label>
+                                        <input type="number" name="filtered_incident_date_after_1" min="1" max="12" id="id_filtered_incident_date_after_1" class="form-control">
+
+
+                                    </div>
+
+                                    <div class="form-group form-group-year">
+                                        <label id="id_filtered_incident_date_after_2-label" class="form-label" for="id_filtered_incident_date_after_2">Year</label>
+                                        <input type="number" name="filtered_incident_date_after_2" min="1900" max="2021" id="id_filtered_incident_date_after_2" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="form-group" style="padding-top:10px; padding-right:90%">
+                            <input type="hidden" name="ods" value="Z01">
+                            <input class="nhsuk-button" type="submit" value="Filter results" id="submit-button"> <br>
+                            <a href="/event-view">Clear filters</a>
+                        </div>
+                        </div>
+                        <br>
+
+
+                    </form>
+                </div>
+            </div>
+        
+        <br>
+        <div class="column-two-thirds">
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header" width="15%" scope="col" style="padding-top:0;">Reference number</th>
+                        <th class="govuk-table__header" width="15%" scope="col" style="padding-top:0;">Created on</th>
+                        <th class="govuk-table__header" width="15%" scope="col" style="padding-top:0;">Created by</th>
+                        <th class="govuk-table__header" width="10%" scope="col" style="padding-top:0;">Event date</th>
+                        <th class="govuk-table__header" width="10%" scope="col" style="padding-top:0;">Event type</th>
+                        <th class="govuk-table__header" width="10%" scope="col" style="padding-top:0;">Section 1</th>
+                        <th class="govuk-table__header" width="10%" scope="col" style="padding-top:0;">Section 2</th>
+                        <th class="govuk-table__header" width="10%" scope="col" style="padding-top:0;"> </th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">146-924-540</td>
+                        <td class="govuk-table__cell">30 Oct 2022 10:43</td>
+                        <td class="govuk-table__cell">John Jones</td>
+                        <td class="govuk-table__cell">30 Oct 2022</td>
+                        <td class="govuk-table__cell">Maternal death (whilst pregnant)</td>
+                        <td class="govuk-table__cell">Draft started</td>
+                        <td class="govuk-table__cell">Not started </td>
+                        <td class="govuk-table__cell">
+                            <a href="/maternal/task-list" style="margin-top: 0;">View</a>
+                        </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">146-924-540</td>
+                        <td class="govuk-table__cell">27 Oct 2022 13:17</td>
+                        <td class="govuk-table__cell">Hope Bristow</td>
+                        <td class="govuk-table__cell">27 Oct 2022</td>
+                        <td class="govuk-table__cell">Severe brain injury</td>
+                        <td class="govuk-table__cell">Submitted - 27 Oct 2022</td>
+                        <td class="govuk-table__cell">Not started</td>
+                        <td class="govuk-table__cell">
+                            <a href="/submitted-section-1" style="margin-top: 0;">View</a>
+                        </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">146-924-540</td>
+                        <td class="govuk-table__cell">28 Apr 2021 10:43</td>
+                        <td class="govuk-table__cell">Joe Bloggs</td>
+                        <td class="govuk-table__cell">28 Apr 2021</td>
+                        <td class="govuk-table__cell">Severe brain injury</td>
+                        <td class="govuk-table__cell">Submitted - 28 Apr 2021</td>
+                        <td class="govuk-table__cell">Submitted - 03 Mar 2021</td>
+                        <td class="govuk-table__cell">
+                            <a href="/submitted-read-only" style="margin-top: 0;">View</a>
+                        </td>
+                    </tr>
+
+
+
+
+
+
+                </tbody>
+            </table>
+        </div>
+        
+
+        <div class="column-one-third form-group"></div>
+        <div class="column-two-thirds">
+            <div class="pagination">
+                <span class="step-links">
+
+                    
+                <span class="current">
+                    Page 1 of 5.
+                </span>
+
+
+
+                        <a href="/protoCombinedView">next</a>
+                    <a href="/protoCombinedView">last &raquo;</a>
+                    
+
+
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</main>
+
+{% endblock %}

@@ -12,7 +12,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-  Maternity events - single notification portal
+  {{ serviceName }}
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -37,21 +37,37 @@
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds">
 
-        <h1>Notify national organisations about maternity events</h1>
+        <h1>Notify national organisations of a qualifying perinatal event</h1>
         <p></p>
         <p>You can use this service to:</p>
         <ul>
-          <li>notify HSIB of </li>
-          <li>notify NHSR of severe brain injuries</li>
-          <li>notify MBBRACE of</li>
-          <li>notify CDOPs</li>
+          <li>notify Maternity and Newborn Safety Investigations Special Health Authority (MNSI) of neonatal, perinatal and maternal deaths and severe brain injuries</li>
+          <li>notify NHS Resolution (NHSR) of severe brain injuries</li>
+          <li>notify Mothers and Babies: Reducing Risk through Audits and Confidential Enquiries (MBRRACE) of neonatal, perinatal and maternal deaths</li>
+          <li>notify your local Child Death Overview Panel (CDOP) through notification to MBRRACE</li>
         </ul>
+
+        <div class="nhsuk-warning-callout">
+          <h3 class="nhsuk-warning-callout__label">
+            <span role="text">
+              <span class="nhsuk-u-visually-hidden">Important: </span>
+              Notification deadline
+            </span>
+          </h3>
+          <p>You must complete this form within your statutory deadline.</p>
+        </div>
 
         <h2>Before you start</h2>
 
-        <p>We'll ask you for: ...</p>
+        <p>We will ask you for the relevant information from the following categories:</p>
+        <ul>
+          <li>Event details</li>
+          <li>Details of the mother and/or baby involved</li>
+          <li>Information about the trust</li>
+        </ul>
 
-        <a class="nhsuk-button" href="#" role="button" draggable="false">Start now</a>
+
+        <a class="nhsuk-button" href="/sign-in" role="button" draggable="false">Start now</a>
 
         <p>By using this service you are agreeing to our <a href="#">terms of use</a> and <a href="#">privacy policy</a>.</p>
 
@@ -60,6 +76,7 @@
 
   </main>
 </div>
+
 
       <!-- End of content -->
 

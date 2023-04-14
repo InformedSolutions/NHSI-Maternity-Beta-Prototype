@@ -1,0 +1,302 @@
+
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+{{ serviceName }}
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+          <h1 class="nhsuk-fieldset__heading">
+            Support and comorbidities
+          </h1>
+        </legend>
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+            <label class="nhsuk-label" for="email">
+              Did the baby require respiratory support and/or intubation?
+            </label>
+      
+        
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="respiratory-1" name="respiratory" type="radio" value="email" aria-controls="conditional-respiratory-1" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="respiratory-1">
+                  Yes
+                </label>
+              </div>
+          
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-respiratory-1">
+          
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="example">
+                    What was the highest level of respiratory support required?
+                  </label>
+                  <select class="nhsuk-select" id="select-1" name="select-1">
+                    <option value="1">Oxygen</option>
+                    <option value="2">High flow O2</option>
+                    <option value="3">CPAP</option>
+                    <option value="3">BIPAP</option>
+                    <option value="3">Invasive conventional ventilation</option>
+                    <option value="3">HFOV</option>
+                    <option value="3">ECMO</option>
+                    <option value="3">Other</option>
+                    <option value="3">Not known</option>
+                  </select>
+                  </div>
+              </div>
+          
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="respiratory-2" name="respiratory" type="radio" value="phone" aria-controls="conditional-respiratory-2" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="respiratory-2">
+                  No
+                </label>
+              </div>        
+          
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="respiratory-3" name="respiratory" type="radio" value="phone" aria-controls="conditional-respiratory-3" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="respiratory-3">
+                  Not applicable
+                </label>
+              </div>  
+          
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="respiratory-4" name="respiratory" type="radio" value="phone" aria-controls="conditional-respiratory-4" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="respiratory-4">
+                  Not known
+                </label>
+              </div>  
+          
+            </div>
+          </fieldset>
+          
+          </div>
+
+          
+      <div class="nhsuk-form-group">
+
+        <fieldset class="nhsuk-fieldset" aria-describedby="chronic">
+          <label class="nhsuk-label" for="email">
+            Did this baby have a chronic respiratory problem?
+          </label>
+
+
+          <div class="nhsuk-radios nhsuk-radios--conditional">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="chronic-1" name="chronic" type="radio" value="email" aria-controls="conditional-chronic-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="chronic-1">
+                Yes
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-chronic-1">
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="example">
+                  Which problem did this baby have?
+                </label>
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="asthma">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                      Asthma
+                    </label>
+                  </div>
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="cystic-fibrosis">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                      Cystic fibrosis
+                    </label>
+                  </div>
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="chronic-lung-disease">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                      Chronic lung disease of prematurity
+                    </label>
+                  </div>
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="example-4" name="example" type="checkbox" value="other">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-4">
+                      Other, please specify 
+                      <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="chronic-2" name="chronic" type="radio" value="phone" aria-controls="conditional-chronic-2" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="chronic-2">
+                No
+              </label>
+            </div>        
+            
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="chronic-3" name="chronic" type="radio" value="phone" aria-controls="conditional-chronic-3" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="chronic-3">
+                Not known
+              </label>
+            </div>        
+
+          </div>
+        </fieldset>
+
+      </div>
+ 
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" aria-describedby="othercomorb">
+            <label class="nhsuk-label" for="email">
+              Did this baby have any other comorbidities?
+            </label>
+        
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="othercomorb-1" name="othercomorb" type="radio" value="email" aria-controls="conditional-othercomorb-1" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="othercomorb-1">
+                  Yes
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-othercomorb-1">
+                <div class="nhsuk-form-group">
+        
+                  <div class="nhsuk-radios">
+                    <label class="nhsuk-label nhsuk-radios__label" for="othercomorb-1">
+                        Which problem did this baby have?
+                    </label>
+                    <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="asthma">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                            Diabetes
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="cystic-fibrosis">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                            Cardiac disease
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="chronic-lung-disease">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                            Neurological/neuromuscular condition (including cerebral palsy)
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="chronic-lung-disease">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                            Genetic syndrome
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="example-4" name="example" type="checkbox" value="chronic-lung-disease">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-4">
+                            Malignancy
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="example-5" name="example" type="checkbox" value="chronic-lung-disease">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-5">
+                            Immunocompromised
+                        </label>
+                      </div>
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="example-6" name="example" type="checkbox" value="other">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-6">
+                          Other, please specify 
+                          <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+                        </label>
+                      </div>
+                    </div>
+                </div>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="othercomorb-2" name="othercomorb" type="radio" value="phone" aria-controls="conditional-othercomorb-2" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="othercomorb-2">
+                  No
+                </label>
+              </div>        
+              
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="othercomorb-3" name="othercomorb" type="radio" value="phone" aria-controls="conditional-othercomorb-3" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="othercomorb-3">
+                 Not known
+                </label>
+              </div>        
+            </div>
+            </div>
+          </fieldset>
+
+          <div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+              <label class="nhsuk-label" for="email">
+                Was the baby breastfed before the illness?
+              </label>
+        
+          
+              <div class="nhsuk-radios nhsuk-radios--conditional">
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="mothercovid-1" name="mothercovid" type="radio" value="email" aria-controls="conditional-mothercovid-1" aria-expanded="false">
+                  <label class="nhsuk-label nhsuk-radios__label" for="mothercovid-1">
+                    Yes
+                  </label>
+                </div>
+              
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="mothercovid-2" name="mothercovid" type="radio" value="phone" aria-controls="conditional-mothercovid-2" aria-expanded="false">
+                  <label class="nhsuk-label nhsuk-radios__label" for="mothercovid-2">
+                    No
+                  </label>
+                </div>        
+              
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="mothercovid-3" name="mothercovid" type="radio" value="phone" aria-controls="conditional-mothercovid-3" aria-expanded="false">
+                  <label class="nhsuk-label nhsuk-radios__label" for="mothercovid-3">
+                    Not known 
+                  </label>
+                </div>  
+              </div>
+            </fieldset>
+          
+          </div>
+        
+
+        <a class="nhsuk-button" href="/check-answers-section-1" role="button" draggable="false">Continue</a>
+
+        <p><a href="/task-list">Return to task list</a></p>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

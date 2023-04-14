@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Confirmation page template - NHS.UK prototype kit
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4">
+
+      <div class="nhsuk-card__content">
+
+        <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
+          Notification complete
+        </h1>
+
+        <p class="nhsuk-u-font-size-24">
+          Your reference number
+          <br>
+          <strong class="nhsuk-u-font-size-32">HDJ2123F</strong>
+        </p>
+        
+      </div>
+
+    </div>
+      <p>We have notified MNSI. You must return to the task list and complete the second section to notify NHSR. 
+        We will not ask for any information already provided in this notification unless the information 
+        provided is likely to have changed. </p>
+
+      <a class="nhsuk-button nhsuk-button--secondary" href="/brain-injury/task-list-section-2" role="button" draggable="false">Return to task list to complete section 2</a>
+
+    </div>
+  </div>
+{% endblock %}
+
+

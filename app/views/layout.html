@@ -14,7 +14,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-  NHS.UK prototype kit
+ 
 {% endblock %}
 
 <!-- Edit the header -->
@@ -22,8 +22,8 @@
 {% block header %}
   {{ header({
     "service": {
-        "name": "Maternity events - single notification portal",
-        "href": "/"
+        "name": "Notify national organisations of a qualifying perinatal event",
+        "href": "/home"
       },
       "showNav": "false",
       "showSearch": "false"
@@ -37,12 +37,24 @@
   {{ footer({
     "links": [
       {
-        "URL": "/",
-        "label": "Home"
+        "URL": "/cookies",
+        "label": "Cookies"
       },
       {
-        "URL": "/page-example",
-        "label": "Example page"
+        "URL": "/terms-and-conditions",
+        "label": "Terms and conditions"
+      },
+      {
+        "URL": "/accessibility",
+        "label": "Accessibility"
+      },
+      {
+        "URL": "mailto:itservicedesk@england.nhs.uk",
+        "label": "Contact us"
+      },
+      {
+        "URL": "https://www.england.nhs.uk/patient-safety/learn-from-patient-safety-events-service/lfpse-faqs-august-2022/",
+        "label": "FAQ link"
       }
     ]
   })}}

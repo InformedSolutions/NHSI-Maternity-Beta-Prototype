@@ -1,0 +1,307 @@
+
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">      
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+            <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Nominated family contact
+              </h1>
+            </legend>
+
+            <p>This will be used by MNSI</p>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="email">
+                First name
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="test-width-10" type="text">
+            </div>
+    
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="name">
+                Surname
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="surname" name="test-width-10" type="text">
+            </div>
+            
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="name">
+                Preferred name
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="surname" name="test-width-10" type="text">
+            </div>
+  
+            <h3 class="nhsuk-heading-m">Address</h3>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-line-1">
+                Address line 1
+              </label>
+              <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-line-2">
+                Address line 2 (optional)
+              </label>
+              <input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
+            </div>          
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-town">
+                Town or city
+              </label>
+              <input class="nhsuk-input nhsuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+            </div>          
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-county">
+                County (optional)
+              </label>
+              <input class="nhsuk-input nhsuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+            </div>          
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-postcode">
+                Postcode
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="phone-number">
+                Telephone number
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="phone-number" name="test-width-10" type="text">
+            </div>
+            
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="reporting-trust">
+                Email address
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="email-address" name="test-width-10" type="text">
+            </div>
+
+            <div class="nhsuk-radios nhsuk-radios--inline">
+              <label class="nhsuk-label" for="reporting-trust">
+                Preferred method of communication
+              </label>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                  Email
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                  Telephone
+                </label>
+              </div>
+            </div>
+            <br>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="reporting-trust">
+                Relationship to mother/baby
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="email-address" name="test-width-10" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="reporting-trust">
+                Special communication requirements
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="email-address" name="test-width-10" type="text">
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="select-1">
+                Ethnicity
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="1" disabled> </option>
+                <option value="1" disabled>White</option>
+                <option value="2">British</option>
+                <option value="3">Irish</option>
+                <option value="4">Gypsy or Irish Traveller</option>
+                <option value="5">Other White</option>
+                <option value="6" disabled>Mixed/Multiple ethnic group</option>
+                <option value="7">White and Black Caribbean</option>
+                <option value="8">White and Black African</option>
+                <option value="9">White and Asian</option>
+                <option value="10">Other Mixed</option>
+                <option value="11" disabled>Asian/Asian British</option>
+                <option value="12">Indian</option>
+                <option value="13">Pakistani</option>
+                <option value="14">Bangladeshi</option>
+                <option value="15">Chinese</option>
+                <option value="16">Other Asian</option>
+                <option value="17" disabled>Black/African/Caribbean/Black British</option>
+                <option value="18">African</option>
+                <option value="19">Caribbean</option>
+                <option value="20">Other Black</option>
+                <option value="21" disabled>Other ethnic group</option>
+                <option value="22">Arab</option>
+                <option value="23">Any other ethnic group</option>
+              </select>
+            </div>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="select-1">
+                Religion
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="1">  </option>
+                <option value="2"> African religion</option>
+                <option value="3"> Agnostic movement</option>
+                <option value="4"> Anthroposophy</option>
+                <option value="5"> Arcane school religion </option>
+                <option value="6"> Atheist movement</option>
+                <option value="7"> Black magic</option>
+                <option value="8"> Brahma Kumaris</option>
+                <option value="9"> British Israelism</option>
+                <option value="10"> Christian Humanism</option>
+                <option value="11" disabled> Christian religion</option>
+                <option value="12"> Agnostic Christian</option>
+                <option value="13"> Anglican Church</option>
+                <option value="14"> Baptist Church</option>
+                <option value="15"> Catholic religion</option>
+                <option value="16"> Celtic Christian Church </option>
+                <option value="17"> Christadelphian movement </option>
+                <option value="18"> Christian Existentialism</option>
+                <option value="19"> Christian Spiritualism </option>
+                <option value="20"> Church of Jesus Christ of Latter Day Saints </option>
+                <option value="21"> Church Universal and Triumphant </option>
+                <option value="22"> Eastern Christianity </option>
+                <option value="23"> Free Christian Church </option>
+                <option value="24"> Independent Fundamental Christian Church </option>
+                <option value="25"> Jehovah's Witness religion </option>
+                <option value="26"> Judaic Christian </option>
+                <option value="27"> Nonconformist religion </option>
+                <option value="28"> Old Catholic Church </option>
+                <option value="29"> Open Episcopal Church </option>
+                <option value="30"> Orthodox Christian religion </option>
+                <option value="31"> Pentecostalist religion </option>
+                <option value="32"> Plymouth Brethren religion </option>
+                <option value="1"> Protestant religion </option>
+                <option value="1"> Quaker religion </option>
+                <option value="1"> Reformed Church </option>
+                <option value="1"> Rosicrucian Fellowship </option>
+                <option value="1"> Salvation Army </option>
+                <option value="1"> Seventh Day Adventist religion </option>
+                <option value="1"> Swedenborgianism </option>
+                <option value="1"> Unitarian Universalist Church </option>
+                <option value="1"> United Church of Christ </option>
+                <option value="1"> Western Christianity </option>
+                <option value="1"> - </option>
+                <option value="1"> Church of Religious Science </option>
+                <option value="1"> Comenianism </option>
+                <option value="1"> Deism</option>
+                <option value="1"> Eckankar religion </option>
+                <option value="1"> Eminist religion </option>
+                <option value="1"> Goddess Tradition </option>
+                <option value="1" disabled> Hinduism, Buddhism AND/OR derivative </option>
+                <option value="1"> Brahmanism</option>
+                <option value="1"> Buddhism</option>
+                <option value="1"> Hinduism</option>
+                <option value="1"> Jainism</option>
+                <option value="1"> Lamaism</option>
+                <option value="1"> Sikhism</option>
+                <option value="1"> - </option>
+                <option value="1"> Humanism</option>
+                <option value="1"> Indigenous spirituality </option>
+                <option value="1"> Infinite Way</option>
+                <option value="1" disabled> Islam</option>
+                <option value="1"> Ahmadiyya Islam</option>
+                <option value="1"> Druze religion</option>
+                <option value="1"> Shi'ite muslim religio</option>
+                <option value="1"> Sufi muslim religion</option>
+                <option value="1"> Sunni muslim religion</option>
+                <option value="1"> - </option>
+                <option value="1" disabled> Judaism</option>
+                <option value="1"> Conservative Jewish religion</option>
+                <option value="1"> Hasidim</option>
+                <option value="1"> Humanistic Judaism</option>
+                <option value="1"> Kabbalah</option>
+                <option value="1"> Liberal Jewish religion</option>
+                <option value="1"> Messianic Judaism</option>
+                <option value="1"> Orthodox Jewish Faith</option>
+                <option value="1"> Reform Jewish Faith</option>
+                <option value="1"> - </option>
+                <option value="1"> Lightworker</option>
+                <option value="1"> Mixed religion</option>
+                <option value="1"> Mysticism</option>
+                <option value="1"> National Spiritualist Church</option>
+                <option value="1"> Native American Religion</option>
+                <option value="1"> New age movement</option>
+                <option value="1" disabled> New religious movement </option>
+                <option value="1"> Christian Scientist religious movement</option>
+                <option value="1"> Krishna consciousness religious movement</option>
+                <option value="1"> Unification church religious movement </option>
+                <option value="1"> - </option>
+                <option value="1"> Occultism</option>
+                <option value="1"> Paganism</option>
+                <option value="1"> Pantheism</option>
+                <option value="1"> Para-religious movement </option>
+                <option value="1"> Peyote Religion</option>
+                <option value="1"> Primal society religion</option>
+                <option value="1"> Primitive tribal spiritual belief</option>
+                <option value="1"> Radhasoami</option>
+                <option value="1"> Rastafarian movement </option>
+                <option value="1" disabled> Religion of Japan, China AND/OR Persia</option>
+                <option value="1"> Confucianism</option>
+                <option value="1"> Shintoism</option>
+                <option value="1"> Taoism</option>
+                <option value="1"> Zoroastrianism</option>
+                <option value="1"> - </option>
+                <option value="1"> Santeria</option>
+                <option value="1"> Satanism</option>
+                <option value="1"> Shamanism</option>
+                <option value="1"> Shumei</option>
+                <option value="1"> Spiritualism</option>
+                <option value="1"> Transcendental meditation</option>
+                <option value="1"> Trinitarian Humanism</option>
+                <option value="1"> Universalism</option>
+                <option value="1"> Vodun</option>
+                <option value="1"> Witchcraft</option>
+                <option value="1"> Yoruba</option>
+                  </select>
+            </div>
+
+          </fieldset>
+          </div>
+        <a class="nhsuk-button" href="/brain-injury/check-answers-section-1" role="button" draggable="false">Continue</a>
+        
+        <p><a href="/brain-injury/task-list">Return to task list</a></p>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,167 @@
+
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">      
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+            <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Parent/Guardian details
+              </h1>
+            </legend>
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="select-1">
+                Title
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="0">Choose title</option>
+                <option value="1">Mr</option>
+                <option value="2">Mrs</option>
+                <option value="3">Ms</option>
+                <option value="4">Miss</option>
+                <option value="5">Mx</option>
+                <option value="5">Dr</option>
+                <option value="5">Prof</option>
+              </select>
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="email">
+                First name
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="PG-first-name" type="text">
+            </div>
+    
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="name">
+                Surname
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="surname" name="test-width-10" type="text">
+            </div>
+            <h3 class="nhsuk-heading-m">Address</h3>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-line-1">
+                Address line 1
+              </label>
+              <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-line-2">
+                Address line 2 (optional)
+              </label>
+              <input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
+            </div>          
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-town">
+                Town or city
+              </label>
+              <input class="nhsuk-input nhsuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+            </div>          
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-county">
+                County (optional)
+              </label>
+              <input class="nhsuk-input nhsuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+            </div>          
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="address-postcode">
+                Postcode
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+            </div>
+          </div>  
+
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="select-1">
+                Occupation
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="1">TBD</option>
+              </select>
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="select-1">
+                Marital status
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="1">Choose marital status</option>
+                <option value="1">Single</option>
+                <option value="2">Married</option>
+                <option value="3">Divorced</option>
+                <option value="4">Civil partnership</option>
+                <option value="5">Widowed</option>
+              </select>
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="select-1">
+                Relationship to injured party
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="1">Choose relationship</option>
+                <option value="2">Mother</option>
+                <option value="3">Father</option>
+                <option value="3">Legal guardian</option>
+              </select>
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="select-1">
+                What is the family's preferred language?
+              </label>
+              <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="1">Choose language</option>
+                <option value="2">English</option>
+                <option value="3">Other values to be agreed</option>
+              </select>
+            </div>
+            
+            <br>
+
+          </fieldset>
+          <br>  
+
+          {% if labour=='yes' and diagnosed=='yes' %}
+
+          <a class="nhsuk-button" href="/brain-injury/check-answers-section-2" role="button" draggable="false">Continue</a>
+
+          {% else %}
+
+          <a class="nhsuk-button" href="/brain-injury/check-answers-section-1" role="button" draggable="false">Continue</a>
+
+          {% endif %}
+        
+        <p><a href="/brain-injury/task-list">Return to task list</a></p>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

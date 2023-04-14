@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+Maternity events - single notification portal
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+    <form method="post" class="form">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+
+          <div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <h1 class="nhsuk-fieldset__heading">
+                  Was this a multiple pregnancy?
+                </h1>
+              </legend>
+
+
+              <div class="nhsuk-radios nhsuk-radios--conditional">
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="multiple-1" name="multiple" type="radio" value="yes"
+                    aria-controls="conditional-contact-1" aria-expanded="false">
+                  <label class="nhsuk-label nhsuk-radios__label" for="multiple-1">
+                    Yes
+                  </label>
+                </div>
+
+                <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="number">
+                      Number of babies
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-2" id="number" name="number" type="number">
+                  </div>
+
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="multiple-2" name="multiple" type="radio" value="no"
+                    aria-controls="conditional-contact-2" aria-expanded="false">
+                  <label class="nhsuk-label nhsuk-radios__label" for="multiple-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+
+          </div>
+          <button type="submit" class="nhsuk-button">
+            Continue
+          </button>
+
+        </div>
+      </div>
+    </form>
+  </main>
+</div>
+
+<!-- End of content -->
+
+</div>
+</div>
+{% endblock %}

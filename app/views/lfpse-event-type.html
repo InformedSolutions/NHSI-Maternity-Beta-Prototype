@@ -1,0 +1,102 @@
+
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+Record patient safety events
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <div class="nhsuk-form-group">
+
+          <div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <h1 class="nhsuk-fieldset__heading">
+                  What kind of event do you want to record?
+                </h1>
+              </legend>
+          
+              <div class="nhsuk-radios">
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="lfpse-event-type-1" name="lfpse-event-type" type="radio" value="incident">
+                  <label class="nhsuk-label nhsuk-radios__label" for="lfpse-event-type-1">
+                    <strong>Incident</strong> - Something has happened, or failed to happen, that could have or did lead to patient harm
+                    <br> <a href>What does this mean?</a>
+                  </label>
+                </div>
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="lfpse-event-type-2" name="lfpse-event-type" type="radio" value="outcome">
+                  <label class="nhsuk-label nhsuk-radios__label" for="lfpse-event-type-2">
+                    <strong>Outcome</strong> - A poor outcome routinely reporting locally where it is not yet known whether or not the outcome was caused by a patient safety incident
+                    <br> <a href>What does this mean?</a>
+                  </label>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="lfpse-event-type-5" name="lfpse-event-type" type="radio" value="maternity">
+                  <label class="nhsuk-label nhsuk-radios__label" for="lfpse-event-type-5">
+                    <strong>Maternity</strong> - A maternity incident that needs to be reported to one or more national organisations
+                    <br> <a href>What does this mean?</a>
+                  </label>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="lfpse-event-type-3" name="lfpse-event-type" type="radio" value="risk">
+                  <label class="nhsuk-label nhsuk-radios__label" for="lfpse-event-type-3">
+                    <strong>Risk</strong> - A risk to patient safety in the future, though no patients have yet been affected
+                    <br> <a href>What does this mean?</a>
+                  </label>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="lfpse-event-type-4" name="lfpse-event-type" type="radio" value="good">
+                  <label class="nhsuk-label nhsuk-radios__label" for="lfpse-event-type-4">
+                    <strong>Good care</strong> - An example of good care that can be learned from
+                    <br> <a href>What does this mean?</a>
+                  </label>
+                </div>
+          
+              </div>
+            </fieldset>
+          
+          
+      </div>
+    </fieldset>
+
+  </div>
+
+</form>
+
+        <a class="nhsuk-button" href="/event-type" role="button" draggable="false">Continue</a>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

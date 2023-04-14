@@ -1,0 +1,81 @@
+
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+  Maternity events - single notification portal
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <div class="nhsuk-form-group">
+          <form method="post" class="form">
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <h1 class="nhsuk-fieldset__heading">
+                  Investigation details
+                </h1>
+              </legend>
+
+              <div class="nhsuk-form-group">
+                <legend class="nhsuk-label">
+                    Have the family requested an Early Notificiation investigation?
+                </legend>
+            
+                <div class="nhsuk-radios">
+            
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="example-1" name="EN" type="radio" value="yes">
+                    <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                      Yes
+                    </label>
+                  </div>
+            
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="example-2" name="EN" type="radio" value="no">
+                    <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+                      No
+                    </label>
+                  </div>
+            
+                </div>
+              </div>
+
+              <br>
+              <button type="submit" class="nhsuk-button">
+                Continue
+              </button>              
+            </fieldset>
+          </form>
+        </div>
+        
+        <br>
+        <p><a href="/brain-injury/task-list">Return to task list</a></p>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

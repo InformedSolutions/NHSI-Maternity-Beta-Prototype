@@ -1,0 +1,85 @@
+
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+  Maternity events - single notification portal
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset" aria-describedby="role">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                What was the role of ABC Trust?
+              </h1>
+            </legend>
+      
+            <div class="nhsuk-checkboxes">
+        
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="hospital-role-1" name="hospital-role" type="checkbox" value="role" aria-controls="conditional-hospital-role-1" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="hospital-role-1">
+                  Mother was booked here
+                </label>
+              </div>
+            
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="hospital-role-2" name="hospital-role" type="checkbox" value="role" aria-controls="conditional-hospital-role-2" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="hospital-role-2">
+                  Mother laboured here
+                </label>
+              </div>        
+            
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="hospital-role-3" name="hospital-role" type="checkbox" value="role" aria-controls="conditional-hospital-role-3" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="hospital-role-3">
+                  Mother gave birth here 
+                </label>
+              </div>  
+            
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="hospital-role-4" name="hospital-role" type="checkbox" value="role" aria-controls="conditional-hospital-role-4" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="hospital-role-4">
+                  Baby died here
+                </label>
+              </div> 
+
+            </div>
+          </fieldset>
+        
+        </div>            
+    
+      <a class="nhsuk-button" href="/mothers-details" role="button" draggable="false">Continue</a>
+    
+      <p><a href="/task-list">Return to task list</a></p>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

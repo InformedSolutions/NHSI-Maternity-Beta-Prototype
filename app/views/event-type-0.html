@@ -1,0 +1,160 @@
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+Maternity events - single notification portal
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+    <form method="post" class="form">
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+
+          <div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="determine-event-type-hint">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <h1 class="nhsuk-fieldset__heading">
+                  What type of event do you want to notify?
+                </h1>
+              </legend>
+
+              <div class="nhsuk-hint" id="event-type-hint">
+                If you select multiple event types, they must have happened in the same event (e.g must be a mother baby
+                pair).
+              </div>
+
+              <h2 class="nhsuk-heading-m">Mother</h2>
+
+              <div class="nhsuk-radios">
+
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="maternal" name="maternal-event-type" type="checkbox" value="maternal">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="maternal">
+                    Maternal death (while pregnant or within 42 days of the end of the pregnancy)
+                  </label>
+                </div>
+
+                <div>
+                  <details class="nhsuk-details">
+                    <summary class="nhsuk-details__summary">
+                      <span class="nhsuk-details__summary-text">
+                        <span class="nhsuk-details__summary-text">
+                          What does this mean?
+                        </span>
+                    </summary>
+                    <div class="nhsuk-details__text">
+                      <p>Death of a woman while pregnant or within 42 days of the end of the pregnancy, regardless of the place and circumstances of the death.</p>
+                    </div>
+                  </details>
+                </div>
+
+
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="maternal-365" name="maternal-event-type" type="checkbox"
+                    value="maternal-365">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="maternal-365">
+                    Maternal death (between 42 and 365 days after pregnancy)
+                  </label>
+                </div>
+
+                <div>
+                  <details class="nhsuk-details">
+                    <summary class="nhsuk-details__summary">
+                      <span class="nhsuk-details__summary-text">
+                        <span class="nhsuk-details__summary-text">
+                          What does this mean?
+                        </span>
+                    </summary>
+                    <div class="nhsuk-details__text">
+                      <p>All deaths of women between 42 and 365 days of the end of the pregnancy, regardless of the place and circumstances of the death.</p>
+                    </div>
+                  </details>
+                </div>
+                <br>
+                <h2 class="nhsuk-heading-m">Baby</h2>
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="baby-death" name="baby-event-type" type="checkbox"
+                    value="baby-death">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="baby-death">
+                    Death (any event where a baby has died)
+                  </label>
+                </div>
+
+                <div>
+                  <details class="nhsuk-details">
+                    <summary class="nhsuk-details__summary">
+                      <span class="nhsuk-details__summary-text">
+                        <span class="nhsuk-details__summary-text">
+                          What does this mean?
+                        </span>
+                    </summary>
+                    <div class="nhsuk-details__text">
+                      <p>All baby deaths up to 28 days after birth.
+                  </details>
+                </div>
+
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="event-type-9" name="baby-event-type" type="checkbox"
+                    value="brain-injury">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="event-type-9">
+                    Severe brain injury (between 37 weeks of gestation and 7 days)
+                  </label>
+                </div>
+
+                <div>
+                  <details class="nhsuk-details">
+                    <summary class="nhsuk-details__summary">
+                      <span class="nhsuk-details__summary-text">
+                        What does this mean?
+                      </span>
+                    </summary>
+                    <div class="nhsuk-details__text">
+                      <p>Eligible babies include those born at term (≥37 completed weeks of gestation), following
+                        labour, that had a severe brain
+                        injury diagnosed in the first seven days of life. These are any babies that had one or more of
+                        the following:</p>
+
+                      <ul>
+                        <li>Diagnosed with grade III hypoxicischaemic encephalopathy (HIE)</li>
+                        <li>Actively therapeutically cooled</li>
+                        <li>Had all three of the following signs: decreased central tone; comatose; seizures of any
+                          kinds</li>
+
+                      </ul>
+
+                    </div>
+                  </details>
+
+                </div>
+                <br>
+                <button type="submit" class="nhsuk-button">
+                  Continue
+                </button>
+            </fieldset>
+          </div>
+        </div>
+    </form>
+
+
+
+  </main>
+</div>
+
+<!-- End of content -->
+
+{% endblock %}

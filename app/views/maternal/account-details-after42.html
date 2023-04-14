@@ -1,0 +1,125 @@
+
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <h1 class="nhsuk-heading-l">Provide user details</h1>
+
+        <p>Let us know your own details so we know who is creating the notification. These details will be shared with the national organisations after submitting.</p>
+
+        <p>Some details are taken from your OKTA account - you need to update these on OKTA if they do not look right.</p>
+        
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="email">
+            Email address
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="email address" name="test-width-10" type="text" value="example@example.com" disabled>
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="name">
+            Name
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="name" name="test-width-10" type="text" value="Example Example" disabled>
+          </div>
+      
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-unit">
+            Reporting unit
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="name">
+            Job title
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="name" name="test-width-10" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="name">
+            Phone number
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="name" name="test-width-10" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+            <label class="nhsuk-label" for="name">
+              Will you be the lead contact for this case?
+            </label>
+      
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email" aria-controls="conditional-contact-1" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                  Yes
+                </label>
+              </div>
+                
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+                  No
+                </label>
+              </div> 
+              
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-2">
+
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="email">
+                    Contact Name
+                  </label>
+                  <input class="nhsuk-input nhsuk-input--width-10" id="input-width-5" name="test-width-5" type="text">
+                </div>
+        
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="email">
+                    Contact email
+                  </label>
+                  <input class="nhsuk-input nhsuk-input--width-10" id="email" name="email" type="text">
+                </div>        
+              </div>
+
+            </div>
+          </fieldset>
+        
+        </div>
+
+        <a class="nhsuk-button" href="/mothers-details" role="button" draggable="false">Save</a>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+Maternity events - single notification portal
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+    <form method="post" class="form">
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+
+          <div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="determine-event-type-hint">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <h1 class="nhsuk-fieldset__heading">
+                  Are you notifying an event where the mother and/or baby has died?
+                </h1>
+              </legend>
+
+              <div class="nhsuk-radios nhsuk-radios--conditional">
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="determine-event-type-1" name="yes-no" type="radio" value="yes"
+                    aria-controls="content">
+                  <label class="nhsuk-label nhsuk-radios__label" for="determine-event-type-1">
+                    Yes
+                  </label>
+                </div>
+
+                  <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="content">
+                    <label class="nhsuk-label nhsuk-radios__label" for="determine-event-type">
+                      Who has died?
+                    </label>
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="determine-event-type" name="died" type="radio" value="mother">
+                      <label class="nhsuk-label nhsuk-radios__label" for="determine-event-type">
+                        Mother
+                      </label>
+                    </div>
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="determine-event-type" name="died" type="radio" value="baby">
+                      <label class="nhsuk-label nhsuk-radios__label" for="determine-event-type">
+                        Baby
+                      </label>
+                    </div>
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="determine-event-type" name="died" type="radio" value="both">
+                      <label class="nhsuk-label nhsuk-radios__label" for="determine-event-type">
+                        Both
+                      </label>
+                    </div>
+                  </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="determine-event-type" name="yes-no" type="radio" value="no">
+                  <label class="nhsuk-label nhsuk-radios__label" for="determine-event-type-2">
+                    No
+                  </label>
+                </div>
+              </div>
+              <br>
+              <button type="submit" class="nhsuk-button">
+                Continue
+              </button>
+            </fieldset>
+          </div>
+        </div>
+    </form>
+
+
+
+  </main>
+</div>
+
+<!-- End of content -->
+
+{% endblock %}

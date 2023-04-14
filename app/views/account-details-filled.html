@@ -1,0 +1,101 @@
+
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+  Maternity events - single notification portal
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <h1 class="nhsuk-heading-xl">Organisation account information</h1>
+        <p>View and update your organisation's account information.</p>
+        <p>Some details are taken from your OKTA account - you need to update these on OKTA if they do not look right.</p>
+        <br>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Reporting trust
+            </dt>
+            <dd class="govuk-summary-list__value">
+              ABC Hospital Trust
+            </dd>
+          </div>
+        </dl>
+
+        <h1 class="nhsuk-heading-l">Trust's maternity contact details</h1>
+        <div class="nhsuk-hint" id="example-hint">
+          These details are used for notifying NHSR.
+        </div>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              First name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Sam
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/account-details-org-edit">
+                Change
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Surname
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Fender
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/account-details-org-edit">
+                Change
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Email address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              sam.fender@nhs.net
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/account-details-org-edit">
+                Change
+              </a>
+            </dd>
+          </div>
+        </dl>
+        <br>
+
+        <p><a href="home">Return to home</a></p>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

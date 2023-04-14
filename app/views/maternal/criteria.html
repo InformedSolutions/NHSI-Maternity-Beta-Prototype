@@ -1,0 +1,188 @@
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+Maternity events - single notification portal
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+  <form method="post" class="form">
+    <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+
+          <div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <h1 class="nhsuk-fieldset__heading">
+                  Maternal death details
+                </h1>
+              </legend>
+
+              {% if MaternalEventType == 'maternal-365' %}
+              {% else %}
+
+              <div class="nhsuk-radios">
+                <label class="nhsuk-label" for="suicide">
+                  Did the mother die by suicide?
+                </label>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="suicide-1" name="suicide" type="radio" value="yes">
+                  <label class="nhsuk-label nhsuk-radios__label" for="suicide-1">
+                    Yes
+                  </label>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="suicide-2" name="suicide" type="radio" value="no">
+                  <label class="nhsuk-label nhsuk-radios__label" for="suicide-2">
+                    No
+                  </label>
+                </div>
+              </div>
+              <br>
+
+              <div class="nhsuk-radios">
+                <label class="nhsuk-label" for="email">
+                  Was it a direct maternal death?
+                </label>
+
+                <div>
+                  <details class="nhsuk-details">
+                    <summary class="nhsuk-details__summary">
+                      <span class="nhsuk-details__summary-text">
+                        <span class="nhsuk-details__summary-text">
+                          What does this mean?
+                        </span>
+                    </summary>
+                    <div class="nhsuk-details__text">
+                      <p>Direct deaths include those resulting from obstetric complications of the
+                        pregnant state (pregnancy, labour and after the birth), from interventions, omissions, incorrect
+                        treatment or from a chain of events resulting from any of the above.</p>
+                    </div>
+                  </details>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="direct-death-1" name="direct-death" type="radio" value="yes">
+                  <label class="nhsuk-label nhsuk-radios__label" for="direct-death-1">
+                    Yes
+                  </label>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="direct-death-2" name="direct-death" type="radio" value="no">
+                  <label class="nhsuk-label nhsuk-radios__label" for="direct-death-2">
+                    No
+                  </label>
+                </div>
+
+                <br>
+
+                <div class="nhsuk-radios">
+                  <label class="nhsuk-label" for="email">
+                    Was it an indirect maternal death?
+                  </label>
+
+                  <div>
+                    <details class="nhsuk-details">
+                      <summary class="nhsuk-details__summary">
+                        <span class="nhsuk-details__summary-text">
+                          <span class="nhsuk-details__summary-text">
+                            What does this mean?
+                          </span>
+                      </summary>
+                      <div class="nhsuk-details__text">
+                        <p>Indirect deaths include those from previous existing disease or disease that
+                          developed during pregnancy, and which was not the result of direct obstetric causes but was
+                          aggravated by the physiological effects of pregnancy in the perinatal period (during or within 42
+                          days of the end of pregnancy).</p>
+                      </div>
+                    </details>
+                  </div>
+                  
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="indirect-1" name="indirect" type="radio" value="yes">
+                    <label class="nhsuk-label nhsuk-radios__label" for="indirect-1">
+                      Yes
+                    </label>
+                  </div>
+
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="indirect-2" name="indirect" type="radio" value="no">
+                    <label class="nhsuk-label nhsuk-radios__label" for="indirect-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+
+                <br>
+
+                {% endif %}
+
+                <div class="nhsuk-radios nhsuk-radios--conditional">
+
+                  <label class="nhsuk-label">
+                    Was this a multiple pregnancy?
+                  </label>
+
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="multiple-1" name="multiple" type="radio" value="yes"
+                      aria-controls="conditional-contact-1" aria-expanded="false">
+                    <label class="nhsuk-label nhsuk-radios__label" for="multiple-1">
+                      Yes
+                    </label>
+                  </div>
+
+                  <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="number">
+                        Number of babies
+                      </label>
+                      <input class="nhsuk-input nhsuk-input--width-2" id="number" name="number" type="number">
+                    </div>
+
+                  </div>
+
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="multiple-2" name="multiple" type="radio" value="no"
+                      aria-controls="conditional-contact-2" aria-expanded="false">
+                    <label class="nhsuk-label nhsuk-radios__label" for="multiple-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+            </fieldset>
+
+            </fieldset>
+
+          </div>
+
+          <br>
+
+          <button type="submit" class="nhsuk-button">
+            Continue
+          </button>
+
+
+        </div>
+      </div>
+
+    </main>
+  </form>
+</div>
+{% endblock %}

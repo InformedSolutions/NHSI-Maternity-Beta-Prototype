@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+Maternity events - single notification portal
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+    <form method="post" class="form">
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+
+          <div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="determine-event-type-hint">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <h1 class="nhsuk-fieldset__heading">
+                  When did the mother's death occur?
+                </h1>
+              </legend>
+
+              <div class="nhsuk-radios">
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="death-details-1" name="death-details" type="radio" value="maternal"
+                    aria-controls="content">
+                  <label class="nhsuk-label nhsuk-radios__label" for="death-details-1">
+                    While pregnant
+                  </label>
+                </div>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="death-details-2" name="death-details" type="radio" value="maternal-42"
+                    aria-controls="content">
+                  <label class="nhsuk-label nhsuk-radios__label" for="death-details-2">
+                    Less than 42 days after giving birth
+                  </label>
+                </div>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="death-details-3" name="death-details" type="radio" value="maternal-365"
+                    aria-controls="content">
+                  <label class="nhsuk-label nhsuk-radios__label" for="death-details-3">
+                    Between 42 and 365 days after giving birth
+                  </label>
+                </div>
+              </div>
+              <br>
+              <button type="submit" class="nhsuk-button">
+                Continue
+              </button>
+            </fieldset>
+          </div>
+        </div>
+    </form>
+
+
+
+  </main>
+</div>
+
+<!-- End of content -->
+
+{% endblock %}

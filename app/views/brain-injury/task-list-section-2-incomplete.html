@@ -1,0 +1,223 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+ <br>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="nhsuk-heading-xl">
+        Notify of a severe brain injury
+      </h1>
+
+      <p>Event type: Severe brain injury <a href ="../event-type">change</a></p>
+
+      <h2 class="nhsuk-heading-l">Section 1 - Complete at your earliest convenience</h2>
+
+      <div class="nhsuk-hint" id="example-hint">
+        This section is used for notifying MNSI.
+      </div>
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> User details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                  User details
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--purple" id="read-declaration-status">Submitted</strong>
+            </li>
+          </ul> 
+        </li>
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">2. </span> Event details
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+                Event details
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--purple" id="read-declaration-status">Submitted</strong>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+                Event type details
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--purple" id="read-declaration-status">Submitted</strong>
+          </li>
+        </ul> 
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">3. </span> Mother's details
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              Mother's details
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--purple" id="read-declaration-status">Submitted</strong>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">4. </span> Baby details
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              Baby's details
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--purple" id="read-declaration-status">Submitted</strong>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">5. </span> Further event details
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              Describe what happened
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--purple" id="read-declaration-status">Submitted</strong>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">6. </span> MNSI consent and nominated family contact
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+                MNSI consent
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--purple" id="read-declaration-status">Submitted</strong>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+                Nominated family contact
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--purple" id="read-declaration-status">Submitted</strong>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">7. </span> Submit section 1
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+                Review answers and submit
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--purple" id="read-declaration-status">Submitted</strong>
+          </li>
+        </ul>
+      </li>
+
+      
+      <h2 class="nhsuk-heading-l">Section 2 - Complete once you have submitted section 1</h2>
+
+      <div class="nhsuk-hint" id="example-hint">
+        This section is used for notifying NHSR.
+      </div>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">8. </span> Parent/Guardian details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a href="claimant-details" aria-describedby="company-information-status">
+              <span class="app-task-list__task-name">
+                 Parent/Guardian details
+              </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--purple" id="list-convictions-status">Completed</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">9. </span> Trust's maternity contact details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a href="maternity-contact-details" aria-describedby="company-information-status">
+              <span class="app-task-list__task-name">
+                 Trust's maternity contact details
+              </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--purple" id="list-convictions-status">Completed</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">10. </span> Investigation details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a href="claimant-details" aria-describedby="company-information-status">
+              <span class="app-task-list__task-name">
+                 Investigation details
+              </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--white" id="list-convictions-status">In Progress</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">11. </span> MRI outcome
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a href="claimant-details" aria-describedby="company-information-status">
+              <span class="app-task-list__task-name">
+                 MRI outcome
+              </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">12. </span> Submit
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                  Review answers and submit
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--red" id="submit-pay-status">Cannot start yet</strong>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+{% endblock %}

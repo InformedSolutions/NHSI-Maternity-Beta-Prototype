@@ -1,0 +1,48 @@
+
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <h1 class="nhsuk-heading-l">Update your organisation's maternity contact details</h1>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-trust">
+            First name
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-trust" name="test-width-10" type="text">
+        </div>
+
+        <a class="nhsuk-button" href="/account-details-filled" role="button" draggable="false">Update</a>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

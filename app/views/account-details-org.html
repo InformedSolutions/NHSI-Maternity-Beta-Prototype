@@ -1,0 +1,80 @@
+
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <h1 class="nhsuk-heading-l">Set up your organisation's account information</h1>
+        <p>An account for your organisation has not already been set up. To continue, you must create one now.</p>
+        <p>These details will be shared with the national organisations when you submit a notification. These must be kept up to date.</p>
+        <p>Some details are taken from your OKTA account - you need to update these on OKTA if they do not look right.</p>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-trust">
+            Reporting trust
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-trust" name="test-width-10" type="text" value="ABC Hospital Trust" disabled>
+        </div>
+        
+        <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+          <h1 class="nhsuk-fieldset__heading">
+            Trust's maternity contact details
+          </h1>
+          <div class="nhsuk-hint" id="example-hint">
+            These details are used for notifying NHSR.
+          </div>
+        </legend>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="email">
+            First name
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="PG-first-name" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="name">
+            Surname
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="surname" name="test-width-10" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="name">
+            Email address
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="surname" name="test-width-10" type="text">
+        </div>
+        <br>
+        <a class="nhsuk-button" href="/home" role="button" draggable="false">Create account</a>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

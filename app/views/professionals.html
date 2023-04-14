@@ -1,0 +1,227 @@
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+{{ serviceName }}
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <h1 class="nhsuk-heading-l">Professional's details</h1>
+
+        <p>Provide the details of the professionals involved in the patient's care. <p>
+
+        <h3 class="nhsuk-heading-m">GP</h3>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-unit">
+            Name {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}of GP{% endif %} {% if eventType=='neonatal' or eventType=='perinatal' %} (optional) {% endif %}
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
+        </div>
+
+        {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-unit">
+            Name of surgery (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
+        </div>
+
+        {% endif %}
+
+        {% if eventType=='neonatal' or eventType=='perinatal' or eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-unit">
+            Email Address (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-unit">
+            Telephone Number {% if eventType=='neonatal' or eventType=='perinatal' %} (optional) {% endif %}
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
+        </div>
+
+        {% endif %}
+
+        {% if eventType=='neonatal' or eventType=='perinatal' %}
+
+        <h3 class="nhsuk-heading-m">Neonatologist</h3>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="email">
+            Name (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="email address" name="test-width-10" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="email">
+            Email Address (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="email address" name="test-width-10" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="name">
+            Telephone Number (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="name" name="test-width-10" type="text">
+        </div>
+
+        <h3 class="nhsuk-heading-m">Obstetrician</h3>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="phone-number">
+            Name (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="phone-number" name="test-width-10" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-trust">
+            Email Address (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-trust" name="test-width-10" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-trust">
+            Telephone Number (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-trust" name="test-width-10" type="text">
+        </div>
+
+        <h3 class="nhsuk-heading-m">Delivery Midwife</h3>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-unit">
+            Name (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-unit">
+            Email Address (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-unit">
+            Telephone Number (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
+        </div>
+
+        <h3 class="nhsuk-heading-m">Community Midwife</h3>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-unit">
+            Name (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-unit">
+            Email Address (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-unit">
+            Telephone Number (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
+        </div>
+
+        <h3 class="nhsuk-heading-m">Other</h3>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-unit">
+            Name (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-unit">
+            Email Address (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
+        </div>
+        
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="reporting-unit">
+            Telephone Number (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="PMRT">
+            Will you use the PMRT for the CDOP review and reporting of this death?
+          </label>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="PMRT-1" name="PMRT" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="PMRT-1">
+              Yes
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="PMRT-2" name="PMRT" type="radio" value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="PMRT-2">
+              No
+            </label>
+          </div>
+        </div>
+
+        {% endif %}
+
+        {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}
+
+        <a class="nhsuk-button" href="/check-answers-section-1" role="button" draggable="false">Continue</a>
+
+        {% else %}
+
+        <a class="nhsuk-button" href="/covid-19" role="button" draggable="false">Continue</a>
+
+        {% endif %}
+
+        <p><a href="/task-list">Return to task list</a></p>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- End of content -->
+
+</div>
+</div>
+{% endblock %}
