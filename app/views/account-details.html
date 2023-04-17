@@ -37,15 +37,15 @@
           <input class="nhsuk-input nhsuk-input--width-10" id="email address" name="test-width-10" type="text" value="example@example.com" disabled>
         </div>
 
+        {% if eventType == 'maternal' or eventType == 'maternal-42' or eventType == 'maternal-365' %}
+
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="name">
             Name
           </label>
           <input class="nhsuk-input nhsuk-input--width-10" id="name" name="test-width-10" type="text" value="Example Example" disabled>
         </div>
-
-        {% if eventType == 'maternal' or eventType == 'maternal-42' or eventType == 'maternal-365' %}
-
+       
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="name">
             Job title
@@ -115,8 +115,8 @@
         </div>
 
         {% endif %}
-
-        {% if eventType == 'perinatal' %}
+        
+        {% if eventType == 'perinatal' or eventType == 'neonatal' %}
 
         <a class="nhsuk-button" href="role-of-hospital" role="button" draggable="false">Continue</a>
 

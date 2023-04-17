@@ -122,6 +122,12 @@ router.get('/event-type-3', function(req,res){
     })
 })
 
+router.get('/account-details', function(req,res){
+    res.render('account-details', {
+        eventType: req.session.eventType
+    })
+})
+
 router.post('/event-type-3', function (req, res) {
     req.session.gestationKnown = req.session.data['gestation-known']
     req.session.gestationWeeks = req.session.data['gestational-weeks']

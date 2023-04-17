@@ -25,7 +25,7 @@
       <div class="nhsuk-grid-column-two-thirds">
         <legend class="nhsuk-fieldset__legend nhsuk-label--l">
           <h1 class="nhsuk-fieldset__heading">
-            Covid-19
+            Covid-19 Exposure
           </h1>
         </legend>
 
@@ -45,18 +45,6 @@
                   Yes
                 </label>
               </div>
-        
-              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
-        
-                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="example">
-                    Give details of known or suspected exposure
-                  </label>
-                  <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
-                </div>
-        
-              </div>
-        
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
                 <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
@@ -65,7 +53,7 @@
               </div>        
 
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="covid-3" name="covid" type="radio" value="phone" aria-controls="conditional-covid-3" aria-expanded="false">
+                <input class="nhsuk-radios__input" id="covid-3" name="contact" type="radio" value="phone" aria-controls="conditional-covid-3" aria-expanded="false">
                 <label class="nhsuk-label nhsuk-radios__label" for="covid-3">
                   Not known
                 </label>
@@ -74,255 +62,10 @@
             </div>
           </fieldset>
         
-        </div>
+        </div>        
 
-        <div class="nhsuk-form-group">
+        <a class="nhsuk-button" href="/covid-19-further" role="button" draggable="false">Continue</a>
 
-          <fieldset class="nhsuk-fieldset" aria-describedby="covid">
-            <label class="nhsuk-label" for="email">
-              Did this baby show clinical signs of COVID-19 in the two weeks before death?
-            </label>
-      
-        
-            <div class="nhsuk-radios nhsuk-radios--conditional">
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="covid-1" name="covid" type="radio" value="email" aria-controls="conditional-covid-1" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="covid-1">
-                  Yes
-                </label>
-              </div>
-        
-              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-covid-1">
-        
-                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="example">
-                    Describe the clinical signs in as much detail as possible
-                  </label>
-                  <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
-                </div>
-        
-              </div>
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="covid-2" name="covid" type="radio" value="phone" aria-controls="conditional-covid-2" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="covid-2">
-                  No
-                </label>
-              </div>        
-              
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="covid-3" name="covid" type="radio" value="phone" aria-controls="conditional-covid-3" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="covid-3">
-                  Not known
-                </label>
-              </div>        
-
-            </div>
-          </fieldset>
-        
-        </div>
-
-        {% if eventType == 'stillbirth' or eventType == 'late-fetal-loss' %}
-        {% else %}
-
-        <div class="nhsuk-form-group">
-
-          <fieldset class="nhsuk-fieldset" aria-describedby="covidtest">
-            <label class="nhsuk-label" for="email">
-              Was this baby tested for COVID-19?
-            </label>
-        
-            <div class="nhsuk-radios nhsuk-radios--conditional">
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="covidtest-1" name="covidtest" type="radio" value="email" aria-controls="conditional-covidtest-1" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="covidtest-1">
-                  Yes, tested when alive
-                </label>
-              </div>
-        
-              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-covidtest-1">
-                <div class="nhsuk-form-group">
-
-                  <div class="nhsuk-radios">
-                    <label class="nhsuk-label nhsuk-radios__label" for="covidtest-1">
-                      What was the result?
-                    </label>
-              
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
-                        Positive
-                      </label>
-                    </div>
-              
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
-                        Negative
-                      </label>
-                    </div>
-              
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="not sure">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
-                        Not known
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="covidtest-2" name="covidtest" type="radio" value="phone" aria-controls="conditional-covidtest-2" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="covidtest-2">
-                  Yes, tested after death
-                </label>
-              </div>        
-
-              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-covidtest-2">
-                <div class="nhsuk-form-group">
-
-                  <div class="nhsuk-radios">
-                    <label class="nhsuk-label nhsuk-radios__label" for="covidtest-2">
-                      What was the result?
-                    </label>
-              
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
-                        Positive
-                      </label>
-                    </div>
-              
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
-                        Negative
-                      </label>
-                    </div>
-              
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="not sure">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
-                        Not known
-                      </label>
-                    </div>
-                    </div>
-                  </div>
-                </div>
-              
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="covidtest-3" name="covidtest" type="radio" value="phone" aria-controls="conditional-covidtest-3" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="covidtest-3">
-                  Yes, tested at post-mortem
-                </label>
-              </div>        
-
-              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-covidtest-3">
-                <div class="nhsuk-form-group">
-
-                  <div class="nhsuk-radios">
-                    <label class="nhsuk-label nhsuk-radios__label" for="covidtest-3">
-                      What was the result?
-                    </label>
-              
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
-                        Positive
-                      </label>
-                    </div>
-              
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
-                        Negative
-                      </label>
-                    </div>
-              
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="not sure">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
-                        Not known
-                      </label>
-                    </div>
-                    </div>
-                  </div>
-                </div>
-
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="covidtest-4" name="covidtest" type="radio" value="phone" aria-controls="conditional-covidtest-4" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="covidtest-4">
-                  No, not tested
-                </label>
-              </div>       
-
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="covidtest-5" name="covidtest" type="radio" value="phone" aria-controls="conditional-covidtest-5" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="covidtest-5">
-                  Not known
-                </label>
-              </div>        
-      
-            </div>
-            </div>
-          </fieldset>
-          {% endif %}
-
-          <div class="nhsuk-form-group">
-
-            <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
-              <label class="nhsuk-label" for="email">
-                Was the mother tested for COVID-19?
-              </label>
-        
-          
-              <div class="nhsuk-radios nhsuk-radios--conditional">
-          
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="mothercovid-1" name="mothercovid" type="radio" value="email" aria-controls="conditional-mothercovid-1" aria-expanded="false">
-                  <label class="nhsuk-label nhsuk-radios__label" for="mothercovid-1">
-                    Yes and tested positive
-                  </label>
-                </div>
-              
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="mothercovid-2" name="mothercovid" type="radio" value="phone" aria-controls="conditional-mothercovid-2" aria-expanded="false">
-                  <label class="nhsuk-label nhsuk-radios__label" for="mothercovid-2">
-                    Yes and tested negative
-                  </label>
-                </div>        
-              
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="mothercovid-3" name="mothercovid" type="radio" value="phone" aria-controls="conditional-mothercovid-3" aria-expanded="false">
-                  <label class="nhsuk-label nhsuk-radios__label" for="mothercovid-3">
-                    Not tested 
-                  </label>
-                </div>  
-              
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="mothercovid-4" name="mothercovid" type="radio" value="phone" aria-controls="conditional-mothercovid-4" aria-expanded="false">
-                  <label class="nhsuk-label nhsuk-radios__label" for="mothercovid-4">
-                    Not applicable 
-                  </label>
-                </div> 
-              
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="mothercovid-5" name="mothercovid" type="radio" value="phone" aria-controls="conditional-mothercovid-5" aria-expanded="false">
-                  <label class="nhsuk-label nhsuk-radios__label" for="mothercovid-5">
-                    Not known
-                  </label>
-                </div> 
-  
-              </div>
-            </fieldset>
-          
-          </div>
-        
-
-        <a class="nhsuk-button" href="/comorbidities" role="button" draggable="false">Continue</a>
 
         <p><a href="/task-list">Return to task list</a></p>
 

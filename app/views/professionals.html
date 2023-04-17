@@ -31,7 +31,7 @@
 
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="reporting-unit">
-            Name {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}of GP{% endif %} (optional)
+            Name {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}of GP{% endif %} {% if eventType=='neonatal' or eventType=='perinatal' %} (optional) {% endif %}
           </label>
           <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
         </div>
@@ -58,7 +58,7 @@
 
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="reporting-unit">
-            Telephone Number (optional)
+            Telephone Number {% if eventType=='neonatal' or eventType=='perinatal' %} (optional) {% endif %}
           </label>
           <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
         </div>
