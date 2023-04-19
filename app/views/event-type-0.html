@@ -34,17 +34,22 @@ Maternity events - single notification portal
               </legend>
 
               <div class="nhsuk-hint" id="event-type-hint">
-                If you select multiple event types, they must have happened in the same event (e.g must be a mother baby
-                pair).
+                To include multiple baby deaths in the same notification, select the Death (any event where a baby has
+                died) option.
+              </div>
+
+              <div class="nhsuk-hint" id="event-type-hint">
+                To notify more than one of these events, you need to create separate notifications. You must create one
+                notification first and then return to this page to create the other one.
               </div>
 
               <h2 class="nhsuk-heading-m">Mother</h2>
 
               <div class="nhsuk-radios">
 
-                <div class="nhsuk-checkboxes__item">
-                  <input class="nhsuk-checkboxes__input" id="maternal" name="maternal-event-type" type="checkbox" value="maternal">
-                  <label class="nhsuk-label nhsuk-checkboxes__label" for="maternal">
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="maternal" name="event-type" type="radio" value="maternal">
+                  <label class="nhsuk-label nhsuk-radios__label" for="maternal">
                     Maternal death (while pregnant or within 42 days of the end of the pregnancy)
                   </label>
                 </div>
@@ -58,16 +63,17 @@ Maternity events - single notification portal
                         </span>
                     </summary>
                     <div class="nhsuk-details__text">
-                      <p>Death of a woman while pregnant or within 42 days of the end of the pregnancy, regardless of the place and circumstances of the death.</p>
+                      <p>Death of a woman while pregnant or within 42 days of the end of the pregnancy, regardless of
+                        the place and circumstances of the death.</p>
                     </div>
                   </details>
                 </div>
 
 
-                <div class="nhsuk-checkboxes__item">
-                  <input class="nhsuk-checkboxes__input" id="maternal-365" name="maternal-event-type" type="checkbox"
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="maternal-365" name="event-type" type="radio"
                     value="maternal-365">
-                  <label class="nhsuk-label nhsuk-checkboxes__label" for="maternal-365">
+                  <label class="nhsuk-label nhsuk-radios__label" for="maternal-365">
                     Maternal death (between 42 and 365 days after pregnancy)
                   </label>
                 </div>
@@ -81,16 +87,16 @@ Maternity events - single notification portal
                         </span>
                     </summary>
                     <div class="nhsuk-details__text">
-                      <p>All deaths of women between 42 and 365 days of the end of the pregnancy, regardless of the place and circumstances of the death.</p>
+                      <p>All deaths of women between 42 and 365 days of the end of the pregnancy, regardless of the
+                        place and circumstances of the death.</p>
                     </div>
                   </details>
                 </div>
                 <br>
                 <h2 class="nhsuk-heading-m">Baby</h2>
-                <div class="nhsuk-checkboxes__item">
-                  <input class="nhsuk-checkboxes__input" id="baby-death" name="baby-event-type" type="checkbox"
-                    value="baby-death">
-                  <label class="nhsuk-label nhsuk-checkboxes__label" for="baby-death">
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="baby-death" name="event-type" type="radio" value="baby-death">
+                  <label class="nhsuk-label nhsuk-radios__label" for="baby-death">
                     Death (any event where a baby has died)
                   </label>
                 </div>
@@ -108,10 +114,10 @@ Maternity events - single notification portal
                   </details>
                 </div>
 
-                <div class="nhsuk-checkboxes__item">
-                  <input class="nhsuk-checkboxes__input" id="event-type-9" name="baby-event-type" type="checkbox"
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="event-type-9" name="event-type" type="radio"
                     value="brain-injury">
-                  <label class="nhsuk-label nhsuk-checkboxes__label" for="event-type-9">
+                  <label class="nhsuk-label nhsuk-radios__label" for="event-type-9">
                     Severe brain injury (between 37 weeks of gestation and 7 days)
                   </label>
                 </div>

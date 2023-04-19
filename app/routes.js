@@ -55,8 +55,8 @@ router.post('/event-type', function (req, res) {
 
 router.post('/event-type-0', function (req, res) {
 
-    req.session.MaternalEventType = req.body['maternal-event-type'];
-    req.session.BabyEventType = req.body['baby-event-type']
+    req.session.MaternalEventType = req.body['event-type'];
+    req.session.BabyEventType = req.body['event-type']
 
     if ((req.session.BabyEventType == 'baby-death' || req.session.BabyEventType == 'brain-injury') && (req.session.MaternalEventType == 'maternal' || req.session.MaternalEventType == 'maternal-42' || req.session.MaternalEventType == 'maternal-365')) {
         
