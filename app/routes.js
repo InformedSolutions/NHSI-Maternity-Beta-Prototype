@@ -143,7 +143,7 @@ router.post('/event-type-3', function (req, res) {
 
     // Multiple baby flow only configured for Stillbirth
     if (req.session.multiple == 'yes') {
-        res.redirect('/stillbirth/task-list')
+        res.redirect('/combined-task-list')
     } else if (req.session.gestationWeeks > 21 && req.session.gestationWeeks < 24 && req.session.signOfLife == 'no') {
         req.session.eventType = "late-fetal-loss"
         res.redirect('/late-fetal-loss/task-list')
