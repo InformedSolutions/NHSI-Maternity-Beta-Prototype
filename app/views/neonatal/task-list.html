@@ -69,6 +69,9 @@
             </span>
             <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
           </li>
+
+          {% if termination=='no' %}
+
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="/household"aria-describedby="company-information-status">
@@ -77,6 +80,9 @@
             </span>
             <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
           </li>
+
+          {% endif %}
+
         </ul>
       </li>
 
@@ -109,6 +115,9 @@
             </span>
             <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
           </li>
+
+          {% if termination=='no' %}
+
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="/cause-of-death" aria-describedby="company-information-status">
@@ -149,6 +158,7 @@
             </span>
             <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
           </li>
+          {% endif %}
         </ul>
       </li>
 

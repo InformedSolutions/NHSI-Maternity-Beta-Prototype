@@ -193,15 +193,15 @@ Maternity events - single notification portal
                           </label>
                         </div>
                         <div class="nhsuk-radios__item">
-                          <input class="nhsuk-radios__input" id="time-after-birth-1" name="time-after-birth" type="radio"
-                            value="between-7-28">
+                          <input class="nhsuk-radios__input" id="time-after-birth-1" name="time-after-birth"
+                            type="radio" value="between-7-28">
                           <label class="nhsuk-label nhsuk-radios__label" for="time-after-birth-1">
                             Between 7 and 28 completed days
                           </label>
                         </div>
                         <div class="nhsuk-radios__item">
-                          <input class="nhsuk-radios__input" id="time-after-birth-2" name="time-after-birth" type="radio"
-                            value="after-28">
+                          <input class="nhsuk-radios__input" id="time-after-birth-2" name="time-after-birth"
+                            type="radio" value="after-28">
                           <label class="nhsuk-label nhsuk-radios__label" for="time-after-birth-2">
                             After 28 completed days
                           </label>
@@ -218,6 +218,26 @@ Maternity events - single notification portal
                     </div>
 
                   </div>
+                  <br>
+                  <label class="nhsuk-label">
+                    Was this a termination?
+                  </label>
+  
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="termination-1" name="termination" type="radio" value="yes">
+                    <label class="nhsuk-label nhsuk-radios__label" for="termination-1">
+                      Yes
+                    </label>
+                  </div>
+  
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="termination-2" name="termination" type="radio" value="no">
+                    <label class="nhsuk-label nhsuk-radios__label" for="termination-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+  
                 </div>
 
 
@@ -307,8 +327,8 @@ Maternity events - single notification portal
                       <div class="nhsuk-date-input" id="example">
                         <div class="nhsuk-date-input__item">
                           <div class="nhsuk-form-group">
-                            <input class="nhsuk-input nhsuk-date-input__input" id="birth-weight-b2" name="birth-weight-b2"
-                              type="number" pattern="[0-9]*" inputmode="numeric">
+                            <input class="nhsuk-input nhsuk-date-input__input" id="birth-weight-b2"
+                              name="birth-weight-b2" type="number" pattern="[0-9]*" inputmode="numeric">
                           </div>
                         </div>
                       </div>
@@ -391,164 +411,207 @@ Maternity events - single notification portal
                     </div>
 
                   </div>
-                </div>
+                  <br>
+                  <label class="nhsuk-label">
+                    Was this a termination?
+                  </label>
 
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="termination-baby2-1" name="termination-baby2" type="radio" value="yes">
+                    <label class="nhsuk-label nhsuk-radios__label" for="termination-baby2-1">
+                      Yes
+                    </label>
+                  </div>
+
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="termination-baby2-2" name="termination-baby2" type="radio" value="no">
+                    <label class="nhsuk-label nhsuk-radios__label" for="termination-baby2-2">
+                      No
+                    </label>
+                  </div>
+                </div>
 
               </div>
 
 
+          </div>
 
-              {% else %}
 
-              <div class="nhsuk-radios nhsuk-radios--conditional nhsuk-form-group">
-                <label class="nhsuk-label" for="gestation">
-                  Is gestational age at delivery known?
-                </label>
 
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="gestation-1" name="gestation-known" type="radio" value="yes"
-                    aria-controls="conditional-gestation-1" aria-expanded="false">
-                  <label class="nhsuk-label nhsuk-radios__label" for="gestation-1">
-                    Yes
-                  </label>
-                </div>
+          {% else %}
 
-                <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-gestation-1">
+          <div class="nhsuk-radios nhsuk-radios--conditional nhsuk-form-group">
+            <label class="nhsuk-label" for="gestation">
+              Is gestational age at delivery known?
+            </label>
 
-                  <div class="nhsuk-date-input" id="example">
-                    <div class="nhsuk-date-input__item">
-                      <div class="nhsuk-form-group">
-                        <label class="nhsuk-label nhsuk-date-input__label" for="gestational-weeks">
-                          Weeks
-                        </label>
-                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="gestational-weeks"
-                          name="gestational-weeks" type="number" pattern="[0-9]*" inputmode="numeric">
-                      </div>
-                    </div>
-                    <div class="nhsuk-date-input__item">
-                      <div class="nhsuk-form-group">
-                        <label class="nhsuk-label nhsuk-date-input__label" for="gestational-days">
-                          Days
-                        </label>
-                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="gestational-days"
-                          name="gestational-days" type="number" pattern="[0-9]*" inputmode="numeric">
-                      </div>
-                    </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="gestation-1" name="gestation-known" type="radio" value="yes"
+                aria-controls="conditional-gestation-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="gestation-1">
+                Yes
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-gestation-1">
+
+              <div class="nhsuk-date-input" id="example">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="gestational-weeks">
+                      Weeks
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="gestational-weeks"
+                      name="gestational-weeks" type="number" pattern="[0-9]*" inputmode="numeric">
                   </div>
-
                 </div>
-
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="gestation-2" name="gestation-known" type="radio" value="no"
-                    aria-controls="conditional-gestation-2" aria-expanded="false">
-                  <label class="nhsuk-label nhsuk-radios__label" for="gestation-2">
-                    No
-                  </label>
-                </div>
-
-                <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-gestation-2">
-
-                  <label class="nhsuk-label" for="input-width-10">
-                    Birth weight (grams)
-                  </label>
-                  <div class="nhsuk-date-input" id="example">
-                    <div class="nhsuk-date-input__item">
-                      <div class="nhsuk-form-group">
-                        <input class="nhsuk-input nhsuk-date-input__input" id="birth-weight" name="birth-weight"
-                          type="number" pattern="[0-9]*" inputmode="numeric">
-                      </div>
-                    </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="gestational-days">
+                      Days
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="gestational-days"
+                      name="gestational-days" type="number" pattern="[0-9]*" inputmode="numeric">
                   </div>
-
                 </div>
               </div>
+
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="gestation-2" name="gestation-known" type="radio" value="no"
+                aria-controls="conditional-gestation-2" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="gestation-2">
+                No
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-gestation-2">
+
+              <label class="nhsuk-label" for="input-width-10">
+                Birth weight (grams)
+              </label>
+              <div class="nhsuk-date-input" id="example">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <input class="nhsuk-input nhsuk-date-input__input" id="birth-weight" name="birth-weight"
+                      type="number" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="nhsuk-radios">
+            <label class="nhsuk-label">
+              Was the baby thought to be alive at the onset of the care process that led to the delivery?
+            </label>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="thought-alive" name="thought-alive" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="thought-alive">
+                Yes
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="thought-alive-1" name="thought-alive" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="thought-alive-1">
+                No
+              </label>
+            </div>
+          </div>
+          <br>
+          <div class="nhsuk-radios nhsuk-radios--conditional">
+            <label class="nhsuk-label">
+              Did the baby show signs of life at delivery?
+            </label>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="sign-of-life" name="sign-of-life" type="radio" value="yes"
+                aria-controls="sign-of-life-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="sign-of-life">
+                Yes
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="sign-of-life-1">
 
               <div class="nhsuk-radios">
                 <label class="nhsuk-label">
-                  Was the baby thought to be alive at the onset of the care process that led to the delivery?
+                  How long after birth did the baby die?
                 </label>
-
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="thought-alive" name="thought-alive" type="radio" value="yes">
-                  <label class="nhsuk-label nhsuk-radios__label" for="thought-alive">
-                    Yes
+                  <input class="nhsuk-radios__input" id="time-after-birth" name="time-after-birth" type="radio"
+                    value="before-7">
+                  <label class="nhsuk-label nhsuk-radios__label" for="time-after-birth">
+                    Before 7 completed days
                   </label>
                 </div>
-
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="thought-alive-1" name="thought-alive" type="radio" value="no">
-                  <label class="nhsuk-label nhsuk-radios__label" for="thought-alive-1">
-                    No
+                  <input class="nhsuk-radios__input" id="time-after-birth" name="time-after-birth" type="radio"
+                    value="between-7-28">
+                  <label class="nhsuk-label nhsuk-radios__label" for="time-after-birth">
+                    Between 7 and 28 completed days
+                  </label>
+                </div>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="time-after-birth" name="time-after-birth" type="radio"
+                    value="after-28">
+                  <label class="nhsuk-label nhsuk-radios__label" for="time-after-birth">
+                    After 28 completed days
                   </label>
                 </div>
               </div>
-              <br>
-              <div class="nhsuk-radios nhsuk-radios--conditional">
-                <label class="nhsuk-label">
-                  Did this baby show signs of life at delivery?
-                </label>
 
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="sign-of-life" name="sign-of-life" type="radio" value="yes"
-                    aria-controls="sign-of-life-1" aria-expanded="false">
-                  <label class="nhsuk-label nhsuk-radios__label" for="sign-of-life">
-                    Yes
-                  </label>
-                </div>
+            </div>
 
-                <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="sign-of-life-1">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="sign-of-life" name="sign-of-life" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="sign-of-life">
+                No
+              </label>
+            </div>
 
-                  <div class="nhsuk-radios">
-                    <label class="nhsuk-label">
-                      How long after birth did the baby die?
-                    </label>
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="time-after-birth" name="time-after-birth" type="radio"
-                        value="before-7">
-                      <label class="nhsuk-label nhsuk-radios__label" for="time-after-birth">
-                        Before 7 completed days
-                      </label>
-                    </div>
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="time-after-birth" name="time-after-birth" type="radio"
-                        value="between-7-28">
-                      <label class="nhsuk-label nhsuk-radios__label" for="time-after-birth">
-                        Between 7 and 28 completed days
-                      </label>
-                    </div>
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="time-after-birth" name="time-after-birth" type="radio"
-                        value="after-28">
-                      <label class="nhsuk-label nhsuk-radios__label" for="time-after-birth">
-                        After 28 completed days
-                      </label>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="sign-of-life" name="sign-of-life" type="radio" value="no">
-                  <label class="nhsuk-label nhsuk-radios__label" for="sign-of-life">
-                    No
-                  </label>
-                </div>
-
-              </div>
-              {% endif %}
           </div>
           <br>
-          <button type="submit" class="nhsuk-button">
-            Continue
-          </button>
-          </fieldset>
-        </div>
+          <div class="nhsuk-radios">
+            <label class="nhsuk-label">
+              Was this a termination?
+            </label>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="termination-1" name="termination" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="termination-1">
+                Yes
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="termination-2" name="termination" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="termination-2">
+                No
+              </label>
+            </div>
+          </div>
       </div>
-    </form>
+
+        </div>
+        {% endif %}
+      </div>
+      <br>
+      <button type="submit" class="nhsuk-button">
+        Continue
+      </button>
+      </fieldset>
+</div>
+</div>
+</form>
 
 
 
-  </main>
+</main>
 </div>
 
 <!-- End of content -->
