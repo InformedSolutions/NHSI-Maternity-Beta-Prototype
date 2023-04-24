@@ -32,12 +32,43 @@ Maternity events - single notification portal
               </h1>
             </legend>
 
-            <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset" aria-describedby="nhs-number">
               <label class="nhsuk-label" for="email">
-                NHS number (optional)
+                Is the mother's NHS number known?
               </label>
-              <input class="nhsuk-input nhsuk-input--width-10" id="email" name="email" type="text">
-            </div>
+    
+              <div class="nhsuk-radios nhsuk-radios--conditional">
+    
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="nhs-number-1" name="nhs-number" type="radio" value="yes"
+                    aria-controls="conditional-nhs-number-1" aria-expanded="false">
+                  <label class="nhsuk-label nhsuk-radios__label" for="nhs-number-1">
+                    Yes
+                  </label>
+                </div>
+    
+                <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-nhs-number-1">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="nhs-number">
+                      NHS number
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-10" id="nhs-number"
+                      name="nhs-number" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+    
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="nhs-number-2" name="nhs-number" type="radio" value="no"
+                    aria-controls="conditional-nhs-number-2" aria-expanded="false">
+                  <label class="nhsuk-label nhsuk-radios__label" for="nhs-number-2">
+                    No
+                  </label>
+                </div>
+                
+              </div>
+            </fieldset>
+
+            <br>
 
             {% if eventType == 'late-fetal-loss' or eventType == 'maternal-365' or eventType=='perinatal' %}
             {% else %}
@@ -672,34 +703,20 @@ Maternity events - single notification portal
 
     {% if eventType=='perinatal' or eventType=='neonatal' %}
 
-    <div class="nhsuk-radios nhsuk-radios--conditional">
+    <div class="nhsuk-radios ">
       <label class="nhsuk-label" for="smoke">
         During pregnancy, did the mother smoke or use tobacco?
       </label>
 
-
       <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="smoke-1" name="smoke" type="radio" value="email"
-          aria-controls="conditional-smoke-1" aria-expanded="false">
+        <input class="nhsuk-radios__input" id="smoke-1" name="smoke" type="radio" value="email">
         <label class="nhsuk-label nhsuk-radios__label" for="smoke-1">
           Yes
         </label>
       </div>
 
-      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-smoke-1">
-
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="email">
-            How many cigarettes per day did they smoke?
-          </label>
-          <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
-        </div>
-
-      </div>
-
       <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="smoke-2" name="smoke" type="radio" value="phone"
-          aria-controls="conditional-smoke-2" aria-expanded="false">
+        <input class="nhsuk-radios__input" id="smoke-2" name="smoke" type="radio" value="phone">
         <label class="nhsuk-label nhsuk-radios__label" for="smoke-2">
           No
         </label>
