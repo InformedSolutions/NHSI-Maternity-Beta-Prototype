@@ -414,7 +414,7 @@ router.post('/brain-injury/still-alive', function(req,res) {
     req.session.die = req.session.data['die']
     
     if (req.session.die == 'yes') {
-        res.redirect('/event-type-3')
+        res.redirect('/multiple-babies')
     } else {
         res.redirect('/brain-injury/details')
     }
