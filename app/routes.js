@@ -136,6 +136,7 @@ router.post('/event-type-3', function (req, res) {
     req.session.signOfLife = req.session.data['sign-of-life']
     req.session.timeAfterBirth = req.session.data['time-after-birth']
     req.session.thoughtAlive = req.session.data['thought-alive']
+    req.session.termination = req.session.data['termination']
 
     // get number of babies data for demo purposes
     req.session.multiple = req.session.multiple
@@ -394,8 +395,18 @@ router.get('/not-notifiable', function (req, res) {
 
 router.get('/neonatal/task-list', function (req, res) {
     req.session.gestationWeeks = req.session.gestationWeeks
+    
     res.render('neonatal/task-list', {
-        gestationWeeks: req.session.gestationWeeks
+        gestationWeeks: req.session.gestationWeeks,
+        termination: req.session.termination
+    });
+});
+
+router.get('/perinatal/task-list', function (req, res) {
+    
+    res.render('perinatal/task-list', {
+        gestationWeeks: req.session.gestationWeeks,
+        termination: req.session.termination
     });
 });
 

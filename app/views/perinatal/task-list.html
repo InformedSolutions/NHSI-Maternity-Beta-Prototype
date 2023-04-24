@@ -71,6 +71,18 @@
             </span>
             <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
           </li>
+          {% if termination=='no' %}
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/household"aria-describedby="company-information-status">
+              Partner's details
+              </a>
+            </span>
+            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
+          </li>
+
+          {% endif %}
         </ul>
       </li>
 
@@ -95,26 +107,13 @@
             </span>
             <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
           </li>
+
+          {% if termination=='no' %}
+
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="/cause-of-death" aria-describedby="company-information-status">
                 Cause of death
-              </a>
-            </span>
-            <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
-          </li>
-        </ul>
-      </li>
-
-      <li>
-        <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">4. </span> Partner details
-        </h2>
-        <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/household" aria-describedby="company-information-status">
-                Partner's details
               </a>
             </span>
             <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
@@ -127,14 +126,6 @@
             </span>
             <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
           </li>
-        </ul>
-      </li>
-
-      <li>
-        <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">5. </span> Further event details
-        </h2>
-        <ul class="app-task-list__items">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="/further-details" aria-describedby="company-information-status">
@@ -143,14 +134,6 @@
             </span>
             <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
           </li>
-        </ul>
-      </li>
-
-      <li>
-        <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">6. </span> Professional's details
-        </h2>
-        <ul class="app-task-list__items">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="/professionals" aria-describedby="company-information-status">
@@ -159,14 +142,6 @@
             </span>
             <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
           </li>
-        </ul>
-      </li>
-
-      <li>
-        <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">7. </span> Covid-19
-        </h2>
-        <ul class="app-task-list__items">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="/covid-19" aria-describedby="company-information-status">
@@ -175,12 +150,17 @@
             </span>
             <strong class="nhsuk-tag nhsuk-tag--grey" id="list-convictions-status">Not started</strong>
           </li>
+
+          {% endif %}
+
+        </ul>
+
         </ul>
       </li>
 
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">8. </span> Submit section 1
+          <span class="app-task-list__section-number">4. </span> Submit section 1
         </h2>
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
