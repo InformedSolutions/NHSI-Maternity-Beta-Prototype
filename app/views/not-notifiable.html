@@ -11,11 +11,21 @@
     <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4">
 
       <div class="nhsuk-card__content">
-        {% if (diagnosed == 'no') %}
+        {% if (diagnosed == 'no' and labour == 'yes') %}
         <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
-          This event type is not notifiable to MNSI or NHSR
+          This severe brain injury is not notifiable to MNSI or NHSR
         </h1>
-        <p>This is because the severe brain injury was not diagnosed with 7 days of birth.</p>
+        <p>This is because the severe brain injury was not diagnosed within 7 days of birth.</p>
+        {% elif (labour == 'no' and diagnosed == 'yes') %}
+        <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
+          This severe brain injury is not notifiable to MNSI or NHSR
+        </h1>
+        <p>This is because the mother did not go into labour.</p>
+        {% elif (diagnosed == 'no' and labour == 'no') %}
+        <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
+          This severe brain injury is not notifiable to MNSI or NHSR
+        </h1>
+        <p>This is because the severe brain injury was not diagnosed within 7 days of birth and the mother did not go into labour.</p>
         {% else %}
         <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
           This event type is not notifiable to MBRRACE or MNSI
