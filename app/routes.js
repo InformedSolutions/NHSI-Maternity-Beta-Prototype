@@ -380,15 +380,12 @@ router.get('/locations', function (req, res) {
 });
 
 router.get('/not-notifiable', function (req, res) {
-    req.session.birthWeight = req.session.birthWeight
-    req.session.timeAfterBirth = req.session.timeAfterBirth
-    req.session.diagnosed = req.session.diagnosed
-    req.session.mri = req.session.mri
 
     res.render('not-notifiable', {
         birthWeight: req.session.birthWeight,
         timeAfterBirth: req.session.timeAfterBirth,
         diagnosed: req.session.diagnosed,
+        labour: req.session.labour,
         mri: req.session.mri
     });
 })
@@ -434,8 +431,14 @@ router.post('/brain-injury/still-alive', function(req,res) {
 router.post('/brain-injury/details', function(req,res) {
     req.session.diagnosed = req.session.data['diagnosed']
     req.session.labour = req.session.data['labour']
+
+    if (req.session.diagnosed == 'yes' && req.session.labour == 'yes') {
     
-    res.redirect('/brain-injury/task-list')
+        res.redirect('/brain-injury/task-list')
+
+    } else {
+        res.redirect('/not-notifiable')
+    }
 })
 
 router.get('/brain-injury/task-list', function (req, res) {
