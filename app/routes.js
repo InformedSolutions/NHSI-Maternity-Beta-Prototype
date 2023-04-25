@@ -219,11 +219,11 @@ router.get('/mothers-details', function (req, res) {
 
 
 router.get('/baby-1-details', function (req, res) {
-    req.session.eventType = req.session.eventType;
-    req.session.gestationKnown = req.session.gestationKnown
+
     res.render('baby-1-details', {
         eventType: req.session.eventType,
         gestationKnown: req.session.gestationKnown,
+        termination: req.session.termination,
     });
 });
 
