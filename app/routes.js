@@ -55,8 +55,8 @@ router.post('/event-type', function (req, res) {
 
 router.post('/event-type-0', function (req, res) {
 
-    req.session.MaternalEventType = req.body['maternal-event-type'];
-    req.session.BabyEventType = req.body['baby-event-type']
+    req.session.MaternalEventType = req.body['event-type'];
+    req.session.BabyEventType = req.body['event-type']
 
     if ((req.session.BabyEventType == 'baby-death' || req.session.BabyEventType == 'brain-injury') && (req.session.MaternalEventType == 'maternal' || req.session.MaternalEventType == 'maternal-42' || req.session.MaternalEventType == 'maternal-365')) {
         
@@ -144,7 +144,7 @@ router.post('/event-type-3', function (req, res) {
 
     // Multiple baby flow only configured for Stillbirth
     if (req.session.multiple == 'yes') {
-        res.redirect('/stillbirth/task-list')
+        res.redirect('/combined-task-list')
     } else if (req.session.gestationWeeks > 21 && req.session.gestationWeeks < 24 && req.session.signOfLife == 'no') {
         req.session.eventType = "late-fetal-loss"
         res.redirect('/late-fetal-loss/task-list')
@@ -425,7 +425,7 @@ router.post('/brain-injury/still-alive', function(req,res) {
     req.session.die = req.session.data['die']
     
     if (req.session.die == 'yes') {
-        res.redirect('/event-type-3')
+        res.redirect('/multiple-babies')
     } else {
         res.redirect('/brain-injury/details')
     }
