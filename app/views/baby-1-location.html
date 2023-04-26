@@ -153,6 +153,14 @@ Maternity events - single notification portal
 
     <a class="nhsuk-button" href="/check-answers-section-1" role="button" draggable="false">Continue</a>
 
+    {% elif eventType == 'perinatal' and termination == 'yes' %}
+
+    <a class="nhsuk-button" href="/check-answers-section-1" role="button" draggable="false">Continue</a>
+
+    {% elif eventType == 'neonatal' and termination == 'yes' %}
+
+    <a class="nhsuk-button" href="/check-answers-section-1" role="button" draggable="false">Continue</a>
+
     {% else %}
 
     <a class="nhsuk-button" href="/cause-of-death" role="button" draggable="false">Continue</a>

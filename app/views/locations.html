@@ -47,13 +47,6 @@
               </div>
         
               <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
-
-                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="email">
-                    Age of mother at booking
-                  </label>
-                  <input class="nhsuk-input nhsuk-input--width-2" id="input-width-5" name="test-width-5" type="text">
-                </div>
         
                 <div class="nhsuk-form-group">
                   <label class="nhsuk-label" for="email">
@@ -97,7 +90,31 @@
         
         </div>
 
+        {% if eventType == 'stillbirth' and (gestationWeeks > 36) and (thoughtAlive == 'yes') %}
+        
+        <a class="nhsuk-button" href="/event-details" role="button" draggable="false">Continue</a>
+
+        {% elif eventType == 'neonatal' and termination == 'yes' %}
+
+        <a class="nhsuk-button" href="/event-details" role="button" draggable="false">Continue</a>
+
+        {% elif eventType == 'neonatal' and termination == 'no' %}
+
+        <a class="nhsuk-button" href="/household" role="button" draggable="false">Continue</a>
+
+        {% elif eventType == 'perinatal' and termination == 'yes' %}
+
         <a class="nhsuk-button" href="/baby-1-details" role="button" draggable="false">Continue</a>
+
+        {% elif eventType == 'perinatal' and termination == 'no' %}
+
+        <a class="nhsuk-button" href="/household" role="button" draggable="false">Continue</a>
+
+        {% else %}
+
+        <a class="nhsuk-button" href="/baby-1-details" role="button" draggable="false">Continue</a>
+
+        {% endif %}
 
         <p><a href="/task-list">Return to task list</a></p>
 
