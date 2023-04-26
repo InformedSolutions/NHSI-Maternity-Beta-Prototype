@@ -27,178 +27,327 @@
 
         <p>Provide the details of the professionals involved in the patient's care. <p>
 
+        {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}
+
         <h3 class="nhsuk-heading-m">GP</h3>
 
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="reporting-unit">
-            Name {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}of GP{% endif %} {% if eventType=='neonatal' or eventType=='perinatal' %} (optional) {% endif %}
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
-        </div>
-
-        {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}
-
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="reporting-unit">
-            Name of surgery (optional)
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
-        </div>
-
-        {% endif %}
-
-        {% if eventType=='neonatal' or eventType=='perinatal' or eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}
-
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="reporting-unit">
-            Email Address (optional)
+            Name of GP
           </label>
           <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
         </div>
 
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="reporting-unit">
-            Telephone Number {% if eventType=='neonatal' or eventType=='perinatal' %} (optional) {% endif %}
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
-        </div>
-
-        {% endif %}
-
-        {% if eventType=='neonatal' or eventType=='perinatal' %}
-
-        <h3 class="nhsuk-heading-m">Neonatologist</h3>
-
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="email">
-            Name (optional)
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="email address" name="test-width-10" type="text">
-        </div>
-
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="email">
-            Email Address (optional)
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="email address" name="test-width-10" type="text">
-        </div>
-
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="name">
-            Telephone Number (optional)
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="name" name="test-width-10" type="text">
-        </div>
-
-        <h3 class="nhsuk-heading-m">Obstetrician</h3>
-
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="phone-number">
-            Name (optional)
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="phone-number" name="test-width-10" type="text">
-        </div>
-
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="reporting-trust">
-            Email Address (optional)
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-trust" name="test-width-10" type="text">
-        </div>
-
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="reporting-trust">
-            Telephone Number (optional)
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-trust" name="test-width-10" type="text">
-        </div>
-
-        <h3 class="nhsuk-heading-m">Delivery Midwife</h3>
-
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="reporting-unit">
-            Name (optional)
+            Name of surgery
           </label>
           <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
         </div>
 
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="reporting-unit">
-            Email Address (optional)
+            Email Address
           </label>
           <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
         </div>
 
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="reporting-unit">
-            Telephone Number (optional)
+            Telephone Number
           </label>
           <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
         </div>
 
-        <h3 class="nhsuk-heading-m">Community Midwife</h3>
+        {% else %}
 
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="reporting-unit">
-            Name (optional)
+        <fieldset class="nhsuk-fieldset" aria-describedby="gp-details">
+          <label class="nhsuk-label" for="gp-details">
+            Are the GP details known?
           </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
-        </div>
 
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="reporting-unit">
-            Email Address (optional)
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
-        </div>
+          <div class="nhsuk-radios nhsuk-radios--conditional">
 
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="reporting-unit">
-            Telephone Number (optional)
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
-        </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="gp-details-1" name="gp-details" type="radio" value="yes"
+                aria-controls="conditional-gp-details-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="gp-details-1">
+                Yes
+              </label>
+            </div>
 
-        <h3 class="nhsuk-heading-m">Other</h3>
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-gp-details-1">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="gp-name">
+                  Name 
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="gp-name" name="test-width-10" type="text">
+              </div>
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="gp-email-address">
+                  Email address 
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="gp-email-address" name="test-width-10" type="text">
+              </div>
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="gp-telephone-number">
+                  Telephone number 
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="gp-telephone-number" name="test-width-10" type="text">
+              </div>
+            </div>
 
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="reporting-unit">
-            Name (optional)
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
-        </div>
-
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="reporting-unit">
-            Email Address (optional)
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
-        </div>
-        
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="reporting-unit">
-            Telephone Number (optional)
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
-        </div>
-
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="PMRT">
-            Will you use the PMRT for the CDOP review and reporting of this death?
-          </label>
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="PMRT-1" name="PMRT" type="radio" value="yes">
-            <label class="nhsuk-label nhsuk-radios__label" for="PMRT-1">
-              Yes
-            </label>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="gp-details-2" name="gp-details" type="radio" value="no"
+                aria-controls="conditional-gp-details-2" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="gp-details-2">
+                No
+              </label>
+            </div>
           </div>
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="PMRT-2" name="PMRT" type="radio" value="no">
-            <label class="nhsuk-label nhsuk-radios__label" for="PMRT-2">
-              No
-            </label>
+        </fieldset>
+
+        <br>
+
+        <fieldset class="nhsuk-fieldset" aria-describedby="neonatologist">
+          <label class="nhsuk-label" for="neonatologist">
+            Are the neonatologist details known?
+          </label>
+
+          <div class="nhsuk-radios nhsuk-radios--conditional">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="neonatologist-1" name="neonatologist" type="radio" value="yes"
+                aria-controls="conditional-neonatologist-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="neonatologist-1">
+                Yes
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-neonatologist-1">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="gp-name">
+                  Name 
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="gp-name" name="test-width-10" type="text">
+              </div>
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="gp-email-address">
+                  Email address 
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="gp-email-address" name="test-width-10" type="text">
+              </div>
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="gp-telephone-number">
+                  Telephone number 
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="gp-telephone-number" name="test-width-10" type="text">
+              </div>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="neonatologist-2" name="neonatologist" type="radio" value="no"
+                aria-controls="conditional-neonatologist-2" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="neonatologist-2">
+                No
+              </label>
+            </div>
           </div>
-        </div>
+        </fieldset>
+
+        <br>
+
+        <fieldset class="nhsuk-fieldset" aria-describedby="obstetrician-details">
+          <label class="nhsuk-label" for="obstetrician-details">
+            Are the obstetrician details known?
+          </label>
+
+          <div class="nhsuk-radios nhsuk-radios--conditional">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="obstetrician-details-1" name="obstetrician-details" type="radio" value="yes"
+                aria-controls="conditional-obstetrician-details-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="obstetrician-details-1">
+                Yes
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-obstetrician-details-1">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="gp-name">
+                  Name 
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="gp-name" name="test-width-10" type="text">
+              </div>
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="gp-email-address">
+                  Email address 
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="gp-email-address" name="test-width-10" type="text">
+              </div>
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="gp-telephone-number">
+                  Telephone number 
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="gp-telephone-number" name="test-width-10" type="text">
+              </div>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="obstetrician-details-2" name="obstetrician-details" type="radio" value="no"
+                aria-controls="conditional-obstetrician-details-2" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="obstetrician-details-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <br>
+
+        <fieldset class="nhsuk-fieldset" aria-describedby="delivery-midwife-details">
+          <label class="nhsuk-label" for="delivery-midwife-details">
+            Are the delivery midwife details known?
+          </label>
+
+          <div class="nhsuk-radios nhsuk-radios--conditional">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="delivery-midwife-details-1" name="delivery-midwife-details" type="radio" value="yes"
+                aria-controls="conditional-delivery-midwife-details-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="delivery-midwife-details-1">
+                Yes
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-delivery-midwife-details-1">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="gp-name">
+                  Name 
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="gp-name" name="test-width-10" type="text">
+              </div>
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="gp-email-address">
+                  Email address 
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="gp-email-address" name="test-width-10" type="text">
+              </div>
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="gp-telephone-number">
+                  Telephone number 
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="gp-telephone-number" name="test-width-10" type="text">
+              </div>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="delivery-midwife-details-2" name="delivery-midwife-details" type="radio" value="no"
+                aria-controls="conditional-delivery-midwife-details-2" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="delivery-midwife-details-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <br>
+
+        <fieldset class="nhsuk-fieldset" aria-describedby="community-midwife-details">
+          <label class="nhsuk-label" for="community-midwife-details">
+            Are the community midwife details known?
+          </label>
+
+          <div class="nhsuk-radios nhsuk-radios--conditional">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="community-midwife-details-1" name="community-midwife-details" type="radio" value="yes"
+                aria-controls="conditional-community-midwife-details-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="community-midwife-details-1">
+                Yes
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-community-midwife-details-1">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="gp-name">
+                  Name 
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="gp-name" name="test-width-10" type="text">
+              </div>
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="gp-email-address">
+                  Email address 
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="gp-email-address" name="test-width-10" type="text">
+              </div>
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="gp-telephone-number">
+                  Telephone number 
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="gp-telephone-number" name="test-width-10" type="text">
+              </div>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="community-midwife-details-2" name="community-midwife-details" type="radio" value="no"
+                aria-controls="conditional-community-midwife-details-2" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="community-midwife-details-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <br>
+
+        <fieldset class="nhsuk-fieldset" aria-describedby="other-details">
+          <label class="nhsuk-label" for="other-details">
+            Are another professional's details known?
+          </label>
+
+          <div class="nhsuk-radios nhsuk-radios--conditional">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="other-details-1" name="other-details" type="radio" value="yes"
+                aria-controls="conditional-other-details-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="other-details-1">
+                Yes
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-other-details-1">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="gp-name">
+                  Name 
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="gp-name" name="test-width-10" type="text">
+              </div>
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="gp-email-address">
+                  Email address 
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="gp-email-address" name="test-width-10" type="text">
+              </div>
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="gp-telephone-number">
+                  Telephone number 
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-10" id="gp-telephone-number" name="test-width-10" type="text">
+              </div>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="other-details-2" name="other-details" type="radio" value="no"
+                aria-controls="conditional-other-details-2" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="other-details-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <br>
 
         {% endif %}
 
