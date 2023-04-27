@@ -152,7 +152,15 @@
     
     </div>
 
+        {% if eventType=='perinatal' %}
+
+        <a class="nhsuk-button" href="/baby-1-details" role="button" draggable="false">Continue</a>
+
+        {% else %}
+
         <a class="nhsuk-button" href="/event-details" role="button" draggable="false">Continue</a>
+
+        {% endif %}
 
         <p><a href="/task-list">Return to task list</a></p>
 

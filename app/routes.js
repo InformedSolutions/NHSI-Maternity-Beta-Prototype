@@ -328,9 +328,18 @@ router.post('/household', function (req, res) {
     if (req.session.correspondenceType == 'yes') {
         res.redirect('/household-further')
     }
-    else if (req.session.correspondenceType == 'no') {
+    else if (req.session.correspondenceType == 'no' && req.session.eventType == 'neonatal') {
         res.redirect('/event-details')
     }
+    else if (req.session.correspondenceType == 'no' && req.session.eventType == 'perinatal') {
+        res.redirect('/baby-1-details')
+    }
+})
+
+router.get('/household-further', function (req, res) {
+    res.render('household-further', {
+        eventType: req.session.eventType,
+    })
 })
 
 router.post('/sibling-details', function (req, res) {
