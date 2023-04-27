@@ -231,6 +231,7 @@ router.get('/baby-1-location', function (req, res) {
     req.session.eventType = req.session.eventType;
     res.render('baby-1-location', {
         eventType: req.session.eventType,
+        termination: req.session.termination
     });
 });
 
@@ -327,9 +328,18 @@ router.post('/household', function (req, res) {
     if (req.session.correspondenceType == 'yes') {
         res.redirect('/household-further')
     }
-    else if (req.session.correspondenceType == 'no') {
-        res.redirect('/sibling-details')
+    else if (req.session.correspondenceType == 'no' && req.session.eventType == 'neonatal') {
+        res.redirect('/event-details')
     }
+    else if (req.session.correspondenceType == 'no' && req.session.eventType == 'perinatal') {
+        res.redirect('/baby-1-details')
+    }
+})
+
+router.get('/household-further', function (req, res) {
+    res.render('household-further', {
+        eventType: req.session.eventType,
+    })
 })
 
 router.post('/sibling-details', function (req, res) {
@@ -365,6 +375,20 @@ router.get('/covid-19', function (req, res) {
     });
 });
 
+router.post('/covid-19', function (req, res) {
+    req.session.exposed = req.session.data['exposed'];
+
+    if (req.session.exposed == 'yes') {
+        res.redirect('/covid-19-further')
+    }
+    else if (req.session.exposed == 'no') {
+        res.redirect('/check-answers-section-1')
+    }
+    else if (req.session.exposed == 'not-known') {
+        res.redirect('/check-answers-section-1')
+    }
+});
+
 router.get('/cause-of-death', function (req, res) {
     req.session.eventType = req.session.eventType;
     res.render('cause-of-death', {
@@ -376,6 +400,9 @@ router.get('/locations', function (req, res) {
     req.session.eventType = req.session.eventType;
     res.render('locations', {
         eventType: req.session.eventType,
+        termination: req.session.termination,
+        thoughtAlive: req.session.thoughtAlive,
+        gestationWeeks: req.session.gestationWeeks,
     });
 });
 
