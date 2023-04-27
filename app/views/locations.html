@@ -90,7 +90,11 @@
         
         </div>
 
-        {% if eventType == 'stillbirth' and (gestationWeeks > 36) and (thoughtAlive == 'yes') %}
+        {% if eventType == 'maternal-42' or eventType == 'maternal' or eventType == 'maternal-365' %}
+
+        <a class="nhsuk-button" href="/cause-of-death" role="button" draggable="false">Continue</a>
+
+        {% elif eventType == 'stillbirth' and (gestationWeeks > 36) and (thoughtAlive == 'yes') %}
         
         <a class="nhsuk-button" href="/event-details" role="button" draggable="false">Continue</a>
 

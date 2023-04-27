@@ -149,7 +149,11 @@ Maternity events - single notification portal
       </div>
     </div>
 
-    {% if eventType == 'stillbirth' or eventType == 'late-fetal-loss' %}
+    {% if eventType == 'maternal' or eventType == 'maternal-42' or eventType == 'maternal-365' %}
+
+    <a class="nhsuk-button" href="/check-answers-section-1" role="button" draggable="false">Continue</a>
+
+    {% elif eventType == 'stillbirth' or eventType == 'late-fetal-loss' %}
 
     <a class="nhsuk-button" href="/check-answers-section-1" role="button" draggable="false">Continue</a>
 

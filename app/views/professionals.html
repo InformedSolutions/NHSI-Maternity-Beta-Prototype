@@ -40,7 +40,7 @@
 
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="reporting-unit">
-            Name of surgery (optional)
+            Name of surgery
           </label>
           <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
         </div>
@@ -51,7 +51,7 @@
 
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="reporting-unit">
-            Email Address (optional)
+            Email Address {% if eventType=='neonatal' or eventType=='perinatal' %} (optional) {% endif %}
           </label>
           <input class="nhsuk-input nhsuk-input--width-10" id="reporting-unit" name="test-width-10" type="text">
         </div>
@@ -204,7 +204,7 @@
 
         {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}
 
-        <a class="nhsuk-button" href="/check-answers-section-1" role="button" draggable="false">Continue</a>
+        <a class="nhsuk-button" href="/baby-1-details" role="button" draggable="false">Continue</a>
 
         {% else %}
 
