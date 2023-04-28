@@ -26,6 +26,18 @@
           This severe brain injury is not notifiable to MNSI or NHSR
         </h1>
         <p>This is because the severe brain injury was not diagnosed within 7 days of birth and the mother did not go into labour.</p>
+        {% elif (nhsr == 'no') %}
+        <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
+          This severe brain injury is not notifiable to NHSR
+        </h1>
+        <p>Section 2 is no longer required and NHSR have not been notified. You can <a href='/event-view'>view the notification in the manage events section.</a></p>
+      
+        <p class="nhsuk-u-font-size-24">
+          Your reference number
+          <br>
+          <strong class="nhsuk-u-font-size-32">HDJ2123F</strong>
+        </p>
+        
         {% else %}
         <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
           This event type is not notifiable to MBRRACE or MNSI
