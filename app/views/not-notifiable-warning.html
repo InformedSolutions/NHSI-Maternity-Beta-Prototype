@@ -27,7 +27,7 @@ Maternity events - single notification portal
 
             <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-                {% if eventType == 'brain-injury' and diagnosed == 'no' and labour == 'no' %}
+                {% if eventType == 'brain-injury' and (diagnosed == 'no' or labour == 'no') %}
                 <h1 class="nhsuk-fieldset__heading">
                   Do you need to notify this event?
                 </h1>

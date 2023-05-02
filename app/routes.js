@@ -510,7 +510,7 @@ router.post('/not-notifiable-warning', function (req, res) {
     req.session.needed = req.session.data['needed']
 
     if (req.session.needed == 'yes') {
-        if (req.session.eventType == 'brain-injury' && req.session.labour == 'no' && req.session.diagnosed == 'no') {
+        if (req.session.labour == 'no' || req.session.diagnosed == 'no') {
             res.redirect('/brain-injury/details')
         } else if (req.session.eventType == 'brain-injury') {
             res.redirect('/brain-injury/investigation-details-1')
