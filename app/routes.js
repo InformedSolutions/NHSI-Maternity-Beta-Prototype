@@ -501,6 +501,8 @@ router.get('/brain-injury/check-answers-section-1', function (req, res) {
 router.get('/not-notifiable-warning', function (req, res) {
     res.render('not-notifiable-warning', {
         eventType: req.session.eventType,
+        labour: req.session.labour,
+        diagnosed: req.session.diagnosed
     });
 });
 
@@ -508,7 +510,9 @@ router.post('/not-notifiable-warning', function (req, res) {
     req.session.needed = req.session.data['needed']
 
     if (req.session.needed == 'yes') {
-        if (req.session.eventType == 'brain-injury') {
+        if (req.session.eventType == 'brain-injury' && req.session.labour == 'no' && req.session.diagnosed == 'no') {
+            res.redirect('/brain-injury/details')
+        } else if (req.session.eventType == 'brain-injury') {
             res.redirect('/brain-injury/investigation-details-1')
         } else {
             res.redirect('/event-type-3')

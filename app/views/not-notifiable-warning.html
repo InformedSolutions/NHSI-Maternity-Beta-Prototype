@@ -27,7 +27,14 @@ Maternity events - single notification portal
 
             <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-                {% if eventType == 'brain-injury' %}
+                {% if eventType == 'brain-injury' and diagnosed == 'no' and labour == 'no' %}
+                <h1 class="nhsuk-fieldset__heading">
+                  Do you need to notify this event?
+                </h1>
+                <p class="nhsuk-hint">
+                  Based on your answers, this severe brain injury is not notifiable to MNSI or NHSR. If you think this is wrong, return to change your answers.
+                </p>
+                {% elif eventType == 'brain-injury' %}
                 <h1 class="nhsuk-fieldset__heading">
                   Do you need to notify this event to NHSR?
                 </h1>
