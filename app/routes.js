@@ -57,6 +57,7 @@ router.post('/event-type-0', function (req, res) {
 
     req.session.MaternalEventType = req.body['event-type'];
     req.session.BabyEventType = req.body['event-type']
+    req.session.eventType = req.body['event-type']
 
     if ((req.session.BabyEventType == 'baby-death' || req.session.BabyEventType == 'brain-injury') && (req.session.MaternalEventType == 'maternal' || req.session.MaternalEventType == 'maternal-42' || req.session.MaternalEventType == 'maternal-365')) {
         
@@ -167,11 +168,11 @@ router.post('/event-type-3', function (req, res) {
         req.session.eventType = "perinatal"
         res.redirect('/perinatal/task-list')
     } else if (req.session.timeAfterBirth == 'after-28') {
-        res.redirect('/not-notifiable')
+        res.redirect('/not-notifiable-warning')
     } else if (req.session.gestationWeeks < 20) {
-        res.redirect('/not-notifiable')
+        res.redirect('/not-notifiable-warning')
     } else if (req.session.birthWeight < 400) {
-        res.redirect('/not-notifiable')
+        res.redirect('/not-notifiable-warning')
     }
 })
 
@@ -317,7 +318,7 @@ router.post('/brain-injury/investigation-details-3', function (req, res) {
         res.redirect('/brain-injury/investigation-details-4')
     }
     else if (req.session.EN == 'no') {
-        res.redirect('/brain-injury/nhsr-end')
+        res.redirect('/not-notifiable-warning')
     }
 })
 
@@ -413,7 +414,8 @@ router.get('/not-notifiable', function (req, res) {
         timeAfterBirth: req.session.timeAfterBirth,
         diagnosed: req.session.diagnosed,
         labour: req.session.labour,
-        mri: req.session.mri
+        mri: req.session.mri,
+        nhsr: req.session.needed
     });
 })
 
@@ -464,7 +466,7 @@ router.post('/brain-injury/details', function(req,res) {
         res.redirect('/brain-injury/task-list')
 
     } else {
-        res.redirect('/not-notifiable')
+        res.redirect('/not-notifiable-warning')
     }
 })
 
@@ -495,3 +497,25 @@ router.get('/brain-injury/check-answers-section-1', function (req, res) {
         diagnosed: req.session.diagnosed
     });
 });
+
+router.get('/not-notifiable-warning', function (req, res) {
+    res.render('not-notifiable-warning', {
+        eventType: req.session.eventType,
+    });
+});
+
+router.post('/not-notifiable-warning', function (req, res) {
+    req.session.needed = req.session.data['needed']
+
+    if (req.session.needed == 'yes') {
+        if (req.session.eventType == 'brain-injury') {
+            res.redirect('/brain-injury/investigation-details-1')
+        } else {
+            res.redirect('/event-type-3')
+        }
+    } else if (req.session.needed == 'no') {
+        res.redirect('/not-notifiable')
+    }
+
+
+})

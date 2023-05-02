@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+Maternity events - single notification portal
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+    <form method="post" class="form">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+
+          <div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                {% if eventType == 'brain-injury' %}
+                <h1 class="nhsuk-fieldset__heading">
+                  Do you need to notify this event to NHSR?
+                </h1>
+                <p class="nhsuk-hint">
+                  Based on your answers, NHSR do not need to be notified of this severe brain injury. If you think this is wrong, return to change your answers. MNSI have already been notified.
+                </p>
+                {% else %}
+                <h1 class="nhsuk-fieldset__heading">
+                  Do you need to notify this event?
+                </h1>
+                <p class="nhsuk-hint">
+                  Based on your answers, this baby death is not notifiable to MBRRACE or MNSI. If you think this is wrong, return to change your answers.
+                </p>
+                {% endif %}
+              </legend>
+
+
+              <div class="nhsuk-radios nhsuk-radios--conditional">
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="needed-1" name="needed" type="radio" value="yes">
+                  <label class="nhsuk-label nhsuk-radios__label" for="needed-1">
+                    Yes, return to change answers
+                  </label>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="needed-2" name="needed" type="radio" value="no">
+                  <label class="nhsuk-label nhsuk-radios__label" for="needed-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+
+          </div>
+          <button type="submit" class="nhsuk-button">
+            Confirm
+          </button>
+
+        </div>
+      </div>
+    </form>
+  </main>
+</div>
+
+<!-- End of content -->
+{% endblock %}
