@@ -131,12 +131,44 @@ Maternity events - single notification portal
 
         <br>
 
-        <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" aria-describedby="first-name">
           <label class="nhsuk-label" for="email">
-            First name (optional)
+            Is the baby's first name known?
           </label>
-          <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
-        </div>
+
+          <div class="nhsuk-radios nhsuk-radios--conditional">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="first-name-1" name="first-name" type="radio" value="yes"
+                aria-controls="conditional-first-name-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="first-name-1">
+                Yes
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-first-name-1">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="first-name">
+                  First name
+                </label>
+                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="first-name"
+                  name="hospital-number" type="text">
+              </div>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="first-name-2" name="first-name" type="radio" value="no"
+                aria-controls="conditional-first-name-2" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="first-name-2">
+                No
+              </label>
+            </div>
+            
+          </div>
+        </fieldset>
+
+        <br>
+
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="email">
             Surname
@@ -428,12 +460,45 @@ Maternity events - single notification portal
 
         {% if eventType=='late-fetal-loss' or eventType=='stillbirth' or eventType=='neonatal' or eventType=='perinatal'
         %}
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="input-width-10">
-            Hospital number (optional)
+
+        <fieldset class="nhsuk-fieldset" aria-describedby="hospital-number">
+          <label class="nhsuk-label" for="email">
+            Is the baby's hospital number known?
           </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
-        </div>
+
+          <div class="nhsuk-radios nhsuk-radios--conditional">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="hospital-number-1" name="hospital-number" type="radio" value="yes"
+                aria-controls="conditional-hospital-number-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="hospital-number-1">
+                Yes
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-hospital-number-1">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="hospital-number">
+                  Hospital number
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-10" id="hospital-number"
+                  name="hospital-number" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="hospital-number-2" name="hospital-number" type="radio" value="no"
+                aria-controls="conditional-hospital-number-2" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="hospital-number-2">
+                No
+              </label>
+            </div>
+            
+          </div>
+        </fieldset>
+
+        <br>
+
         {% endif %}
 
         {% if (eventType == 'stillbirth') or (eventType == 'late-fetal-loss') %}
