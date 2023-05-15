@@ -178,9 +178,19 @@ Maternity events - single notification portal
                         <div class="nhsuk-form-group">
                           <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
                             {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}
-                            Age at death
+                            Mother's age at death	
                             {% else %}
-                            Age when giving birth 
+                            Mother's age at baby's birth	
+                            {% endif %}
+                          </label>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day"
+                            name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                          <br>
+                          <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                            {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}
+                            Mother's age at death	
+                            {% else %}
+                            Mother's age at death	
                             {% endif %}
                           </label>
                           <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day"
@@ -338,6 +348,7 @@ Maternity events - single notification portal
       </label>
       <select class="nhsuk-select" id="select-1" name="select-1">
         <option value="1">Choose religion</option>
+        <option value="1">Not known</option>
         <option value="2"> African religion</option>
         <option value="3"> Agnostic movement</option>
         <option value="4"> Anthroposophy</option>
