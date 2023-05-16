@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+Maternity events - single notification portal
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+
+<div class="nhsuk-width-container">
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <h1 class="nhsuk-heading-xl">There is a problem with your account</h1>
+        <p>You are unable to use the Single Notification Portal because your NHS England Applications account does not have an 
+          organisation code assigned to it. </p>
+        <p>You need to <a href="">update your NHS England Applications account</a> to be able to use this service.</p>
+
+        <br>
+        <p><a href="home">Return to home</a></p>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- End of content -->
+
+</div>
+</div>
+{% endblock %}
