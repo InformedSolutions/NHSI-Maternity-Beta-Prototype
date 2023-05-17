@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {% if MaternalEventType == 'maternal' %}
+
+    <h1 class="nhsuk-heading-xl">
+      Notify of a maternal death (while pregnant or within 42 days of the end of the pregnancy)
+    </h1>
+
+    {% if (suicide == 'yes') %}
+    <p>Event type: Maternal death (while pregnant or within 42 days of the end of the pregnancy) <a
+        href="/event-type-0">change</a><br>
+      Was the death was caused by suicide?: Yes <a href="/maternal/criteria">change</a><br>
+      Was it a direct maternal death?: Yes <a href="/maternal/criteria">change</a><br>
+      Was it an indirect maternal death?: No <a href="/maternal/criteria">change</a></p>
+    {% else %}
+    <p>Event type: Maternal death (while pregnant or within 42 days of the end of the pregnancy) <a
+        href="/event-type-0">change</a><br>
+      Was the death was caused by suicide?: No <a href="/maternal/criteria">change</a><br>
+      Was it a direct maternal death?: Yes <a href="/maternal/criteria">change</a><br>
+      Was it an indirect maternal death?: No <a href="/maternal/criteria">change</a></p>
+
+    {% endif %}
+
+    {% elif MaternalEventType == 'maternal-365' %}
+
+    <h1 class="nhsuk-heading-xl">
+      Notify of a maternal death (between 42 days and 365 after pregnancy)
+    </h1>
+
+    <p>Event type: Maternal death (between 42 days and 365 after pregnancy)</p>
+
+    {% else %}
+
+    <h1 class="nhsuk-heading-xl">
+      Notify of a maternal death (while pregnant or within 42 days of the end of the pregnancy)
+    </h1>
+
+    {% if (suicide == 'yes') %}
+    <p>Event type: Maternal death (while pregnant or within 42 days of the end of the pregnancy) <a
+        href="/event-type-0">change</a><br>
+      Was the death was caused by suicide?: Yes <a href="/maternal/criteria">change</a><br>
+      Was it a direct maternal death?: Yes <a href="/maternal/criteria">change</a><br>
+      Was it an indirect maternal death?: No <a href="/maternal/criteria">change</a></p>
+    {% else %}
+    <p>Event type: Maternal death (while pregnant or within 42 days of the end of the pregnancy)<br>
+      Was the death was caused by suicide?: No <br>
+      Was it a direct maternal death?: Yes <br>
+      Was it an indirect maternal death?: No </p>
+    <div class="nhsuk-inset-text">
+      <span class="nhsuk-u-visually-hidden">Information: </span>
+      <p class="nhsuk-u-font-size-24">
+        Your reference number
+        <br>
+        <strong class="nhsuk-u-font-size-32">HDJ2123F</strong>
+      </p>
+    </div>
+
+    {% endif %}
+
+    {% endif %}
+
+    <h2 class="nhsuk-heading-l">Section 1 of 2 - Submitted on DD/MM/YYYY</h2>
+
+    <div class="nhsuk-hint" id="example-hint">
+      This section is used for notifying MBRRACE.
+    </div>
+    <p>
+
+    </p>
+    <p>
+      <a href="#">View submitted answers</a>
+    </p>
+
+
+    <h2 class="nhsuk-heading-l">Section 2 of 2 - Submitted on DD/MM/YYYY</h2>
+
+    <div class="nhsuk-hint" id="example-hint">
+      This section collects additional information required to notify MNSI.
+    </div>
+    <p>
+
+    </p>
+    <p>
+      <a href="#">View submitted answers</a>
+    </p>
+
+   
+  
+    <a class="nhsuk-button nhsuk-button--primary" href="/event-view" role="button" draggable="false">Return to home</a>
+
+
+  </div>
+</div>
+
+{% endblock %}

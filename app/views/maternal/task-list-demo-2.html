@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/back.html" %}
+<br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {% if MaternalEventType == 'maternal' %}
+
+    <h1 class="nhsuk-heading-xl">
+      Notify of a maternal death (while pregnant or within 42 days of the end of the pregnancy)
+    </h1>
+
+    {% if (suicide == 'yes') %}
+    <p>Event type: Maternal death (while pregnant or within 42 days of the end of the pregnancy) <a
+        href="/event-type-0">change</a><br>
+      Was the death was caused by suicide?: Yes <a href="/maternal/criteria">change</a><br>
+      Was it a direct maternal death?: Yes <a href="/maternal/criteria">change</a><br>
+      Was it an indirect maternal death?: No <a href="/maternal/criteria">change</a></p>
+    {% else %}
+    <p>Event type: Maternal death (while pregnant or within 42 days of the end of the pregnancy) <a
+        href="/event-type-0">change</a><br>
+      Was the death was caused by suicide?: No <a href="/maternal/criteria">change</a><br>
+      Was it a direct maternal death?: Yes <a href="/maternal/criteria">change</a><br>
+      Was it an indirect maternal death?: No <a href="/maternal/criteria">change</a></p>
+
+    {% endif %}
+
+    {% elif MaternalEventType == 'maternal-365' %}
+
+    <h1 class="nhsuk-heading-xl">
+      Notify of a maternal death (between 42 days and 365 after pregnancy)
+    </h1>
+
+    <p>Event type: Maternal death (between 42 days and 365 after pregnancy)</p>
+
+    {% else %}
+
+    <h1 class="nhsuk-heading-xl">
+      Notify of a maternal death (while pregnant or within 42 days of the end of the pregnancy)
+    </h1>
+
+    {% if (suicide == 'yes') %}
+    <p>Event type: Maternal death (while pregnant or within 42 days of the end of the pregnancy) <a
+        href="/event-type-0">change</a><br>
+      Was the death was caused by suicide?: Yes <a href="/maternal/criteria">change</a><br>
+      Was it a direct maternal death?: Yes <a href="/maternal/criteria">change</a><br>
+      Was it an indirect maternal death?: No <a href="/maternal/criteria">change</a></p>
+    {% else %}
+    <p>Event type: Maternal death (while pregnant or within 42 days of the end of the pregnancy)<br>
+      Was the death was caused by suicide?: No <br>
+      Was it a direct maternal death?: Yes <br>
+      Was it an indirect maternal death?: No </p>
+    <div class="nhsuk-inset-text">
+      <span class="nhsuk-u-visually-hidden">Information: </span>
+      <p class="nhsuk-u-font-size-24">
+        Your reference number
+        <br>
+        <strong class="nhsuk-u-font-size-32">HDJ2123F</strong>
+      </p>
+    </div>
+
+    {% endif %}
+
+    {% endif %}
+
+    <h2 class="nhsuk-heading-l">Section 1 of 2 - Submitted on DD/MM/YYYY</h2>
+
+    <div class="nhsuk-hint" id="example-hint">
+      This section is used for notifying MBRRACE.
+    </div>
+    <p>
+
+    </p>
+    <p>
+      <a href="#">View submitted answers</a>
+    </p>
+
+
+    <h2 class="nhsuk-heading-l">Section 2 of 2 - Complete at earliest convenience</h2>
+
+    <div class="nhsuk-hint" id="example-hint">
+      This section collects additional information required to notify MNSI.
+    </div>
+
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          View tasks to complete
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <ol class="app-task-list">
+          <li>
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">5. </span> MNSI consent
+            </h2>
+            <ul class="app-task-list__items">
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                   <a href="">MNSI consent</a>
+                </span>                
+                <strong class="nhsuk-tag nhsuk-tag--white" id="submit-pay-status">In progress</strong>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">6. </span> Submit section 2
+            </h2>
+            <ul class="app-task-list__items">
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  Review answers and submit
+                </span>
+                <strong class="nhsuk-tag nhsuk-tag--red" id="submit-pay-status">Cannot start yet</strong>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </details>
+
+    <a class="nhsuk-button nhsuk-button--secondary" href="/event-view" role="button" draggable="false">Save progress and
+      return later</a>
+
+
+  </div>
+</div>
+
+{% endblock %}

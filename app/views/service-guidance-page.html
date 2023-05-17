@@ -1,0 +1,81 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Content page example - NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{{ breadcrumb({
+href: "/",
+text: "Home"
+}) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+        <!-- Change the page heading -->
+        <h1>
+            Service Guidance Page
+        </h1>
+
+        <!-- Add content here -->
+        <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+        <p class="nhsuk-lede-text">
+            This NHS companion to the GOV.UK service standard will help you check that you're working to best practice
+            from the start.
+        </p>
+        <p>
+            The NHS service standard is designed to help teams:
+        </p>
+        <ul class="list list-bullet">
+            <li>
+                meet the GOV.UK service standard
+            </li>
+            <li>
+                address the different needs of health service users
+            </li>
+            <li>
+                navigate the complexities of delivering digital services in health and care
+            </li>
+        </ul>
+
+        <p>
+            It contains the 14 points of the GOV.UK service standard, with guidance to help teams meet them in a health
+            context, and 3 extra points specific to health and social care.
+        </p>
+        <p>
+            If your service is being assessed by the Government Digital Service, you must meet the first 14 points. If
+            you work in health, we recommend trying to meet all 17 points.
+        </p>
+
+        <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
+            Page last reviewed: 15 March 2021<br>
+            Next review due: 15 March 2024
+        </p>
+
+        <!-- End of content -->
+
+    </div>
+
+</div>
+{% endblock %}
