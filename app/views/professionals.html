@@ -349,6 +349,25 @@
 
         <br>
 
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="PMRT">
+            Will you use the PMRT for the CDOP review and reporting of this death?
+          </label>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="PMRT-1" name="PMRT" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="PMRT-1">
+              Yes
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="PMRT-2" name="PMRT" type="radio" value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="PMRT-2">
+              No
+            </label>
+          </div>
+        </div>
+        
+
         {% endif %}
 
         {% if eventType=='maternal' or eventType=='maternal-42' or eventType=='maternal-365' %}
