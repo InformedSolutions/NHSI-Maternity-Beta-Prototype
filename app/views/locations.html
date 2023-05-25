@@ -1,9 +1,8 @@
-
 {% extends 'layout.html' %}
 
 
 {% block pageTitle %}
-  Maternity events - single notification portal
+Maternity events - single notification portal
 {% endblock %}
 
 
@@ -28,109 +27,145 @@
 
           <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
 
-            {% if eventType == 'late-fetal-loss' or eventType == 'stillbirth' or eventType=='neonatal' or eventType=='perinatal' %}
+            {% if eventType == 'late-fetal-loss' or eventType == 'stillbirth' or eventType=='neonatal' or
+            eventType=='perinatal' %}
 
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
               <h1 class="nhsuk-fieldset__heading">
                 Was this mother booked?
               </h1>
             </legend>
-      
-        
+
+
             <div class="nhsuk-radios nhsuk-radios--conditional">
-        
+
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email" aria-controls="conditional-contact-1" aria-expanded="false">
+                <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email"
+                  aria-controls="conditional-contact-1" aria-expanded="false">
                 <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
                   Yes
                 </label>
               </div>
-        
+
               <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
-        
+
                 <div class="nhsuk-form-group">
                   <label class="nhsuk-label" for="email">
                     Intended place of birth at booking
                   </label>
+                  <div class="nhsuk-hint" id="contact-hint">
+                    Start typing and select the unit from the list.
+                  </div>
+                  <div class="nhsuk-form-group">
+                    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+                  </div>
+                  <br>
+                  <label class="nhsuk-label" for="email">
+                    Or specify other
+                  </label>
                   <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
                 </div>
                 <div class="nhsuk-form-group">
                   <label class="nhsuk-label" for="email">
-                    Intended place of birth at the start of care in labour/induction/caesarean
+                    Intended place of birth at the start of care in labour or induction or caesarean
+                  </label>
+                  <div class="nhsuk-hint" id="contact-hint">
+                    Start typing and select the unit from the list.
+                  </div>
+                  <div class="nhsuk-form-group">
+                    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+                  </div>
+                  <br>
+                  <label class="nhsuk-label" for="email">
+                    Or specify other
                   </label>
                   <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
                 </div>
-        
+
               </div>
-        
+
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
+                <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone"
+                  aria-controls="conditional-contact-2" aria-expanded="false">
                 <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
                   No
                 </label>
-              </div>        
+              </div>
             </div>
 
             {% else %}
 
             <div class="nhsuk-form-group">
-              
+
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
                 <h1 class="nhsuk-fieldset__heading">
                   Place of death
                 </h1>
               </legend>
-  
-              <input class="nhsuk-input nhsuk-input--width-10" id="email" name="email" type="text">
+
+              <div class="nhsuk-hint" id="contact-hint">
+                Start typing and select the unit from the list.
+              </div>
+              <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
             </div>
-
-            {% endif %}
-
-          </fieldset>
-        
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="email">
+                Or specify other
+              </label>
+              <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+            </div>
         </div>
-
-        {% if eventType == 'maternal-42' or eventType == 'maternal' or eventType == 'maternal-365' %}
-
-        <a class="nhsuk-button" href="/cause-of-death" role="button" draggable="false">Continue</a>
-
-        {% elif eventType == 'stillbirth' and (gestationWeeks > 36) and (thoughtAlive == 'yes') %}
-        
-        <a class="nhsuk-button" href="/event-details" role="button" draggable="false">Continue</a>
-
-        {% elif eventType == 'neonatal' and termination == 'yes' %}
-
-        <a class="nhsuk-button" href="/event-details" role="button" draggable="false">Continue</a>
-
-        {% elif eventType == 'neonatal' and termination == 'no' %}
-
-        <a class="nhsuk-button" href="/household" role="button" draggable="false">Continue</a>
-
-        {% elif eventType == 'perinatal' and termination == 'yes' %}
-
-        <a class="nhsuk-button" href="/baby-1-details" role="button" draggable="false">Continue</a>
-
-        {% elif eventType == 'perinatal' and termination == 'no' %}
-
-        <a class="nhsuk-button" href="/household" role="button" draggable="false">Continue</a>
-
-        {% else %}
-
-        <a class="nhsuk-button" href="/baby-1-details" role="button" draggable="false">Continue</a>
-
-        {% endif %}
-
-        <p><a href="/task-list">Return to task list</a></p>
-
-
       </div>
+
+
+
+      {% endif %}
+
+      </fieldset>
+
     </div>
 
-  </main>
+    {% if eventType == 'maternal-42' or eventType == 'maternal' or eventType == 'maternal-365' %}
+
+    <a class="nhsuk-button" href="/cause-of-death" role="button" draggable="false">Continue</a>
+
+    {% elif eventType == 'stillbirth' and (gestationWeeks > 36) and (thoughtAlive == 'yes') %}
+
+    <a class="nhsuk-button" href="/event-details" role="button" draggable="false">Continue</a>
+
+    {% elif eventType == 'neonatal' and termination == 'yes' %}
+
+    <a class="nhsuk-button" href="/event-details" role="button" draggable="false">Continue</a>
+
+    {% elif eventType == 'neonatal' and termination == 'no' %}
+
+    <a class="nhsuk-button" href="/household" role="button" draggable="false">Continue</a>
+
+    {% elif eventType == 'perinatal' and termination == 'yes' %}
+
+    <a class="nhsuk-button" href="/baby-1-details" role="button" draggable="false">Continue</a>
+
+    {% elif eventType == 'perinatal' and termination == 'no' %}
+
+    <a class="nhsuk-button" href="/household" role="button" draggable="false">Continue</a>
+
+    {% else %}
+
+    <a class="nhsuk-button" href="/baby-1-details" role="button" draggable="false">Continue</a>
+
+    {% endif %}
+
+    <p><a href="/task-list">Return to task list</a></p>
+
+
+</div>
 </div>
 
-      <!-- End of content -->
+</main>
+</div>
 
-    </div>
-  </div>
+<!-- End of content -->
+
+</div>
+</div>
 {% endblock %}

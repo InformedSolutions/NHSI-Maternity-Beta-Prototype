@@ -74,6 +74,15 @@ Maternity events - single notification portal
                   <label class="nhsuk-label" for="email">
                     Actual place of birth
                   </label>
+                  <div class="nhsuk-hint" id="contact-hint">
+                    Start typing and select the unit from the list.
+                  </div>
+                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+                 </div>
+            <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="email">
+                    Or specify other 
+                  </label>
                   <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
                 </div>
 
@@ -90,11 +99,60 @@ Maternity events - single notification portal
           </fieldset>
 
         </div>
+        <div class="nhsuk-form-group">
+
+          <div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+  
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                <h3 class="nhsuk-fieldset__heading">
+                  Was the birth unattended?
+                </h3>
+              </legend>
+        
+            <div class="nhsuk-radios">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                  Yes
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+                  No
+                </label>
+              </div>
+        
+            </div>
+          </fieldset>
+        </div>
+        </div>
         {% if eventType == 'neonatal' or eventType == 'perinatal' %}
 
         <div class="nhsuk-form-group">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            <h3 class="nhsuk-fieldset__heading">
+              Place of death
+            </h3>
+          </legend>
+          <div class="nhsuk-hint" id="contact-hint">
+            Start typing and select the unit from the list.
+          </div>
+          <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+        </div>
+        <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="email">
-            Place of death
+            Or specify other
+          </label>
+          <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+        </div>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="email">
+            Type of unit
           </label>
           <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
         </div>
@@ -125,8 +183,19 @@ Maternity events - single notification portal
         {% endif %} 
         
         <div class="nhsuk-form-group">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            <h3 class="nhsuk-fieldset__heading">
+              Unit of care prior to transfer for palliative care or discharge
+            </h3>
+          </legend>
+          <div class="nhsuk-hint" id="contact-hint">
+            Start typing and select the unit from the list.
+          </div>
+          <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+        </div>
+        <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="email">
-            Unit of care prior to transfer for palliative care/discharge
+            Or specify other
           </label>
           <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
         </div>
