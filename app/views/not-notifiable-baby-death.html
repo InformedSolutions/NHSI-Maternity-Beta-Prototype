@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Confirmation page template - NHS.UK prototype kit
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+        <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4">
+
+            <div class="nhsuk-card__content">
+                {% if (diagnosed == 'no' and labour == 'yes') %}
+                <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
+                    This baby death is not notifiable to MBRRACE or MNSI.
+                </h1>
+                <p>This is because the severe brain injury was not diagnosed within 7 days of birth.</p>
+                {% elif (labour == 'no' and diagnosed == 'yes') %}
+                <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
+                    This severe brain injury is not notifiable to MNSI or NHSR
+                </h1>
+                <p>This is because the mother did not go into labour.</p>
+                {% elif (diagnosed == 'no' and labour == 'no') %}
+                <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
+                    This severe brain injury is not notifiable to MNSI or NHSR
+                </h1>
+                <p>This is because the severe brain injury was not diagnosed within 7 days of birth and the mother did
+                    not go into labour.</p>
+                {% elif (nhsr == 'no') %}
+                <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
+                    This severe brain injury is not notifiable to NHSR
+                </h1>
+                <p>Section 2 is no longer required and NHSR have not been notified. You can <a href='/event-view'>view
+                        the notification in the manage events section.</a></p>
+
+                <p class="nhsuk-u-font-size-24">
+                    Your reference number
+                    <br>
+                    <strong class="nhsuk-u-font-size-32">HDJ2123F</strong>
+                </p>
+
+                {% else %}
+                <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
+                    This baby death is not notifiable to MBRRACE or MNSI.
+                </h1>
+                    <p>This is because the baby was born alive before 22 weeks gestation or weighed less than 200g. </p>
+                <p> A separate notification for deaths of babies who were born before 22 weeks gestation or weighed less
+                    than 200g needs to be made directly to the CDOP. A list of CDOP contacts can be found at the
+                    following link <a href="URL">
+                        https://www.gov.uk/government/publications/child-death-overview-panels-contacts</a></a></p>
+                   <p>If you want to use the PMRT to review a post-neonatal death please see the guidance on the PMRT home
+                    page on the MBRRACE-UK/PMRT web portal. You will need to log into the MBRRACE-UK/PMRT system
+                    directly:<a href="URL"> www.mbrrace.ox.ac.uk</a></a></p> 
+                {% endif %}
+                {% if (timeAfterBirth == 'after-28') %}
+                <p>This is because the death occured more than 28 days after delivery.</p>
+                <p>You must still <a href='https://www.qes-online.co.uk/ecdop'>report the death to your local CDOP.</a>
+                </p>
+                {% elif (birthWeight < 400) %} <p>This is because the gestational age at delivery is unknown
+                    <strong>and</strong> the birth weight was less than 400g.</p>
+                    <p>You must still <a href='https://www.qes-online.co.uk/ecdop'>report the death to your local
+                            CDOP.</a></p>
+                    {% endif %}
+            </div>
+
+        </div>
+
+        <a class="nhsuk-button nhsuk-button--secondary" href="/event-type-0" role="button" draggable="false">Notify of
+            another event</a>
+        <p><a href="/home">Return to home</p></a>
+
+    </div>
+</div>
+{% endblock %}
